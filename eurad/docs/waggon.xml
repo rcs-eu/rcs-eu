@@ -1,0 +1,1631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="waggon">
+    <doc><![CDATA[<DIV>Class representing waggon</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">Waggon</attribute>
+    <attribute name="RuntimeName">Waggon</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="waggononbill">
+        <doc><![CDATA[<DIV>Class representing waggon on railway bill</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonOnBill</attribute>
+        <attribute name="RuntimeName">WaggonOnBill</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{c343e3b8-ae91-4766-a763-b0bdf0f6d9f0}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Text of the weight on the waggon</DIV>]]></doc>
+        <modlrstring>WeightStr: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WeightStr</attribute>
+        <attribute name="RuntimeName">WeightStr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{08a5d6f4-59b7-4ade-9d5e-98345657aa25}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if isEmpty then 'Próżny' else realWeight.asString + ' t' endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. If waggon is empty (no cargo)</DIV>]]></doc>
+        <modlrstring>IsEmpty: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsEmpty</attribute>
+        <attribute name="RuntimeName">IsEmpty</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{0c77abf6-84f3-4f31-a8b4-dfe876c11e11}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.WaggonLoad = #Empty</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Identifies that the user has selected to override the information&nbsp;calculated from the waggon number.</DIV>]]></doc>
+        <modlrstring>WagonInfoChanged: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WagonInfoChanged</attribute>
+        <attribute name="RuntimeName">WagonInfoChanged</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{18075970-cbdb-40fa-ae39-75e7f638de15}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>If waggon numer is OK</DIV>]]></doc>
+        <modlrstring>WaggonNrIsCorrect(waggonNr:String):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonNrIsCorrect</attribute>
+        <attribute name="RuntimeName">WaggonNrIsCorrect</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{31e2ca69-0f69-450b-a70d-fe68feed20dd}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">True</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">waggonNr</attribute>
+            <attribute name="RuntimeName">waggonNr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Amount of axel for the waggon</DIV>]]></doc>
+        <modlrstring>Axles: Integer = 2</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Axles</attribute>
+        <attribute name="RuntimeName">Axles</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{3cdc514a-bfb0-481f-8d54-0922b844877d}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">2</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. If waggon nr is proper</DIV>]]></doc>
+        <modlrstring>WaggonNrIsWrong: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonNrIsWrong</attribute>
+        <attribute name="RuntimeName">WaggonNrIsWrong</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{463cd795-9e64-44a8-8ac7-9316574e3948}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Number of the waggon</DIV>]]></doc>
+        <modlrstring>WaggonNr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonNr</attribute>
+        <attribute name="RuntimeName">WaggonNr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4a7ad48b-40d8-4da7-93c4-9113364688a0}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">12</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Rcs.Eurad.Model.Model.Resources,NPP_00000018</attribute>
+            <attribute name="Tag">NNP</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Amount of the cargo (not its weight) i.e. 100 palets</DIV>]]></doc>
+        <modlrstring>CargoAmount: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CargoAmount</attribute>
+        <attribute name="RuntimeName">CargoAmount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{51b7caf0-6dbd-4a7a-8b3a-f48a3a6504ba}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Text fro the UTI's on the waggon</DIV>]]></doc>
+        <modlrstring>UtiStr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">UtiStr</attribute>
+        <attribute name="RuntimeName">UtiStr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{520aaf0e-aa6b-40ba-b245-93b1fb0fa215}_EMDUPEID_2</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">500</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Methode for seting waggon info</DIV>]]></doc>
+        <modlrstring>SetWaggonInfo()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SetWaggonInfo</attribute>
+        <attribute name="RuntimeName">SetWaggonInfo</attribute>
+        <attribute name="Visibility">Protected</attribute>
+        <attribute name="id">{6cc858c3-dec1-428f-96ac-9a88ddd65013}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Text of the NHM's on the waggon</DIV>]]></doc>
+        <modlrstring>NhmsStr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NhmsStr</attribute>
+        <attribute name="RuntimeName">NhmsStr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{741228ec-b7c7-4d4d-ba53-9bd663e2f540}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">10000</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>If waggon is private. If false then waggon is railway owned.</DIV>]]></doc>
+        <modlrstring>IsPrivate: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsPrivate</attribute>
+        <attribute name="RuntimeName">IsPrivate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{7f7bddca-5c75-47c2-b336-994b688dfc2e}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. If waggon is loaded with containers</DIV>]]></doc>
+        <modlrstring>HasUti: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">HasUti</attribute>
+        <attribute name="RuntimeName">HasUti</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{8f9dde9a-1ac6-448e-9f92-826f24fd65bb}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Uti-&gt;notEmpty</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Effecive real weight. If UTI is loaded then sum of weights on UTI in other way rela weight.</DIV>]]></doc>
+        <modlrstring>EffectiveRealWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EffectiveRealWeight</attribute>
+        <attribute name="RuntimeName">EffectiveRealWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{9ee62eb1-86a5-4f43-903c-d652d826f04e}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if (isUtiTransport) then uti.realWeight-&gt;sum else
+if (not IsEmpty) then realweight else 0 endif endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Methode for copying <SPAN></SPAN>waggon information to new waggon</DIV>]]></doc>
+        <modlrstring>CopyFrom(waggon:Waggon)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CopyFrom</attribute>
+        <attribute name="RuntimeName">CopyFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a00022f4-a3de-464a-a2d6-0dec5855af86}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">True</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">waggon</attribute>
+            <attribute name="RuntimeName">waggon</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Waggon</attribute>
+                <attribute name="RuntimeName">Waggon</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Weight of the cargo if no uti is loaded</DIV>]]></doc>
+        <modlrstring>RealWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealWeight</attribute>
+        <attribute name="RuntimeName">RealWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a7093845-f80d-4988-8ffe-344de8c3938a}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV><I>
+<DIV>Methode for&nbsp;cloning waggon</I></DIV></DIV>]]></doc>
+        <modlrstring>Clone():Waggon</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Clone</attribute>
+        <attribute name="RuntimeName">Clone</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a76d85a5-4fd0-4dbd-b09c-25b288c71b11}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">True</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Waggon</attribute>
+                <attribute name="RuntimeName">Waggon</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Gross weight of the cargo which is checked and confirmed by forwarder</DIV>]]></doc>
+        <modlrstring>CheckedGrossWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CheckedGrossWeight</attribute>
+        <attribute name="RuntimeName">CheckedGrossWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ba9d58e4-3881-4a1e-a253-387c3e712213}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Type of the waggon i.e. Habis</DIV>]]></doc>
+        <modlrstring>WaggonType: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonType</attribute>
+        <attribute name="RuntimeName">WaggonType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{bfcbcce1-9014-4110-ae52-5250ec3155b3}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">20</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Text representing the waggon (type, loading length etc.)</DIV>]]></doc>
+        <modlrstring>WaggonInfoStr: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonInfoStr</attribute>
+        <attribute name="RuntimeName">WaggonInfoStr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{c37bebd6-cece-4602-9191-85a15bc7361d}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">500</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Net&nbsp;weight of the cargo which is checked and confirmed by forwarder</DIV></DIV>]]></doc>
+        <modlrstring>CheckedRealWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CheckedRealWeight</attribute>
+        <attribute name="RuntimeName">CheckedRealWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{c8f46d9e-e7c8-41e3-a86b-a04360eb333c}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.CheckedGrossWeight - self.CheckedTareWeight</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Gauge of the waggon: Any - not defined; Normal - european; WM0 - WM0; WM1 - WM1</DIV>]]></doc>
+        <modlrstring>Gauge: LoadingGauge</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Gauge</attribute>
+        <attribute name="RuntimeName">Gauge</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{cfabedea-a640-4c18-b5ec-68b6fcf0c139}_EMDUPEID_2</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">LoadingGauge</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">LoadingGauge</attribute>
+            <attribute name="RuntimeName">LoadingGauge</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Loading length posibility for the waggon</DIV>]]></doc>
+        <modlrstring>LoadLength: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LoadLength</attribute>
+        <attribute name="RuntimeName">LoadLength</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{d4db0d00-1289-4194-9450-2e5156679c8c}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>If this is UTI transport</DIV>]]></doc>
+        <modlrstring>IsUtiTransport: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsUtiTransport</attribute>
+        <attribute name="RuntimeName">IsUtiTransport</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{dbf5b769-f12b-47b0-8f98-505550a6fd4b}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Tare&nbsp;weight of the cargo which is checked and confirmed by forwarder</DIV></DIV>]]></doc>
+        <modlrstring>CheckedTareWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CheckedTareWeight</attribute>
+        <attribute name="RuntimeName">CheckedTareWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{e2fabe3b-8d34-4af3-913e-c158e9cdd1c2}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Note for the waggon</DIV>]]></doc>
+        <modlrstring>Note: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Note</attribute>
+        <attribute name="RuntimeName">Note</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ec1b0db3-6faa-47ca-bee1-3b9207acec00}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">1000</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Methode for seting NHM</DIV>]]></doc>
+        <modlrstring>SetOneNhm(nhm:Nhm)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SetOneNhm</attribute>
+        <attribute name="RuntimeName">SetOneNhm</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">cda83c6a-b48c-4647-9c8a-fb90fdc895a0</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">nhm</attribute>
+            <attribute name="RuntimeName">nhm</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Nhm</attribute>
+                <attribute name="RuntimeName">Nhm</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>WaggonLoad: WaggonLoad</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonLoad</attribute>
+        <attribute name="RuntimeName">WaggonLoad</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">fd112e10-cb64-433e-a890-df7c8a43c4b1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">WaggonLoad</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Enumeration">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WaggonLoad</attribute>
+            <attribute name="RuntimeName">WaggonLoad</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="IncludeInCodeGen">False</attribute>
+            <attribute name="id">e39bf66c-d847-4f1e-a34b-d016478cdb10</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">GenericEnumAsInteger</attribute>
+            <attribute name="Tag">Eco.PMapper</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="waggon">
+        <doc><![CDATA[<DIV>One way association.</DIV>]]></doc>
+        <modlrstring>WaggonsNhms (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">WaggonsNhms</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">WaggonsNhms</attribute>
+        <attribute name="id">{a347ee4b-3e54-4bcd-817a-3db226566632}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WaggonNhm</attribute>
+            <attribute name="RuntimeName">WaggonNhm</attribute>
+            <attribute name="EffectiveName">WaggonNhm</attribute>
+            <attribute name="id">{031f64bb-20b9-4f9e-a135-0177b6e4bb51}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="waggon">
+            <doc><![CDATA[<DIV>Class representing waggon</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Waggon</attribute>
+            <attribute name="RuntimeName">Waggon</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="nhm">
+            <doc><![CDATA[<DIV>NHM list loaded on the waggon</DIV>]]></doc>
+            <modlrstring>Nhms (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Nhms</attribute>
+            <attribute name="RuntimeName">Nhms</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Nhms</attribute>
+            <attribute name="id">{5f981153-bfd8-4bc5-9592-65e89195d055}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="nhm">
+                <doc><![CDATA[<DIV>Represents&nbsp;NHM classification's entry. </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Nhm</attribute>
+                <attribute name="RuntimeName">Nhm</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2b83af30-b245-4ae9-97c0-b1edf4cb45f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">WaggonNhms</attribute>
+            <attribute name="Tag">Eco.FormerNames</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="waggon">
+        <doc><![CDATA[<DIV>
+<DIV>One way association.</DIV></DIV>]]></doc>
+        <modlrstring>WaggonNhm1_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonNhm1_</attribute>
+        <attribute name="RuntimeName">WaggonNhm1_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">WaggonNhm1_</attribute>
+        <attribute name="id">{c483b4b7-e068-4a72-934a-2a8842d19b15}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WaggonNhm1</attribute>
+            <attribute name="RuntimeName">WaggonNhm1</attribute>
+            <attribute name="EffectiveName">WaggonNhm1</attribute>
+            <attribute name="id">{94ea21b2-3a78-4eb8-8bad-be661ea58d40}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="waggon">
+            <doc><![CDATA[<DIV>Class representing waggon</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Waggon</attribute>
+            <attribute name="RuntimeName">Waggon</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="nhm">
+            <doc><![CDATA[<DIV>Derived. Pointing to NHM if only one NHM is loaded on waggon</DIV>]]></doc>
+            <modlrstring>OneNhm (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OneNhm</attribute>
+            <attribute name="RuntimeName">OneNhm</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OneNhm</attribute>
+            <attribute name="id">{c992ea6a-c416-448e-abfa-261c9c99dc2a}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="nhm">
+                <doc><![CDATA[<DIV>Represents&nbsp;NHM classification's entry. </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Nhm</attribute>
+                <attribute name="RuntimeName">Nhm</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2b83af30-b245-4ae9-97c0-b1edf4cb45f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="waggon">
+        <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+        <modlrstring>WaggonUti_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WaggonUti_</attribute>
+        <attribute name="RuntimeName">WaggonUti_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">WaggonUti_</attribute>
+        <attribute name="id">{875fbd36-95c2-4ae4-9cea-420231864018}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WaggonUti</attribute>
+            <attribute name="RuntimeName">WaggonUti</attribute>
+            <attribute name="EffectiveName">WaggonUti</attribute>
+            <attribute name="id">{d1dbb352-5fb3-482a-b19f-13a558fac841}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="waggon">
+            <doc><![CDATA[<DIV>Class representing waggon</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Waggon</attribute>
+            <attribute name="RuntimeName">Waggon</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="uti">
+            <doc><![CDATA[<DIV>List of UTI's on the waggon</DIV>]]></doc>
+            <modlrstring>Uti (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Uti</attribute>
+            <attribute name="RuntimeName">Uti</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Uti</attribute>
+            <attribute name="id">{b99cd760-a75f-426b-9143-a5db2930d9e4}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="uti">
+                <doc><![CDATA[<DIV>Class representing container</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Uti</attribute>
+                <attribute name="RuntimeName">Uti</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4dc988e8-9e75-4984-b0e0-a9372c9a84bc}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="waggon">
+        <doc><![CDATA[<DIV>
+<DIV>Points to a&nbsp;waggon on which cargo was transported.</DIV></DIV>]]></doc>
+        <modlrstring>Waggon (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Waggon</attribute>
+        <attribute name="RuntimeName">Waggon</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Waggon</attribute>
+        <attribute name="id">{0bc330fb-d854-4993-89c5-d88ffbc29509}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CargoHolderWaggonWaggon</attribute>
+            <attribute name="RuntimeName">CargoHolderWaggonWaggon</attribute>
+            <attribute name="EffectiveName">CargoHolderWaggonWaggon</attribute>
+            <attribute name="id">{f9565efc-df02-4fd8-b21d-8f3203209e90}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="waggon">
+            <doc><![CDATA[<DIV>Class representing waggon</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Waggon</attribute>
+            <attribute name="RuntimeName">Waggon</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cargoholderwaggon">
+            <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+            <modlrstring>CargoHolderWaggonWaggon_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CargoHolderWaggonWaggon_</attribute>
+            <attribute name="RuntimeName">CargoHolderWaggonWaggon_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CargoHolderWaggonWaggon_</attribute>
+            <attribute name="id">{6339e49d-8a7e-43d2-81b8-cdcaaa7ff848}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="cargoholderwaggon">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing a holder for cargo for&nbsp;railway transports.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CargoHolderWaggon</attribute>
+                <attribute name="RuntimeName">CargoHolderWaggon</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c340b42c-1d35-4f99-bb2b-3cef9eb61772}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="waggon">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>Waggons (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">Waggons</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Waggons</attribute>
+        <attribute name="id">cf29b693-f0df-4c11-aeef-e0cb78f56dca</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">WaggonWaggonsNetAmountNetAmounts</attribute>
+            <attribute name="EffectiveName">WaggonWaggonsNetAmountNetAmounts</attribute>
+            <attribute name="id">b07b286e-508d-483f-ba96-16e28e35d4d4</attribute>
+            <link name="Class">
+              <object type="Class" href="waggonamountquantity">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">WaggonAmountQuantity</attribute>
+                <attribute name="RuntimeName">WaggonAmountQuantity</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">6dd6db43-854b-4d82-bf98-4ebfbf4d8694</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="waggon">
+            <doc><![CDATA[<DIV>Class representing waggon</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Waggon</attribute>
+            <attribute name="RuntimeName">Waggon</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="netamount">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>NetAmounts (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">NetAmounts</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NetAmounts</attribute>
+            <attribute name="id">515f32d4-6c28-4f06-a247-6d54d4f84daf</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="netamount">
+                <doc><![CDATA[<DIV>Represents a net amount of money.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NetAmount</attribute>
+                <attribute name="RuntimeName">NetAmount</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">46819b00-ed5a-4879-8072-2de21bba51f2</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">65</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">24a14d3b-7d1c-4595-846e-932120896829</attribute>
+        <attribute name="x">-57</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">40</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">e2b88a4d-b65a-423d-afd4-d6772b80275d</attribute>
+        <attribute name="x">-8</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">65</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">True</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="waggon">
+        <attribute name="RenderedWidth">156</attribute>
+        <attribute name="id">82fbd74f-e6ce-492e-aefc-b205f3c945f5</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Waggon</attribute>
+        <attribute name="RenderedHeight">268</attribute>
+        <attribute name="x">392</attribute>
+        <attribute name="y">784</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">HideOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.01_executed_railway_transport">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/c944f3c3-7e93-4e4a-a2d4-2e2067071c7d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">c944f3c3-7e93-4e4a-a2d4-2e2067071c7d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.01 Executed Railway Transport</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.01 Executed Railway Transport</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="waggon">
+        <attribute name="RenderedWidth">156</attribute>
+        <attribute name="id">45bd849d-8dc4-47e8-a2fe-5d5bc3ef8b4f</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Waggon</attribute>
+        <attribute name="RenderedHeight">330</attribute>
+        <attribute name="x">96</attribute>
+        <attribute name="y">800</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.05_executed_gos_servce">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3570b341-3b9d-4b50-a216-a75190baaacb.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3570b341-3b9d-4b50-a216-a75190baaacb</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.05 Executed GOS Servce</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.05 Executed GOS Servce</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="waggon">
+        <attribute name="RenderedWidth">156</attribute>
+        <attribute name="id">fc2a2d54-005b-4e5e-bf69-65fa3c1e8fc3</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Waggon</attribute>
+        <attribute name="RenderedHeight">330</attribute>
+        <attribute name="x">936</attribute>
+        <attribute name="y">1048</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.01_invoice_specitems">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4e688bb0-c589-4275-92a0-3d060494e148.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4e688bb0-c589-4275-92a0-3d060494e148</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.01 Invoice SpecItems</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.01 Invoice SpecItems</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="waggon">
+        <attribute name="RenderedWidth">156</attribute>
+        <attribute name="id">2a5f7952-aed4-47bd-8ac6-6db532c26d9f</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Waggon</attribute>
+        <attribute name="RenderedHeight">330</attribute>
+        <attribute name="x">104</attribute>
+        <attribute name="y">872</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.10_cargo_holders">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/991a97f5-b326-4c27-ad0f-7d83cc7feee4.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">991a97f5-b326-4c27-ad0f-7d83cc7feee4</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.10 Cargo Holders</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.10 Cargo Holders</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

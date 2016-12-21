@@ -1,0 +1,61 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Message in package EuradSystem</h1>
+    <p><DIV>Abstract class representing base of message in message system.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">LinksStr: String</td>
+        <td class="style1"><DIV>Derived. String describing how to display all of the attachments as link (eg.&nbsp;document number, file name ect.)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageDateTime: DateTime</td>
+        <td class="style1"><DIV>Specifies date when message is intended to be sent by system.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageDescription: String</td>
+        <td class="style1"><DIV>Derived.&nbsp;Needs to be&nbsp;handled in child class.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageText: String</td>
+        <td class="style1"><DIV>Derived.&nbsp;Needs to be&nbsp;handled in child class.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Attachments : <a href="attachment.htm">attachment</a> 0..*</td>
+        <td class="style1"><DIV>Message attachments as list of <SPAN style="FONT-STYLE: italic">Attachment </SPAN><SPAN>objects.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Deliveries : <a href="messagedelivery.htm">messagedelivery</a> 1..*</td>
+        <td class="style1"><DIV>As <SPAN style="FONT-STYLE: italic">Message </SPAN><SPAN>can be sent to more than one recipient </SPAN><SPAN>- this lists contains all required </SPAN><SPAN style="FONT-STYLE: italic">MessageDelivery </SPAN><SPAN>log.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Documents : <a href="abstractroot.htm">abstractroot</a> 0..*</td>
+        <td class="style1"><DIV>List of&nbsp;objects (eg. CustomerOrder, OutInvoice, etc.) message is bound to.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.00_messaging.htm">03.00 Messaging</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

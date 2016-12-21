@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_ininvoice_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/5c5afbcc-a9ac-49b2-a655-f4bb2c5cf705.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">5c5afbcc-a9ac-49b2-a655-f4bb2c5cf705</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:InInvoice.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_ininvoice_rootstate">
+        <doc><![CDATA[<DIV>Determines the state of this document.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{296fc25c-26c6-40c7-a3f4-cea5e17dbcee}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="ininvoice">
+            <doc><![CDATA[<DIV>Represents invoice received from a deliverer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InInvoice</attribute>
+            <attribute name="RuntimeName">InInvoice</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{dfdf898d-5601-4100-a854-4d2948e60d0d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">60</attribute>
+        <attribute name="id">510934d0-da7a-49ff-8d7e-d6a90c6c13f8</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Closed</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">272</attribute>
+        <attribute name="y">264</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Closed</attribute>
+            <attribute name="RuntimeName">Closed</attribute>
+            <attribute name="id">91d34158-41dd-4697-a3e4-28e0959b49c1</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">7396efbf-396d-44a0-8a0f-5c5cb8c9814a</attribute>
+                <attribute name="Guard">OCL: SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN'</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Booked</attribute>
+                    <attribute name="RuntimeName">Booked</attribute>
+                    <attribute name="id">53c9f9fc-b15d-421f-886e-accb8bdbb14b</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoUnbook()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d4917c1b-03b9-47d6-b65d-1ba914265455</attribute>
+                <attribute name="Guard">OCL: self.Specification.Close?</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">0e38a060-62d9-49fb-8156-bd96cfc51833</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.Specification.Close;self.DoClose</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">0c53a88f-76c1-4b91-836a-0f36bff85bd7</attribute>
+                <attribute name="Guard">OCL: SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN'</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Booked</attribute>
+                    <attribute name="RuntimeName">Booked</attribute>
+                    <attribute name="id">53c9f9fc-b15d-421f-886e-accb8bdbb14b</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoBook()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">f9856eef-a62a-4e50-a6a0-071027f5fffe</attribute>
+                <attribute name="Guard">OCL: self.Specification.Open?</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">0e38a060-62d9-49fb-8156-bd96cfc51833</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoOpen;self.Specification.Open</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">64</attribute>
+        <attribute name="id">65251f55-658f-494e-a7a5-954763229544</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Booked</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">272</attribute>
+        <attribute name="y">368</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Booked</attribute>
+            <attribute name="RuntimeName">Booked</attribute>
+            <attribute name="id">53c9f9fc-b15d-421f-886e-accb8bdbb14b</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">0c53a88f-76c1-4b91-836a-0f36bff85bd7</attribute>
+                <attribute name="Guard">OCL: SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN'</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Closed</attribute>
+                    <attribute name="RuntimeName">Closed</attribute>
+                    <attribute name="id">91d34158-41dd-4697-a3e4-28e0959b49c1</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoBook()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">7396efbf-396d-44a0-8a0f-5c5cb8c9814a</attribute>
+                <attribute name="Guard">OCL: SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN'</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Closed</attribute>
+                    <attribute name="RuntimeName">Closed</attribute>
+                    <attribute name="id">91d34158-41dd-4697-a3e4-28e0959b49c1</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoUnbook()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">61</attribute>
+        <attribute name="id">81a87965-e42d-4f16-afa0-566ec87e4bb3</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InWork</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">272</attribute>
+        <attribute name="y">152</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InWork</attribute>
+            <attribute name="RuntimeName">InWork</attribute>
+            <attribute name="id">0e38a060-62d9-49fb-8156-bd96cfc51833</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">e91250a4-d45d-4e58-a801-abaa1dc3e7d4</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">fceb6ebc-deaa-42b7-b503-e86b9a056b9a</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">f9856eef-a62a-4e50-a6a0-071027f5fffe</attribute>
+                <attribute name="Guard">OCL: self.Specification.Open?</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Closed</attribute>
+                    <attribute name="RuntimeName">Closed</attribute>
+                    <attribute name="id">91d34158-41dd-4697-a3e4-28e0959b49c1</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoOpen;self.Specification.Open</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d4917c1b-03b9-47d6-b65d-1ba914265455</attribute>
+                <attribute name="Guard">OCL: self.Specification.Close?</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Closed</attribute>
+                    <attribute name="RuntimeName">Closed</attribute>
+                    <attribute name="id">91d34158-41dd-4697-a3e4-28e0959b49c1</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.Specification.Close;self.DoClose</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">f56d929d-ba5a-4791-9bbc-3901d74ba4b6</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">272</attribute>
+        <attribute name="y">40</attribute>
+        <link name="Vertex" />
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="autonum">
+    <doc><![CDATA[<DIV>Class representing autonumeration for documents which are autonumerated.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">AutoNum</attribute>
+    <attribute name="RuntimeName">AutoNum</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces">IEcoOnSave</attribute>
+    <attribute name="id">{b0005012-5064-4dfa-8b94-0a8ca3712514}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass" />
+    <link name="Subclasses">
+      <object type="Class" href="autonumoutinv">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing autonumeration for outgoing invoices.</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AutoNumOutInv</attribute>
+        <attribute name="RuntimeName">AutoNumOutInv</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{5f0cf6ad-009f-449e-aa08-7cf7c74706cd}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">AllMembers</attribute>
+        <attribute name="Tag">Eco.OptimisticLocking</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Next number in autonumeration.</DIV>]]></doc>
+        <modlrstring>Nr: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Nr</attribute>
+        <attribute name="RuntimeName">Nr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{5f702982-0765-44d6-a6ad-dee58668288f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.DerivedSettable</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="autonum">
+        <doc><![CDATA[<DIV>Points&nbsp;to an object&nbsp;with information about auto-numeration for this object. It's set for all objects which are auto-numerated documents.</DIV>]]></doc>
+        <modlrstring>AutoNum (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AutoNum</attribute>
+        <attribute name="RuntimeName">AutoNum</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment">Document must implement IAutoNumGeneratorProvider.</attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AutoNum</attribute>
+        <attribute name="id">{c5932310-b316-4ace-a39b-c4dbae8b7dd5}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AutoNumAbstractRoot</attribute>
+            <attribute name="RuntimeName">AutoNumAbstractRoot</attribute>
+            <attribute name="EffectiveName">AutoNumAbstractRoot</attribute>
+            <attribute name="id">{664aa001-c714-4b57-b905-cd1c0e46ae00}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="autonum">
+            <doc><![CDATA[<DIV>Class representing autonumeration for documents which are autonumerated.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AutoNum</attribute>
+            <attribute name="RuntimeName">AutoNum</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces">IEcoOnSave</attribute>
+            <attribute name="id">{b0005012-5064-4dfa-8b94-0a8ca3712514}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="abstractroot">
+            <doc><![CDATA[<DIV>Points to a document&nbsp;to which this autonumeration belongs.</DIV>]]></doc>
+            <modlrstring>Document (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Document</attribute>
+            <attribute name="RuntimeName">Document</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment">Document must implement IAutoNumGeneratorProvider.</attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Document</attribute>
+            <attribute name="id">{f867f32a-11ad-4c7f-9561-f7c9a11e1c08}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="abstractroot">
+                <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AbstractRoot</attribute>
+                <attribute name="RuntimeName">AbstractRoot</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">dcaa83a8-9277-4e0c-bbe6-c219234f10a4</attribute>
+        <attribute name="x">-24</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">28</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">29cec048-0c5d-4cf2-a381-68c3a746f180</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="autonum">
+        <attribute name="RenderedWidth">113</attribute>
+        <attribute name="id">48a0ede5-93a4-4f9a-8e05-453d5521f437</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">AutoNum</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">88</attribute>
+        <attribute name="y">664</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{b0005012-5064-4dfa-8b94-0a8ca3712514}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.03_outinvoices">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/874678d5-6660-4c9c-bfc6-fbc349ad0150.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">874678d5-6660-4c9c-bfc6-fbc349ad0150</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.03 OutInvoices</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.03 OutInvoices</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="autonum">
+        <attribute name="RenderedWidth">105</attribute>
+        <attribute name="id">3f104b9b-25b0-4e53-be87-f9639c9ddfd8</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">AutoNum</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">408</attribute>
+        <attribute name="y">248</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{b0005012-5064-4dfa-8b94-0a8ca3712514}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.04_autoinc">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7e1b4a8f-ff60-42ad-aa5d-d2640ddee810.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7e1b4a8f-ff60-42ad-aa5d-d2640ddee810</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.04 AutoInc</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.04 AutoInc</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

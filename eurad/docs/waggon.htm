@@ -1,0 +1,172 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Waggon in package EuradSystem</h1>
+    <p><DIV>Class representing waggon</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Axles: Integer = 2</td>
+        <td class="style1"><DIV>Amount of axel for the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoAmount: Decimal</td>
+        <td class="style1"><DIV>Amount of the cargo (not its weight) i.e. 100 palets</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CheckedGrossWeight: Decimal</td>
+        <td class="style1"><DIV>Gross weight of the cargo which is checked and confirmed by forwarder</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CheckedRealWeight: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Net&nbsp;weight of the cargo which is checked and confirmed by forwarder</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CheckedTareWeight: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Tare&nbsp;weight of the cargo which is checked and confirmed by forwarder</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveRealWeight: Decimal</td>
+        <td class="style1"><DIV>Derived. Effecive real weight. If UTI is loaded then sum of weights on UTI in other way rela weight.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Gauge: LoadingGauge</td>
+        <td class="style1"><DIV>Gauge of the waggon: Any - not defined; Normal - european; WM0 - WM0; WM1 - WM1</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasUti: Boolean</td>
+        <td class="style1"><DIV>Derived. If waggon is loaded with containers</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsEmpty: Boolean</td>
+        <td class="style1"><DIV>Derived. If waggon is empty (no cargo)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsPrivate: Boolean</td>
+        <td class="style1"><DIV>If waggon is private. If false then waggon is railway owned.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsUtiTransport: Boolean</td>
+        <td class="style1"><DIV>If this is UTI transport</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LoadLength: Decimal</td>
+        <td class="style1"><DIV>Loading length posibility for the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmsStr: String</td>
+        <td class="style1"><DIV>Derived. Text of the NHM's on the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Note for the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealWeight: Decimal</td>
+        <td class="style1"><DIV>Weight of the cargo if no uti is loaded</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UtiStr: String</td>
+        <td class="style1"><DIV>Derived. Text fro the UTI's on the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonInfoStr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Derived. Text representing the waggon (type, loading length etc.)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonLoad: WaggonLoad</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonNr: String</td>
+        <td class="style1"><DIV>Number of the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonNrIsWrong: Boolean</td>
+        <td class="style1"><DIV>Derived. If waggon nr is proper</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonType: String</td>
+        <td class="style1"><DIV>Type of the waggon i.e. Habis</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WagonInfoChanged: Boolean</td>
+        <td class="style1"><DIV>Identifies that the user has selected to override the information&nbsp;calculated from the waggon number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WeightStr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Derived. Text of the weight on the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():Waggon</td>
+        <td class="style1"><DIV><I>
+<DIV>Methode for&nbsp;cloning waggon</I></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(waggon:Waggon)</td>
+        <td class="style1"><DIV>Methode for copying <SPAN></SPAN>waggon information to new waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetOneNhm(nhm:Nhm)</td>
+        <td class="style1"><DIV>Methode for seting NHM</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetWaggonInfo()</td>
+        <td class="style1"><DIV>Methode for seting waggon info</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonNrIsCorrect(waggonNr:String):Boolean</td>
+        <td class="style1"><DIV>If waggon numer is OK</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CargoHolderWaggonWaggon_ : <a href="cargoholderwaggon.htm">cargoholderwaggon</a> 0..*</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NetAmounts : <a href="netamount.htm">netamount</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nhms : <a href="nhm.htm">nhm</a> 0..*</td>
+        <td class="style1"><DIV>NHM list loaded on the waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OneNhm : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"><DIV>Derived. Pointing to NHM if only one NHM is loaded on waggon</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Uti : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"><DIV>List of UTI's on the waggon</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.01_executed_railway_transport.htm">07.01 Executed Railway Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.10_cargo_holders.htm">07.10 Cargo Holders</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

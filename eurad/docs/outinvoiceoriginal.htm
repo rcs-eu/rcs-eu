@@ -1,0 +1,71 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">OutInvoiceOriginal in package EuradSystem</h1>
+    <p><DIV>Represents a outgoing invoice.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DaysBetweenInvAndServiceOk: Boolean</td>
+        <td class="style1"><DIV>Indicates whether ServiceDate and InvoiceDate comply with the configured constraints.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsReductionInvoice: Boolean</td>
+        <td class="style1"><DIV>Indicates whether this invoice is a reduction invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceDate: DateTime</td>
+        <td class="style1"><DIV>The date of the executed service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateCorrection():OutInvoice</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetInvoiceType():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetPaymentDate():DateTime?</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Corrections : <a href="outinvoicecorrection.htm">outinvoicecorrection</a> 0..*</td>
+        <td class="style1"><DIV>A list of correction invoices.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreatedWithCorrection : <a href="outinvoicecorrection.htm">outinvoicecorrection</a> 0..1</td>
+        <td class="style1"><DIV><SPAN style="TEXT-DECORATION: line-through">Not in use.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoicedOrders : <a href="customerorder.htm">customerorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of invoiced&nbsp;customer orders.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LastCorrection : <a href="outinvoicecorrection.htm">outinvoicecorrection</a> 0..1</td>
+        <td class="style1"><DIV>Points to the last correction for this invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Proform : <a href="outinvoiceproform.htm">outinvoiceproform</a> 0..1</td>
+        <td class="style1"><DIV>Points to a proforma invoice (if such invoice was issued).</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

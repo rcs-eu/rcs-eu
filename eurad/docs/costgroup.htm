@@ -1,0 +1,102 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CostGroup in package EuradSystem</h1>
+    <p><DIV>Class representing a group of costs.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CanEdit: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if this group can be edited i.e. no executed items were connected to this group.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GroupType: CostGroupType</td>
+        <td class="style1"><DIV>Derived. Type of group depending on kind of <SPAN style="FONT-STYLE: italic">CostGroupDetail</SPAN><SPAN>. Enum:</SPAN></DIV>
+<DIV><SPAN>- None,</SPAN></DIV>
+<DIV><SPAN>- Waggon,</SPAN></DIV>
+<DIV><SPAN>- Truck,</SPAN></DIV>
+<DIV><SPAN>- Ship,</SPAN></DIV>
+<DIV><SPAN>- Customs,</SPAN></DIV>
+<DIV><SPAN>- Gos,</SPAN></DIV>
+<DIV><SPAN>- Terminal,</SPAN></DIV>
+<DIV><SPAN>- Other,</SPAN></DIV>
+<DIV><SPAN>- Unknown.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsRailEmpty: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if on a list of costs there is a cost with railway condition with empty limit. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nr: Integer</td>
+        <td class="style1"><DIV>Derived. Reference number of a group in a list of groups for a calculation.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AddCostList : <a href="costlist.htm">costlist</a> 1</td>
+        <td class="style1"><DIV>Poins to a list of additional costs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Calculation : <a href="offeredservicecalc.htm">offeredservicecalc</a> 1</td>
+        <td class="style1"><DIV>Points to a calculation to which this group of costs belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostGroupDetail : <a href="costgroupdetail.htm">costgroupdetail</a> 1</td>
+        <td class="style1"><DIV>Points to an object which is a detail for this group and is specific for different type of services.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostList : <a href="costlist.htm">costlist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of costs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererContractService : <a href="deliverercontractservice.htm">deliverercontractservice</a> 0..1</td>
+        <td class="style1"><DIV>Points to a service from a deliverer contract which is adequate to this group. It is used in contracts for internal company units.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItems : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>A list of executed items to which this group was connected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Prices : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..*</td>
+        <td class="style1"><DIV>A list of prices which were created upon costs from this group.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_16.00_internal_price_request.htm">16.00 Internal Price Request</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

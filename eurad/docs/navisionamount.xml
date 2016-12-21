@@ -1,0 +1,2193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="navisionamount">
+    <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">NavisionAmount</attribute>
+    <attribute name="RuntimeName">NavisionAmount</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="navisionintegration">
+        <doc><![CDATA[<DIV>Represents&nbsp;single navision buffer entry.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NavisionIntegration</attribute>
+        <attribute name="RuntimeName">NavisionIntegration</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{ba361864-fcf8-4661-8a8d-a6b09f4f5b81}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">String.Format('{0}: {1,10:0.00} PLN, {2,10:0.00} {3}, {4,10:0.00} {5}, ({6,10:0.0000})', self.AmountType, self.NettoPln, self.NettoKodWaluty, self.KodWaluty, self.Netto, self.KodWaluty, self.KursWaluty)</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>NettoKodWaluty: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NettoKodWaluty</attribute>
+        <attribute name="RuntimeName">NettoKodWaluty</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{33a2872e-b752-44ca-8060-658db75fd80e}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>JednostkaMiary: String = N/A</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">JednostkaMiary</attribute>
+        <attribute name="RuntimeName">JednostkaMiary</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{39151ee0-a68b-4af0-afac-473fd09ef3d5}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">N/A</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment">Unikalna nazwa naturalnej jednostki miary (np. TONY).</attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Unikalna nazwa naturalnej jednostki miary (np. TONY).</attribute>
+            <attribute name="Tag">EcoModeler.OneLiner</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">'N/A'</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>WartoscVat: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WartoscVat</attribute>
+        <attribute name="RuntimeName">WartoscVat</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{41c61b87-66bf-4663-b20d-4f0b3d11e6bf}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>StawkaVat: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StawkaVat</attribute>
+        <attribute name="RuntimeName">StawkaVat</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{51204eee-ab25-44b2-8185-c89053c424de}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">10</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>NettoPln: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NettoPln</attribute>
+        <attribute name="RuntimeName">NettoPln</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{64264390-3937-4dd3-ba10-8612c1cfd6b0}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>KwotaKPdlaKR: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">KwotaKPdlaKR</attribute>
+        <attribute name="RuntimeName">KwotaKPdlaKR</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{70e089ca-963b-464f-85c2-8d9351acdb95}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>KwotaKPdlaKRwWalucieKP: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">KwotaKPdlaKRwWalucieKP</attribute>
+        <attribute name="RuntimeName">KwotaKPdlaKRwWalucieKP</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{70e089ca-963b-464f-85c2-8d9351acdb95}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>IloscP: Decimal = 0</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IloscP</attribute>
+        <attribute name="RuntimeName">IloscP</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{7b9400b4-fab7-405e-bae1-5fb3dc20afcd}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">0</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment">Ilość w jednostce przeliczeniowej jednolitej dla wszystkich rodzajów działalności, np. tony.</attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Ilość w jednostce przeliczeniowej jednolitej dla wszystkich rodzajów działalności, np. tony.</attribute>
+            <attribute name="Tag">EcoModeler.OneLiner</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>ObszarBiznesowy: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ObszarBiznesowy</attribute>
+        <attribute name="RuntimeName">ObszarBiznesowy</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{918ee930-47d9-404a-ac2e-6f2b5c98566a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>JednostkaMiaryP: String = N/A</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">JednostkaMiaryP</attribute>
+        <attribute name="RuntimeName">JednostkaMiaryP</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{92e4c56a-a18b-4f7f-918b-479d3dcae803}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">N/A</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment">Unikalna nazwa przeliczeniowej jednostki miary (np. TONY).</attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Unikalna nazwa przeliczeniowej jednostki miary (np. TONY).</attribute>
+            <attribute name="Tag">EcoModeler.OneLiner</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">'N/A'</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>Netto: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Netto</attribute>
+        <attribute name="RuntimeName">Netto</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{92ed9d25-2f5a-477b-bb0f-56a58b5f1f3a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>KodWaluty: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">KodWaluty</attribute>
+        <attribute name="RuntimeName">KodWaluty</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a2fa4851-93db-4f56-a89f-c8c01c243e0c}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">10</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>KodWalutyKP: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">KodWalutyKP</attribute>
+        <attribute name="RuntimeName">KodWalutyKP</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a2fa4851-93db-4f56-a89f-c8c01c243e0c}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">10</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>RodzajRoznicy: Integer = 0</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RodzajRoznicy</attribute>
+        <attribute name="RuntimeName">RodzajRoznicy</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ae473469-d6e0-4997-b845-44f297c926c4}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">0</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>TypKosztu: Integer = 0</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TypKosztu</attribute>
+        <attribute name="RuntimeName">TypKosztu</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b3997a3a-a2a0-44bb-9a98-5bc2d468e10b}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">0</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>RodzajPrzewazajacejUslugi: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RodzajPrzewazajacejUslugi</attribute>
+        <attribute name="RuntimeName">RodzajPrzewazajacejUslugi</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{c0b8403c-da14-4a37-8079-c0040145905b}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>KursWaluty: Decimal = 0</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">KursWaluty</attribute>
+        <attribute name="RuntimeName">KursWaluty</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{c17b1f47-59f0-47c5-aa9b-ca9b54cdb9d9}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">0</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>Ilosc: Decimal = 0</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Ilosc</attribute>
+        <attribute name="RuntimeName">Ilosc</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{dea748a0-77fc-4fdd-9826-893ac16d261c}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">0</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment">Ilość sprzedaży w jednostce naturalnej, np.: tony, ilosci jazd.</attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Ilość sprzedaży w jednostce naturalnej, np.: tony, ilosci jazd.</attribute>
+            <attribute name="Tag">EcoModeler.OneLiner</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>AmountType: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AmountType</attribute>
+        <attribute name="RuntimeName">AmountType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">c44d1537-c586-4079-b605-e513264ea96d</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if(self.Service.RealPrices-&gt;Includes(self)) then
+    'CR' 
+else
+    if(self.Service.RealCosts-&gt;Includes(self)) then 
+        if(self.AcceptedInvoiceCost.isNull) then 
+            'KW' 
+        else
+            'KR'
+        endif
+    else
+        if(self.Service.OrderPrices-&gt;Includes(self)) then
+            'CP' 
+        else
+            if(self.Service.OrderCosts-&gt;Includes(self)) then
+                'KP' 
+            else
+                '??'
+            endif
+        endif
+    endif
+endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>NavisionAmountNavisionService_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NavisionAmountNavisionService_</attribute>
+        <attribute name="RuntimeName">NavisionAmountNavisionService_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NavisionAmountNavisionService_</attribute>
+        <attribute name="id">{266a0cb7-22b0-4218-9045-15d0d3d514ab}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmountNavisionService</attribute>
+            <attribute name="RuntimeName">NavisionAmountNavisionService</attribute>
+            <attribute name="EffectiveName">NavisionAmountNavisionService</attribute>
+            <attribute name="id">{16bb97c6-54fa-4228-99c0-3167d7bf4585}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionservice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>Service (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Service</attribute>
+            <attribute name="RuntimeName">Service</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Service</attribute>
+            <attribute name="id">{5b1c830b-012f-4186-9fb4-bf0f672a6c6f}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionservice">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents service from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionService</attribute>
+                <attribute name="RuntimeName">NavisionService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{91f992bc-82b2-475b-8c0b-e7b049133177}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>
+<DIV>Points to an object containing this cost's data in Navision buffer.</DIV></DIV>]]></doc>
+        <modlrstring>NavisionKP (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NavisionKP</attribute>
+        <attribute name="RuntimeName">NavisionKP</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NavisionKP</attribute>
+        <attribute name="id">{1c7ee5bb-7230-454b-920a-4ce7b1bd357d}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmountExecutedItemCost</attribute>
+            <attribute name="RuntimeName">NavisionAmountExecutedItemCost</attribute>
+            <attribute name="EffectiveName">NavisionAmountExecutedItemCost</attribute>
+            <attribute name="id">{1d3833c3-f32c-484e-b243-eb57fce35709}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditemcost">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>ExecutedItemCost (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedItemCost</attribute>
+            <attribute name="RuntimeName">ExecutedItemCost</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExecutedItemCost</attribute>
+            <attribute name="id">{2f831760-2aed-4203-b110-9b32b0644d02}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditemcost">
+                <doc><![CDATA[<DIV>Class representing a calculated expected cost of an executed item.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItemCost</attribute>
+                <attribute name="RuntimeName">ExecutedItemCost</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{289888f9-9543-4f75-bb23-d2f0ac89669f}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">NavisionAmount</attribute>
+            <attribute name="Tag">Eco.FormerNames</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>RealPrices (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealPrices</attribute>
+        <attribute name="RuntimeName">RealPrices</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">RealPrices</attribute>
+        <attribute name="id">{75356bca-9bb3-48b9-9b8c-99c90e73f517}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RealPriceService</attribute>
+            <attribute name="RuntimeName">RealPriceService</attribute>
+            <attribute name="EffectiveName">RealPriceService</attribute>
+            <attribute name="id">{20714a8f-01ce-47a4-add9-9d5f01941911}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionservice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>RealPriceService_ (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RealPriceService_</attribute>
+            <attribute name="RuntimeName">RealPriceService_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">RealPriceService_</attribute>
+            <attribute name="id">{9407be4f-635d-45f8-8075-c3d88e7e79f4}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionservice">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents service from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionService</attribute>
+                <attribute name="RuntimeName">NavisionService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{91f992bc-82b2-475b-8c0b-e7b049133177}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>RealCosts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealCosts</attribute>
+        <attribute name="RuntimeName">RealCosts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">RealCosts</attribute>
+        <attribute name="id">{ecc9fbc4-4c06-4ed4-bb54-9ac8cbad023f}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RealCostService</attribute>
+            <attribute name="RuntimeName">RealCostService</attribute>
+            <attribute name="EffectiveName">RealCostService</attribute>
+            <attribute name="id">{30cc9bea-b10c-4445-ab11-6487a1807679}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionservice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>RealCostService_ (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RealCostService_</attribute>
+            <attribute name="RuntimeName">RealCostService_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">RealCostService_</attribute>
+            <attribute name="id">{0ddd24fe-2ec2-443b-abc3-7a1fa8750e8c}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionservice">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents service from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionService</attribute>
+                <attribute name="RuntimeName">NavisionService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{91f992bc-82b2-475b-8c0b-e7b049133177}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>PlannedPrices (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PlannedPrices</attribute>
+        <attribute name="RuntimeName">PlannedPrices</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PlannedPrices</attribute>
+        <attribute name="id">{5c588291-9186-4178-88a7-8749d92d7ba4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PlannedPriceService</attribute>
+            <attribute name="RuntimeName">PlannedPriceService</attribute>
+            <attribute name="EffectiveName">PlannedPriceService</attribute>
+            <attribute name="id">{31111570-237b-4fc7-881d-5b9762210608}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionservice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>PlannedPriceService_ (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PlannedPriceService_</attribute>
+            <attribute name="RuntimeName">PlannedPriceService_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PlannedPriceService_</attribute>
+            <attribute name="id">{d8ca9dfa-f335-4610-9df3-47bd410dd9a6}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionservice">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents service from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionService</attribute>
+                <attribute name="RuntimeName">NavisionService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{91f992bc-82b2-475b-8c0b-e7b049133177}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>Amounts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Amounts</attribute>
+        <attribute name="RuntimeName">Amounts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Amounts</attribute>
+        <attribute name="id">{282ff5b6-fbee-4b47-b182-6d00f15f7456}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmountNavisionUnit</attribute>
+            <attribute name="RuntimeName">NavisionAmountNavisionUnit</attribute>
+            <attribute name="EffectiveName">NavisionAmountNavisionUnit</attribute>
+            <attribute name="id">{478a4d19-2bb5-4739-98f1-34648f5c29ac}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionunit">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>Unit (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Unit</attribute>
+            <attribute name="RuntimeName">Unit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Unit</attribute>
+            <attribute name="id">{d2c0e522-b39c-453e-aa92-e3c156a20f6c}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionunit">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents&nbsp;system&nbsp;company unit&nbsp;from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionUnit</attribute>
+                <attribute name="RuntimeName">NavisionUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{fa7ef786-6984-470a-b509-682e28075e49}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>PlannedCosts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PlannedCosts</attribute>
+        <attribute name="RuntimeName">PlannedCosts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PlannedCosts</attribute>
+        <attribute name="id">{02c61fa1-9cce-4456-a9f4-902aab10c9a7}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PlannedCostService</attribute>
+            <attribute name="RuntimeName">PlannedCostService</attribute>
+            <attribute name="EffectiveName">PlannedCostService</attribute>
+            <attribute name="id">{511e4b31-127e-45cc-b25c-8b7f183f08d0}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionservice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>PlannedCostService_ (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PlannedCostService_</attribute>
+            <attribute name="RuntimeName">PlannedCostService_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PlannedCostService_</attribute>
+            <attribute name="id">{fd09f2f0-f5c5-4279-ad76-117ab4f2ae0e}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionservice">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents service from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionService</attribute>
+                <attribute name="RuntimeName">NavisionService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{91f992bc-82b2-475b-8c0b-e7b049133177}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>Points to an object of a <SPAN style="FONT-STYLE: italic">NavisionAmount </SPAN><SPAN>class in which information about this connection are pushed to Navision buffer.</SPAN></DIV>]]></doc>
+        <modlrstring>NavisionAmount (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NavisionAmount</attribute>
+        <attribute name="RuntimeName">NavisionAmount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NavisionAmount</attribute>
+        <attribute name="id">{0d51ca87-2b25-4365-b78f-95b4bb2e7c9f}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCostNavisionAmount</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCostNavisionAmount</attribute>
+            <attribute name="EffectiveName">AcceptedInvoiceCostNavisionAmount</attribute>
+            <attribute name="id">{58f7cde0-1b8c-4a38-9fce-9f46bf13f368}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="acceptedinvoicecost">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>AcceptedInvoiceCost (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCost</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCost</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">AcceptedInvoiceCost</attribute>
+            <attribute name="id">{61342614-41e2-4528-9a3b-c66fde727040}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="acceptedinvoicecost">
+                <doc><![CDATA[<DIV>Class representing an object which is created when an object of&nbsp;<A id=D#ininvoiceamount.htm title=InInvoiceAmount href="http://localhost/ininvoiceamount.htm"><SPAN style="FONT-STYLE: italic">InInvoiceAmount</SPAN></A><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class is connected&nbsp;to an object of&nbsp;<A id=D#executeditemcost.htm title=ExecutedItemCost href="http://localhost/executeditemcost.htm"><SPAN style="FONT-STYLE: italic">ExecutedItemCost</SPAN></A></SPAN><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class. It happens when a real cost from incoming invoice is connected to an expected cost from a customer's order.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AcceptedInvoiceCost</attribute>
+                <attribute name="RuntimeName">AcceptedInvoiceCost</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>OrderCosts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderCosts</attribute>
+        <attribute name="RuntimeName">OrderCosts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderCosts</attribute>
+        <attribute name="id">{8b893380-f698-42ad-a7b4-e41a286ed340}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderCostService</attribute>
+            <attribute name="RuntimeName">OrderCostService</attribute>
+            <attribute name="EffectiveName">OrderCostService</attribute>
+            <attribute name="id">{5957aa50-68b3-4fcc-9872-f096efa74a0d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionservice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>OrderCostService_ (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderCostService_</attribute>
+            <attribute name="RuntimeName">OrderCostService_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OrderCostService_</attribute>
+            <attribute name="id">{94dec588-2596-4266-b6af-742e1198c335}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionservice">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents service from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionService</attribute>
+                <attribute name="RuntimeName">NavisionService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{91f992bc-82b2-475b-8c0b-e7b049133177}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>KRAmounts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">KRAmounts</attribute>
+        <attribute name="RuntimeName">KRAmounts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">KRAmounts</attribute>
+        <attribute name="id">{561924db-0782-4779-b308-42215d602517}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmountNavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmountNavisionAmount</attribute>
+            <attribute name="EffectiveName">NavisionAmountNavisionAmount</attribute>
+            <attribute name="id">{7a198135-c1a1-4c63-abd4-629d5125f955}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionamount">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>KPAmount (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">KPAmount</attribute>
+            <attribute name="RuntimeName">KPAmount</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">KPAmount</attribute>
+            <attribute name="id">{ee5fcd48-dd55-42cf-a256-a4efd31f0aaf}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionamount">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionAmount</attribute>
+                <attribute name="RuntimeName">NavisionAmount</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>KPAmount (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">KPAmount</attribute>
+        <attribute name="RuntimeName">KPAmount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">KPAmount</attribute>
+        <attribute name="id">{ee5fcd48-dd55-42cf-a256-a4efd31f0aaf}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmountNavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmountNavisionAmount</attribute>
+            <attribute name="EffectiveName">NavisionAmountNavisionAmount</attribute>
+            <attribute name="id">{7a198135-c1a1-4c63-abd4-629d5125f955}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionamount">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>KRAmounts (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">KRAmounts</attribute>
+            <attribute name="RuntimeName">KRAmounts</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">KRAmounts</attribute>
+            <attribute name="id">{561924db-0782-4779-b308-42215d602517}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionamount">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionAmount</attribute>
+                <attribute name="RuntimeName">NavisionAmount</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>
+<DIV>Points to an object containing this price's data in Navision buffer.&nbsp;</DIV></DIV>]]></doc>
+        <modlrstring>NavisionCP (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NavisionCP</attribute>
+        <attribute name="RuntimeName">NavisionCP</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NavisionCP</attribute>
+        <attribute name="id">{1572ac58-2539-473f-bcb2-1dbfd53a1aea}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmountExecutedItemPrice</attribute>
+            <attribute name="RuntimeName">NavisionAmountExecutedItemPrice</attribute>
+            <attribute name="EffectiveName">NavisionAmountExecutedItemPrice</attribute>
+            <attribute name="id">{86dac0aa-67e9-4080-ad65-679f61043bad}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditemprice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>ExecutedItemPrice (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedItemPrice</attribute>
+            <attribute name="RuntimeName">ExecutedItemPrice</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExecutedItemPrice</attribute>
+            <attribute name="id">{950123c3-3d07-4461-9a5d-03dde2ef6cde}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditemprice">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing a calculated&nbsp;price of an executed item.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItemPrice</attribute>
+                <attribute name="RuntimeName">ExecutedItemPrice</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a9019d5e-de2d-4a96-879b-6e30c21cd5b3}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">NavisionAmount</attribute>
+            <attribute name="Tag">Eco.FormerNames</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>Amounts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Amounts</attribute>
+        <attribute name="RuntimeName">Amounts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Amounts</attribute>
+        <attribute name="id">{7a13eae2-ad13-44c4-847f-9e6262431833}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmountNavisionCompany</attribute>
+            <attribute name="RuntimeName">NavisionAmountNavisionCompany</attribute>
+            <attribute name="EffectiveName">NavisionAmountNavisionCompany</attribute>
+            <attribute name="id">{b629aa2a-100c-4b2a-a711-7cc7c572ef76}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisioncompany">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>Company (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Company</attribute>
+            <attribute name="RuntimeName">Company</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Company</attribute>
+            <attribute name="id">{d5b950a1-abd7-4a44-8cbe-ada42ab5dd22}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisioncompany">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents external company from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionCompany</attribute>
+                <attribute name="RuntimeName">NavisionCompany</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{6aec28d6-8be5-4440-9961-88b415bab839}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>OrderPrices (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderPrices</attribute>
+        <attribute name="RuntimeName">OrderPrices</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderPrices</attribute>
+        <attribute name="id">{bb2f1490-d500-430f-97a8-556650604f43}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderPriceService</attribute>
+            <attribute name="RuntimeName">OrderPriceService</attribute>
+            <attribute name="EffectiveName">OrderPriceService</attribute>
+            <attribute name="id">{dcf51ee9-95ed-43e1-88d1-c93778c7af88}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionservice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>OrderPriceService_ (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderPriceService_</attribute>
+            <attribute name="RuntimeName">OrderPriceService_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OrderPriceService_</attribute>
+            <attribute name="id">{42b7679d-345f-4a6a-97ab-4c85bb3cd8fd}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionservice">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents service from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionService</attribute>
+                <attribute name="RuntimeName">NavisionService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{91f992bc-82b2-475b-8c0b-e7b049133177}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp; </DIV>]]></doc>
+        <modlrstring>Amounts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Amounts</attribute>
+        <attribute name="RuntimeName">Amounts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Amounts</attribute>
+        <attribute name="id">{0a74d88a-6044-4608-ad9f-43825113353b}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionBufferNavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionBufferNavisionAmount</attribute>
+            <attribute name="EffectiveName">NavisionBufferNavisionAmount</attribute>
+            <attribute name="id">{e2aca9f0-7912-4d71-95e4-0d9fe8e8c0f5}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisioninvoice">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>Invoice (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Invoice</attribute>
+            <attribute name="RuntimeName">Invoice</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Invoice</attribute>
+            <attribute name="id">{af2dba86-7862-44e1-847b-abab2f938980}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisioninvoice">
+                <doc><![CDATA[<DIV>Represents invoice document from the Navision buffer. </DIV>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-WEIGHT: bold">For more detail see "Navision buffer documentation". </SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionInvoice</attribute>
+                <attribute name="RuntimeName">NavisionInvoice</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{7d3a84dd-ef9d-4074-aae0-471ae5f599fc}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>Amounts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Amounts</attribute>
+        <attribute name="RuntimeName">Amounts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Amounts</attribute>
+        <attribute name="id">{b8ca632d-b2aa-407d-bd1d-b3d4be89cb0a}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionInvoiceItemNavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionInvoiceItemNavisionAmount</attribute>
+            <attribute name="EffectiveName">NavisionInvoiceItemNavisionAmount</attribute>
+            <attribute name="id">{e30fea69-7577-4124-afe8-bd0b16d2deeb}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisioninvoiceitem">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>InvoiceItem (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InvoiceItem</attribute>
+            <attribute name="RuntimeName">InvoiceItem</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">InvoiceItem</attribute>
+            <attribute name="id">{7772e38e-6812-48c6-a883-91c448b1c3da}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisioninvoiceitem">
+                <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Represents invoice item&nbsp;from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionInvoiceItem</attribute>
+                <attribute name="RuntimeName">NavisionInvoiceItem</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c29cde67-673c-4b26-a82b-a4894bb0c4bf}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="navisionamount">
+        <doc><![CDATA[<DIV>Points to a price in Navision buffer.</DIV>]]></doc>
+        <modlrstring>NavisionCR (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NavisionCR</attribute>
+        <attribute name="RuntimeName">NavisionCR</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NavisionCR</attribute>
+        <attribute name="id">{2dcba57b-443a-4671-9f3a-879f0f2879c9}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceAmountNavisionAmount</attribute>
+            <attribute name="RuntimeName">OutInvoiceAmountNavisionAmount</attribute>
+            <attribute name="EffectiveName">OutInvoiceAmountNavisionAmount</attribute>
+            <attribute name="id">{f78b9d7e-6bae-4523-b98a-a2aa9c3241a2}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navisionamount">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoiceamount">
+            <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+            <modlrstring>OutInvoiceAmount (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceAmount</attribute>
+            <attribute name="RuntimeName">OutInvoiceAmount</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OutInvoiceAmount</attribute>
+            <attribute name="id">{eef906c8-930b-47f1-a1a1-203bd059c04c}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoiceamount">
+                <doc><![CDATA[<DIV>Class representing an invoiced price.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceAmount</attribute>
+                <attribute name="RuntimeName">OutInvoiceAmount</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{867dc59b-cc6e-45ea-a20c-1489995f8ffa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">NavisionAmount</attribute>
+            <attribute name="Tag">Eco.FormerNames</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="navisionamount">
+        <attribute name="RenderedWidth">171</attribute>
+        <attribute name="id">f3afb7ef-541e-4266-a646-f8947b9540de</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NavisionAmount</attribute>
+        <attribute name="RenderedHeight">228</attribute>
+        <attribute name="x">368</attribute>
+        <attribute name="y">1088</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.01_navision">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4eb5d6cd-7264-4dd2-8d3d-20e57027436d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4eb5d6cd-7264-4dd2-8d3d-20e57027436d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.01 Navision</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.01 Navision</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="navisionamount">
+        <attribute name="RenderedWidth">171</attribute>
+        <attribute name="id">a7c1b42a-a823-4c05-b827-e3853bea383e</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NavisionAmount</attribute>
+        <attribute name="RenderedHeight">228</attribute>
+        <attribute name="x">1160</attribute>
+        <attribute name="y">936</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.03_service_tags">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7b91939a-240f-49be-9e87-a7aec43c70b5.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7b91939a-240f-49be-9e87-a7aec43c70b5</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.03 Service Tags</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.03 Service Tags</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

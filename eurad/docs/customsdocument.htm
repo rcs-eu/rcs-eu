@@ -1,0 +1,139 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CustomsDocument in package EuradSystem</h1>
+    <p><DIV>Class representing a customs document.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Akcyza: Decimal</td>
+        <td class="style1"><DIV>Value of excise tax.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoGrossWeight: Decimal</td>
+        <td class="style1"><DIV>Gross weight of cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoNotEu: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo is not from European Union.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsCost: Decimal</td>
+        <td class="style1"><DIV>Value of customs cost.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsCostSum: Decimal</td>
+        <td class="style1"><DIV>Sum of customs costs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsPayDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Date of payment.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsPayDeadline: DateTime</td>
+        <td class="style1"><DIV>Payment deadline.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DateOfAplication: DateTime</td>
+        <td class="style1"><DIV>Date of declaration to a customs office.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DateOfNotification: DateTime</td>
+        <td class="style1"><DIV>Date of notification&nbsp;to a&nbsp;customs office.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocNr: String</td>
+        <td class="style1"><DIV>Customs document's number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Embargo: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo undergoes permissions for embargo.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LimitedImpExp: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo undergoes permissions for limited import/export.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NeedCustomsCare: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo undergoes customs inspection.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OplataManipulacyjna: Decimal</td>
+        <td class="style1"><DIV>Value of handling fee.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayByClient: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that all customs costs are paid directly&nbsp;by a customer.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SadBisCount: Integer = 0</td>
+        <td class="style1"><DIV>Number of SAD BIS documents.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Vat: Decimal</td>
+        <td class="style1"><DIV>Value of VAT.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Cn : <a href="nhm.htm">nhm</a> 1</td>
+        <td class="style1"><DIV>Points to an object which contains Cn number data.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomDocType : <a href="customsdoctype.htm">customsdoctype</a> 1</td>
+        <td class="style1"><DIV>Type of customs document.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsCostCurr : <a href="curr.htm">curr</a> 1</td>
+        <td class="style1"><DIV>Currency of all customs costs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsInsuranceDoc : <a href="customsinsurancedoc.htm">customsinsurancedoc</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object which contains data about customs insurance.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsProcedure : <a href="customsprocedure.htm">customsprocedure</a> 0..1</td>
+        <td class="style1"><DIV>Customs procedure.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HighRiskCargo : <a href="highriskcargo.htm">highriskcargo</a> 0..*</td>
+        <td class="style1"><DIV>A list of high risk cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PreparedBy : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>
+<DIV>A user who registers executed item of customs type.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceAcCorrectionCustomsDocument_ : <a href="serviceaccorrection.htm">serviceaccorrection</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceAcDocumentCustomDocument_ : <a href="serviceacdocument.htm">serviceacdocument</a> 0..1</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SubmitBy : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TranzitInfo : <a href="customsdoctranzit.htm">customsdoctranzit</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object which contains transit data.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.04_executed_ac_servce.htm">07.04 Executed AC Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

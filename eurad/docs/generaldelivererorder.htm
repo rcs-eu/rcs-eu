@@ -1,0 +1,92 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">GeneralDelivererOrder in package EuradSystem</h1>
+    <p><DIV>Class representing a general order to a deliverer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ValidFrom: DateTime</td>
+        <td class="style1"><DIV>Date from which this order is valid.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidTill: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Date&nbsp;to which this order is valid.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoAccept()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoClose()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoReject(reason:String)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetPossibleInternalCustomerOrders():IList&lt;GeneralCustomerOrder&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CostSourceAbstr : <a href="costsourceabstr.htm">costsourceabstr</a> 0..*</td>
+        <td class="style1"><DIV>A list of cost's sources referencing an internal offer and&nbsp;indicating which order's services should be created in an internal customer order created upon this deliverer order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrder : <a href="generalcustomerorder.htm">generalcustomerorder</a> 0..1</td>
+        <td class="style1"><DIV>Points to a general customer order upon which this order was created.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererOrderGeneralDelivererOrder_ : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalCustomerOrder : <a href="generalcustomerorder.htm">generalcustomerorder</a> 0..1</td>
+        <td class="style1"><DIV>Points to a general order from an internal&nbsp;customer which was created upon this order. Used for internal document workflow.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageDelOrderGenAcceptedGeneralDelivererOrder_ : <a href="messagedelordergenaccepted.htm">messagedelordergenaccepted</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageDelOrderGenInternalNewGeneralDelivererOrder_ : <a href="messagedelordergeninternalnew.htm">messagedelordergeninternalnew</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageDelOrderGenRejectedGeneralDelivererOrder_ : <a href="messagedelordergenrejected.htm">messagedelordergenrejected</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SingleOrders : <a href="singledelivererorder.htm">singledelivererorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of single orders for a deliverer.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

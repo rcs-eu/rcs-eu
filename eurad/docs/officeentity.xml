@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="officeentity">
+    <doc><![CDATA[<DIV>Class representing a document in a system.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">OfficeEntity</attribute>
+    <attribute name="RuntimeName">OfficeEntity</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces">Rcs.Core.Eco.IEcoOnSave</attribute>
+    <attribute name="id">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractroot">
+        <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractRoot</attribute>
+        <attribute name="RuntimeName">AbstractRoot</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="executeditem">
+        <doc><![CDATA[<DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExecutedItem</attribute>
+        <attribute name="RuntimeName">ExecutedItem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces">IEcoOnSave</attribute>
+        <attribute name="id">{78395a97-455d-4f97-a366-8607343fd841}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="officeentityautonum">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing a autonumerated document in a system, e.g. offer, order, invoice etc.</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OfficeEntityAutoNum</attribute>
+        <attribute name="RuntimeName">OfficeEntityAutoNum</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces">IAutoNumGeneratorProvider</attribute>
+        <attribute name="id">{f876b969-db95-4873-bad5-c76e1b97015d}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">Children</attribute>
+        <attribute name="Tag">Eco.TableMapping</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived.</DIV>]]></doc>
+        <modlrstring>BelongsAlsoToStr: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">BelongsAlsoToStr</attribute>
+        <attribute name="RuntimeName">BelongsAlsoToStr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{1b762470-8800-4a06-bca0-746c205278ad}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">500</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.BelongsAlsoTo.Identifier-&gt;asSeparatedList(';')</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>OnSave()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OnSave</attribute>
+        <attribute name="RuntimeName">OnSave</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b9f95bca-99a9-4eed-8f3c-3644b2ea022a}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">True</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method.</DIV></DIV>]]></doc>
+        <modlrstring>CopyFrom(officeEntity:OfficeEntity; deepCopy:Boolean)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CopyFrom</attribute>
+        <attribute name="RuntimeName">CopyFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{bdeed8fa-53ad-4e61-add8-998a982a63df}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">True</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">officeEntity</attribute>
+            <attribute name="RuntimeName">officeEntity</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfficeEntity</attribute>
+                <attribute name="RuntimeName">OfficeEntity</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">deepCopy</attribute>
+            <attribute name="RuntimeName">deepCopy</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="officeentity">
+        <doc><![CDATA[<DIV>List of documents which belongs to this unit</DIV>]]></doc>
+        <modlrstring>Documents (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Documents</attribute>
+        <attribute name="RuntimeName">Documents</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Documents</attribute>
+        <attribute name="id">{4fa01882-8908-481b-a0db-af8383042099}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfficeEntitySysCompanyUnit</attribute>
+            <attribute name="RuntimeName">OfficeEntitySysCompanyUnit</attribute>
+            <attribute name="EffectiveName">OfficeEntitySysCompanyUnit</attribute>
+            <attribute name="id">{11a7fe76-94b9-43ff-8a7d-0b00d48736e3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="officeentity">
+            <doc><![CDATA[<DIV>Class representing a document in a system.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfficeEntity</attribute>
+            <attribute name="RuntimeName">OfficeEntity</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces">Rcs.Core.Eco.IEcoOnSave</attribute>
+            <attribute name="id">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="syscompanyunit">
+            <doc><![CDATA[<DIV>Points to an internal company unit to which this document belongs.</DIV>]]></doc>
+            <modlrstring>SysCompanyUnit (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysCompanyUnit</attribute>
+            <attribute name="RuntimeName">SysCompanyUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysCompanyUnit</attribute>
+            <attribute name="id">{be56c9c6-445f-46d3-9bfb-c9263fd8a8ed}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="syscompanyunit">
+                <doc><![CDATA[<DIV><SUMMARY>Class defining companies using the system </SUMMARY></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{ad158864-18dc-4bf0-8046-3527ce03f54a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="officeentity">
+        <doc><![CDATA[<DIV>Document like: customer offer, customer order etc.</DIV>]]></doc>
+        <modlrstring>Document (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Document</attribute>
+        <attribute name="RuntimeName">Document</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Document</attribute>
+        <attribute name="id">{5c82c3dc-6253-4e17-b0b0-465f58b287e2}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CompanyLastDocAbstractBusiness</attribute>
+            <attribute name="RuntimeName">CompanyLastDocAbstractBusiness</attribute>
+            <attribute name="EffectiveName">CompanyLastDocAbstractBusiness</attribute>
+            <attribute name="id">{de12ea75-92df-46be-a51e-7bf2d6efccc3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="officeentity">
+            <doc><![CDATA[<DIV>Class representing a document in a system.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfficeEntity</attribute>
+            <attribute name="RuntimeName">OfficeEntity</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces">Rcs.Core.Eco.IEcoOnSave</attribute>
+            <attribute name="id">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="lastdocumentholder">
+            <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+            <modlrstring>CompanyLastDocAbstractBusiness_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CompanyLastDocAbstractBusiness_</attribute>
+            <attribute name="RuntimeName">CompanyLastDocAbstractBusiness_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CompanyLastDocAbstractBusiness_</attribute>
+            <attribute name="id">{ee3a40d7-35f5-4270-82b7-a447a5672cf5}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="lastdocumentholder">
+                <doc><![CDATA[<DIV>Class representing a holder which points to a document which was last prepared for <SPAN style="FONT-STYLE: italic">Company</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">LastDocumentHolder</attribute>
+                <attribute name="RuntimeName">LastDocumentHolder</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{b64c6583-9dc4-4354-97df-ae49952353c4}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="officeentity">
+        <doc><![CDATA[<DIV>Not in use.</DIV>]]></doc>
+        <modlrstring>AddDocuments (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AddDocuments</attribute>
+        <attribute name="RuntimeName">AddDocuments</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AddDocuments</attribute>
+        <attribute name="id">{36baa629-ddbe-4eb5-b7c4-30dbce8c3a72}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AddDocsInSysCompUnits</attribute>
+            <attribute name="RuntimeName">AddDocsInSysCompUnits</attribute>
+            <attribute name="EffectiveName">AddDocsInSysCompUnits</attribute>
+            <attribute name="id">{ea59c506-a113-41dc-b300-b4c0754ce9ee}</attribute>
+            <link name="Class">
+              <object type="Class" href="adddocsinsyscompunits">
+                <doc><![CDATA[<DIV>Class representing an object which is created when an object of&nbsp;<SPAN style="FONT-STYLE: italic">SysCompanyUnit</SPAN>&nbsp;class is connected&nbsp;to an object of&nbsp;<SPAN style="FONT-STYLE: italic">OfficeEntity</SPAN>&nbsp;class. It happens when a&nbsp;documents&nbsp;have more than one responsible internal company&nbsp;units.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AddDocsInSysCompUnits</attribute>
+                <attribute name="RuntimeName">AddDocsInSysCompUnits</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{20e327fb-1d2b-4489-ad34-56d033b55dc5}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="officeentity">
+            <doc><![CDATA[<DIV>Class representing a document in a system.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfficeEntity</attribute>
+            <attribute name="RuntimeName">OfficeEntity</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces">Rcs.Core.Eco.IEcoOnSave</attribute>
+            <attribute name="id">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="syscompanyunit">
+            <doc><![CDATA[<DIV>A list of additional internal company units to which this document also can belong.</DIV>]]></doc>
+            <modlrstring>BelongsAlsoTo (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BelongsAlsoTo</attribute>
+            <attribute name="RuntimeName">BelongsAlsoTo</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">BelongsAlsoTo</attribute>
+            <attribute name="id">{f7eb89bd-9cd0-4462-a445-6c1f7649c50c}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="syscompanyunit">
+                <doc><![CDATA[<DIV><SUMMARY>Class defining companies using the system </SUMMARY></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{ad158864-18dc-4bf0-8046-3527ce03f54a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="officeentity">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>OfficeEntitysSysCompanyUnits (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">OfficeEntitysSysCompanyUnits</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OfficeEntitysSysCompanyUnits</attribute>
+        <attribute name="id">4afa18a4-d6f8-4bf5-a688-9758fefc9aef</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SysCompanyUnitSysCompanyUnitsOfficeEntityOfficeEntitysSysCompanyUnits</attribute>
+            <attribute name="EffectiveName">SysCompanyUnitSysCompanyUnitsOfficeEntityOfficeEntitysSysCompanyUnits</attribute>
+            <attribute name="id">04b5e493-5fbd-45d2-8732-ac05aa3f51dd</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="officeentity">
+            <doc><![CDATA[<DIV>Class representing a document in a system.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfficeEntity</attribute>
+            <attribute name="RuntimeName">OfficeEntity</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces">Rcs.Core.Eco.IEcoOnSave</attribute>
+            <attribute name="id">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="syscompanyunit">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>SysCompanyUnits (1..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SysCompanyUnits</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysCompanyUnits</attribute>
+            <attribute name="id">a48b5663-4757-48e2-895a-408c877689ea</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="syscompanyunit">
+                <doc><![CDATA[<DIV><SUMMARY>Class defining companies using the system </SUMMARY></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{ad158864-18dc-4bf0-8046-3527ce03f54a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">116e3b28-442b-44c0-89d2-974d46ffd2da</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">fd5f03e8-8c1a-48f4-9da1-541f55c20ad2</attribute>
+        <attribute name="x">-16</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">37e6eb1e-b70d-40e2-9792-7b6a5464e244</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">dc093358-d9a4-4dad-90b9-c9defec96df3</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="officeentity">
+        <attribute name="RenderedWidth">168</attribute>
+        <attribute name="id">4f436ada-d1cb-47f9-9f4b-307d9d14f74c</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OfficeEntity</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">928</attribute>
+        <attribute name="y">128</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_05.00_crm">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3df18cbe-9f87-4946-9713-1aeab10476a9.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3df18cbe-9f87-4946-9713-1aeab10476a9</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">05.00 CRM</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">05.00 CRM</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="officeentity">
+        <attribute name="RenderedWidth">168</attribute>
+        <attribute name="id">244cea9d-4f18-477f-864c-3790ceb3ff22</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OfficeEntity</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">640</attribute>
+        <attribute name="y">576</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.01_commom_2">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3167f6ce-199f-4838-8d4d-015218da863a.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3167f6ce-199f-4838-8d4d-015218da863a</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.01 Commom 2</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.01 Commom 2</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="officeentity">
+        <attribute name="RenderedWidth">168</attribute>
+        <attribute name="id">5f2485f5-819b-49c1-8d0f-571c8b92e671</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OfficeEntity</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">792</attribute>
+        <attribute name="y">112</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_00.00_root">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/5fb69212-5f28-4b12-a6b2-4319787c3b8b.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">5fb69212-5f28-4b12-a6b2-4319787c3b8b</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">00.00 Root</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">00.00 Root</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="officeentity">
+        <attribute name="RenderedWidth">92</attribute>
+        <attribute name="id">d062e8a3-dbbd-417e-8874-b8a5579ece6b</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OfficeEntity</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">440</attribute>
+        <attribute name="y">96</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_11.00_deliverer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/79a39408-8580-44c8-ba52-0b554ee17b3c.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">79a39408-8580-44c8-ba52-0b554ee17b3c</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">11.00 Deliverer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">11.00 Deliverer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="officeentity">
+        <attribute name="RenderedWidth">168</attribute>
+        <attribute name="id">95a9c8fd-aa99-4321-9b8e-102b23be3c6d</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OfficeEntity</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">128</attribute>
+        <attribute name="y">24</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{07193305-fbf8-4d45-814e-82cebe218c3d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.04_autoinc">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7e1b4a8f-ff60-42ad-aa5d-d2640ddee810.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7e1b4a8f-ff60-42ad-aa5d-d2640ddee810</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.04 AutoInc</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.04 AutoInc</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

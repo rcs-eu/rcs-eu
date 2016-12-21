@@ -1,0 +1,91 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">ExecItemShip in package EuradSystem</h1>
+    <p><DIV>
+<DIV>Class representing an executed item of&nbsp;ship&nbsp;type which can be registered in a customer order.</DIV></DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DispatchDate: DateTime</td>
+        <td class="style1"><DIV>Dispatch date of transport.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClearKnownQuantities()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateInvoiceSpecItem():SpecItemInInv</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns an invoice's specification item of&nbsp;Ship type created upon this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine1():String</td>
+        <td class="style1"><DIV>Method. Returns ship's name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine2():String</td>
+        <td class="style1"><DIV>Method. Returns dispatch date as a string.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine3():String</td>
+        <td class="style1"><DIV>Method. Returns NHM code of transported cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine4():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns a real weight as a string.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine5():String</td>
+        <td class="style1"><DIV>Method. Returns transport dispatch harbour as a string.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine6():String</td>
+        <td class="style1"><DIV>Method. Returns transport destination harbour as a string.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOffersToConnect():IObjectList</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns a list of offers suitable for this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOrderedServicesToConnect():IDictionary&lt;OrderedService, CostGroup&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns a list of services from an order suitable for this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MeetsPriceCondition(priceCondition:PriceCodition):Boolean</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Method. Checks if data from&nbsp;</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Ship </SPAN><SPAN style="FONT-FAMILY: Verdana">meets all conditions from </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">priceCondition</SPAN><SPAN style="FONT-FAMILY: Verdana">. It is used to find a proper single price or cost&nbsp;for this executed item.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetKnownQuantities()</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Method. Sets quantity in a </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">QList</SPAN><SPAN style="FONT-FAMILY: Verdana">:</SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">- for PredefinedUnit.Ship it sets 1,</SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">- for PredefinedUnit.Jednostki it 1,</SPAN></DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">- for PredefinedUnit.Tone it sets real weight from </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana">Ship </SPAN><SPAN style="FONT-FAMILY: Verdana">oraz sum of weights from containers.</SPAN></DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Ship : <a href="ship.htm">ship</a> 1</td>
+        <td class="style1"><DIV>Points to a ship.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.03_executed_ship_transport.htm">07.03 Executed Ship Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

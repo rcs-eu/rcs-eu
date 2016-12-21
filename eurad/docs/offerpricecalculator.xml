@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="offerpricecalculator">
+    <doc><![CDATA[<DIV>Abstract class representing a calculator&nbsp;which is responsible for automatic calculation of <SPAN style="FONT-STYLE: italic">Price's </SPAN><SPAN>values.</SPAN></DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">OfferPriceCalculator</attribute>
+    <attribute name="RuntimeName">OfferPriceCalculator</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{6f26f3d7-8627-42f2-8dfa-a67d3ce5a080}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractroot">
+        <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractRoot</attribute>
+        <attribute name="RuntimeName">AbstractRoot</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="simpleofferpricecalculator">
+        <doc><![CDATA[<DIV>Transiant class for calculating prices</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SimpleOfferPriceCalculator</attribute>
+        <attribute name="RuntimeName">SimpleOfferPriceCalculator</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{12cf2d6c-6d6b-4ddb-a9ff-ab6d4b7447cf}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="advancedofferpricecalculator">
+        <doc><![CDATA[<DIV>Class representing an object which is used for automatic calculation of offered service's&nbsp;prices. It calculates prices for railway services having costs and conditions for price.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AdvancedOfferPriceCalculator</attribute>
+        <attribute name="RuntimeName">AdvancedOfferPriceCalculator</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{15ae8499-6ed2-4d02-8e97-bc8eb5d1fb9f}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>ObserverUpdate(value:AbstractRoot)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ObserverUpdate</attribute>
+        <attribute name="RuntimeName">ObserverUpdate</attribute>
+        <attribute name="Visibility">Protected</attribute>
+        <attribute name="id">{837eed48-1ff9-4549-ab92-2d25ba8a574b}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">value</attribute>
+            <attribute name="RuntimeName">value</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AbstractRoot</attribute>
+                <attribute name="RuntimeName">AbstractRoot</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>RecalculatePrice()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RecalculatePrice</attribute>
+        <attribute name="RuntimeName">RecalculatePrice</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a16dbd2c-e1a8-46ee-b590-a7236ab9ff57}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">True</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="offerpricecalculator">
+        <doc><![CDATA[<DIV>Points to an object which is responsible for automatic price calculation.</DIV>]]></doc>
+        <modlrstring>Calculator (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Calculator</attribute>
+        <attribute name="RuntimeName">Calculator</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Calculator</attribute>
+        <attribute name="id">{4a29ae38-297c-4a72-bb4c-129f8e793fe4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferedServicePriceOfferPriceCalculator</attribute>
+            <attribute name="RuntimeName">OfferedServicePriceOfferPriceCalculator</attribute>
+            <attribute name="EffectiveName">OfferedServicePriceOfferPriceCalculator</attribute>
+            <attribute name="id">{a9f95490-18cf-45b8-abc9-936a9ccdb9d8}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="offerpricecalculator">
+            <doc><![CDATA[<DIV>Abstract class representing a calculator&nbsp;which is responsible for automatic calculation of <SPAN style="FONT-STYLE: italic">Price's </SPAN><SPAN>values.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferPriceCalculator</attribute>
+            <attribute name="RuntimeName">OfferPriceCalculator</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{6f26f3d7-8627-42f2-8dfa-a67d3ce5a080}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredserviceprice">
+            <doc><![CDATA[<DIV>Points to a price to which this calculator is used.</DIV>]]></doc>
+            <modlrstring>Price (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Price</attribute>
+            <attribute name="RuntimeName">Price</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Price</attribute>
+            <attribute name="id">{7641a10e-5cce-492e-91d1-d42234d8032d}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredserviceprice">
+                <doc><![CDATA[<DIV>Class representing a&nbsp;price per unit.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedServicePrice</attribute>
+                <attribute name="RuntimeName">OfferedServicePrice</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{823d359b-1974-4c8a-a664-a9196eddedaa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">3b42adce-b50e-4417-8498-535f7dec30eb</attribute>
+        <attribute name="x">-24</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">44</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">True</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">e351dfea-1d62-4ce1-aa5c-d9f55516e0df</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">44</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="offerpricecalculator">
+        <attribute name="RenderedWidth">154</attribute>
+        <attribute name="id">d1fb53e2-709a-4ddf-8025-5a94e63b1c30</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OfferPriceCalculator</attribute>
+        <attribute name="RenderedHeight">54</attribute>
+        <attribute name="x">1048</attribute>
+        <attribute name="y">792</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{6f26f3d7-8627-42f2-8dfa-a67d3ce5a080}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.00_offers">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7a04f235-c98c-462a-89f5-4d1b18e61279.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7a04f235-c98c-462a-89f5-4d1b18e61279</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.00 Offers</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.00 Offers</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

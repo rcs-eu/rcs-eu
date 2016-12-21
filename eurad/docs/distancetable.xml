@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="distancetable">
+    <doc><![CDATA[<DIV>Represents a table of railway distances.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">DistanceTable</attribute>
+    <attribute name="RuntimeName">DistanceTable</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{29aceae6-c4fe-4178-a722-a7c8855fc55a}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">self.Name + ': ' + self.ValidFrom.formatDateTime('d') + ' ÷ ' + self.ValidTo.formatDateTime('d')</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>The last day of validity of this table.</DIV>]]></doc>
+        <modlrstring>ValidTo: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValidTo</attribute>
+        <attribute name="RuntimeName">ValidTo</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{11662b51-39c5-4540-82c9-c5443cb82787}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>The name of the table.</DIV>]]></doc>
+        <modlrstring>Name: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Name</attribute>
+        <attribute name="RuntimeName">Name</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{1513242a-cda3-46b6-987e-f94afe3369b2}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">15</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>GetDistance(from:Station; to:Station; out distance:Integer):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetDistance</attribute>
+        <attribute name="RuntimeName">GetDistance</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{70e88525-de55-45fb-b42b-2029476404cf}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">from</attribute>
+            <attribute name="RuntimeName">from</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Station</attribute>
+                <attribute name="RuntimeName">Station</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">to</attribute>
+            <attribute name="RuntimeName">to</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Station</attribute>
+                <attribute name="RuntimeName">Station</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">distance</attribute>
+            <attribute name="RuntimeName">distance</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Integer</attribute>
+                <attribute name="RuntimeName">Integer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>The first day of validity of this table.</DIV></DIV>]]></doc>
+        <modlrstring>ValidFrom: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValidFrom</attribute>
+        <attribute name="RuntimeName">ValidFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ecb0a56e-1d7c-4844-8c60-4b6b93faeec2}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="distancetable">
+        <doc><![CDATA[<DIV>Distance table where this value is valid</DIV>]]></doc>
+        <modlrstring>DistanceTable (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DistanceTable</attribute>
+        <attribute name="RuntimeName">DistanceTable</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">DistanceTable</attribute>
+        <attribute name="id">{981c6570-31ac-44ec-a7ee-d784e77e24d5}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StationsDistanceDistanceTable</attribute>
+            <attribute name="RuntimeName">StationsDistanceDistanceTable</attribute>
+            <attribute name="EffectiveName">StationsDistanceDistanceTable</attribute>
+            <attribute name="id">{13934da2-9e0a-40f0-a765-eee86e08fbaa}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="distancetable">
+            <doc><![CDATA[<DIV>Represents a table of railway distances.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistanceTable</attribute>
+            <attribute name="RuntimeName">DistanceTable</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{29aceae6-c4fe-4178-a722-a7c8855fc55a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="stationsdistance">
+            <doc><![CDATA[<DIV>A list of distances.</DIV>]]></doc>
+            <modlrstring>Distances (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Distances</attribute>
+            <attribute name="RuntimeName">Distances</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Distances</attribute>
+            <attribute name="id">{71ef2090-78f6-47f9-98ca-38fe6ef6943b}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="stationsdistance">
+                <doc><![CDATA[<DIV>Class representing distance between two stations</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">StationsDistance</attribute>
+                <attribute name="RuntimeName">StationsDistance</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0acadf8f-b27d-42b7-8cea-1153f516ec98}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="distancetable">
+        <doc><![CDATA[<DIV>Distance table on which this station appear</DIV>]]></doc>
+        <modlrstring>DistanceTables (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DistanceTables</attribute>
+        <attribute name="RuntimeName">DistanceTables</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">DistanceTables</attribute>
+        <attribute name="id">{d7f8b2d2-3d58-444a-a189-30313ff7d322}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StationDistanceTable</attribute>
+            <attribute name="RuntimeName">StationDistanceTable</attribute>
+            <attribute name="EffectiveName">StationDistanceTable</attribute>
+            <attribute name="id">{71b83ed1-24f3-41f8-9063-471d4be13df8}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="distancetable">
+            <doc><![CDATA[<DIV>Represents a table of railway distances.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistanceTable</attribute>
+            <attribute name="RuntimeName">DistanceTable</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{29aceae6-c4fe-4178-a722-a7c8855fc55a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="station">
+            <doc><![CDATA[<DIV>A list of railway stations.</DIV>]]></doc>
+            <modlrstring>Stations (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Stations</attribute>
+            <attribute name="RuntimeName">Stations</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Stations</attribute>
+            <attribute name="id">{241cd094-08c0-4622-b7fa-32fda7c916e4}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="station">
+                <doc><![CDATA[<DIV>Class representing railway station</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Station</attribute>
+                <attribute name="RuntimeName">Station</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0c5000a9-bdf0-495a-ac18-742c9212d199}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="distancetable">
+        <doc><![CDATA[<DIV>In which distance table</DIV>]]></doc>
+        <modlrstring>DistanceTable (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DistanceTable</attribute>
+        <attribute name="RuntimeName">DistanceTable</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">DistanceTable</attribute>
+        <attribute name="id">{959acf15-eb9c-48c4-8d96-32c6a3876424}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StationDistSearchingDistanceTable</attribute>
+            <attribute name="RuntimeName">StationDistSearchingDistanceTable</attribute>
+            <attribute name="EffectiveName">StationDistSearchingDistanceTable</attribute>
+            <attribute name="id">{7e775208-30fa-4042-998e-87d079319d7c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="distancetable">
+            <doc><![CDATA[<DIV>Represents a table of railway distances.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistanceTable</attribute>
+            <attribute name="RuntimeName">DistanceTable</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{29aceae6-c4fe-4178-a722-a7c8855fc55a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="stationdistsearching">
+            <doc><![CDATA[<DIV>One way asociation.</DIV>]]></doc>
+            <modlrstring>StationDistSearchingDistanceTable_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StationDistSearchingDistanceTable_</attribute>
+            <attribute name="RuntimeName">StationDistSearchingDistanceTable_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">StationDistSearchingDistanceTable_</attribute>
+            <attribute name="id">{bba6f724-e706-41be-8821-8676a2346ea9}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="stationdistsearching">
+                <doc><![CDATA[<DIV>Transiant class for seraching distances between stations</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">StationDistSearching</attribute>
+                <attribute name="RuntimeName">StationDistSearching</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{657dbbc9-c77d-429b-879b-9d422f5776be}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="distancetable">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">73d51e69-0b7e-4d45-b39e-994347435e9f</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">DistanceTable</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">496</attribute>
+        <attribute name="y">888</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{29aceae6-c4fe-4178-a722-a7c8855fc55a}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.00_common">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/efdd5d61-e1b3-40f7-b238-153cac683a57.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">efdd5d61-e1b3-40f7-b238-153cac683a57</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.00 Common</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.00 Common</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="distancetable">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">26409c09-0907-4789-b4ca-d15656debd4b</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">DistanceTable</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">96</attribute>
+        <attribute name="y">296</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{29aceae6-c4fe-4178-a722-a7c8855fc55a}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_station_distances_searching">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/30b57b5c-21f6-462b-bf02-a907d3c3b9f6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">30b57b5c-21f6-462b-bf02-a907d3c3b9f6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">Station distances searching</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">Station distances searching</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="distancetable">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">067c8a4e-bad9-498d-9e00-b5dc9e244802</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">DistanceTable</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">496</attribute>
+        <attribute name="y">888</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{29aceae6-c4fe-4178-a722-a7c8855fc55a}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.06_locations">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/11f44bd4-3bc6-48d0-970c-bbca5c87225e.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">11f44bd4-3bc6-48d0-970c-bbca5c87225e</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.06 Locations</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.06 Locations</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="netamount">
+    <doc><![CDATA[<DIV>Represents a net amount of money.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">NetAmount</attribute>
+    <attribute name="RuntimeName">NetAmount</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="amount">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Amount</attribute>
+        <attribute name="RuntimeName">Amount</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">55a1c5c4-2ac3-4538-9b57-74e58b24d417</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="executeditemcost">
+        <doc><![CDATA[<DIV>Class representing a calculated expected cost of an executed item.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExecutedItemCost</attribute>
+        <attribute name="RuntimeName">ExecutedItemCost</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{289888f9-9543-4f75-bb23-d2f0ac89669f}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="executeditemprice">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing a calculated&nbsp;price of an executed item.</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExecutedItemPrice</attribute>
+        <attribute name="RuntimeName">ExecutedItemPrice</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{a9019d5e-de2d-4a96-879b-6e30c21cd5b3}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="invoiceamount">
+        <doc><![CDATA[<DIV>Represents a cost or price&nbsp;of invoiced service.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">InvoiceAmount</attribute>
+        <attribute name="RuntimeName">InvoiceAmount</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{ef8dfd73-2442-4428-9530-0341412acfbd}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="ownvehiclecost">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OwnVehicleCost</attribute>
+        <attribute name="RuntimeName">OwnVehicleCost</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">a314a871-77a6-48e6-969b-9e2595b8162e</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">self.DisplayString</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">Parent</attribute>
+        <attribute name="Tag">Eco.TableMapping</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">"NetValue=if (self.AmountRounding-&gt;isEmpty) then self.MUQuantity * self.NetRate else self.AmountRounding.Round(self.MUQuantity * self.NetRate) endif",Curr=self.FCurr,Name=self.DeriveMLString('FName')</attribute>
+        <attribute name="Tag">Eco.DerivationExpressions</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">MUnit</attribute>
+        <attribute name="Tag">Eco.FormerNames</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Stores multilingual version of the <SPAN style="FONT-STYLE: italic">Name</SPAN>.</DIV>]]></doc>
+        <modlrstring>FName: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FName</attribute>
+        <attribute name="RuntimeName">FName</attribute>
+        <attribute name="Visibility">Private</attribute>
+        <attribute name="id">{17c32409-f204-4522-8f55-0059b6df9b51}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">300</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>NetRate: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NetRate</attribute>
+        <attribute name="RuntimeName">NetRate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">43bcbfca-f7d1-4b57-a94d-98b091b95894</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>OldFNetValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OldFNetValue</attribute>
+        <attribute name="RuntimeName">OldFNetValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">501816b3-5378-459c-aabf-93af0fd49b06</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">FNetValue</attribute>
+            <attribute name="Tag">Eco.FormerNames</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>MUQuantity: Decimal = 1</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MUQuantity</attribute>
+        <attribute name="RuntimeName">MUQuantity</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">5d21289f-9db5-4592-9831-968943afa09f</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue">1</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">1</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="netamount">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>AmountCurr_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AmountCurr_</attribute>
+        <attribute name="RuntimeName">AmountCurr_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AmountCurr_</attribute>
+        <attribute name="id">{f3ae9f02-6536-4a92-9eef-374ea4af920b}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AmountCurr</attribute>
+            <attribute name="RuntimeName">AmountCurr</attribute>
+            <attribute name="EffectiveName">AmountCurr</attribute>
+            <attribute name="id">{cf3bdc77-a97d-4cef-a5c0-317b3a3bf848}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="netamount">
+            <doc><![CDATA[<DIV>Represents a net amount of money.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NetAmount</attribute>
+            <attribute name="RuntimeName">NetAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="curr">
+            <doc><![CDATA[<DIV>The currency of the amount.</DIV>]]></doc>
+            <modlrstring>FCurr (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">FCurr</attribute>
+            <attribute name="RuntimeName">FCurr</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">FCurr</attribute>
+            <attribute name="id">{e7a57e96-5388-4f20-b140-5dde038d6701}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="curr">
+                <doc><![CDATA[<DIV>Class representing a currency.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a16a47ef-1b40-4645-bb62-08fd1b044d7b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="netamount">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>NetAmountsMUnit (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">NetAmountsMUnit</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NetAmountsMUnit</attribute>
+        <attribute name="id">d0ebbe21-e7fc-425d-a4eb-543fb780d26d</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">NetAmountNetAmountsMUnitMUnitMUnit</attribute>
+            <attribute name="EffectiveName">NetAmountNetAmountsMUnitMUnitMUnit</attribute>
+            <attribute name="id">364f0fff-ef7c-4879-804a-b685b816663a</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="netamount">
+            <doc><![CDATA[<DIV>Represents a net amount of money.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NetAmount</attribute>
+            <attribute name="RuntimeName">NetAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="munit">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>MUnit (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MUnit</attribute>
+            <attribute name="id">686b7964-04aa-49ab-9324-4e5189a0a877</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="munit">
+                <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Represents a measure unit.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MUnit</attribute>
+                <attribute name="RuntimeName">MUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e423a987-abe5-441e-94a6-637ec5da7b74}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="netamount">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>NetAmounts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">NetAmounts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NetAmounts</attribute>
+        <attribute name="id">515f32d4-6c28-4f06-a247-6d54d4f84daf</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">WaggonWaggonsNetAmountNetAmounts</attribute>
+            <attribute name="EffectiveName">WaggonWaggonsNetAmountNetAmounts</attribute>
+            <attribute name="id">b07b286e-508d-483f-ba96-16e28e35d4d4</attribute>
+            <link name="Class">
+              <object type="Class" href="waggonamountquantity">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">WaggonAmountQuantity</attribute>
+                <attribute name="RuntimeName">WaggonAmountQuantity</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">6dd6db43-854b-4d82-bf98-4ebfbf4d8694</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="netamount">
+            <doc><![CDATA[<DIV>Represents a net amount of money.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NetAmount</attribute>
+            <attribute name="RuntimeName">NetAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="waggon">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>Waggons (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">Waggons</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Waggons</attribute>
+            <attribute name="id">cf29b693-f0df-4c11-aeef-e0cb78f56dca</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="waggon">
+                <doc><![CDATA[<DIV>Class representing waggon</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Waggon</attribute>
+                <attribute name="RuntimeName">Waggon</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d83a38ef-7867-499c-95c5-d618fd5fd3b0}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="netamount">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>NetAmountsAmountRounding (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">NetAmountsAmountRounding</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NetAmountsAmountRounding</attribute>
+        <attribute name="id">b3685ef5-8b67-41bb-b139-194aaf292f0e</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">AmountRoundingAmountRoundingNetAmountNetAmountsAmountRounding</attribute>
+            <attribute name="EffectiveName">AmountRoundingAmountRoundingNetAmountNetAmountsAmountRounding</attribute>
+            <attribute name="id">e87b65a9-89a4-4164-b32d-703a1eb6b3a6</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="netamount">
+            <doc><![CDATA[<DIV>Represents a net amount of money.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NetAmount</attribute>
+            <attribute name="RuntimeName">NetAmount</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="amountrounding">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>AmountRounding (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">AmountRounding</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">AmountRounding</attribute>
+            <attribute name="id">fd87dee4-1b08-4468-8840-83a175cb98d3</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="amountrounding">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AmountRounding</attribute>
+                <attribute name="RuntimeName">AmountRounding</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">83dfe429-fcf6-43e6-86f2-c95339bd3919</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">ab231f05-4389-481e-84a9-50d15eb1d55f</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">65</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">5508d7cc-4103-4733-9672-0cee5988f443</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">54</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">bab69d06-67e1-4341-8008-9dbf0d60f3fc</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">6d9e26d8-7628-4023-8a84-726b4ae02565</attribute>
+        <attribute name="x">70,5</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">24</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">1</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">c8bd632f-501b-46fb-a1c3-caef4a48ba7c</attribute>
+        <attribute name="x">70,5</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">24</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">1</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">2ccc32aa-d428-41f3-a5bd-ba4770d3f418</attribute>
+        <attribute name="x">-48</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">54</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">74cc0d95-5681-41a0-b6dc-a76462ad5123</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">54</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">2</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">dadd4377-f16e-4d4f-85da-b01d10dc923f</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">a878e7e6-bb8f-464c-92a5-d12a1773d800</attribute>
+        <attribute name="x">-67,5</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">32</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">0acc8e96-5444-4ebc-be7b-8e49c6e3f0a6</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">c387d73d-d156-42bf-8a05-ae8f4f5f94be</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">True</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">7e266ce4-b4f9-4b0a-a1a7-3e5aafe30a86</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">123</attribute>
+        <attribute name="id">c1e02b57-0999-4e7d-a468-349d2b26fcc5</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">720</attribute>
+        <attribute name="y">576</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.01_executed_railway_transport">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/c944f3c3-7e93-4e4a-a2d4-2e2067071c7d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">c944f3c3-7e93-4e4a-a2d4-2e2067071c7d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.01 Executed Railway Transport</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.01 Executed Railway Transport</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">123</attribute>
+        <attribute name="id">9249b8e2-5fcc-45b4-a801-f835c83eafc8</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">624</attribute>
+        <attribute name="y">232</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_00.01_amounts">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b83dd3a4-8518-4596-8fdb-e4b97138e355.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b83dd3a4-8518-4596-8fdb-e4b97138e355</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">00.01 Amounts</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">00.01 Amounts</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">90</attribute>
+        <attribute name="id">141e2254-62ee-43cf-8a1d-0c066b9a6628</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">648</attribute>
+        <attribute name="y">1496</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.00_invoices">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/d81b451f-ede7-4e54-937a-8ff3e22eb838.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">d81b451f-ede7-4e54-937a-8ff3e22eb838</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.00 Invoices</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.00 Invoices</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">123</attribute>
+        <attribute name="id">2e8063c5-eaf3-45c8-933f-22a24bd8f412</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">728</attribute>
+        <attribute name="y">984</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.00_invoices">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/d81b451f-ede7-4e54-937a-8ff3e22eb838.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">d81b451f-ede7-4e54-937a-8ff3e22eb838</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.00 Invoices</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.00 Invoices</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">123</attribute>
+        <attribute name="id">797954e0-c9ea-4a29-8685-77a54e0b5710</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">640</attribute>
+        <attribute name="y">1328</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.00_invoices">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/d81b451f-ede7-4e54-937a-8ff3e22eb838.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">d81b451f-ede7-4e54-937a-8ff3e22eb838</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.00 Invoices</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.00 Invoices</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">123</attribute>
+        <attribute name="id">1786a9d3-ccc5-4832-939f-a1747b4d4c81</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">696</attribute>
+        <attribute name="y">752</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.04_invoice_costs">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b7389669-a43a-4ab3-bb81-2d85a84a4991.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b7389669-a43a-4ab3-bb81-2d85a84a4991</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.04 Invoice costs</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.04 Invoice costs</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">123</attribute>
+        <attribute name="id">a7200c83-c54d-464e-8917-263e3714a386</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">80</attribute>
+        <attribute name="y">640</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.05_ininvoice">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/92e5f3c0-70cc-4004-a1b0-ca9dcc9864bd.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">92e5f3c0-70cc-4004-a1b0-ca9dcc9864bd</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.05 InInvoice</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.05 InInvoice</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="netamount">
+        <attribute name="RenderedWidth">123</attribute>
+        <attribute name="id">f9ebb00e-ba50-4ce7-b527-4fb015005441</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NetAmount</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">424</attribute>
+        <attribute name="y">136</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{70828a61-d9e8-479a-b75e-c05c74c53b64}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_00.04_roundings">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/588af826-3aa3-41f7-8f54-d96312f998f2.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">588af826-3aa3-41f7-8f54-d96312f998f2</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">00.04 Roundings</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">00.04 Roundings</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

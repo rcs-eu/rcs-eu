@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="customsdocument">
+    <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">CustomsDocument</attribute>
+    <attribute name="RuntimeName">CustomsDocument</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="officeentityautonum">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing a autonumerated document in a system, e.g. offer, order, invoice etc.</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OfficeEntityAutoNum</attribute>
+        <attribute name="RuntimeName">OfficeEntityAutoNum</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces">IAutoNumGeneratorProvider</attribute>
+        <attribute name="id">{f876b969-db95-4873-bad5-c76e1b97015d}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Sum of customs costs.</DIV>]]></doc>
+        <modlrstring>CustomsCostSum: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsCostSum</attribute>
+        <attribute name="RuntimeName">CustomsCostSum</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{11c15a8b-0507-42e1-82b1-1bb843318053}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.CustomsCost + self.Vat + self.Akcyza + self.OplataManipulacyjna</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo undergoes customs inspection.</SPAN></DIV>]]></doc>
+        <modlrstring>NeedCustomsCare: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NeedCustomsCare</attribute>
+        <attribute name="RuntimeName">NeedCustomsCare</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{188abe59-e1f3-4e75-adf2-db32f528060b}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that all customs costs are paid directly&nbsp;by a customer.</SPAN></DIV>]]></doc>
+        <modlrstring>PayByClient: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PayByClient</attribute>
+        <attribute name="RuntimeName">PayByClient</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{2c530dad-2860-4748-8828-cfda6b691f33}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Date of notification&nbsp;to a&nbsp;customs office.</DIV>]]></doc>
+        <modlrstring>DateOfNotification: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DateOfNotification</attribute>
+        <attribute name="RuntimeName">DateOfNotification</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{35a4f29d-92a0-4b47-b673-0b18a8567855}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Customs document's number.</DIV>]]></doc>
+        <modlrstring>DocNr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocNr</attribute>
+        <attribute name="RuntimeName">DocNr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{488674a3-3361-46dc-a274-504e8c694f5b}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Rcs.Eurad.Model.Model.Resources,NPP_00000011</attribute>
+            <attribute name="Tag">NNP</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo undergoes permissions for limited import/export.</SPAN></DIV>]]></doc>
+        <modlrstring>LimitedImpExp: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LimitedImpExp</attribute>
+        <attribute name="RuntimeName">LimitedImpExp</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{48abe044-ef20-4798-b3f3-9d2c80e546ab}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Number of SAD BIS documents.</DIV>]]></doc>
+        <modlrstring>SadBisCount: Integer = 0</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SadBisCount</attribute>
+        <attribute name="RuntimeName">SadBisCount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{49cc7233-1026-42c9-b00c-009390b28a35}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">0</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo undergoes permissions for embargo.</SPAN></DIV>]]></doc>
+        <modlrstring>Embargo: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Embargo</attribute>
+        <attribute name="RuntimeName">Embargo</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4f44f65d-45f5-4932-8513-f38d1b70ec8d}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Value of excise tax.</DIV>]]></doc>
+        <modlrstring>Akcyza: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Akcyza</attribute>
+        <attribute name="RuntimeName">Akcyza</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6100f167-6619-436a-b118-a6bc48a3abc4}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Payment deadline.</DIV>]]></doc>
+        <modlrstring>CustomsPayDeadline: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsPayDeadline</attribute>
+        <attribute name="RuntimeName">CustomsPayDeadline</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6e92a4f2-f50b-4009-bb47-dc26bd65a678}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Gross weight of cargo.</DIV>]]></doc>
+        <modlrstring>CargoGrossWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CargoGrossWeight</attribute>
+        <attribute name="RuntimeName">CargoGrossWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6fc89947-cfff-4dc4-82e1-202ccf2c7ab7}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Value of customs cost.</DIV>]]></doc>
+        <modlrstring>CustomsCost: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsCost</attribute>
+        <attribute name="RuntimeName">CustomsCost</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a2c8a1f6-5349-4fcc-a49e-b1513fad241a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Date of declaration to a customs office.</DIV>]]></doc>
+        <modlrstring>DateOfAplication: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DateOfAplication</attribute>
+        <attribute name="RuntimeName">DateOfAplication</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{c57ff43f-e9d8-43af-a79d-523cbbc8ee3b}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Value of VAT.</DIV>]]></doc>
+        <modlrstring>Vat: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Vat</attribute>
+        <attribute name="RuntimeName">Vat</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{cbf493fc-78e3-4555-9d33-16838a5aff3f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Value of handling fee.</DIV>]]></doc>
+        <modlrstring>OplataManipulacyjna: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OplataManipulacyjna</attribute>
+        <attribute name="RuntimeName">OplataManipulacyjna</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{d7f3b11c-564e-4fc0-b4e8-ef32b05b1b54}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>means that cargo is not from European Union.</SPAN></DIV>]]></doc>
+        <modlrstring>CargoNotEu: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CargoNotEu</attribute>
+        <attribute name="RuntimeName">CargoNotEu</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ee12ae5f-f372-4438-bdb5-a326d0f6c567}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Date of payment.</DIV>]]></doc>
+        <modlrstring>CustomsPayDate: DateTime = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsPayDate</attribute>
+        <attribute name="RuntimeName">CustomsPayDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{eedde218-8d33-4cab-be4b-d4fda8a6073a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AsNullable</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>Points to a customs document.</DIV>]]></doc>
+        <modlrstring>CustomsDocument (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsDocument</attribute>
+        <attribute name="RuntimeName">CustomsDocument</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomsDocument</attribute>
+        <attribute name="id">{1adecb98-395f-421a-8665-6636dc48121d}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocumentCustomsDocTranzit</attribute>
+            <attribute name="RuntimeName">CustomsDocumentCustomsDocTranzit</attribute>
+            <attribute name="EffectiveName">CustomsDocumentCustomsDocTranzit</attribute>
+            <attribute name="id">{02256af6-5110-47a1-a931-9a52301260a9}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customsdoctranzit">
+            <doc><![CDATA[<DIV>Points to an object which contains transit data.</DIV>]]></doc>
+            <modlrstring>TranzitInfo (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TranzitInfo</attribute>
+            <attribute name="RuntimeName">TranzitInfo</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TranzitInfo</attribute>
+            <attribute name="id">{4b0e39c0-8dc9-4258-ab21-7a1280fb702c}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="customsdoctranzit">
+                <doc><![CDATA[<DIV>Class representing a transit data in executed item of type customs.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomsDocTranzit</attribute>
+                <attribute name="RuntimeName">CustomsDocTranzit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{b85e990f-70f6-48b4-bd45-fdc3319d5ba2}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>Document issued in this service</DIV>]]></doc>
+        <modlrstring>Document (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Document</attribute>
+        <attribute name="RuntimeName">Document</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Document</attribute>
+        <attribute name="id">{789bb077-5242-4db3-ad5c-f25f9ae4aa4b}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceAcDocumentCustomDocument</attribute>
+            <attribute name="RuntimeName">ServiceAcDocumentCustomDocument</attribute>
+            <attribute name="EffectiveName">ServiceAcDocumentCustomDocument</attribute>
+            <attribute name="id">{099900f2-7dd6-4873-b44b-282c32ba3437}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="serviceacdocument">
+            <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+            <modlrstring>ServiceAcDocumentCustomDocument_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceAcDocumentCustomDocument_</attribute>
+            <attribute name="RuntimeName">ServiceAcDocumentCustomDocument_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ServiceAcDocumentCustomDocument_</attribute>
+            <attribute name="id">{e33aa0a8-2f33-46a1-a08e-e9be6a2a6f2a}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="serviceacdocument">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing service details as&nbsp;customs document issuing service</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ServiceAcDocument</attribute>
+                <attribute name="RuntimeName">ServiceAcDocument</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{44cd2290-b0c1-448f-86b1-cf50cc6e6d84}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>
+<DIV>One way association.</DIV></DIV>]]></doc>
+        <modlrstring>CustomsDocumentNhm_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsDocumentNhm_</attribute>
+        <attribute name="RuntimeName">CustomsDocumentNhm_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomsDocumentNhm_</attribute>
+        <attribute name="id">{7c838e47-4933-41eb-9505-1db1a995c3bd}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocumentNhm</attribute>
+            <attribute name="RuntimeName">CustomsDocumentNhm</attribute>
+            <attribute name="EffectiveName">CustomsDocumentNhm</attribute>
+            <attribute name="id">{17277da3-5671-4955-ba62-32c4b0b3eb9d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="nhm">
+            <doc><![CDATA[<DIV>Points to an object which contains Cn number data.</DIV>]]></doc>
+            <modlrstring>Cn (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Cn</attribute>
+            <attribute name="RuntimeName">Cn</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Cn</attribute>
+            <attribute name="id">{7526261e-e2ff-417e-836f-a08e48c8ff99}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="nhm">
+                <doc><![CDATA[<DIV>Represents&nbsp;NHM classification's entry. </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Nhm</attribute>
+                <attribute name="RuntimeName">Nhm</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2b83af30-b245-4ae9-97c0-b1edf4cb45f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>Points to a customs document in which this insurance is used.</DIV>]]></doc>
+        <modlrstring>UsedOn (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">UsedOn</attribute>
+        <attribute name="RuntimeName">UsedOn</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">UsedOn</attribute>
+        <attribute name="id">{ef6fbf61-8e25-4682-9bfa-62449def5648}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocumentCustomsInsuranceDoc</attribute>
+            <attribute name="RuntimeName">CustomsDocumentCustomsInsuranceDoc</attribute>
+            <attribute name="EffectiveName">CustomsDocumentCustomsInsuranceDoc</attribute>
+            <attribute name="id">{1bf0ee09-2681-4771-890c-d383610a9e26}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customsinsurancedoc">
+            <doc><![CDATA[<DIV>Points to an object which contains data about customs insurance.</DIV>]]></doc>
+            <modlrstring>CustomsInsuranceDoc (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsInsuranceDoc</attribute>
+            <attribute name="RuntimeName">CustomsInsuranceDoc</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomsInsuranceDoc</attribute>
+            <attribute name="id">{61a168b4-438e-48e1-953c-035720c13abf}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="customsinsurancedoc">
+                <doc><![CDATA[<DIV>Class representing a customs insurance.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomsInsuranceDoc</attribute>
+                <attribute name="RuntimeName">CustomsInsuranceDoc</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{28ad97a9-3bf5-4c77-89ed-72e371e158a3}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>Document itself</DIV>]]></doc>
+        <modlrstring>Document (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Document</attribute>
+        <attribute name="RuntimeName">Document</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Document</attribute>
+        <attribute name="id">{c660844b-22ab-44f1-9b94-045a26e3d01f}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceAcCorrectionCustomsDocument</attribute>
+            <attribute name="RuntimeName">ServiceAcCorrectionCustomsDocument</attribute>
+            <attribute name="EffectiveName">ServiceAcCorrectionCustomsDocument</attribute>
+            <attribute name="id">{3dee08eb-74e5-4840-970c-a67f01e74e60}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="serviceaccorrection">
+            <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>ServiceAcCorrectionCustomsDocument_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceAcCorrectionCustomsDocument_</attribute>
+            <attribute name="RuntimeName">ServiceAcCorrectionCustomsDocument_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ServiceAcCorrectionCustomsDocument_</attribute>
+            <attribute name="id">{0acccb32-f447-4323-999a-47d290726485}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="serviceaccorrection">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing service details which corrects another customs document</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ServiceAcCorrection</attribute>
+                <attribute name="RuntimeName">ServiceAcCorrection</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{14f59cac-bccc-4478-bca5-e6500d69edec}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>CustomDocumentCustomDocType_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomDocumentCustomDocType_</attribute>
+        <attribute name="RuntimeName">CustomDocumentCustomDocType_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomDocumentCustomDocType_</attribute>
+        <attribute name="id">{8a2298e2-0b33-40e7-a78e-172d41868846}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomDocumentCustomDocType</attribute>
+            <attribute name="RuntimeName">CustomDocumentCustomDocType</attribute>
+            <attribute name="EffectiveName">CustomDocumentCustomDocType</attribute>
+            <attribute name="id">{6ece2b26-40cf-4eec-8630-463215f3f1f3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customsdoctype">
+            <doc><![CDATA[<DIV>Type of customs document.</DIV>]]></doc>
+            <modlrstring>CustomDocType (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomDocType</attribute>
+            <attribute name="RuntimeName">CustomDocType</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomDocType</attribute>
+            <attribute name="id">{91ae5e94-1330-4706-b89f-3d5a29bbc603}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="customsdoctype">
+                <doc><![CDATA[<DIV>Class representing a type of customs document.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomsDocType</attribute>
+                <attribute name="RuntimeName">CustomsDocType</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{f547980e-fa9e-471f-8a6b-4f10deb581df}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>
+<DIV>One way association. </DIV></DIV>]]></doc>
+        <modlrstring>CustomsDocumentSysUser1_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsDocumentSysUser1_</attribute>
+        <attribute name="RuntimeName">CustomsDocumentSysUser1_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomsDocumentSysUser1_</attribute>
+        <attribute name="id">{faf60dca-cb65-42bf-851f-55cb3331512a}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocumentSysUser1</attribute>
+            <attribute name="RuntimeName">CustomsDocumentSysUser1</attribute>
+            <attribute name="EffectiveName">CustomsDocumentSysUser1</attribute>
+            <attribute name="id">{85f09038-cdba-4038-8f24-ac9e8f83b1b1}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysuser">
+            <doc><![CDATA[<DIV>Not in use.</DIV>]]></doc>
+            <modlrstring>SubmitBy (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SubmitBy</attribute>
+            <attribute name="RuntimeName">SubmitBy</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SubmitBy</attribute>
+            <attribute name="id">{c4beb0b8-f3fe-466d-ae8d-952c44503bf0}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysuser">
+                <doc><![CDATA[<DIV><SUMMARY />Represents&nbsp;a user of the system.&nbsp; </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUser</attribute>
+                <attribute name="RuntimeName">SysUser</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0469cc7f-5155-4220-8957-727b0f7b3a86}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>CustomDocumentCustomsProcedure_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomDocumentCustomsProcedure_</attribute>
+        <attribute name="RuntimeName">CustomDocumentCustomsProcedure_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomDocumentCustomsProcedure_</attribute>
+        <attribute name="id">{35ee5bbd-1708-4e43-9907-25f5dc96a607}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomDocumentCustomsProcedure</attribute>
+            <attribute name="RuntimeName">CustomDocumentCustomsProcedure</attribute>
+            <attribute name="EffectiveName">CustomDocumentCustomsProcedure</attribute>
+            <attribute name="id">{8691a8da-b490-4427-bbbd-5a7593caa05e}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customsprocedure">
+            <doc><![CDATA[<DIV>Customs procedure.</DIV>]]></doc>
+            <modlrstring>CustomsProcedure (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsProcedure</attribute>
+            <attribute name="RuntimeName">CustomsProcedure</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomsProcedure</attribute>
+            <attribute name="id">{dc4cb053-145f-4fd5-af36-5be15b6effac}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="customsprocedure">
+                <doc><![CDATA[<DIV>Class representing customs procedure.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomsProcedure</attribute>
+                <attribute name="RuntimeName">CustomsProcedure</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a6e7ab5a-5bec-4851-8f21-6c9ec0a5cdbb}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>CustomsDocumentHighRiskCargo_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsDocumentHighRiskCargo_</attribute>
+        <attribute name="RuntimeName">CustomsDocumentHighRiskCargo_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomsDocumentHighRiskCargo_</attribute>
+        <attribute name="id">{926cbaee-8257-4d0d-b55b-b15f8541056f}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocumentHighRiskCargo</attribute>
+            <attribute name="RuntimeName">CustomsDocumentHighRiskCargo</attribute>
+            <attribute name="EffectiveName">CustomsDocumentHighRiskCargo</attribute>
+            <attribute name="id">{96b15386-8182-487d-a8e1-7be1151fe055}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="highriskcargo">
+            <doc><![CDATA[<DIV>A list of high risk cargo.</DIV>]]></doc>
+            <modlrstring>HighRiskCargo (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">HighRiskCargo</attribute>
+            <attribute name="RuntimeName">HighRiskCargo</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">HighRiskCargo</attribute>
+            <attribute name="id">{26c7055e-b884-46d2-9b08-a6a2d5df42c8}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="highriskcargo">
+                <doc><![CDATA[<DIV>Class representing cargo of high risk for customs services.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">HighRiskCargo</attribute>
+                <attribute name="RuntimeName">HighRiskCargo</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c861e427-26ae-44b6-8f16-49e943488078}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>
+<DIV>One way association. </DIV></DIV>]]></doc>
+        <modlrstring>CustomsDocumentSysUser_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsDocumentSysUser_</attribute>
+        <attribute name="RuntimeName">CustomsDocumentSysUser_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomsDocumentSysUser_</attribute>
+        <attribute name="id">{57180384-b3b9-4d98-b6f8-166075407704}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocumentSysUser</attribute>
+            <attribute name="RuntimeName">CustomsDocumentSysUser</attribute>
+            <attribute name="EffectiveName">CustomsDocumentSysUser</attribute>
+            <attribute name="id">{c884f59d-7b16-4ccf-9235-4c06fd17c308}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysuser">
+            <doc><![CDATA[<DIV>
+<DIV>A user who registers executed item of customs type.</DIV></DIV>]]></doc>
+            <modlrstring>PreparedBy (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PreparedBy</attribute>
+            <attribute name="RuntimeName">PreparedBy</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PreparedBy</attribute>
+            <attribute name="id">{49a79256-e95a-4718-88e0-479d0708c97f}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysuser">
+                <doc><![CDATA[<DIV><SUMMARY />Represents&nbsp;a user of the system.&nbsp; </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUser</attribute>
+                <attribute name="RuntimeName">SysUser</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0469cc7f-5155-4220-8957-727b0f7b3a86}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customsdocument">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>CustomsDocumentCurr_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsDocumentCurr_</attribute>
+        <attribute name="RuntimeName">CustomsDocumentCurr_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomsDocumentCurr_</attribute>
+        <attribute name="id">{ef5bd49e-a5a2-4621-82cd-09816bd69086}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocumentCurr</attribute>
+            <attribute name="RuntimeName">CustomsDocumentCurr</attribute>
+            <attribute name="EffectiveName">CustomsDocumentCurr</attribute>
+            <attribute name="id">{e8ea046e-80c1-4843-bed0-de3e7323d6db}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customsdocument">
+            <doc><![CDATA[<DIV>Class representing a customs document.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsDocument</attribute>
+            <attribute name="RuntimeName">CustomsDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="curr">
+            <doc><![CDATA[<DIV>Currency of all customs costs.</DIV>]]></doc>
+            <modlrstring>CustomsCostCurr (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomsCostCurr</attribute>
+            <attribute name="RuntimeName">CustomsCostCurr</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomsCostCurr</attribute>
+            <attribute name="id">{3109ba3b-df78-40de-8ff0-046bff29ebb3}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="curr">
+                <doc><![CDATA[<DIV>Class representing a currency.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a16a47ef-1b40-4645-bb62-08fd1b044d7b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="customsdocument">
+        <attribute name="RenderedWidth">179</attribute>
+        <attribute name="id">32321d52-f146-4974-8aab-3661bb30e84b</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CustomsDocument</attribute>
+        <attribute name="RenderedHeight">207</attribute>
+        <attribute name="x">432</attribute>
+        <attribute name="y">992</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{991ee647-16fd-428a-8562-05df8a04d4e3}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.04_executed_ac_servce">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/a5be0352-3a90-443b-b27e-79cba09dbf1a.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">a5be0352-3a90-443b-b27e-79cba09dbf1a</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.04 Executed AC Servce</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.04 Executed AC Servce</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

@@ -1,0 +1,847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="servicetpdetail">
+    <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">ServiceTPDetail</attribute>
+    <attribute name="RuntimeName">ServiceTPDetail</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="servicetpstorage">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing reloading as from unit to storage and vice versa (unloading&nbsp;to or uploading&nbsp;from storage)</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceTPStorage</attribute>
+        <attribute name="RuntimeName">ServiceTPStorage</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{a7e8e515-df0f-40d3-8325-bbfd2bee0c4e}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="servicetpreload">
+        <doc><![CDATA[<DIV>Class representing reloading as from unit to unit</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceTPReload</attribute>
+        <attribute name="RuntimeName">ServiceTPReload</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fa334519-06f1-43fa-b6c2-f3b23977e0cc}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">Children</attribute>
+        <attribute name="Tag">Eco.TableMapping</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. State changer.</DIV>]]></doc>
+        <modlrstring>Execute()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Execute</attribute>
+        <attribute name="RuntimeName">Execute</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{04265115-1c09-439b-8c1c-22e4770c12d5}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Reloaded weight</DIV>]]></doc>
+        <modlrstring>EffectiveWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EffectiveWeight</attribute>
+        <attribute name="RuntimeName">EffectiveWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{2e10547a-def5-46e3-a2fa-cf6ede43edbd}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if self.oclIsTypeOf(ServiceTPReload) then  self.safeCast(ServiceTPReload).UnloadWeight else if self.oclIsTypeOf(ServiceTPStorage) then self.safeCast(ServiceTPStorage).Weight else 0 endif endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute" href="statediagram_servicetpdetail_rootstate">
+        <doc><![CDATA[<DIV>State of the service</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6d62a57b-79e0-4dfd-8f94-b2bf620686b2}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsStateAttribute</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Registered</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Amount of packages reloaded</DIV>]]></doc>
+        <modlrstring>EffectivePackagesAmount: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EffectivePackagesAmount</attribute>
+        <attribute name="RuntimeName">EffectivePackagesAmount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b71b8f1b-0aad-4b74-92b7-e31fd43fb652}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if self.oclIsTypeOf(ServiceTPReload) then  self.safeCast(ServiceTPReload).UnloadPackagesAmount else if self.oclIsTypeOf(ServiceTPStorage) then self.safeCast(ServiceTPStorage).PackagesAmount else 0 endif endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method. State changer.</DIV></DIV>]]></doc>
+        <modlrstring>Register()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Register</attribute>
+        <attribute name="RuntimeName">Register</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{cf7c4c9d-21d6-42f1-bce9-a887445a4e8d}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="servicetpdetail">
+        <doc><![CDATA[<DIV>The services executed by the transloading terminal.</DIV>]]></doc>
+        <modlrstring>ServiceExecuted (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceExecuted</attribute>
+        <attribute name="RuntimeName">ServiceExecuted</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ServiceExecuted</attribute>
+        <attribute name="id">{999cb859-f052-42fd-a7e1-a97283cafb9b}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DispositionTPExecutedService</attribute>
+            <attribute name="RuntimeName">DispositionTPExecutedService</attribute>
+            <attribute name="EffectiveName">DispositionTPExecutedService</attribute>
+            <attribute name="id">{3dd86982-f213-40b9-930b-b0adc0357733}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="servicetpdetail">
+            <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPDetail</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="dispositiontp">
+            <doc><![CDATA[<DIV>Points to reloading disposition to which reloading service detail belongs</DIV>]]></doc>
+            <modlrstring>ExecutedDisposition (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedDisposition</attribute>
+            <attribute name="RuntimeName">ExecutedDisposition</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExecutedDisposition</attribute>
+            <attribute name="id">{31cf0398-5b59-4e95-b612-45b396d92c5d}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="dispositiontp">
+                <doc><![CDATA[<DIV>Represents a transloading terminal&nbsp;disposition.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DispositionTP</attribute>
+                <attribute name="RuntimeName">DispositionTP</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0610f577-bd43-4b97-95fa-9e795ea0e448}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="servicetpdetail">
+        <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+        <modlrstring>ServiceTPDetailGeneralCustomerOrder_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceTPDetailGeneralCustomerOrder_</attribute>
+        <attribute name="RuntimeName">ServiceTPDetailGeneralCustomerOrder_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ServiceTPDetailGeneralCustomerOrder_</attribute>
+        <attribute name="id">{f098c16a-8769-4c99-ab2c-c5b4ee6b93a1}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetailGeneralCustomerOrder</attribute>
+            <attribute name="RuntimeName">ServiceTPDetailGeneralCustomerOrder</attribute>
+            <attribute name="EffectiveName">ServiceTPDetailGeneralCustomerOrder</attribute>
+            <attribute name="id">{3e852693-01e5-46e6-a0b8-41132e696e21}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="servicetpdetail">
+            <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPDetail</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="generalcustomerorder">
+            <doc><![CDATA[<DIV>Points to general customer order to which reloading service detail belongs</DIV>]]></doc>
+            <modlrstring>GeneralCustomerOrder (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GeneralCustomerOrder</attribute>
+            <attribute name="RuntimeName">GeneralCustomerOrder</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">GeneralCustomerOrder</attribute>
+            <attribute name="id">{f17226a2-7b87-465a-be05-2603ab4016fe}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="generalcustomerorder">
+                <doc><![CDATA[<DIV>Class representing a general order from a customer.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GeneralCustomerOrder</attribute>
+                <attribute name="RuntimeName">GeneralCustomerOrder</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{fcb27b38-3732-486f-bbd2-576d2e3abd82}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.OrderedServices.Items-&gt;filterOnType(ServiceTP).ServiceTPDetail-&gt;select(ExecutedDisposition-&gt;notEmpty)</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="servicetpdetail">
+        <doc><![CDATA[<DIV>
+<DIV>The services&nbsp;ordered&nbsp;with the transloading terminal.</DIV></DIV>]]></doc>
+        <modlrstring>ServiceOrdered (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceOrdered</attribute>
+        <attribute name="RuntimeName">ServiceOrdered</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ServiceOrdered</attribute>
+        <attribute name="id">{b3655f2e-1b63-47d7-827a-19c98ec26561}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DispositionTPOrderedService</attribute>
+            <attribute name="RuntimeName">DispositionTPOrderedService</attribute>
+            <attribute name="EffectiveName">DispositionTPOrderedService</attribute>
+            <attribute name="id">{4d82731d-aecd-4011-89d3-4f2ef0e2d62d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="servicetpdetail">
+            <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPDetail</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="dispositiontp">
+            <doc><![CDATA[<DIV>Points to reloading disposition on which this service was ordered</DIV>]]></doc>
+            <modlrstring>OrderedDisposition (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedDisposition</attribute>
+            <attribute name="RuntimeName">OrderedDisposition</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OrderedDisposition</attribute>
+            <attribute name="id">{c2227390-f377-4ad3-aa59-b0c40af4e75e}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="dispositiontp">
+                <doc><![CDATA[<DIV>Represents a transloading terminal&nbsp;disposition.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DispositionTP</attribute>
+                <attribute name="RuntimeName">DispositionTP</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0610f577-bd43-4b97-95fa-9e795ea0e448}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="servicetpdetail">
+        <doc><![CDATA[<DIV>Details of the service depending of type</DIV>]]></doc>
+        <modlrstring>ServiceTPDetail (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceTPDetail</attribute>
+        <attribute name="RuntimeName">ServiceTPDetail</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ServiceTPDetail</attribute>
+        <attribute name="id">{5c603b0d-6073-4415-8cb6-2abbd48d1350}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPServiceTPDetail</attribute>
+            <attribute name="EffectiveName">ServiceTPServiceTPDetail</attribute>
+            <attribute name="id">{593f6003-3e37-42d4-a013-36cc7b195e8d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="servicetpdetail">
+            <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPDetail</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="servicetp">
+            <doc><![CDATA[<DIV>Points to reloading service which this detail object describes</DIV>]]></doc>
+            <modlrstring>ServiceTP (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTP</attribute>
+            <attribute name="RuntimeName">ServiceTP</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ServiceTP</attribute>
+            <attribute name="id">{14d28eec-5145-42a4-9b3d-51a39da65375}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="servicetp">
+                <doc><![CDATA[<DIV>Class representing reloading/storage service</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ServiceTP</attribute>
+                <attribute name="RuntimeName">ServiceTP</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{bd7f5fdf-b434-4085-bbd8-3341da2e9b8f}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="servicetpdetail">
+        <doc><![CDATA[<DIV>Association to reloading details info object</DIV>]]></doc>
+        <modlrstring>ServiceTPDetail (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceTPDetail</attribute>
+        <attribute name="RuntimeName">ServiceTPDetail</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ServiceTPDetail</attribute>
+        <attribute name="id">{98f9f8f9-e256-47dc-9002-f57692ee3f31}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SpecItemTPServiceTPDetail</attribute>
+            <attribute name="RuntimeName">SpecItemTPServiceTPDetail</attribute>
+            <attribute name="EffectiveName">SpecItemTPServiceTPDetail</attribute>
+            <attribute name="id">{aecf57b0-69ee-4570-9224-cb416ce5a293}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="servicetpdetail">
+            <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPDetail</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="specitemtp">
+            <doc><![CDATA[<DIV>List of invoice specification items where this detail is invoiced</DIV>]]></doc>
+            <modlrstring>SpecItemTP (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SpecItemTP</attribute>
+            <attribute name="RuntimeName">SpecItemTP</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SpecItemTP</attribute>
+            <attribute name="id">{b44eb8cb-9dcc-4f4d-9ff2-5c2879fb297b}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="specitemtp">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing&nbsp;reloading service on an invoice (incoming and outgoing)</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SpecItemTP</attribute>
+                <attribute name="RuntimeName">SpecItemTP</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{7e00ddca-a4b1-4a91-a8ef-e5bea213a274}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="servicetpdetail">
+        <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+        <modlrstring>ServiceTPDetail (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceTPDetail</attribute>
+        <attribute name="RuntimeName">ServiceTPDetail</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ServiceTPDetail</attribute>
+        <attribute name="id">{3c327c9f-0772-426c-b22a-463f570ba045}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetailCargo</attribute>
+            <attribute name="RuntimeName">ServiceTPDetailCargo</attribute>
+            <attribute name="EffectiveName">ServiceTPDetailCargo</attribute>
+            <attribute name="id">{d01e1877-1645-453e-950a-897b5ea55597}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="servicetpdetail">
+            <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPDetail</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cargo">
+            <doc><![CDATA[<DIV>Points to reloaded cargo</DIV>]]></doc>
+            <modlrstring>Cargo (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Cargo</attribute>
+            <attribute name="RuntimeName">Cargo</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Cargo</attribute>
+            <attribute name="id">{7bdb8e1d-d513-4e4c-82a2-53ac9c97e593}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="cargo">
+                <doc><![CDATA[<DIV>Describes cargo.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Cargo</attribute>
+                <attribute name="RuntimeName">Cargo</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4e894279-beb2-4957-9534-22b00c136e3b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine">
+      <object type="StateMachine">
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StateMachine1</attribute>
+        <attribute name="RuntimeName">StateMachine1</attribute>
+        <attribute name="id">1f882793-c4ae-41c4-aaa9-da40a5126773</attribute>
+      </object>
+    </link>
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">132236a1-c14e-4da7-917e-f555a5bb9e76</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">6e53844c-ac57-4e9f-bc83-d45fed9c8cbb</attribute>
+        <attribute name="x">-64</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="servicetpdetail">
+        <attribute name="RenderedWidth">166</attribute>
+        <attribute name="id">3f556910-fa41-4da8-a612-21154be8ba40</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ServiceTPDetail</attribute>
+        <attribute name="RenderedHeight">96</attribute>
+        <attribute name="x">600</attribute>
+        <attribute name="y">552</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.06_executed_tp_servce">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/92499bc0-8006-4bd5-901c-f501766b4cb6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">92499bc0-8006-4bd5-901c-f501766b4cb6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.06 Executed TP Servce</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.06 Executed TP Servce</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="servicetpdetail">
+        <attribute name="RenderedWidth">166</attribute>
+        <attribute name="id">7c86c59f-8b35-443b-8e69-295d221af232</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ServiceTPDetail</attribute>
+        <attribute name="RenderedHeight">96</attribute>
+        <attribute name="x">424</attribute>
+        <attribute name="y">1184</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.01_invoice_specitems">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4e688bb0-c589-4275-92a0-3d060494e148.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4e688bb0-c589-4275-92a0-3d060494e148</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.01 Invoice SpecItems</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.01 Invoice SpecItems</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

@@ -1,0 +1,1678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="singlecost">
+    <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">SingleCost</attribute>
+    <attribute name="RuntimeName">SingleCost</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">self.DisplayString</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Methode.</DIV>]]></doc>
+        <modlrstring>AddCostWithCondition(condition:PriceCodition)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AddCostWithCondition</attribute>
+        <attribute name="RuntimeName">AddCostWithCondition</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{05b34891-706d-45ce-bced-4a34aa8ede8c}_EMDUPEID_1</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">condition</attribute>
+            <attribute name="RuntimeName">condition</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PriceCodition</attribute>
+                <attribute name="RuntimeName">PriceCodition</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Short - one line note</DIV>]]></doc>
+        <modlrstring>ShortNote: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ShortNote</attribute>
+        <attribute name="RuntimeName">ShortNote</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{17c32409-f204-4522-8f55-0059b6df9b51}_EMDUPEID_2</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">300</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Methode. Creates price request upon this cost.</DIV></DIV>]]></doc>
+        <modlrstring>CreatePriceRequest(deliverer:Deliverer; requestNr:String; cargo:Cargo; cgd:CostGroupDetail):PriceRequest</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CreatePriceRequest</attribute>
+        <attribute name="RuntimeName">CreatePriceRequest</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{38300109-8a57-4f6a-98d3-06accc93115e}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">returnparam</attribute>
+            <attribute name="RuntimeName">returnparam</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PriceRequest</attribute>
+                <attribute name="RuntimeName">PriceRequest</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">deliverer</attribute>
+            <attribute name="RuntimeName">deliverer</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Deliverer</attribute>
+                <attribute name="RuntimeName">Deliverer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">requestNr</attribute>
+            <attribute name="RuntimeName">requestNr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">cargo</attribute>
+            <attribute name="RuntimeName">cargo</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Cargo</attribute>
+                <attribute name="RuntimeName">Cargo</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">cgd</attribute>
+            <attribute name="RuntimeName">cgd</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CostGroupDetail</attribute>
+                <attribute name="RuntimeName">CostGroupDetail</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. String representing cost in GUI</DIV>]]></doc>
+        <modlrstring>DisplayString: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DisplayString</attribute>
+        <attribute name="RuntimeName">DisplayString</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{511240cd-ecdc-4974-b8b9-768a0c2c3bb0}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if self.ShortNote.isNullOrEmpty then String.Format('{1} {2}', self.ShortNote, self.CostValues-&gt;collect(EfectiveNet.Round(2)).asString-&gt;asSeparatedList(';'), self.Curr.Sign) else String.Format('{0}={1} {2}', self.ShortNote, self.CostValues-&gt;collect(EfectiveNet.Round(2)).asString-&gt;asSeparatedList(';'), self.Curr.Sign) endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. If list of cost values is not empty</DIV>]]></doc>
+        <modlrstring>HasCostValues: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">HasCostValues</attribute>
+        <attribute name="RuntimeName">HasCostValues</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{9aeec652-fb44-4267-8ec7-e97dcb61454c}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.CostValues-&gt;notEmpty</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.DerivedSettable</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. If cost is from/for internal deliverer</DIV>]]></doc>
+        <modlrstring>IsInternal: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsInternal</attribute>
+        <attribute name="RuntimeName">IsInternal</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{c2eb56b6-83cc-4374-82bd-057d26d38aae}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.CostSource.CostDeliverer.IsInternal</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>This is text of the cost if cost have no values but only described with this entry</DIV>]]></doc>
+        <modlrstring>ValueText: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValueText</attribute>
+        <attribute name="RuntimeName">ValueText</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ca0f99dc-98dc-4d48-a812-2d5ecf7068cc}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">500</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Defining if cost is uknown - derscribed with field ValueText</DIV>]]></doc>
+        <modlrstring>HasUnknownValue: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">HasUnknownValue</attribute>
+        <attribute name="RuntimeName">HasUnknownValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{cb5124bb-3468-4302-8a1a-412c79098041}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Type of source of the cost:</DIV>
+<DIV>&nbsp; NotSet - not set;</DIV>
+<DIV>&nbsp; Deliverer - only deliverer is known for this cost;</DIV>
+<DIV>&nbsp; Contract - cost comes from a contract;</DIV>
+<DIV>&nbsp; Request - cost comes from a request from deliverer;</DIV>
+<DIV>&nbsp; Tariff - cost is calculated upon a tariff (not always automatecaly)</DIV>]]></doc>
+        <modlrstring>CostSourceType: CostSourceType</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CostSourceType</attribute>
+        <attribute name="RuntimeName">CostSourceType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{cea9ea57-70bc-4bf7-9757-1558b59aa6b4}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">CostSourceType</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostSourceType</attribute>
+            <attribute name="RuntimeName">CostSourceType</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.DerivedSettable</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>A list of costs.</DIV>]]></doc>
+        <modlrstring>Costs (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Costs</attribute>
+        <attribute name="RuntimeName">Costs</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Costs</attribute>
+        <attribute name="id">{eb9c133f-a14c-413b-84bf-d1cb8bfc46df}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostListCosts</attribute>
+            <attribute name="RuntimeName">CostListCosts</attribute>
+            <attribute name="EffectiveName">CostListCosts</attribute>
+            <attribute name="id">{04d1de1b-037f-432d-9982-cb581339dc9f}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="costlist">
+            <doc><![CDATA[<DIV>Points to the CostList to which this cost belongs</DIV>]]></doc>
+            <modlrstring>CostList (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostList</attribute>
+            <attribute name="RuntimeName">CostList</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CostList</attribute>
+            <attribute name="id">{1219851a-714f-405c-a728-d4dff86a7e5a}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="costlist">
+                <doc><![CDATA[<DIV>Class representing an object which has a list of costs.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CostList</attribute>
+                <attribute name="RuntimeName">CostList</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c85c28c8-b826-4fad-873c-9cba16ae0cda}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>A list of single costs which make this price.</DIV>]]></doc>
+        <modlrstring>IncludedCosts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IncludedCosts</attribute>
+        <attribute name="RuntimeName">IncludedCosts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">IncludedCosts</attribute>
+        <attribute name="id">{57210b88-8b7d-41f1-af56-f3bd3a281fb0}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCostOfferedServicePrice</attribute>
+            <attribute name="RuntimeName">SingleCostOfferedServicePrice</attribute>
+            <attribute name="EffectiveName">SingleCostOfferedServicePrice</attribute>
+            <attribute name="id">{06e8773e-aa98-4639-a0fd-81fa121806f3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredserviceprice">
+            <doc><![CDATA[<DIV>Points to OfferedServicePrice to which this cost belongs</DIV>]]></doc>
+            <modlrstring>OfferedServicePrice (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferedServicePrice</attribute>
+            <attribute name="RuntimeName">OfferedServicePrice</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OfferedServicePrice</attribute>
+            <attribute name="id">{9c31259c-69f6-4573-8375-7205f85cc0a9}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredserviceprice">
+                <doc><![CDATA[<DIV>Class representing a&nbsp;price per unit.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedServicePrice</attribute>
+                <attribute name="RuntimeName">OfferedServicePrice</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{823d359b-1974-4c8a-a664-a9196eddedaa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>SingleCostOutInvoiceAmount_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SingleCostOutInvoiceAmount_</attribute>
+        <attribute name="RuntimeName">SingleCostOutInvoiceAmount_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCostOutInvoiceAmount_</attribute>
+        <attribute name="id">{5b200f60-9f45-45c5-a04a-f38a4eb8a0e5}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCostOutInvoiceAmount</attribute>
+            <attribute name="RuntimeName">SingleCostOutInvoiceAmount</attribute>
+            <attribute name="EffectiveName">SingleCostOutInvoiceAmount</attribute>
+            <attribute name="id">{14df242b-5ce7-4c06-900b-5b47f780c4c4}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoiceamount">
+            <doc><![CDATA[<DIV>Points to OutInvoiceAmounts in which this cost was use</DIV>]]></doc>
+            <modlrstring>InternalOutInvoiceAmount (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InternalOutInvoiceAmount</attribute>
+            <attribute name="RuntimeName">InternalOutInvoiceAmount</attribute>
+            <attribute name="Visibility">Private</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">InternalOutInvoiceAmount</attribute>
+            <attribute name="id">{a780cb9b-6e04-48cd-b8fc-292a714a62db}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoiceamount">
+                <doc><![CDATA[<DIV>Class representing an invoiced price.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceAmount</attribute>
+                <attribute name="RuntimeName">OutInvoiceAmount</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{867dc59b-cc6e-45ea-a20c-1489995f8ffa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>Points to a cost for which this source belongs.</DIV>]]></doc>
+        <modlrstring>SingleCost (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SingleCost</attribute>
+        <attribute name="RuntimeName">SingleCost</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCost</attribute>
+        <attribute name="id">{646bca83-a628-493a-8d2b-976100eac19b}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCostCostSourceAbstr</attribute>
+            <attribute name="RuntimeName">SingleCostCostSourceAbstr</attribute>
+            <attribute name="EffectiveName">SingleCostCostSourceAbstr</attribute>
+            <attribute name="id">{210e0a78-9300-49f5-8d68-282b0864e6ef}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="costsourceabstr">
+            <doc><![CDATA[<DIV>Points to CostSource of the cost</DIV>]]></doc>
+            <modlrstring>CostSource (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostSource</attribute>
+            <attribute name="RuntimeName">CostSource</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CostSource</attribute>
+            <attribute name="id">{403e41f0-da40-4f4f-8f5c-46a349c67fdb}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="costsourceabstr">
+                <doc><![CDATA[<DIV>Abstract class representing a cost's source.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CostSourceAbstr</attribute>
+                <attribute name="RuntimeName">CostSourceAbstr</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{24e311f6-1c8a-48f2-9159-261e16a743a2}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>ExpectedPriceCurr_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExpectedPriceCurr_</attribute>
+        <attribute name="RuntimeName">ExpectedPriceCurr_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ExpectedPriceCurr_</attribute>
+        <attribute name="id">{9b22cf5e-6abf-4d37-87e1-8e6b8a31ed04}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExpectedPriceCurr</attribute>
+            <attribute name="RuntimeName">ExpectedPriceCurr</attribute>
+            <attribute name="EffectiveName">ExpectedPriceCurr</attribute>
+            <attribute name="id">{22daac5a-641f-49f4-8f7a-33077195c735}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="curr">
+            <doc><![CDATA[<DIV>Points to currecny of the cost</DIV>]]></doc>
+            <modlrstring>Curr (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Curr</attribute>
+            <attribute name="RuntimeName">Curr</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Curr</attribute>
+            <attribute name="id">{2a2789aa-cbe0-482f-9533-b1834a414493}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="curr">
+                <doc><![CDATA[<DIV>Class representing a currency.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a16a47ef-1b40-4645-bb62-08fd1b044d7b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">One way association.</SPAN></DIV></SPAN></DIV>]]></doc>
+        <modlrstring>SingleCostMUnit_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SingleCostMUnit_</attribute>
+        <attribute name="RuntimeName">SingleCostMUnit_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCostMUnit_</attribute>
+        <attribute name="id">{aa28e752-1558-40be-a702-8b2c9748ecab}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCostMUnit</attribute>
+            <attribute name="RuntimeName">SingleCostMUnit</attribute>
+            <attribute name="EffectiveName">SingleCostMUnit</attribute>
+            <attribute name="id">{5e08fea7-f1ed-4b8b-aa7b-7c03263896ca}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="munit">
+            <doc><![CDATA[<DIV>Points to measure unit of the cost</DIV>]]></doc>
+            <modlrstring>MUnit (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MUnit</attribute>
+            <attribute name="RuntimeName">MUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MUnit</attribute>
+            <attribute name="id">{929ccf3c-afda-4725-9a25-e7c7ef05a7c3}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="munit">
+                <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Represents a measure unit.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MUnit</attribute>
+                <attribute name="RuntimeName">MUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e423a987-abe5-441e-94a6-637ec5da7b74}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+        <modlrstring>SingleCostSingleCostType_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SingleCostSingleCostType_</attribute>
+        <attribute name="RuntimeName">SingleCostSingleCostType_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCostSingleCostType_</attribute>
+        <attribute name="id">{d7e6bd9a-a634-4f0d-9126-cc8f6ea825de}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCostSingleCostType</attribute>
+            <attribute name="RuntimeName">SingleCostSingleCostType</attribute>
+            <attribute name="EffectiveName">SingleCostSingleCostType</attribute>
+            <attribute name="id">{5e62e2ad-8a6f-45a7-a334-e968be73e9c5}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="singlecosttype">
+            <doc><![CDATA[<DIV>CostType of the cost</DIV>]]></doc>
+            <modlrstring>CostType (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostType</attribute>
+            <attribute name="RuntimeName">CostType</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CostType</attribute>
+            <attribute name="id">{b3499485-da45-4c64-a4f4-dc49135948be}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="singlecosttype">
+                <doc><![CDATA[<DIV>Abstract class for all cost types</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SingleCostType</attribute>
+                <attribute name="RuntimeName">SingleCostType</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2f4df077-7996-4a55-b036-957cf6b765da}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>Derived. A list of all single costs of this item.</DIV>]]></doc>
+        <modlrstring>SingleCosts (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SingleCosts</attribute>
+        <attribute name="RuntimeName">SingleCosts</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCosts</attribute>
+        <attribute name="id">{382ee447-4fc1-41ab-ad0f-9edf0390143d}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedItemSingleCost</attribute>
+            <attribute name="RuntimeName">ExecutedItemSingleCost</attribute>
+            <attribute name="EffectiveName">ExecutedItemSingleCost</attribute>
+            <attribute name="id">{60e0f5d0-828f-4986-b2c5-6d4166122e37}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditem">
+            <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+            <modlrstring>ExecutedItemSingleCost_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedItemSingleCost_</attribute>
+            <attribute name="RuntimeName">ExecutedItemSingleCost_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExecutedItemSingleCost_</attribute>
+            <attribute name="id">{0083e574-d65a-4342-a986-f6d3d7a0dfe4}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditem">
+                <doc><![CDATA[<DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">IEcoOnSave</attribute>
+                <attribute name="id">{78395a97-455d-4f97-a366-8607343fd841}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.CostList.Costs</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[<DIV>Points to a cost for which this value belongs.</DIV>]]></doc>
+        <modlrstring>ExpectedPrice (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExpectedPrice</attribute>
+        <attribute name="RuntimeName">ExpectedPrice</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ExpectedPrice</attribute>
+        <attribute name="id">{39471d5d-2818-4a92-b519-d8fe3ae554cf}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">LimitedPriceExpectedPrice</attribute>
+            <attribute name="RuntimeName">LimitedPriceExpectedPrice</attribute>
+            <attribute name="EffectiveName">LimitedPriceExpectedPrice</attribute>
+            <attribute name="id">{880dcab4-9b35-4bf3-97af-0a62d78dffa7}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="costvalue">
+            <doc><![CDATA[<DIV>List of the cost values</DIV>]]></doc>
+            <modlrstring>CostValues (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostValues</attribute>
+            <attribute name="RuntimeName">CostValues</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CostValues</attribute>
+            <attribute name="id">{76b0e609-44a3-43d3-aa5f-2dc214c15193}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="costvalue">
+                <doc><![CDATA[<DIV>Class representing a cost's value.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CostValue</attribute>
+                <attribute name="RuntimeName">CostValue</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{66f2e85b-81d0-4664-b4bc-2eddf7e97506}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>CreatedFromSingleCost (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CreatedFromSingleCost</attribute>
+        <attribute name="RuntimeName">CreatedFromSingleCost</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CreatedFromSingleCost</attribute>
+        <attribute name="id">5a86dddd-4487-43d5-b779-f8ed85a26850</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SingleCostCreatedFromSingleCostPriceRequestSegPriceRequestSegs</attribute>
+            <attribute name="EffectiveName">SingleCostCreatedFromSingleCostPriceRequestSegPriceRequestSegs</attribute>
+            <attribute name="id">52fc7afe-a7cb-4b69-9160-0a887824238c</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="pricerequestseg">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>PriceRequestSegs (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">PriceRequestSegs</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PriceRequestSegs</attribute>
+            <attribute name="id">4e2615a9-604e-424c-98e2-7ecf1bf73503</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="pricerequestseg">
+                <doc><![CDATA[<DIV>Class representing a service from a price request.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PriceRequestSeg</attribute>
+                <attribute name="RuntimeName">PriceRequestSeg</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e0ad5687-3752-4ced-b394-c082a121a0af}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>SingleCostsAmountRounding (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">SingleCostsAmountRounding</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCostsAmountRounding</attribute>
+        <attribute name="id">a12163ee-d748-416d-9f53-63ff6cc4baf5</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SingleCostSingleCostsAmountRoundingAmountRoundingAmountRounding</attribute>
+            <attribute name="EffectiveName">SingleCostSingleCostsAmountRoundingAmountRoundingAmountRounding</attribute>
+            <attribute name="id">bfd2b4b2-755d-4de1-96d6-53a4478d3477</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="amountrounding">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>AmountRounding (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">AmountRounding</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">AmountRounding</attribute>
+            <attribute name="id">9151ed49-f1a7-4acc-a9e7-5f828268de76</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="amountrounding">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AmountRounding</attribute>
+                <attribute name="RuntimeName">AmountRounding</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">83dfe429-fcf6-43e6-86f2-c95339bd3919</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>SingleCostsMUnitRounding (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">SingleCostsMUnitRounding</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCostsMUnitRounding</attribute>
+        <attribute name="id">86a747eb-bb7f-4a27-95c1-ac100d5ddad4</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnitRoundingMUnitRoundingSingleCostSingleCostsMUnitRounding</attribute>
+            <attribute name="EffectiveName">MUnitRoundingMUnitRoundingSingleCostSingleCostsMUnitRounding</attribute>
+            <attribute name="id">c1738c35-7934-4403-a887-088932eac7b0</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="munitrounding">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>MUnitRounding (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnitRounding</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MUnitRounding</attribute>
+            <attribute name="id">ed7d7918-0a2c-45fd-8442-481a0abc3509</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="munitrounding">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MUnitRounding</attribute>
+                <attribute name="RuntimeName">MUnitRounding</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="singlecost">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>SingleCostForIntAmount (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SingleCostForIntAmount</attribute>
+        <attribute name="RuntimeName">SingleCostForIntAmount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SingleCostForIntAmount</attribute>
+        <attribute name="id">549339bb-414c-4ce1-8c62-066711b218ef</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">OutInvoiceAmountInternalOutInvoiceAmountsSingleCostSingleCostForIntAmount</attribute>
+            <attribute name="EffectiveName">OutInvoiceAmountInternalOutInvoiceAmountsSingleCostSingleCostForIntAmount</attribute>
+            <attribute name="id">cb79b63d-aea9-4f0d-9490-caa197206922</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="singlecost">
+            <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCost</attribute>
+            <attribute name="RuntimeName">SingleCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoiceamount">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>InternalOutInvoiceAmounts (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InternalOutInvoiceAmounts</attribute>
+            <attribute name="RuntimeName">InternalOutInvoiceAmounts</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">InternalOutInvoiceAmounts</attribute>
+            <attribute name="id">ed1293ba-bc23-4ef6-ad15-bafb982167cb</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoiceamount">
+                <doc><![CDATA[<DIV>Class representing an invoiced price.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceAmount</attribute>
+                <attribute name="RuntimeName">OutInvoiceAmount</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{867dc59b-cc6e-45ea-a20c-1489995f8ffa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="singlecost">
+        <attribute name="RenderedWidth">162</attribute>
+        <attribute name="id">2342e793-308d-40ca-b2f8-809aae442284</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SingleCost</attribute>
+        <attribute name="RenderedHeight">136</attribute>
+        <attribute name="x">1032</attribute>
+        <attribute name="y">944</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.00_offers">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7a04f235-c98c-462a-89f5-4d1b18e61279.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7a04f235-c98c-462a-89f5-4d1b18e61279</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.00 Offers</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.00 Offers</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="singlecost">
+        <attribute name="RenderedWidth">162</attribute>
+        <attribute name="id">de17f8dc-8c34-4399-9d1e-c30041ce894d</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SingleCost</attribute>
+        <attribute name="RenderedHeight">136</attribute>
+        <attribute name="x">352</attribute>
+        <attribute name="y">376</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.01_offers_singlecost_and_offeredprice">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b330daed-216c-496b-93ba-65ee0be8c09d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b330daed-216c-496b-93ba-65ee0be8c09d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.01 Offers SingleCost and OfferedPrice</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.01 Offers SingleCost and OfferedPrice</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="singlecost">
+        <attribute name="RenderedWidth">88</attribute>
+        <attribute name="id">9f825c95-b95e-428d-9934-568482456b03</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SingleCost</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">80</attribute>
+        <attribute name="y">640</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">HideAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_10.00_pricerequest">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/542d90a9-e453-41ef-a92e-bfa2153b29a0.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">542d90a9-e453-41ef-a92e-bfa2153b29a0</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">10.00 PriceRequest</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">10.00 PriceRequest</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="singlecost">
+        <attribute name="RenderedWidth">88</attribute>
+        <attribute name="id">c187f0c6-ef6e-47fe-a424-225da7799c23</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SingleCost</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">936</attribute>
+        <attribute name="y">736</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.00_customer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/fb15b843-df27-42c4-83cb-925ccdf9cce3.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">fb15b843-df27-42c4-83cb-925ccdf9cce3</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.00 Customer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">True</attribute>
+            <attribute name="SquareNewGeneralizations">True</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.00 Customer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="singlecost">
+        <attribute name="RenderedWidth">162</attribute>
+        <attribute name="id">94f11b97-fdc4-4c4b-a2d0-7e7dbb59baf8</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SingleCost</attribute>
+        <attribute name="RenderedHeight">136</attribute>
+        <attribute name="x">720</attribute>
+        <attribute name="y">616</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_00.04_roundings">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/588af826-3aa3-41f7-8f54-d96312f998f2.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">588af826-3aa3-41f7-8f54-d96312f998f2</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">00.04 Roundings</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">00.04 Roundings</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

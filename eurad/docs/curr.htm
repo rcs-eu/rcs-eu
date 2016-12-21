@@ -1,0 +1,351 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Curr in package EuradSystem</h1>
+    <p><DIV>Class representing a currency.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Code: String</td>
+        <td class="style1"><DIV>Code of currency, e.g. PLN, USD etc.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Sign: String</td>
+        <td class="style1"><DIV>Sign of currency, e.g. zł, $ etc.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetCurr(serviceProvider:IEcoServiceProvider; currName:String; out curr:Curr):Boolean</td>
+        <td class="style1"><DIV>Method. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if a currency with </SPAN><SPAN style="FONT-STYLE: italic">currName </SPAN><SPAN>code exists in the system and sets this currency to </SPAN><SPAN style="FONT-STYLE: italic">curr </SPAN><SPAN>parameter. Otherwise returns </SPAN><SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>and sets </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">curr </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetCurr(serviceProvider:IEcoServiceProvider; currName:String):Curr</td>
+        <td class="style1"><DIV>Method. Gets a currency with code as <SPAN style="FONT-STYLE: italic">currName </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AccountTransactionsCurr : <a href="accounttransaction.htm">accounttransaction</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AccountTransactionsTransactionCurr : <a href="accounttransaction.htm">accounttransaction</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AmountCurr_ : <a href="netamount.htm">netamount</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AmountsCurr : <a href="amount.htm">amount</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BankAccountCurr_ : <a href="bankaccount.htm">bankaccount</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BankExRatesCurr_ : <a href="bankexrates.htm">bankexrates</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BankTransfersOriginalCurr : <a href="banktransfer.htm">banktransfer</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CashBoxsFCurr : <a href="cashbox.htm">cashbox</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CheckRegistersCurrency : <a href="checkregister.htm">checkregister</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyCurr_ : <a href="company.htm">company</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyCurr1_ : <a href="company.htm">company</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyInsuranceCurr_ : <a href="companyinsurance.htm">companyinsurance</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyLimitCurr_ : <a href="companylimit.htm">companylimit</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ConfigForSystemCurr_ : <a href="configforsystem.htm">configforsystem</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CurrValuesValue : <a href="currvalue.htm">currvalue</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerCurr_ : <a href="customer.htm">customer</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrderCurr_ : <a href="customerorder.htm">customerorder</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsDocTranzitCurr_ : <a href="customsdoctranzit.htm">customsdoctranzit</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsDocumentCurr_ : <a href="customsdocument.htm">customsdocument</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsInsuranceDocCurr_ : <a href="customsinsurancedoc.htm">customsinsurancedoc</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DiscountListCurr_ : <a href="discountlist.htm">discountlist</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchangeRateCurr_ : <a href="exchangerateabstract.htm">exchangerateabstract</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchangeRateSingleCurr_ : <a href="exchangeratesingle.htm">exchangeratesingle</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchangeRateTableCurr_ : <a href="exchangeratetable.htm">exchangeratetable</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExpectedPriceCurr_ : <a href="singlecost.htm">singlecost</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExRateCurr_ : <a href="exrate.htm">exrate</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExRateCurr1_ : <a href="exrate.htm">exrate</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FixedToExRateCurr_ : <a href="fixedtoexrate.htm">fixedtoexrate</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FixedToExRatesCurr_ : <a href="fixedtoexrates.htm">fixedtoexrates</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InInvoiceReclamPosCurr_ : <a href="ininvoicereclampos.htm">ininvoicereclampos</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InsuranceLimitCurr_ : <a href="company.htm">company</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoiceCurr_ : <a href="invoicespecification.htm">invoicespecification</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedServicePriceCurr_ : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaidDocumentsDocumentCurr : <a href="paiddocument.htm">paiddocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayableDocumentsDocumentCurr : <a href="payabledocument.htm">payabledocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaymentsCurr : <a href="payment.htm">payment</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SimpleExRateCurr_ : <a href="simpleexrate.htm">simpleexrate</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SimpleExRateCurr1_ : <a href="simpleexrate.htm">simpleexrate</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemACCurr_ : <a href="specitemac.htm">specitemac</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SystemBankAccountCurr_ : <a href="systembankaccount.htm">systembankaccount</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TempExRatesCurr_ : <a href="tempexrates.htm">tempexrates</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.01_amounts.htm">00.01 Amounts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.04_configuration.htm">01.04 Configuration</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.00_common.htm">02.00 Common</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_05.00_crm.htm">05.00 CRM</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_05.00_crm.htm">05.00 CRM</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_05.00_crm.htm">05.00 CRM</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.04_executed_ac_servce.htm">07.04 Executed AC Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_09.00_deliverercontracts.htm">09.00 DelivererContracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.05_ininvoice.htm">12.05 InInvoice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_13.00_ininvoice_reclamation.htm">13.00 InInvoice Reclamation</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

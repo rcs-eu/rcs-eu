@@ -1,0 +1,155 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">PriceRequest in package EuradSystem</h1>
+    <p><DIV>Price request&nbsp;to deliverer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AnswerValidFrom: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Date from which prices from this request&nbsp;are valid.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AnswerValidTill: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Date&nbsp;to which prices from this request&nbsp;are valid.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExpectAnswerTill: DateTime</td>
+        <td class="style1"><DIV>Date to which answer is expected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInternal: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if a deliverer is an internal company union.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NoteForDeliverer: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Note for a deliverer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RequestDate: DateTime</td>
+        <td class="style1"><DIV>Date of the request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_pricerequest_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Request's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SendDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Date of when this request was sent.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddSingleCost(cargo:Cargo; cost:SingleCost; cgd:CostGroupDetail)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Cancel()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoAsAnswered()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoAsUnanswered()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsAnswered()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsUnanswered()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Send()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetSendParams()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AttachFileList : <a href="attachfilelist.htm">attachfilelist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of attached files.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostSourcePriceReqPriceRequest_ : <a href="costsourcepricereq.htm">costsourcepricereq</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerRequest : <a href="customerrequest.htm">customerrequest</a> 0..1</td>
+        <td class="style1"><DIV>If this request is internal it points to an internal&nbsp;customer request which was created upon this request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Deliverer : <a href="deliverer.htm">deliverer</a> 1</td>
+        <td class="style1"><DIV>A deliverer to which this request was sent.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessagePriceReqAnsweredPriceRequest_ : <a href="messagepricereqanswered.htm">messagepricereqanswered</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessagePriceReqNoAnswerFromCustomerPriceRequest_ : <a href="messagepricereqnoanswerfromcustomer.htm">messagepricereqnoanswerfromcustomer</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessagePriceReqRejectedPriceRequest_ : <a href="messagepricereqrejected.htm">messagepricereqrejected</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PersonalContact : <a href="abstractpersonalcontact.htm">abstractpersonalcontact</a> 0..1</td>
+        <td class="style1"><DIV>A person who work for a deliverer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceRequestItems : <a href="pricerequestitem.htm">pricerequestitem</a> 0..*</td>
+        <td class="style1"><DIV>A list of request's items.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleUser : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>Points to a user who prepared this request.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_10.00_pricerequest.htm">10.00 PriceRequest</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_16.00_internal_price_request.htm">16.00 Internal Price Request</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

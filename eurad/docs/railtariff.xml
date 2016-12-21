@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="railtariff">
+    <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">A separate functional&nbsp;unit which represents a rail tariff. It can be executed by the main part of the application.</SPAN></DIV></DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">RailTariff</attribute>
+    <attribute name="RuntimeName">RailTariff</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="plugin">
+        <doc><![CDATA[<DIV>Represents a&nbsp;separate functional unit wich can be executed by the main part of the application.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Plugin</attribute>
+        <attribute name="RuntimeName">Plugin</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{e06579c6-ee99-48ee-b8e3-1197be138911}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Specifies the last day of validity of the tariff.</SPAN></DIV>]]></doc>
+        <modlrstring>ValidTo: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValidTo</attribute>
+        <attribute name="RuntimeName">ValidTo</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{11662b51-39c5-4540-82c9-c5443cb82787}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Static method. Returns&nbsp;the&nbsp;tariff</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;with the specified name in </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">tariff</SPAN><SPAN style="FONT-FAMILY: Verdana">. The tariff must be valid at the specified </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana">validOn</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;date. The result determines whether the&nbsp;requested&nbsp;tariff was found.</SPAN></DIV>]]></doc>
+        <modlrstring>FindTariff(serviceProvider:IEcoServiceProvider; name:String; validOn:DateTime; out tariff:RailTariff):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FindTariff</attribute>
+        <attribute name="RuntimeName">FindTariff</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{1e9cdf21-f621-4745-8d1c-d9e67a1da4b9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">True</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">serviceProvider</attribute>
+            <attribute name="RuntimeName">serviceProvider</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IEcoServiceProvider</attribute>
+                <attribute name="RuntimeName">IEcoServiceProvider</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">name</attribute>
+            <attribute name="RuntimeName">name</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">validOn</attribute>
+            <attribute name="RuntimeName">validOn</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DateTime</attribute>
+                <attribute name="RuntimeName">DateTime</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">tariff</attribute>
+            <attribute name="RuntimeName">tariff</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RailTariff</attribute>
+                <attribute name="RuntimeName">RailTariff</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Specifies the first&nbsp;day of validity of the tariff.</SPAN></DIV></DIV>]]></doc>
+        <modlrstring>ValidFrom: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValidFrom</attribute>
+        <attribute name="RuntimeName">ValidFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{db790582-3132-4e24-8201-e8fca5acf1ea}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-FAMILY: Verdana">Method. Instantiates a new&nbsp;tariff instance. </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">RailTariffInstance</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;provides&nbsp;specific&nbsp;report generation&nbsp;functionality.</SPAN></DIV></SPAN></DIV>]]></doc>
+        <modlrstring>GetInstance(user:SysUser):RailTariffInstance</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetInstance</attribute>
+        <attribute name="RuntimeName">GetInstance</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">58d34d1a-acb3-4b93-b3bd-2c04561abacb</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RailTariffInstance</attribute>
+                <attribute name="RuntimeName">RailTariffInstance</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">user</attribute>
+            <attribute name="RuntimeName">user</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUser</attribute>
+                <attribute name="RuntimeName">SysUser</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="railtariff">
+        <doc><![CDATA[<DIV>Points to a railway tariff.</DIV>]]></doc>
+        <modlrstring>RailTariff (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RailTariff</attribute>
+        <attribute name="RuntimeName">RailTariff</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">RailTariff</attribute>
+        <attribute name="id">{d5ef0f35-4d6e-4e94-8dae-4f831504ad84}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostSourceTariffRailTariff</attribute>
+            <attribute name="RuntimeName">CostSourceTariffRailTariff</attribute>
+            <attribute name="EffectiveName">CostSourceTariffRailTariff</attribute>
+            <attribute name="id">{89a1bb3c-876f-4527-9b8e-b3d64d5322e8}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="railtariff">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">A separate functional&nbsp;unit which represents a rail tariff. It can be executed by the main part of the application.</SPAN></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailTariff</attribute>
+            <attribute name="RuntimeName">RailTariff</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="costsourcetariff">
+            <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">One way association.</SPAN></DIV>]]></doc>
+            <modlrstring>CostSourceTariffRailTariff_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostSourceTariffRailTariff_</attribute>
+            <attribute name="RuntimeName">CostSourceTariffRailTariff_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CostSourceTariffRailTariff_</attribute>
+            <attribute name="id">{e734f663-8b39-4d14-9767-890147b980e7}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="costsourcetariff">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing a cost's source which is a railway tariff.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CostSourceTariff</attribute>
+                <attribute name="RuntimeName">CostSourceTariff</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{af19a602-48ef-467b-870b-e5eacfb0fd55}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="railtariff">
+        <doc><![CDATA[<DIV>
+<DIV>A list of deliverer's&nbsp;rail tariffs.</DIV></DIV>]]></doc>
+        <modlrstring>RailTariffs (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RailTariffs</attribute>
+        <attribute name="RuntimeName">RailTariffs</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">RailTariffs</attribute>
+        <attribute name="id">{9331173a-43d7-4ab4-9be1-29183845baae}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailTariffDeliverer</attribute>
+            <attribute name="RuntimeName">RailTariffDeliverer</attribute>
+            <attribute name="EffectiveName">RailTariffDeliverer</attribute>
+            <attribute name="id">{c386b8c3-b80b-4e3e-aa03-6403850f6cd0}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="railtariff">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">A separate functional&nbsp;unit which represents a rail tariff. It can be executed by the main part of the application.</SPAN></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailTariff</attribute>
+            <attribute name="RuntimeName">RailTariff</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="deliverer">
+            <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">The deliverer of the tariff.</SPAN></DIV>]]></doc>
+            <modlrstring>Deliverer (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Deliverer</attribute>
+            <attribute name="RuntimeName">Deliverer</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Deliverer</attribute>
+            <attribute name="id">{72028532-bd74-49a0-bd99-0245270728d8}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="deliverer">
+                <doc><![CDATA[<DIV>Represents a contractor which is a Deliverer. </DIV>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt">Note: </SPAN><SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt">Deliverer should have all deliverer related properties (Ubezpieczenia, konta bankowe, ...). These properties are now improperly located in Company.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Deliverer</attribute>
+                <attribute name="RuntimeName">Deliverer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d1a96093-feec-4669-b41d-861ff44f9690}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="railtariff">
+        <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">The tariff of the tariff instance.</SPAN></DIV>]]></doc>
+        <modlrstring>RailTariff (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RailTariff</attribute>
+        <attribute name="RuntimeName">RailTariff</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">RailTariff</attribute>
+        <attribute name="id">{2e518502-f01b-4ef4-b034-6446c9ec40cf}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailTariffInstanceRailTariff</attribute>
+            <attribute name="RuntimeName">RailTariffInstanceRailTariff</attribute>
+            <attribute name="EffectiveName">RailTariffInstanceRailTariff</attribute>
+            <attribute name="id">{ecd34c16-f9fd-436f-812c-708b1c252b28}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="railtariff">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">A separate functional&nbsp;unit which represents a rail tariff. It can be executed by the main part of the application.</SPAN></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailTariff</attribute>
+            <attribute name="RuntimeName">RailTariff</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="railtariffinstance">
+            <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">One way association.</SPAN></DIV></SPAN></DIV>]]></doc>
+            <modlrstring>RailTariffInstanceRailTariff_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailTariffInstanceRailTariff_</attribute>
+            <attribute name="RuntimeName">RailTariffInstanceRailTariff_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">RailTariffInstanceRailTariff_</attribute>
+            <attribute name="id">{0e58ecab-cfe0-4f5d-92ba-297842b0eb33}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="railtariffinstance">
+                <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Provides&nbsp;specific&nbsp;rail tariff calculation</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;functionality.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RailTariffInstance</attribute>
+                <attribute name="RuntimeName">RailTariffInstance</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">IRailTariffImplementation</attribute>
+                <attribute name="id">{cd4db34c-2220-4c9e-8021-fadefa49fa8a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="railtariff">
+        <doc><![CDATA[<DIV>The rail tariff used as a base for price calculations.</DIV>]]></doc>
+        <modlrstring>RailTariff (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RailTariff</attribute>
+        <attribute name="RuntimeName">RailTariff</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">RailTariff</attribute>
+        <attribute name="id">{32b22dbe-2f98-4e1d-a3d4-49067d9e2920}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DiscountListRailTariff</attribute>
+            <attribute name="RuntimeName">DiscountListRailTariff</attribute>
+            <attribute name="EffectiveName">DiscountListRailTariff</attribute>
+            <attribute name="id">{fb45dbe5-eb10-40de-93c3-c3de5df1dd3d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="railtariff">
+            <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">A separate functional&nbsp;unit which represents a rail tariff. It can be executed by the main part of the application.</SPAN></DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailTariff</attribute>
+            <attribute name="RuntimeName">RailTariff</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="discountlist">
+            <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">One way association.</SPAN></DIV></SPAN></DIV>]]></doc>
+            <modlrstring>DiscountListRailTariff_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DiscountListRailTariff_</attribute>
+            <attribute name="RuntimeName">DiscountListRailTariff_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DiscountListRailTariff_</attribute>
+            <attribute name="id">{689b5ec3-a45e-430f-a16b-af346aa286b6}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="discountlist">
+                <doc><![CDATA[<DIV>Represents a list of discounts from a rail tariff.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DiscountList</attribute>
+                <attribute name="RuntimeName">DiscountList</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{b0005360-5612-4955-bd49-c8779ead022d}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="railtariff">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">bfdff4d6-5edd-4d74-9970-3ddc45d280c5</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">RailTariff</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">672</attribute>
+        <attribute name="y">784</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.00_common">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/efdd5d61-e1b3-40f7-b238-153cac683a57.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">efdd5d61-e1b3-40f7-b238-153cac683a57</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.00 Common</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.00 Common</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="railtariff">
+        <attribute name="RenderedWidth">74</attribute>
+        <attribute name="id">e3624cf9-f320-497e-9b77-9d48703510c5</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">RailTariff</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">120</attribute>
+        <attribute name="y">24</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.01_offers_singlecost_and_offeredprice">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b330daed-216c-496b-93ba-65ee0be8c09d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b330daed-216c-496b-93ba-65ee0be8c09d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.01 Offers SingleCost and OfferedPrice</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.01 Offers SingleCost and OfferedPrice</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="railtariff">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">3ee91b99-79a0-428b-aa2b-d736ed5d7238</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">RailTariff</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">920</attribute>
+        <attribute name="y">1408</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_09.00_deliverercontracts">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/5acd3612-8da9-418a-963f-ef034a80df79.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">5acd3612-8da9-418a-963f-ef034a80df79</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">09.00 DelivererContracts</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">09.00 DelivererContracts</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="railtariff">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">d2b5425e-95e3-4e59-b149-1abfe8eb42fb</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">RailTariff</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">704</attribute>
+        <attribute name="y">32</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.11_reports_and_tariffs_framework">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/f7f65fd6-734d-4347-beb1-af8c9589b690.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">f7f65fd6-734d-4347-beb1-af8c9589b690</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.11 Reports and Tariffs Framework</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.11 Reports and Tariffs Framework</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="railtariff">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">8c517db9-990a-42d4-8e9c-febda2f0607c</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">RailTariff</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">536</attribute>
+        <attribute name="y">296</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.12_tariffs_framework">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/ab94ce05-33c1-42e2-b27b-2231114e8318.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">ab94ce05-33c1-42e2-b27b-2231114e8318</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.12 Tariffs Framework</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.12 Tariffs Framework</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="railtariff">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">ac09206f-acd6-482e-852a-5e9f486262de</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">RailTariff</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">976</attribute>
+        <attribute name="y">1368</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{c1c375b9-aa5a-4e11-b4a9-39ffddfae08c}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_15.00_internal_deliverer_contracts">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/e770bab4-fc11-46fa-82c4-8d78266b6c2b.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">e770bab4-fc11-46fa-82c4-8d78266b6c2b</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">15.00 Internal Deliverer Contracts</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">15.00 Internal Deliverer Contracts</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

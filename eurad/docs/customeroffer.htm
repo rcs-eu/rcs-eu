@@ -1,0 +1,274 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CustomerOffer in package EuradSystem</h1>
+    <p><DIV>Class representing an offer for a customer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AcceptAllGeneralOrders: Boolean</td>
+        <td class="style1"><DIV>If <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>all general customer orders wich are created upon this offer are automatically accepted. If </SPAN><SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>nothing happens.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AnswerTill: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A date to which a user who sent this offer&nbsp;expects an answer from a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FooterNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A note which is placed on a footer of an offer report.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInternal: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if a customer is an internal company unit. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NeedContract: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if signing a contract with a customer is required. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferDate: DateTime</td>
+        <td class="style1"><DIV>Offer's date.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderTill: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A date to which a first order should be sent by a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PreliminaryNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>A note which is placed&nbsp;before&nbsp;prices on an offer report.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RejectNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>In this note you can write a reason why this offer was rejected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RequiredDocument: RequiredDocumentForOffer</td>
+        <td class="style1"><DIV>Indicates what kind of document is required to this offer. Enum:</DIV>
+<DIV>- Order,</DIV>
+<DIV>- Contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_customeroffer_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Offer's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SentOn: DateTime</td>
+        <td class="style1"><DIV>A date on which this offer changed its state from <SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Sent</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidFrom: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>A date&nbsp;from which this offer is valid.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidTill: DateTime</td>
+        <td class="style1"><DIV>A date to which this offer is valid.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Abound()</td>
+        <td class="style1"><DIV>Method. Changes an offer's state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Abounded</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Accept()</td>
+        <td class="style1"><DIV>Method. Changes an offer's state from <SPAN style="FONT-STYLE: italic">Sent </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AcceptIfInternal()</td>
+        <td class="style1"><DIV>Method. Is fired on entry to state <SPAN style="FONT-STYLE: italic">Sent</SPAN><SPAN> and&nbsp;only for internal offers. When this offer is connected to deliverer contract (internal price list) then contract is registered upon data from this offer. When this offer is created upon customer request which is connected to a price request then automatically prices are set to a price request upon data from this this offer.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CalculateSimilarityRate(similarOffer:ISimilarOffer):Int64</td>
+        <td class="style1"><DIV>Method. Calculates and returns offer similarity rate.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanPrepare():Boolean</td>
+        <td class="style1"><DIV>Method. Checks if an offer's state can be changed from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>- if all data are filled and proper. Returns </SPAN><SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if everything is O.K. and state can be changed to </SPAN><SPAN style="FONT-STYLE: italic">Prepared</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CleanExchangeRates()</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocNr():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns offer's number. Used for stating a&nbsp;number of a last prepared document for a customer.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoPrepare(ensureDelivererContractCostGroups:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>Method. Is executed when an offer's state is changed from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>and:</SPAN></DIV>
+<DIV><SPAN>- checks if an internal offer does not contain internal costs,</SPAN></DIV>
+<DIV><SPAN>- checks if this offer has at least&nbsp;1 suboffer</SPAN></DIV>
+<DIV><SPAN>- some other data for internal documents' flow.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoSend()</td>
+        <td class="style1"><DIV>Method. Is fired when an offer's state is changed from <SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Sent</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GenerateDelivererContract(contractNr:String; sysCompany:SysCompanyUnit; deliverer:Deliverer):DelivererContractOrg</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetDocDate():DateTime</td>
+        <td class="style1"><DIV>Method. Returns offer's date. Used for stating a date of a last prepared document for a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetListOfSimilarOffers():ISimilarOffer[]</td>
+        <td class="style1"><DIV>Method. Returns a list of offers and customer requests which are similar to this offer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOwningCompany(out company:Company):Boolean</td>
+        <td class="style1"><DIV>Method. Returns <SPAN style="FONT-WEIGHT: bold">true&nbsp;</SPAN><SPAN>if this offer's customer is an outer company and sets this company to </SPAN><SPAN style="FONT-STYLE: italic">company </SPAN><SPAN>parameter. Otherwise returns&nbsp;</SPAN><SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>and sets </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">company </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetParts():SimilarOfferPart[]</td>
+        <td class="style1"><DIV>Method. Gets groups of costs from this customer offer as parts which are used in searching for similar offers.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsInWork()</td>
+        <td class="style1"><DIV>Method. Changes an offer's state from <SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">InWork</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsPrepared(ensureDelivererContractCostGroups:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>Method. Changes an offer's state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Prepared</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Reject()</td>
+        <td class="style1"><DIV>Method. Changes an offer's state from <SPAN style="FONT-STYLE: italic">Sent </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Rejected</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Send()</td>
+        <td class="style1"><DIV>Method. Changes an offer's state from <SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Sent</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ApprovedBy : <a href="sysuser.htm">sysuser</a> 0..1</td>
+        <td class="style1"><DIV>Points to an user who has to approved this offer before it is sent to a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContNote : <a href="offerucontnote.htm">offerucontnote</a> 0..*</td>
+        <td class="style1"><DIV>A list of text items that claim what is included in a price. Used in an offer's report.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostSourceAbstrCustomerOffer_ : <a href="costsourceabstr.htm">costsourceabstr</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Customer : <a href="customer.htm">customer</a> 1</td>
+        <td class="style1"><DIV>Points to a customer for which this offer is prepared.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerContract : <a href="customercontract.htm">customercontract</a> 0..1</td>
+        <td class="style1"><DIV>Points to a contract with a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrders : <a href="customerorder.htm">customerorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of customer orders which were created upon this offer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerRequests : <a href="customerrequest.htm">customerrequest</a> 0..*</td>
+        <td class="style1"><DIV>A list of customer request upon which this offered was created.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerSubOffers : <a href="customersuboffer.htm">customersuboffer</a> 0..*</td>
+        <td class="style1"><DIV>A list of suboffers which belong to this offer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererContractOrg : <a href="deliverercontractorg.htm">deliverercontractorg</a> 0..1</td>
+        <td class="style1"><DIV>Points to a contract with internal deliverer (internal price list).</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererOrderCustomerOffer_ : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchangeRateTable : <a href="offerexchagelist.htm">offerexchagelist</a> 1</td>
+        <td class="style1"><DIV>Points to a table of exchange rates.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageCustOfferNoAnswerCustomerOffer_ : <a href="messagecustoffernoanswer.htm">messagecustoffernoanswer</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NotContNote : <a href="offerunotcontnote.htm">offerunotcontnote</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>A list of text items that claim what is not&nbsp;included in a price. Used in an offer's report.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayTermDetail : <a href="paytermdetail.htm">paytermdetail</a> 1</td>
+        <td class="style1"><DIV>Points to an object which has a data about payment termin.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PersonalContact : <a href="abstractpersonalcontact.htm">abstractpersonalcontact</a> 0..1</td>
+        <td class="style1"><DIV>Points to a person who works for a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleUser : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>Points to a user&nbsp;who prepared this offer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SendNote : <a href="offerusendnote.htm">offerusendnote</a> 0..*</td>
+        <td class="style1"><DIV>A list of text items - requirements. When these requirements are met then a customer can send a cargo. Used in an offer's report.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_08.00_customer_requests.htm">08.00 Customer requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_14.00_customercontracts.htm">14.00 CustomerContracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_16.00_internal_price_request.htm">16.00 Internal Price Request</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

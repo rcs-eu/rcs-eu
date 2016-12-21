@@ -1,0 +1,106 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">SingleCustomerOrder in package EuradSystem</h1>
+    <p><DIV>Class representing single customer order</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">HasMultipleSameTypeItems: Boolean</td>
+        <td class="style1"><DIV>Derived. Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MustHaveGeneralOrder: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nr: Integer</td>
+        <td class="style1"><DIV>Derived. Number of this single order on its general order list</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceDate: DateTime</td>
+        <td class="style1"><DIV>Date of the service for this order. Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanAccept(out msgList:ArrayList):Boolean</td>
+        <td class="style1"><DIV>Methode for chcking if order can be accepted.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanModify():Boolean</td>
+        <td class="style1"><DIV>Methode. Returning if this order can be modified.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangingCustomerOffer(toCustomerOffer:CustomerOffer)</td>
+        <td class="style1"><DIV>Methode. Triggered when offer of this order is changed.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(officeEntity:OfficeEntity; deepCopy:Boolean)</td>
+        <td class="style1"><DIV>Methode. Copying this order</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateOutInvoiceAmounts():IDictionary&lt;ExecutedItem,IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;&gt;</td>
+        <td class="style1"><DIV>Methode. Creates amount to be invoiced from all services from this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OnSave()</td>
+        <td class="style1"><DIV>Methode. Triggered when order is saved.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AssignedGosCargoHolders : <a href="goscargoholder.htm">goscargoholder</a> 0..*</td>
+        <td class="style1"><DIV>CargoHolders for GOS which are associated with this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClosingInvoices : <a href="ininvoicezero.htm">ininvoicezero</a> 0..*</td>
+        <td class="style1"><DIV>List of InInvoiceZero which are created in moment of closing this order</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GeneralOrder : <a href="generalcustomerorder.htm">generalcustomerorder</a> 0..1</td>
+        <td class="style1"><DIV>General order to which this order belongs</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalDelivererOrder : <a href="singledelivererorder.htm">singledelivererorder</a> 0..1</td>
+        <td class="style1"><DIV>Internal deliverer orders created upon this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavCloseOrderSingleCustomerOrder_ : <a href="navcloseorder.htm">navcloseorder</a> 0..*</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavOpenOrderSingleCustomerOrder_ : <a href="navopenorder.htm">navopenorder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.05_ininvoice.htm">12.05 InInvoice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

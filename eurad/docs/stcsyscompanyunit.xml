@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="stcsyscompanyunit">
+    <doc><![CDATA[]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">StcSysCompanyUnit</attribute>
+    <attribute name="RuntimeName">StcSysCompanyUnit</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">c3118c94-fae1-4b20-84d8-441fefd7bf55</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="servicetagcondition">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceTagCondition</attribute>
+        <attribute name="RuntimeName">ServiceTagCondition</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">d4e0afbc-047b-4597-ab72-5aadd69f50bc</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">if(self.IncludeChildCompanyUnits) then
+  String.Format('Jednostka organizacyjna należy do {0}.',self.SysCompanyUnit)
+else
+  String.Format('Jednostka organizacyjna = {0}.',self.SysCompanyUnit)
+endif</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>IncludeChildCompanyUnits: Boolean = true</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IncludeChildCompanyUnits</attribute>
+        <attribute name="RuntimeName">IncludeChildCompanyUnits</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">2ab4f128-1e90-488b-af29-bc0e09b4809b</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">true</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">1</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>MatchesService(executedItem:ExecutedItem):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MatchesService</attribute>
+        <attribute name="RuntimeName">MatchesService</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">fd0d8995-619e-4130-88ba-f6ccc109b7e6</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">True</attribute>
+        <attribute name="Body">(self.SysCompanyUnit = executedItem.SysCompanyUnit) or (self.IncludeChildCompanyUnits and self.SysCompanyUnit.IncludesUnit(executedItem.SysCompanyUnit))</attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">returnparam</attribute>
+            <attribute name="RuntimeName">returnparam</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">executedItem</attribute>
+            <attribute name="RuntimeName">executedItem</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">(self.SysCompanyUnit = executedItem.SysCompanyUnit) or (self.IncludeChildCompanyUnits and self.SysCompanyUnit.IncludesUnit(executedItem.SysCompanyUnit))</attribute>
+            <attribute name="Tag">Eco.Body</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="stcsyscompanyunit">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>StcSysCompanyUnits (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">StcSysCompanyUnits</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">StcSysCompanyUnits</attribute>
+        <attribute name="id">712796a0-fca6-4939-9841-c97a01be445c</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">StcSysCompanyUnitStcSysCompanyUnitsSysCompanyUnitSysCompanyUnit</attribute>
+            <attribute name="EffectiveName">StcSysCompanyUnitStcSysCompanyUnitsSysCompanyUnitSysCompanyUnit</attribute>
+            <attribute name="id">e54a58b3-554b-4807-970a-ae45c3d3dea3</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="stcsyscompanyunit">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StcSysCompanyUnit</attribute>
+            <attribute name="RuntimeName">StcSysCompanyUnit</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">c3118c94-fae1-4b20-84d8-441fefd7bf55</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="syscompanyunit">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>SysCompanyUnit (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SysCompanyUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysCompanyUnit</attribute>
+            <attribute name="id">57d1cefa-4436-4db5-80d8-f5ac914554b1</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="syscompanyunit">
+                <doc><![CDATA[<DIV><SUMMARY>Class defining companies using the system </SUMMARY></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{ad158864-18dc-4bf0-8046-3527ce03f54a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="stcsyscompanyunit">
+        <attribute name="RenderedWidth">193</attribute>
+        <attribute name="id">fe9796f6-761a-4124-8c51-0c6deb67dc6e</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">StcSysCompanyUnit</attribute>
+        <attribute name="RenderedHeight">65</attribute>
+        <attribute name="x">208</attribute>
+        <attribute name="y">784</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">c3118c94-fae1-4b20-84d8-441fefd7bf55</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.03_service_tags">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7b91939a-240f-49be-9e87-a7aec43c70b5.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7b91939a-240f-49be-9e87-a7aec43c70b5</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.03 Service Tags</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.03 Service Tags</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

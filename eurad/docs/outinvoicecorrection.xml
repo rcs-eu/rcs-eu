@@ -1,0 +1,975 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="outinvoicecorrection">
+    <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">OutInvoiceCorrection</attribute>
+    <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="outinvoice">
+        <doc><![CDATA[<DIV>Abstract class representing an outgoing invoice for a customer.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OutInvoice</attribute>
+        <attribute name="RuntimeName">OutInvoice</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{4d734cef-935c-4901-920d-d4c4505a45db}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">Parent</attribute>
+        <attribute name="Tag">Eco.TableMapping</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">PlnDate=self.Original.PlnDate,"FDocumentType=if netvalue &lt; 0 then
+'pl:RW Korekta#!@$en:Corr. out. inv.#!@$de:AR-Gut#!@$'
+else
+'pl:RW Korekta#!@$en:Corr. out. inv.#!@$de:AR-Last#!@$'
+endif"</attribute>
+        <attribute name="Tag">Eco.DerivationExpressions</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>GetPaymentDate():DateTime?</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetPaymentDate</attribute>
+        <attribute name="RuntimeName">GetPaymentDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{18aff083-442f-4c3a-a96d-2b5879f4490d}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">returnparam</attribute>
+            <attribute name="RuntimeName">returnparam</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DateTime?</attribute>
+                <attribute name="RuntimeName">DateTime?</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived.</DIV>]]></doc>
+        <modlrstring>CorrNetValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CorrNetValue</attribute>
+        <attribute name="RuntimeName">CorrNetValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{1b4f5a83-a81e-408c-8bff-2930045045f9}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Specification.Items.safeCast(OutInvoiceItem).CorrNetTotalValue-&gt;sum</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>
+<DIV>
+<DIV>Method.</DIV></DIV></DIV></DIV>]]></doc>
+        <modlrstring>OnSave()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OnSave</attribute>
+        <attribute name="RuntimeName">OnSave</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{5f49aaf9-9e15-4f10-ad31-41e1a396124c}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+        <modlrstring>CorrVatValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CorrVatValue</attribute>
+        <attribute name="RuntimeName">CorrVatValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6e43f932-c830-46e0-aac4-758fbb5d7c3c}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Specification.Items.safeCast(OutInvoiceItem).CorrVatValue-&gt;sum</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+        <modlrstring>CorrectionNr: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CorrectionNr</attribute>
+        <attribute name="RuntimeName">CorrectionNr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{76e77457-fbb6-4b93-b695-dd2fae0814d8}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Original.Corrections.indexOf(self) + 1</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+        <modlrstring>ServiceDate: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceDate</attribute>
+        <attribute name="RuntimeName">ServiceDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{8ce76d50-573f-4fe4-ab07-0a36735209a2}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Original.ServiceDate</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method.</DIV></DIV>]]></doc>
+        <modlrstring>CreateCorrection():OutInvoice</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CreateCorrection</attribute>
+        <attribute name="RuntimeName">CreateCorrection</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ac45bee3-f845-44d3-a1fc-d279727e3447}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoice</attribute>
+                <attribute name="RuntimeName">OutInvoice</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method.</DIV></DIV>]]></doc>
+        <modlrstring>GetInvoiceType():String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetInvoiceType</attribute>
+        <attribute name="RuntimeName">GetInvoiceType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ef50ed54-a761-455e-994e-2d47d73161a4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+        <modlrstring>CorrGrossTotal: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CorrGrossTotal</attribute>
+        <attribute name="RuntimeName">CorrGrossTotal</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{f0888a48-5dc6-4ac1-b299-6e3ff27e57b0}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Specification.Items.safeCast(OutInvoiceItem).CorrGrossValue-&gt;sum</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+        <modlrstring>CorrVatInPLN: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CorrVatInPLN</attribute>
+        <attribute name="RuntimeName">CorrVatInPLN</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{fe1ecfd0-d8b7-43e1-ac79-cdbc2e32c982}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="outinvoicecorrection">
+        <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+        <modlrstring>NextCorrection (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NextCorrection</attribute>
+        <attribute name="RuntimeName">NextCorrection</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NextCorrection</attribute>
+        <attribute name="id">{af861059-d2d5-4a63-9ef2-b600ba107b32}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrectionOutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrectionOutInvoiceCorrection</attribute>
+            <attribute name="EffectiveName">OutInvoiceCorrectionOutInvoiceCorrection</attribute>
+            <attribute name="id">{1efc78a5-b20a-41db-bef6-fbee270d4e8a}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>Derived.</DIV>]]></doc>
+            <modlrstring>PrevCorrection (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PrevCorrection</attribute>
+            <attribute name="RuntimeName">PrevCorrection</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PrevCorrection</attribute>
+            <attribute name="id">{250c4b4d-e75a-4027-8d78-a321f6211a1e}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoicecorrection">
+                <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceCorrection</attribute>
+                <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if (self.CorrectionNr &lt; self.original.Corrections-&gt;size) then  self.Original.Corrections-&gt;at(self.CorrectionNr) else nil endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="outinvoicecorrection">
+        <doc><![CDATA[<DIV>Derived.</DIV>]]></doc>
+        <modlrstring>PrevCorrection (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PrevCorrection</attribute>
+        <attribute name="RuntimeName">PrevCorrection</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PrevCorrection</attribute>
+        <attribute name="id">{250c4b4d-e75a-4027-8d78-a321f6211a1e}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrectionOutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrectionOutInvoiceCorrection</attribute>
+            <attribute name="EffectiveName">OutInvoiceCorrectionOutInvoiceCorrection</attribute>
+            <attribute name="id">{1efc78a5-b20a-41db-bef6-fbee270d4e8a}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+            <modlrstring>NextCorrection (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NextCorrection</attribute>
+            <attribute name="RuntimeName">NextCorrection</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NextCorrection</attribute>
+            <attribute name="id">{af861059-d2d5-4a63-9ef2-b600ba107b32}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoicecorrection">
+                <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceCorrection</attribute>
+                <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if (self.CorrectionNr &gt; 1) then  self.Original.Corrections-&gt;at(self.CorrectionNr-1) else nil endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="outinvoicecorrection">
+        <doc><![CDATA[<DIV>Points to the last correction for this invoice.</DIV>]]></doc>
+        <modlrstring>LastCorrection (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LastCorrection</attribute>
+        <attribute name="RuntimeName">LastCorrection</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">LastCorrection</attribute>
+        <attribute name="id">{d5d01a4d-3362-4b48-b43b-2b951c1cf130}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceOriginalOutInvoiceCorrection1</attribute>
+            <attribute name="RuntimeName">OutInvoiceOriginalOutInvoiceCorrection1</attribute>
+            <attribute name="EffectiveName">OutInvoiceOriginalOutInvoiceCorrection1</attribute>
+            <attribute name="id">{31ba47ba-59b6-44ec-aa0c-d512eebfed83}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoiceoriginal">
+            <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+            <modlrstring>OutInvoiceOriginalOutInvoiceCorrection1_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceOriginalOutInvoiceCorrection1_</attribute>
+            <attribute name="RuntimeName">OutInvoiceOriginalOutInvoiceCorrection1_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OutInvoiceOriginalOutInvoiceCorrection1_</attribute>
+            <attribute name="id">{5ffc9ec1-b89c-4f7f-9f19-ec5003c980d5}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoiceoriginal">
+                <doc><![CDATA[<DIV>Represents a outgoing invoice.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceOriginal</attribute>
+                <attribute name="RuntimeName">OutInvoiceOriginal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{49cad5a2-cc91-4b42-ade3-f74b855da136}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if (self.Corrections-&gt;size &gt; 0) then self.Corrections-&gt;at0(self.Corrections-&gt;size-1) else nil endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="outinvoicecorrection">
+        <doc><![CDATA[<DIV><SPAN style="TEXT-DECORATION: line-through">Not in use.</SPAN></DIV>]]></doc>
+        <modlrstring>CreatedWithCorrection (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CreatedWithCorrection</attribute>
+        <attribute name="RuntimeName">CreatedWithCorrection</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CreatedWithCorrection</attribute>
+        <attribute name="id">{31d5554e-c115-4c51-99c5-ca5a6ef65c95}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceOriginalOutInvoiceCorrection2</attribute>
+            <attribute name="RuntimeName">OutInvoiceOriginalOutInvoiceCorrection2</attribute>
+            <attribute name="EffectiveName">OutInvoiceOriginalOutInvoiceCorrection2</attribute>
+            <attribute name="id">{9136c480-4a66-48ef-ab52-fde220de6b6b}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoiceoriginal">
+            <doc><![CDATA[<DIV>Not in use.</DIV>]]></doc>
+            <modlrstring>NewInvoice (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NewInvoice</attribute>
+            <attribute name="RuntimeName">NewInvoice</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NewInvoice</attribute>
+            <attribute name="id">{fb037190-39c4-4d0e-b96c-c6cd9d13bf74}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoiceoriginal">
+                <doc><![CDATA[<DIV>Represents a outgoing invoice.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceOriginal</attribute>
+                <attribute name="RuntimeName">OutInvoiceOriginal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{49cad5a2-cc91-4b42-ade3-f74b855da136}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="outinvoicecorrection">
+        <doc><![CDATA[<DIV>A list of correction invoices.</DIV>]]></doc>
+        <modlrstring>Corrections (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Corrections</attribute>
+        <attribute name="RuntimeName">Corrections</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Corrections</attribute>
+        <attribute name="id">{caa4fc48-c82e-4aec-baa6-1b13557e8f3d}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceOriginalOutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceOriginalOutInvoiceCorrection</attribute>
+            <attribute name="EffectiveName">OutInvoiceOriginalOutInvoiceCorrection</attribute>
+            <attribute name="id">{9dd29f11-805d-40f1-9cf0-9e5123ab52ea}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoiceoriginal">
+            <doc><![CDATA[<DIV>Points to an original outgoing invoice.</DIV>]]></doc>
+            <modlrstring>Original (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Original</attribute>
+            <attribute name="RuntimeName">Original</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Original</attribute>
+            <attribute name="id">{73959efd-1434-46d8-9276-5c0c3df26826}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoiceoriginal">
+                <doc><![CDATA[<DIV>Represents a outgoing invoice.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoiceOriginal</attribute>
+                <attribute name="RuntimeName">OutInvoiceOriginal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{49cad5a2-cc91-4b42-ade3-f74b855da136}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="outinvoicecorrection">
+        <doc><![CDATA[<DIV>
+<DIV>Derived. One-way association.</DIV></DIV>]]></doc>
+        <modlrstring>OutInvoiceCorrectionOutInvoice_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OutInvoiceCorrectionOutInvoice_</attribute>
+        <attribute name="RuntimeName">OutInvoiceCorrectionOutInvoice_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OutInvoiceCorrectionOutInvoice_</attribute>
+        <attribute name="id">{579683dc-d8c1-4dc4-a6fc-77f7f3f819be}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrectionOutInvoice</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrectionOutInvoice</attribute>
+            <attribute name="EffectiveName">OutInvoiceCorrectionOutInvoice</attribute>
+            <attribute name="id">{e5f70f2f-29f7-47ff-bd69-592fcb4d4ea3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="outinvoicecorrection">
+            <doc><![CDATA[<DIV>Class representing a correction for outgoing invoice.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceCorrection</attribute>
+            <attribute name="RuntimeName">OutInvoiceCorrection</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="outinvoice">
+            <doc><![CDATA[<DIV>
+<DIV>Derived.</DIV></DIV>]]></doc>
+            <modlrstring>PrevCorrectionOrOriginal (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PrevCorrectionOrOriginal</attribute>
+            <attribute name="RuntimeName">PrevCorrectionOrOriginal</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PrevCorrectionOrOriginal</attribute>
+            <attribute name="id">{0cfdb1ae-2909-4e64-8ce7-4252bd8c4a42}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="outinvoice">
+                <doc><![CDATA[<DIV>Abstract class representing an outgoing invoice for a customer.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OutInvoice</attribute>
+                <attribute name="RuntimeName">OutInvoice</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4d734cef-935c-4901-920d-d4c4505a45db}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="outinvoicecorrection">
+        <attribute name="RenderedWidth">160</attribute>
+        <attribute name="id">c63bf5c1-cc2a-4d1d-88d3-1ea89a12b34b</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OutInvoiceCorrection</attribute>
+        <attribute name="RenderedHeight">146</attribute>
+        <attribute name="x">800</attribute>
+        <attribute name="y">40</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{202143be-e15a-4c42-ab5e-1aa63c02372a}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.03_outinvoices">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/874678d5-6660-4c9c-bfc6-fbc349ad0150.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">874678d5-6660-4c9c-bfc6-fbc349ad0150</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.03 OutInvoices</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.03 OutInvoices</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

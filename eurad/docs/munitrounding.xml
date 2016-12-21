@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="munitrounding">
+    <doc><![CDATA[]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">MUnitRounding</attribute>
+    <attribute name="RuntimeName">MUnitRounding</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractroot">
+        <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractRoot</attribute>
+        <attribute name="RuntimeName">AbstractRoot</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">if (self.AlwaysAwayFromZero) 
+then
+String.Format('RoundUp({1}).{0}', self.Decimals, self.MUnit)
+else
+String.Format('RoundMath({1}).{0}', self.Decimals, self.MUnit)
+endif
+</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>FName: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FName</attribute>
+        <attribute name="RuntimeName">FName</attribute>
+        <attribute name="Visibility">Private</attribute>
+        <attribute name="id">5bfafb83-a87d-40f4-a9a8-db497b8baf43</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>Round(quantity:Decimal):Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Round</attribute>
+        <attribute name="RuntimeName">Round</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">e57f0110-17ea-41fa-b7bc-a7609a0c0374</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">True</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">True</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Decimal</attribute>
+                <attribute name="RuntimeName">Decimal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">quantity</attribute>
+            <attribute name="RuntimeName">quantity</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Decimal</attribute>
+                <attribute name="RuntimeName">Decimal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>Decimals: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Decimals</attribute>
+        <attribute name="RuntimeName">Decimals</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">e759cc2e-2538-4701-8c82-eea373192b98</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>AlwaysAwayFromZero: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AlwaysAwayFromZero</attribute>
+        <attribute name="RuntimeName">AlwaysAwayFromZero</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">e870e23e-090e-4ec8-8bed-85464173d91c</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="munitrounding">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>Roundings (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Roundings</attribute>
+        <attribute name="RuntimeName">Roundings</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Roundings</attribute>
+        <attribute name="id">1d5fb3b7-f0f3-4cd4-a417-1f00283f1032</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnitMUnitMUnitRoundingRoundings</attribute>
+            <attribute name="EffectiveName">MUnitMUnitMUnitRoundingRoundings</attribute>
+            <attribute name="id">166e35b7-a8b7-4de5-9c54-3e2894f118a2</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="munitrounding">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MUnitRounding</attribute>
+            <attribute name="RuntimeName">MUnitRounding</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="munit">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>MUnit (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MUnit</attribute>
+            <attribute name="id">fb410ebb-156f-4d70-89f8-3704c30db80b</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="munit">
+                <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Represents a measure unit.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MUnit</attribute>
+                <attribute name="RuntimeName">MUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e423a987-abe5-441e-94a6-637ec5da7b74}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="munitrounding">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>MUnitRounding (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">MUnitRounding</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">MUnitRounding</attribute>
+        <attribute name="id">bced336f-90db-4f26-85fe-9a720c67f23a</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnitRoundingMUnitRoundingOfferedServicePriceOfferedServicePricesMUnitRounding</attribute>
+            <attribute name="EffectiveName">MUnitRoundingMUnitRoundingOfferedServicePriceOfferedServicePricesMUnitRounding</attribute>
+            <attribute name="id">2e8730e2-d35a-434f-9795-fa2c9633d0fe</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="munitrounding">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MUnitRounding</attribute>
+            <attribute name="RuntimeName">MUnitRounding</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredserviceprice">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>OfferedServicePricesMUnitRounding (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">OfferedServicePricesMUnitRounding</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OfferedServicePricesMUnitRounding</attribute>
+            <attribute name="id">0ed4ec71-24de-4642-bb50-343785380e83</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredserviceprice">
+                <doc><![CDATA[<DIV>Class representing a&nbsp;price per unit.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedServicePrice</attribute>
+                <attribute name="RuntimeName">OfferedServicePrice</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{823d359b-1974-4c8a-a664-a9196eddedaa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="munitrounding">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>MUnitRounding (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">MUnitRounding</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">MUnitRounding</attribute>
+        <attribute name="id">09cf068e-4de9-431d-b796-63d7539992f3</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnitRoundingMUnitRoundingSelectedMUnitRoundingValueSelectedMUnitRoundingValues</attribute>
+            <attribute name="EffectiveName">MUnitRoundingMUnitRoundingSelectedMUnitRoundingValueSelectedMUnitRoundingValues</attribute>
+            <attribute name="id">8786d38d-23cd-4040-a6d9-07d9d8e200f2</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="munitrounding">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MUnitRounding</attribute>
+            <attribute name="RuntimeName">MUnitRounding</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="selectedmunitroundingvalue">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>SelectedMUnitRoundingValues (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SelectedMUnitRoundingValues</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SelectedMUnitRoundingValues</attribute>
+            <attribute name="id">03045a1d-97e1-4377-bca4-2333d1c7bf88</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="selectedmunitroundingvalue">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SelectedMUnitRoundingValue</attribute>
+                <attribute name="RuntimeName">SelectedMUnitRoundingValue</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">1417fad9-aa2f-4a55-b3ee-c3d434917f0b</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="munitrounding">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>MUnitRounding (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">MUnitRounding</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">MUnitRounding</attribute>
+        <attribute name="id">ed7d7918-0a2c-45fd-8442-481a0abc3509</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnitRoundingMUnitRoundingSingleCostSingleCostsMUnitRounding</attribute>
+            <attribute name="EffectiveName">MUnitRoundingMUnitRoundingSingleCostSingleCostsMUnitRounding</attribute>
+            <attribute name="id">c1738c35-7934-4403-a887-088932eac7b0</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="munitrounding">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MUnitRounding</attribute>
+            <attribute name="RuntimeName">MUnitRounding</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="singlecost">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>SingleCostsMUnitRounding (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SingleCostsMUnitRounding</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SingleCostsMUnitRounding</attribute>
+            <attribute name="id">86a747eb-bb7f-4a27-95c1-ac100d5ddad4</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="singlecost">
+                <doc><![CDATA[<DIV>Class representing cost per measure unit</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SingleCost</attribute>
+                <attribute name="RuntimeName">SingleCost</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2a675f7a-bb58-4383-b06f-8f376af0eb9b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="munitrounding">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>MUnitRoundingsName (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">MUnitRoundingsName</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">MUnitRoundingsName</attribute>
+        <attribute name="id">e8fe7194-e4c6-4629-9ee0-a9db0516daab</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">MUnitRoundingMUnitRoundingsNameMLStringName</attribute>
+            <attribute name="EffectiveName">MUnitRoundingMUnitRoundingsNameMLStringName</attribute>
+            <attribute name="id">ff568837-79ac-46b4-838e-87521b45cdda</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="munitrounding">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MUnitRounding</attribute>
+            <attribute name="RuntimeName">MUnitRounding</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="mlstring">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>Name (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Name</attribute>
+            <attribute name="RuntimeName">Name</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Name</attribute>
+            <attribute name="id">699c3714-e4db-426d-b245-189e911116d0</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="mlstring">
+                <doc><![CDATA[<DIV>Class representing a multilanguage string.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MLString</attribute>
+                <attribute name="RuntimeName">MLString</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{53f6be1a-4866-4a06-8805-890bc14e2ff3}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="munitrounding">
+        <attribute name="RenderedWidth">149</attribute>
+        <attribute name="id">e18f6519-4eb3-4690-95a2-921f3d78b156</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">MUnitRounding</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">1511</attribute>
+        <attribute name="y">945</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.04_configuration">
+            <doc><![CDATA[<DIV>Configuration properties diagram.</DIV>]]></doc>
+            <modlrdiagram>diagramimages/dcb9fc02-9bf5-4cdc-babd-e4b6cfb065b2.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">dcb9fc02-9bf5-4cdc-babd-e4b6cfb065b2</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.04 Configuration</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.04 Configuration</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="munitrounding">
+        <attribute name="RenderedWidth">149</attribute>
+        <attribute name="id">f15428f7-5b08-41eb-a70e-3e06ac594aff</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">MUnitRounding</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">968</attribute>
+        <attribute name="y">432</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">0f0fd215-c9ef-4951-9d43-4a252be01e25</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_00.04_roundings">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/588af826-3aa3-41f7-8f54-d96312f998f2.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">588af826-3aa3-41f7-8f54-d96312f998f2</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">00.04 Roundings</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">00.04 Roundings</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

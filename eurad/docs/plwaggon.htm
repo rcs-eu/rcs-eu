@@ -1,0 +1,157 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">PLWaggon in package EuradSystem</h1>
+    <p><DIV>Class representing a price condition for a waggon transport.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AnyAxle: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if axles count is no matter for this condition.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Axles: Integer</td>
+        <td class="style1"><DIV>Count of waggon's&nbsp;axles.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CouplerWaggonCount: Integer = 0</td>
+        <td class="style1"><DIV>Count of coupler waggons.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Gauge: LoadingGauge</td>
+        <td class="style1"><DIV>Loading gauge. Enum:</DIV>
+<DIV>- Any = 0,</DIV>
+<DIV>- Normal = 1,</DIV>
+<DIV>- WM0 = 2,</DIV>
+<DIV>- WM1 = 3.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LoadLength: Decimal</td>
+        <td class="style1"><DIV>Loading length.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Owner: WaggonOwner</td>
+        <td class="style1"><DIV>Waggon's owner. Enum:</DIV>
+<DIV>- All = 0 (both private and railway),</DIV>
+<DIV>- Railway = 1,</DIV>
+<DIV>- Privat = 2.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RailwayBillPer: RailwayBillPer</td>
+        <td class="style1"><DIV>&nbsp;</DIV>
+<DIV>SingleWaggon WaggonGroup WholeTrain</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ShareWeight: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainAxlesLesThen: Integer</td>
+        <td class="style1"><DIV>
+<DIV>Axles count&nbsp;for whole train stating at least&nbsp;axles to meet condition.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainAxlesLimitType: TrainCondLimitType</td>
+        <td class="style1"><DIV>Type of axles count limit for a whole train transport. Enum:</DIV>
+<DIV>
+<DIV>- None,</DIV>
+<DIV>- MoreThen,</DIV>
+<DIV>- Between.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainAxlesMoreEqThen: Integer</td>
+        <td class="style1"><DIV>
+<DIV>Axles count&nbsp;for whole train stating&nbsp;less&nbsp;axles to meet condition.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainCalculateEachWaggon: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainTonesLesThen: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Weight condition for whole train stating&nbsp;less tones to meet condition.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainTonesMoreEqThen: Decimal</td>
+        <td class="style1"><DIV>Weight condition for whole train stating at least tones to meet condition.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainTonesRoundEachWaggon: Boolean = False</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainWeightLimitType: TrainCondLimitType</td>
+        <td class="style1"><DIV>Type of weight limit for a whole train transport. Enum:</DIV>
+<DIV>- None,</DIV>
+<DIV>- MoreThen,</DIV>
+<DIV>- Between.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonCount: Integer = 1</td>
+        <td class="style1"><DIV>Count of waggons.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonLoad: WaggonLoad</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonType: String</td>
+        <td class="style1"><DIV>Waggon's type.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine1_Type():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine3():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine4():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine5():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludesTrainAxles(axleCount:Integer):Boolean</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludesTrainWeight(weight:Decimal):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsKindOf(waggonType:String):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsTypeOf(waggonType:String):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1"></table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.02_price_conditions.htm">01.02 Price Conditions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

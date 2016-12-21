@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="integrationqueue">
+    <doc><![CDATA[<DIV>Represents a queue of integration tasks.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">IntegrationQueue</attribute>
+    <attribute name="RuntimeName">IntegrationQueue</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{cf024f41-3417-423c-9214-cae3d4a58585}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass" />
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. gives access to the default queue.</DIV>]]></doc>
+        <modlrstring>DefaultQueue(serviceProvider:IEcoServiceProvider):IntegrationQueue</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DefaultQueue</attribute>
+        <attribute name="RuntimeName">DefaultQueue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{3c8c3d02-0a56-41c6-b54c-90b0c6ab7b10}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">True</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IntegrationQueue</attribute>
+                <attribute name="RuntimeName">IntegrationQueue</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">serviceProvider</attribute>
+            <attribute name="RuntimeName">serviceProvider</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IEcoServiceProvider</attribute>
+                <attribute name="RuntimeName">IEcoServiceProvider</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="integrationqueue">
+        <doc><![CDATA[<DIV>The queue of this task.</DIV>]]></doc>
+        <modlrstring>Queue (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Queue</attribute>
+        <attribute name="RuntimeName">Queue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Queue</attribute>
+        <attribute name="id">{79e8e087-47ef-44b5-88f0-08a5b76d4000}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">IntegrationQueueIntegrationTask</attribute>
+            <attribute name="RuntimeName">IntegrationQueueIntegrationTask</attribute>
+            <attribute name="EffectiveName">IntegrationQueueIntegrationTask</attribute>
+            <attribute name="id">{68f580ab-9d66-44e9-8b8b-4d500601b1b6}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="integrationqueue">
+            <doc><![CDATA[<DIV>Represents a queue of integration tasks.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">IntegrationQueue</attribute>
+            <attribute name="RuntimeName">IntegrationQueue</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{cf024f41-3417-423c-9214-cae3d4a58585}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="integrationtask">
+            <doc><![CDATA[<DIV>Ordered list of tasks.</DIV>]]></doc>
+            <modlrstring>QueuedTasks (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">QueuedTasks</attribute>
+            <attribute name="RuntimeName">QueuedTasks</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">QueuedTasks</attribute>
+            <attribute name="id">{081e45f0-51f3-4468-9520-b9d1bcb69d0d}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="integrationtask">
+                <doc><![CDATA[<DIV>Represents named&nbsp;integration task which can be executed.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IntegrationTask</attribute>
+                <attribute name="RuntimeName">IntegrationTask</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{95f3275c-f49b-4639-ab85-d1fb5a8d6b30}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="integrationqueue">
+        <attribute name="RenderedWidth">134</attribute>
+        <attribute name="id">247fd4b2-365e-4e48-9bb5-215eb49e24e1</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">IntegrationQueue</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">1744</attribute>
+        <attribute name="y">1184</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{cf024f41-3417-423c-9214-cae3d4a58585}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.01_navision">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4eb5d6cd-7264-4dd2-8d3d-20e57027436d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4eb5d6cd-7264-4dd2-8d3d-20e57027436d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.01 Navision</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.01 Navision</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="integrationqueue">
+        <attribute name="RenderedWidth">134</attribute>
+        <attribute name="id">93542fb8-46d5-45dc-8d9b-ebd1058abea4</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">IntegrationQueue</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">400</attribute>
+        <attribute name="y">56</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{cf024f41-3417-423c-9214-cae3d4a58585}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.00_integration">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/ffd2ee6e-2697-4ed1-8452-bda4ea3ec30e.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">ffd2ee6e-2697-4ed1-8452-bda4ea3ec30e</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.00 Integration</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.00 Integration</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

@@ -1,0 +1,55 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">ReportExecution in package EuradSystem</h1>
+    <p><DIV>Keeps information of single&nbsp;report generation.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">GenerationStart: DateTime</td>
+        <td class="style1"><DIV>The moment when the generation of the report started.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GenerationStop: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>The moment when the generation of the report stopped.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GenerationTime: TimeSpan = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Report generation time. This is the time span between GenerationStart and GenerationStop.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">LastUserReportExecution : <a href="lastuserreportexecution.htm">lastuserreportexecution</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Report : <a href="report.htm">report</a> 1</td>
+        <td class="style1"><DIV>The report that was executed.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UsedOptions : <a href="usedoption.htm">usedoption</a> 0..*</td>
+        <td class="style1"><DIV>A list of parameter values used during report generation.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">User : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>The user of the report.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.11_reports_and_tariffs_framework.htm">01.11 Reports and Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

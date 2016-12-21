@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="notecatalog">
+    <doc><![CDATA[<DIV>Represents a dictionary of notes.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">NoteCatalog</attribute>
+    <attribute name="RuntimeName">NoteCatalog</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{9ff56a67-3819-4c72-8397-dc4e3cc76b0e}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>The name of the note.</DIV>]]></doc>
+        <modlrstring>Name: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Name</attribute>
+        <attribute name="RuntimeName">Name</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{40dc1a03-a174-4ced-b3d1-3692b5d94ea0}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">200</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Rcs.Eurad.Model.Model.Resources,NPP_00000013</attribute>
+            <attribute name="Tag">NNP</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>The type of the note.</DIV>]]></doc>
+        <modlrstring>NoteType: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NoteType</attribute>
+        <attribute name="RuntimeName">NoteType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a59de0d7-c690-489b-ac54-0f5c90a7c72e}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">100</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Rcs.Eurad.Model.Model.Resources,NPP_00000014</attribute>
+            <attribute name="Tag">NNP</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>The note itself.</DIV>]]></doc>
+        <modlrstring>Text: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Text</attribute>
+        <attribute name="RuntimeName">Text</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{abc1efe6-ddd1-4ab1-8062-bcb1a27dba5c}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">2000000</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">StringAsMemo</attribute>
+            <attribute name="Tag">Eco.PMapper</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="notecatalog">
+        <doc><![CDATA[<DIV>
+<DIV>One way association. </DIV></DIV>]]></doc>
+        <modlrstring>NoteCatalogSysUser_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NoteCatalogSysUser_</attribute>
+        <attribute name="RuntimeName">NoteCatalogSysUser_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NoteCatalogSysUser_</attribute>
+        <attribute name="id">{0fdd93f0-c601-44bd-af6b-dff324af6b34}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NoteCatalogSysUser</attribute>
+            <attribute name="RuntimeName">NoteCatalogSysUser</attribute>
+            <attribute name="EffectiveName">NoteCatalogSysUser</attribute>
+            <attribute name="id">{a414a832-c700-468e-9ae5-2a0e51516d52}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="notecatalog">
+            <doc><![CDATA[<DIV>Represents a dictionary of notes.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NoteCatalog</attribute>
+            <attribute name="RuntimeName">NoteCatalog</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{9ff56a67-3819-4c72-8397-dc4e3cc76b0e}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysuser">
+            <doc><![CDATA[<DIV>The user of the note.</DIV>]]></doc>
+            <modlrstring>SysUser (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUser</attribute>
+            <attribute name="RuntimeName">SysUser</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysUser</attribute>
+            <attribute name="id">{1972b06f-2fbe-4f73-8a46-11c48e3f60d6}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysuser">
+                <doc><![CDATA[<DIV><SUMMARY />Represents&nbsp;a user of the system.&nbsp; </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUser</attribute>
+                <attribute name="RuntimeName">SysUser</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0469cc7f-5155-4220-8957-727b0f7b3a86}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="notecatalog">
+        <attribute name="RenderedWidth">111</attribute>
+        <attribute name="id">8465ad07-fc02-4f53-89e7-6cba3b93b59a</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NoteCatalog</attribute>
+        <attribute name="RenderedHeight">65</attribute>
+        <attribute name="x">104</attribute>
+        <attribute name="y">608</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{9ff56a67-3819-4c72-8397-dc4e3cc76b0e}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.01_commom_2">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3167f6ce-199f-4838-8d4d-015218da863a.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3167f6ce-199f-4838-8d4d-015218da863a</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.01 Commom 2</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.01 Commom 2</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

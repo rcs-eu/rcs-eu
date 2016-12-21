@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_goscargoholder_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/9428978c-2c71-47e6-b04e-6e50519cb784.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">9428978c-2c71-47e6-b04e-6e50519cb784</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:GosCargoHolder.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_goscargoholder_rootstate">
+        <doc><![CDATA[<DIV>Holder's state.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{391d056b-008e-4c50-8b62-99bedb37617f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">61</attribute>
+        <attribute name="id">7ed624d4-bbfb-4b9c-ad67-d8b254a806ce</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InWork</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">160</attribute>
+        <attribute name="y">200</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InWork</attribute>
+            <attribute name="RuntimeName">InWork</attribute>
+            <attribute name="id">5342c9c6-b71a-4e29-af03-e732840157fa</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">bfc343a8-f408-4c90-a3bb-d1d22158a57d</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">573904dc-0e23-4f54-b22a-b0343f2b87ff</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">c7424bb9-36f5-451b-94b1-17f41ea37481</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Finished</attribute>
+                    <attribute name="RuntimeName">Finished</attribute>
+                    <attribute name="id">26f18f2c-262b-4ff6-9ded-976e9e15e3e5</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">6e788a25-6e0b-43d1-92bd-1e6221c43c1a</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Finished</attribute>
+                    <attribute name="RuntimeName">Finished</attribute>
+                    <attribute name="id">26f18f2c-262b-4ff6-9ded-976e9e15e3e5</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">71</attribute>
+        <attribute name="id">abaa36c5-e474-4372-b62e-6508eae5f7bd</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Finished</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">160</attribute>
+        <attribute name="y">512</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Finished</attribute>
+            <attribute name="RuntimeName">Finished</attribute>
+            <attribute name="id">26f18f2c-262b-4ff6-9ded-976e9e15e3e5</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">6e788a25-6e0b-43d1-92bd-1e6221c43c1a</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">5342c9c6-b71a-4e29-af03-e732840157fa</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">c7424bb9-36f5-451b-94b1-17f41ea37481</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">5342c9c6-b71a-4e29-af03-e732840157fa</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">fba9562b-c77c-42a0-9c9e-ed69652c22e2</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">160</attribute>
+        <attribute name="y">104</attribute>
+        <link name="Vertex" />
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

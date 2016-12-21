@@ -1,0 +1,1410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="payabledocument">
+    <doc><![CDATA[]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">PayableDocument</attribute>
+    <attribute name="RuntimeName">PayableDocument</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractroot">
+        <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractRoot</attribute>
+        <attribute name="RuntimeName">AbstractRoot</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="payableinvoice">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PayableInvoice</attribute>
+        <attribute name="RuntimeName">PayableInvoice</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">86f2a8da-3722-4aba-b788-87043a5829e1</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">String.Format('{0}:{1} ({2}/{3} {4})', 
+self.DocumentType, 
+self.DocumentNr, 
+self.PaidGrossValue,
+self.DocumentGrossValue, 
+self.DocumentCurr)</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentGrossValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentGrossValue</attribute>
+        <attribute name="RuntimeName">DocumentGrossValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">0ef95d31-a060-4b21-8cd2-cbc9786540f3</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentBelongsToPayee: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentBelongsToPayee</attribute>
+        <attribute name="RuntimeName">DocumentBelongsToPayee</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">149d67be-3bec-4094-94f8-5f9f8dd13047</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.DocumentPayee.IncludesContractor(self.DocumentUnit)</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentInternalNr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentInternalNr</attribute>
+        <attribute name="RuntimeName">DocumentInternalNr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">1c83e1f8-4e4b-4898-9551-3db4e3106e3e</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PaidGrossValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PaidGrossValue</attribute>
+        <attribute name="RuntimeName">PaidGrossValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">264498f4-0473-44cd-991a-1a3aaa81047f</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>UnpaidPaymentValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">UnpaidPaymentValue</attribute>
+        <attribute name="RuntimeName">UnpaidPaymentValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">4bbe9019-94e9-4845-ba28-4b278a7bd727</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.DocumentPaymentValue-self.PaidPaymentValue</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>BeginEdit()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">BeginEdit</attribute>
+        <attribute name="RuntimeName">BeginEdit</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">5c304b73-7c54-462a-ad57-c57da1196d1b</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PaidPaymentValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PaidPaymentValue</attribute>
+        <attribute name="RuntimeName">PaidPaymentValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">67648b83-62b0-4e37-9d1c-26c5f39026fd</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if(self.DocumentBelongsToPayer)
+then
+ 0-PaidGrossValue
+else
+ if(self.DocumentBelongsToPayee)
+ then
+  PaidGrossValue
+ else
+  0
+ endif
+endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentNr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentNr</attribute>
+        <attribute name="RuntimeName">DocumentNr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">816fb276-236f-4291-acee-c5dfc6858d5d</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentDueDate: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentDueDate</attribute>
+        <attribute name="RuntimeName">DocumentDueDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">8584a4c2-4d23-4cfc-a7cf-91e4570134d9</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PaymentDate: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PaymentDate</attribute>
+        <attribute name="RuntimeName">PaymentDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">86885dcb-496e-4418-8bc5-f3ae0dafcbcc</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">DocumentDueDate</attribute>
+            <attribute name="Tag">Eco.FormerNames</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentDate: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentDate</attribute>
+        <attribute name="RuntimeName">DocumentDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">8c756c4c-b1c9-4c5e-868a-53581421e029</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>EndEdit()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EndEdit</attribute>
+        <attribute name="RuntimeName">EndEdit</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">8de97965-978c-4193-9f19-04aa4982c001</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute" href="statediagram_payabledocument_state">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>State: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">State</attribute>
+        <attribute name="RuntimeName">State</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">93900a51-b190-4adc-98c1-13d86731ac40</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsStateAttribute</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentBelongsToPayer: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentBelongsToPayer</attribute>
+        <attribute name="RuntimeName">DocumentBelongsToPayer</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">a152038d-d1fc-4696-95a2-94c4d5aaf8b1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.DocumentPayer.IncludesContractor(self.DocumentUnit)</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>FDocumentType: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FDocumentType</attribute>
+        <attribute name="RuntimeName">FDocumentType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">a397d103-665c-4dd2-8d19-f4e2293915aa</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentNetValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentNetValue</attribute>
+        <attribute name="RuntimeName">DocumentNetValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">a50e686a-2b9c-4410-9ed1-6c3405215bf7</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentVatValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentVatValue</attribute>
+        <attribute name="RuntimeName">DocumentVatValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">a5dd8ec1-7798-4f57-8f9f-2b1b967d953f</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DocumentPaymentValue: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocumentPaymentValue</attribute>
+        <attribute name="RuntimeName">DocumentPaymentValue</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">d9b41446-6a02-45ba-ac16-091cd9557541</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">if(self.DocumentBelongsToPayer)
+then
+ 0-DocumentGrossValue
+else
+ if(self.DocumentBelongsToPayee)
+ then
+  DocumentGrossValue
+ else
+  0
+ endif
+endif</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocumentsDocumentCurr (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">PayableDocumentsDocumentCurr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocumentsDocumentCurr</attribute>
+        <attribute name="id">2eafe570-13ed-47e6-86f9-82af68c765db</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">CurrDocumentCurrPayableDocumentPayableDocumentsDocumentCurr</attribute>
+            <attribute name="EffectiveName">CurrDocumentCurrPayableDocumentPayableDocumentsDocumentCurr</attribute>
+            <attribute name="id">1c94c869-feaa-41ff-a914-bce6fb42da5c</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="curr">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>DocumentCurr (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DocumentCurr</attribute>
+            <attribute name="RuntimeName">DocumentCurr</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DocumentCurr</attribute>
+            <attribute name="id">861ecda7-3388-482d-9274-72a5b79199a4</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="curr">
+                <doc><![CDATA[<DIV>Class representing a currency.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a16a47ef-1b40-4645-bb62-08fd1b044d7b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocuments (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">PayableDocuments</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocuments</attribute>
+        <attribute name="id">d2b4f7ed-3205-4671-ade4-b645f64dbc17</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">PayableDocumentPayableDocumentsSysCompanyUnitDocumentUnit</attribute>
+            <attribute name="EffectiveName">PayableDocumentPayableDocumentsSysCompanyUnitDocumentUnit</attribute>
+            <attribute name="id">538652c2-0b39-4a4e-90f3-b5785e3346d3</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="syscompanyunit">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>DocumentUnit (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DocumentUnit</attribute>
+            <attribute name="RuntimeName">DocumentUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DocumentUnit</attribute>
+            <attribute name="id">c4c6a11b-7e2f-4e99-9da0-fb5aef09a9f1</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="syscompanyunit">
+                <doc><![CDATA[<DIV><SUMMARY>Class defining companies using the system </SUMMARY></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{ad158864-18dc-4bf0-8046-3527ce03f54a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocuments (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">PayableDocuments</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocuments</attribute>
+        <attribute name="id">d57aed6d-fc37-43d6-ac89-e016f2e63c54</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">PaymentRemainderPaymentRemaindersPayableDocumentPayableDocuments</attribute>
+            <attribute name="EffectiveName">PaymentRemainderPaymentRemaindersPayableDocumentPayableDocuments</attribute>
+            <attribute name="id">886b6cfa-e20f-40cc-8c51-1c8f93e02124</attribute>
+            <link name="Class">
+              <object type="Class" href="paymentremaindervalue">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PaymentRemainderValue</attribute>
+                <attribute name="RuntimeName">PaymentRemainderValue</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">afe9d125-adb9-49ad-9c64-7fdac54dc06a</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="paymentremainder">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>PaymentRemainders (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">PaymentRemainders</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PaymentRemainders</attribute>
+            <attribute name="id">f680e5f0-ecce-4f1d-a2f7-ff1c3d8bf143</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="paymentremainder">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PaymentRemainder</attribute>
+                <attribute name="RuntimeName">PaymentRemainder</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">e5211cad-9f4b-4b81-abee-38334abfd403</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocumentsDocumentType (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">PayableDocumentsDocumentType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocumentsDocumentType</attribute>
+        <attribute name="id">f86a076e-109d-46c4-b64d-e3a3eba866fb</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">PayableDocumentPayableDocumentsDocumentTypeMLStringDocumentType</attribute>
+            <attribute name="EffectiveName">PayableDocumentPayableDocumentsDocumentTypeMLStringDocumentType</attribute>
+            <attribute name="id">9dd6561a-d899-4f1e-97c7-0a76dff38151</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="mlstring">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>DocumentType (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DocumentType</attribute>
+            <attribute name="RuntimeName">DocumentType</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DocumentType</attribute>
+            <attribute name="id">1c3a70e2-200f-48a2-9efb-9b2958ceee77</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="mlstring">
+                <doc><![CDATA[<DIV>Class representing a multilanguage string.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MLString</attribute>
+                <attribute name="RuntimeName">MLString</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{53f6be1a-4866-4a06-8805-890bc14e2ff3}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocumentsAsPayer (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PayableDocumentsAsPayer</attribute>
+        <attribute name="RuntimeName">PayableDocumentsAsPayer</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocumentsAsPayer</attribute>
+        <attribute name="id">7484892a-0735-44fc-8ecb-0a7c1f2ca1ed</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">PayableDocumentPayableDocumentsAsPayerContractorDocumentPayer</attribute>
+            <attribute name="EffectiveName">PayableDocumentPayableDocumentsAsPayerContractorDocumentPayer</attribute>
+            <attribute name="id">b7f0b72b-7a1b-4fd3-85eb-2891cc0d05ff</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="contractor">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>DocumentPayer (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DocumentPayer</attribute>
+            <attribute name="RuntimeName">DocumentPayer</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DocumentPayer</attribute>
+            <attribute name="id">139a0b7c-4c7a-4199-a8b4-258dae0b5c8b</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="contractor">
+                <doc><![CDATA[<DIV>Abstract class representing a contractor.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Contractor</attribute>
+                <attribute name="RuntimeName">Contractor</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{808e9d4d-c6e3-4aeb-a2e7-3109801131de}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocumentsDocumentOwner (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">PayableDocumentsDocumentOwner</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocumentsDocumentOwner</attribute>
+        <attribute name="id">7519bb57-7409-42b2-b688-a9943368f51a</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ContractorDocumentOwnerPayableDocumentPayableDocumentsDocumentOwner</attribute>
+            <attribute name="EffectiveName">ContractorDocumentOwnerPayableDocumentPayableDocumentsDocumentOwner</attribute>
+            <attribute name="id">b86e0d52-9bc1-4ae9-b469-e645b186dfa4</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="contractor">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>DocumentOwner (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DocumentOwner</attribute>
+            <attribute name="RuntimeName">DocumentOwner</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DocumentOwner</attribute>
+            <attribute name="id">b138ca12-5f5e-4ec7-9ce4-038c96f37a90</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="contractor">
+                <doc><![CDATA[<DIV>Abstract class representing a contractor.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Contractor</attribute>
+                <attribute name="RuntimeName">Contractor</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{808e9d4d-c6e3-4aeb-a2e7-3109801131de}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocuments (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">PayableDocuments</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocuments</attribute>
+        <attribute name="id">7ae802db-7309-4453-b94a-3a082ddc1d19</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">PaymentPaymentsPayableDocumentPayableDocuments</attribute>
+            <attribute name="EffectiveName">PaymentPaymentsPayableDocumentPayableDocuments</attribute>
+            <attribute name="id">cfbff00c-a24f-4d61-9e0b-cb0059aaab86</attribute>
+            <link name="Class">
+              <object type="Class" href="paiddocument">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PaidDocument</attribute>
+                <attribute name="RuntimeName">PaidDocument</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">ff23024a-2137-4747-b4de-8f707d5036cd</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="payment">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>Payments (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">Payments</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Payments</attribute>
+            <attribute name="id">d001a0c9-c4b5-4a76-b34a-df870634792d</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="payment">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Payment</attribute>
+                <attribute name="RuntimeName">Payment</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">672014be-e8ed-4e1d-9d7b-d2d677f9ec00</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="payabledocument">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>PayableDocumentsAsPayee (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PayableDocumentsAsPayee</attribute>
+        <attribute name="RuntimeName">PayableDocumentsAsPayee</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PayableDocumentsAsPayee</attribute>
+        <attribute name="id">110618bc-e1c6-43ee-8ff2-00187946c6e0</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ContractorDocumentPayeePayableDocumentPayableDocumentsAsPayee</attribute>
+            <attribute name="EffectiveName">ContractorDocumentPayeePayableDocumentPayableDocumentsAsPayee</attribute>
+            <attribute name="id">d4641f76-7dd4-4c9f-9ba0-c1a9d20aadad</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="contractor">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>DocumentPayee (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DocumentPayee</attribute>
+            <attribute name="RuntimeName">DocumentPayee</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DocumentPayee</attribute>
+            <attribute name="id">139ddf5e-f879-47c6-ba0f-a46a68efb415</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="contractor">
+                <doc><![CDATA[<DIV>Abstract class representing a contractor.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Contractor</attribute>
+                <attribute name="RuntimeName">Contractor</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{808e9d4d-c6e3-4aeb-a2e7-3109801131de}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine">
+      <object type="StateMachine">
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StateMachine1</attribute>
+        <attribute name="RuntimeName">StateMachine1</attribute>
+        <attribute name="id">683c9cbc-31c5-48ea-ade7-57857ff87d51</attribute>
+      </object>
+    </link>
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">92738f97-2374-4004-a121-0e98d720de17</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">True</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="payabledocument">
+        <attribute name="RenderedWidth">141</attribute>
+        <attribute name="id">03078862-c80e-4418-83f4-58597793ba47</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PayableDocument</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">400</attribute>
+        <attribute name="y">376</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">HideAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_17.00_paymentremainder">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/c2c259a3-1fd4-409d-9d3b-82ef883b0b6a.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">c2c259a3-1fd4-409d-9d3b-82ef883b0b6a</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">17.00 PaymentRemainder</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">17.00 PaymentRemainder</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="payabledocument">
+        <attribute name="RenderedWidth">171</attribute>
+        <attribute name="id">dc72ecc0-2b86-48ba-81aa-d1eb04f33885</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PayableDocument</attribute>
+        <attribute name="RenderedHeight">228</attribute>
+        <attribute name="x">872</attribute>
+        <attribute name="y">40</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_18.00_paymentregister">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/28f7a9d9-14c9-4a64-9baf-b2e27cce1780.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">28f7a9d9-14c9-4a64-9baf-b2e27cce1780</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">18.00 PaymentRegister</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">18.00 PaymentRegister</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

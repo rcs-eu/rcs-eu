@@ -1,0 +1,112 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">GeneralCustomerOrder in package EuradSystem</h1>
+    <p><DIV>Class representing a general order from a customer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AutoSendInnerDelOrders: Boolean</td>
+        <td class="style1"><DIV>Indicates if state of all&nbsp;deliverer orders&nbsp;created for this order should be automatically changed to "Sent".</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidFrom: DateTime</td>
+        <td class="style1"><DIV>Date from which this order is valid.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidTill: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Date&nbsp;to which this order is valid.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanModify():Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangingCustomerOffer(toCustomerOffer:CustomerOffer)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(officeEntity:OfficeEntity; deepCopy:Boolean)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateOutInvoiceAmounts():IDictionary&lt;ExecutedItem,IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;&gt;</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NewSingleCustomerOrder():SingleCustomerOrder</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AssignedGosCargoHolders : <a href="goscargoholder.htm">goscargoholder</a> 0..*</td>
+        <td class="style1"><DIV>A list of all waggons from GOS registries which were connected to this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrderGeneralCustomerOrder_ : <a href="customerorder.htm">customerorder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererOrders : <a href="generaldelivererorder.htm">generaldelivererorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of general orders for a deliverer which were created for this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DispositionsTP : <a href="dispositiontp.htm">dispositiontp</a> 0..*</td>
+        <td class="style1"><DIV>A list of reloading dispositions connected to this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DispositionTPLoadedUnits : <a href="reloadunit.htm">reloadunit</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of all loaded units which are on reloading dispositions connected to this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DispositionTPUnloadedUnits : <a href="reloadunit.htm">reloadunit</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. A list of all unloaded units which are on reloading dispositions connected to this order.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalDelivererOrders : <a href="generaldelivererorder.htm">generaldelivererorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of general orders to internal deliverers upon which this order was created. Used in internal document workflow.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayTermDetail : <a href="paytermdetail.htm">paytermdetail</a> 1</td>
+        <td class="style1"><DIV>Indicates a payment termin for a customer to pay for all executed items registerd in this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceTPDetailGeneralCustomerOrder_ : <a href="servicetpdetail.htm">servicetpdetail</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SingleOrders : <a href="singlecustomerorder.htm">singlecustomerorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of single orders.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.06_executed_tp_servce.htm">07.06 Executed TP Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

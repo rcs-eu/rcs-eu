@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="customercontract">
+    <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">CustomerContract</attribute>
+    <attribute name="RuntimeName">CustomerContract</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="officeentityautonum">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing a autonumerated document in a system, e.g. offer, order, invoice etc.</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OfficeEntityAutoNum</attribute>
+        <attribute name="RuntimeName">OfficeEntityAutoNum</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces">IAutoNumGeneratorProvider</attribute>
+        <attribute name="id">{f876b969-db95-4873-bad5-c76e1b97015d}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="customercontractanex">
+        <doc><![CDATA[<DIV>Class representing an anex to an original contract with customer.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContractAnex</attribute>
+        <attribute name="RuntimeName">CustomerContractAnex</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{8e7de669-a046-4ba8-bca6-bfe103ee6f2f}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="customercontractorg">
+        <doc><![CDATA[<DIV>Class representing an original contract with customer.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContractOrg</attribute>
+        <attribute name="RuntimeName">CustomerContractOrg</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{bcf64711-482a-4f8b-942a-0af386002dfb}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">Children</attribute>
+        <attribute name="Tag">Eco.TableMapping</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>A date to which&nbsp;this contract&nbsp;is valid.</DIV>]]></doc>
+        <modlrstring>ValidTill: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValidTill</attribute>
+        <attribute name="RuntimeName">ValidTill</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{0e272b31-6520-4265-a21c-03b606b7a738}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">Accept </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Sent</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>Send()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Send</attribute>
+        <attribute name="RuntimeName">Send</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{23a81960-ff0b-4b13-aff2-95da851ddcf6}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>A note for this contract.</DIV>]]></doc>
+        <modlrstring>Note: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Note</attribute>
+        <attribute name="RuntimeName">Note</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{2d119d67-23a2-4668-affd-b69c40480125}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">2000000</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">StringAsMemo</attribute>
+            <attribute name="Tag">Eco.PMapper</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">S</SPAN><SPAN style="FONT-STYLE: italic">ent </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Signed</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>Signed()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Signed</attribute>
+        <attribute name="RuntimeName">Signed</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{54b13f0d-b22b-4464-b5a0-cd59100cdd4c}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute" href="statediagram_customercontract_rootstate">
+        <doc><![CDATA[<DIV>A contract's state.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6bac8eeb-8c5a-4ed1-a467-a274a77a84de}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsStateAttribute</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">WaitingForAccept</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>MarkForAcception()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MarkForAcception</attribute>
+        <attribute name="RuntimeName">MarkForAcception</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{76fa2d48-d609-4144-850c-246f4417fe48}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">WaitingForAccept </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">InWork</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>InWork()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">InWork</attribute>
+        <attribute name="RuntimeName">InWork</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b8c13167-7a72-407a-a314-5f78bcdafcc5}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">WaitingForAccept </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Accepted </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Sent </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Abounden</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>Abond()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Abond</attribute>
+        <attribute name="RuntimeName">Abond</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{bb5396b1-0cf1-4250-b50a-77bb50db03c1}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">WaitingForAccept </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>Accept()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Accept</attribute>
+        <attribute name="RuntimeName">Accept</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ca9323c8-310f-4c02-823c-96fa35f9461d}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>A date&nbsp;from which&nbsp;this contract&nbsp;is valid.</DIV></DIV>]]></doc>
+        <modlrstring>ValidFrom: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValidFrom</attribute>
+        <attribute name="RuntimeName">ValidFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{d919d642-9fdd-40f9-8ef9-c87bf16fc861}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="customercontract">
+        <doc><![CDATA[<DIV>Points to a contract with a customer.</DIV>]]></doc>
+        <modlrstring>CustomerContract (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContract</attribute>
+        <attribute name="RuntimeName">CustomerContract</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerContract</attribute>
+        <attribute name="id">{429f213a-1dfa-494c-9c65-a95e57fe2305}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContractCustomerOffer</attribute>
+            <attribute name="RuntimeName">CustomerContractCustomerOffer</attribute>
+            <attribute name="EffectiveName">CustomerContractCustomerOffer</attribute>
+            <attribute name="id">{151032dc-a1ac-4205-83b8-b94839339adc}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customercontract">
+            <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerContract</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customeroffer">
+            <doc><![CDATA[<DIV>A list of customer offers which are connected to this contract.</DIV>]]></doc>
+            <modlrstring>ConcerningOffers (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ConcerningOffers</attribute>
+            <attribute name="RuntimeName">ConcerningOffers</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ConcerningOffers</attribute>
+            <attribute name="id">{5e3df116-c584-444b-85da-79cd96ac3a71}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="customeroffer">
+                <doc><![CDATA[<DIV>Class representing an offer for a customer.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomerOffer</attribute>
+                <attribute name="RuntimeName">CustomerOffer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">ICompanyLastDoc, ISimilarOffer</attribute>
+                <attribute name="id">{c2c05be5-e38d-415a-98cf-e4d7d7062b0b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="customercontract">
+        <doc><![CDATA[<DIV>A list of customer contracts prepared by this user. </DIV>]]></doc>
+        <modlrstring>CustomerContract (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContract</attribute>
+        <attribute name="RuntimeName">CustomerContract</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerContract</attribute>
+        <attribute name="id">{83918735-cbcf-4d39-b716-4469a85fcd8a}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustContractSignBySysUser</attribute>
+            <attribute name="RuntimeName">CustContractSignBySysUser</attribute>
+            <attribute name="EffectiveName">CustContractSignBySysUser</attribute>
+            <attribute name="id">{19f60eb0-aa45-44d4-9db3-24b72e3a4fab}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customercontract">
+            <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerContract</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysuser">
+            <doc><![CDATA[<DIV>Points to an user by whom this contract should be signed.&nbsp;</DIV>]]></doc>
+            <modlrstring>ShouldBeSignedBy (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ShouldBeSignedBy</attribute>
+            <attribute name="RuntimeName">ShouldBeSignedBy</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ShouldBeSignedBy</attribute>
+            <attribute name="id">{385f79c0-a87b-4ed9-8d01-8566d076441e}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysuser">
+                <doc><![CDATA[<DIV><SUMMARY />Represents&nbsp;a user of the system.&nbsp; </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUser</attribute>
+                <attribute name="RuntimeName">SysUser</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0469cc7f-5155-4220-8957-727b0f7b3a86}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customercontract">
+        <doc><![CDATA[<DIV>Points to a contract with a customer.</DIV>]]></doc>
+        <modlrstring>CustomerContract (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContract</attribute>
+        <attribute name="RuntimeName">CustomerContract</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerContract</attribute>
+        <attribute name="id">{56269a12-cba2-4ceb-a3f0-04b522ce4306}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerOrderCustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerOrderCustomerContract</attribute>
+            <attribute name="EffectiveName">CustomerOrderCustomerContract</attribute>
+            <attribute name="id">{36b6dcf3-c93b-4fdd-8d00-37f5ca2a538f}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customercontract">
+            <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerContract</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customerorder">
+            <doc><![CDATA[<DIV>A list of customer orders which are connected to this contract.</DIV>]]></doc>
+            <modlrstring>CustomerOrders (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerOrders</attribute>
+            <attribute name="RuntimeName">CustomerOrders</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomerOrders</attribute>
+            <attribute name="id">{f34d9ede-6a89-4028-b2be-a02bebcd5f9e}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="customerorder">
+                <doc><![CDATA[<DIV>Abstract class representing an order from a customer.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomerOrder</attribute>
+                <attribute name="RuntimeName">CustomerOrder</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{390c0a85-34e9-4d0e-90bf-f74e36401949}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="customercontract">
+        <doc><![CDATA[<DIV>A list of customer contracts on which this person is as a contact to a company.</DIV>]]></doc>
+        <modlrstring>CustomerContract (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContract</attribute>
+        <attribute name="RuntimeName">CustomerContract</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerContract</attribute>
+        <attribute name="id">{cd69efa1-98c4-4629-a3ca-c9230c4a6edb}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContractPersonalContact</attribute>
+            <attribute name="RuntimeName">CustomerContractPersonalContact</attribute>
+            <attribute name="EffectiveName">CustomerContractPersonalContact</attribute>
+            <attribute name="id">{773ea075-57e2-4dc4-94e9-bd90269ab472}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customercontract">
+            <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerContract</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="personalcontact">
+            <doc><![CDATA[<DIV>Points to a person who </DIV>]]></doc>
+            <modlrstring>CustomerContact (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContact</attribute>
+            <attribute name="RuntimeName">CustomerContact</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomerContact</attribute>
+            <attribute name="id">{6b0d8d02-4cdf-4dbf-85c9-46ed45ca3925}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="personalcontact">
+                <doc><![CDATA[<DIV>Class representing a person hired in a company.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PersonalContact</attribute>
+                <attribute name="RuntimeName">PersonalContact</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{26ab6faf-ecef-41cd-a090-71d268058dd5}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customercontract">
+        <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+        <modlrstring>CustomerContractAttachFileList_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContractAttachFileList_</attribute>
+        <attribute name="RuntimeName">CustomerContractAttachFileList_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerContractAttachFileList_</attribute>
+        <attribute name="id">{d416e39d-6c80-4de1-85f9-27e97c2a5d53}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContractAttachFileList</attribute>
+            <attribute name="RuntimeName">CustomerContractAttachFileList</attribute>
+            <attribute name="EffectiveName">CustomerContractAttachFileList</attribute>
+            <attribute name="id">{ae58f1a1-8a3e-462d-bd87-34e303e02756}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customercontract">
+            <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerContract</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="attachfilelist">
+            <doc><![CDATA[<DIV>Point to a list of attachments.</DIV>]]></doc>
+            <modlrstring>FileList (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">FileList</attribute>
+            <attribute name="RuntimeName">FileList</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">FileList</attribute>
+            <attribute name="id">{f0e08912-b4da-4469-8c45-5ad7fa1d874b}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="attachfilelist">
+                <doc><![CDATA[<DIV>Class representing a list of files.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AttachFileList</attribute>
+                <attribute name="RuntimeName">AttachFileList</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d26ec1a7-d57d-4979-9e88-5645167182c0}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customercontract">
+        <doc><![CDATA[<DIV>
+<DIV>One way association. </DIV></DIV>]]></doc>
+        <modlrstring>CustomerContractSysUser_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContractSysUser_</attribute>
+        <attribute name="RuntimeName">CustomerContractSysUser_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerContractSysUser_</attribute>
+        <attribute name="id">{2591692f-46a5-4206-b5de-7f0530e5e736}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContractSysUser</attribute>
+            <attribute name="RuntimeName">CustomerContractSysUser</attribute>
+            <attribute name="EffectiveName">CustomerContractSysUser</attribute>
+            <attribute name="id">{baba3896-8b93-40be-969d-1ce14c4e013d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customercontract">
+            <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerContract</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysuser">
+            <doc><![CDATA[<DIV>Points to an user who prepared this contract.</DIV>]]></doc>
+            <modlrstring>PreparedBy (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PreparedBy</attribute>
+            <attribute name="RuntimeName">PreparedBy</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PreparedBy</attribute>
+            <attribute name="id">{565d0995-0eb7-4970-9541-616b8fe74f6c}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysuser">
+                <doc><![CDATA[<DIV><SUMMARY />Represents&nbsp;a user of the system.&nbsp; </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUser</attribute>
+                <attribute name="RuntimeName">SysUser</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0469cc7f-5155-4220-8957-727b0f7b3a86}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Prohibit</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customercontract">
+        <doc><![CDATA[<DIV>A list of customer contracts in which this customer is a customer.</DIV>]]></doc>
+        <modlrstring>CustomerContract (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerContract</attribute>
+        <attribute name="RuntimeName">CustomerContract</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerContract</attribute>
+        <attribute name="id">{e3757f2e-fcaa-470d-af2f-175b8e13bd00}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContractCustomer</attribute>
+            <attribute name="RuntimeName">CustomerContractCustomer</attribute>
+            <attribute name="EffectiveName">CustomerContractCustomer</attribute>
+            <attribute name="id">{d3f18ea2-f9fa-45c0-9538-16a524872405}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customercontract">
+            <doc><![CDATA[<DIV>Abstract class representing a contract with a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerContract</attribute>
+            <attribute name="RuntimeName">CustomerContract</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customer">
+            <doc><![CDATA[<DIV>Points to a customer with whom this contract is signed.</DIV>]]></doc>
+            <modlrstring>Customer (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Customer</attribute>
+            <attribute name="RuntimeName">Customer</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Customer</attribute>
+            <attribute name="id">{f9d9db32-f890-4389-bea6-bb2c4177bb30}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="customer">
+                <doc><![CDATA[<DIV>Class representing a customer role for contractors.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Customer</attribute>
+                <attribute name="RuntimeName">Customer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{783da978-7a38-4693-b3cf-8003d849a906}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine">
+      <object type="StateMachine">
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StateMachine1</attribute>
+        <attribute name="RuntimeName">StateMachine1</attribute>
+        <attribute name="id">e768ba4b-4b67-49a6-aa01-393379569896</attribute>
+      </object>
+    </link>
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">3b4482f9-5af4-49ac-aaf0-2df28fb02bc5</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">509838aa-54fa-4b66-ba30-cd05856d1ab7</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="customercontract">
+        <attribute name="RenderedWidth">140</attribute>
+        <attribute name="id">b999b070-f8e1-4293-93ea-3fcdd44e36aa</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CustomerContract</attribute>
+        <attribute name="RenderedHeight">146</attribute>
+        <attribute name="x">744</attribute>
+        <attribute name="y">184</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.00_customer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/fb15b843-df27-42c4-83cb-925ccdf9cce3.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">fb15b843-df27-42c4-83cb-925ccdf9cce3</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.00 Customer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">True</attribute>
+            <attribute name="SquareNewGeneralizations">True</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.00 Customer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="customercontract">
+        <attribute name="RenderedWidth">140</attribute>
+        <attribute name="id">a96b2429-acda-45a7-911d-6c77f96f5222</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CustomerContract</attribute>
+        <attribute name="RenderedHeight">146</attribute>
+        <attribute name="x">296</attribute>
+        <attribute name="y">392</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_11.00_deliverer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/79a39408-8580-44c8-ba52-0b554ee17b3c.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">79a39408-8580-44c8-ba52-0b554ee17b3c</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">11.00 Deliverer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">11.00 Deliverer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="customercontract">
+        <attribute name="RenderedWidth">140</attribute>
+        <attribute name="id">c8245dc1-5a2a-4b35-a87c-7dee6c004522</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CustomerContract</attribute>
+        <attribute name="RenderedHeight">146</attribute>
+        <attribute name="x">312</attribute>
+        <attribute name="y">240</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{d2613e4f-e67c-4b05-814d-111e0a176a72}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_14.00_customercontracts">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/95408ae1-4f81-4ce5-bbd6-4b7d171cfeba.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">95408ae1-4f81-4ce5-bbd6-4b7d171cfeba</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">14.00 CustomerContracts</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">14.00 CustomerContracts</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

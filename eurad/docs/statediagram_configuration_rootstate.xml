@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_configuration_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/33e17469-f612-45f4-be4a-e13d8c40bd24.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">33e17469-f612-45f4-be4a-e13d8c40bd24</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:Configuration.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_configuration_rootstate">
+        <doc><![CDATA[<DIV>A configuration's state.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{bb095490-97ad-482c-8c77-ba1ae3860b26}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="configuration">
+            <doc><![CDATA[<DIV>Abstract class representing a set of configuration properties.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Configuration</attribute>
+            <attribute name="RuntimeName">Configuration</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bba6a94a-fe03-4765-a1bf-6290a0a0d5f6}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">31cb406a-5169-4e36-880e-af98d82cc170</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">64</attribute>
+        <attribute name="y">88</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">20</attribute>
+        <attribute name="id">92c39fa2-a03d-4a6f-92b3-a8e1efa37087</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">FinalState</attribute>
+        <attribute name="RenderedHeight">20</attribute>
+        <attribute name="x">72</attribute>
+        <attribute name="y">264</attribute>
+        <link name="Vertex">
+          <object type="FinalState">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">FinalState</attribute>
+            <attribute name="RuntimeName">FinalState</attribute>
+            <attribute name="id">727b93a9-46bf-49f7-bfbb-6647436086af</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming" />
+            <link name="Outgoing" />
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">97</attribute>
+        <attribute name="id">af77966a-cc53-4bd3-bdd0-e4a06e6c362a</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Editing</attribute>
+        <attribute name="RenderedHeight">48</attribute>
+        <attribute name="x">504</attribute>
+        <attribute name="y">80</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Editing</attribute>
+            <attribute name="RuntimeName">Editing</attribute>
+            <attribute name="id">08e5f719-707d-45b0-8b61-88496f5f9a59</attribute>
+            <link name="Entry">
+              <object type="Activity">
+                <attribute name="Body">self.BeginEdit()</attribute>
+              </object>
+            </link>
+            <link name="Exit">
+              <object type="Activity">
+                <attribute name="Body">self.EndEdit()</attribute>
+              </object>
+            </link>
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">3d7add97-c40a-49fe-a15a-b7296392b88f</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Ready</attribute>
+                    <attribute name="RuntimeName">Ready</attribute>
+                    <attribute name="id">1826e0d0-f36f-44be-8ea0-5c4260f400c9</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">560ebca3-3d00-40f9-b08b-0978fd92f404</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Ready</attribute>
+                    <attribute name="RuntimeName">Ready</attribute>
+                    <attribute name="id">1826e0d0-f36f-44be-8ea0-5c4260f400c9</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">56</attribute>
+        <attribute name="id">ec15cf79-0789-47bf-97ef-485b3f98ca4f</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Ready</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">208</attribute>
+        <attribute name="y">80</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Ready</attribute>
+            <attribute name="RuntimeName">Ready</attribute>
+            <attribute name="id">1826e0d0-f36f-44be-8ea0-5c4260f400c9</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">560ebca3-3d00-40f9-b08b-0978fd92f404</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Editing</attribute>
+                    <attribute name="RuntimeName">Editing</attribute>
+                    <attribute name="id">08e5f719-707d-45b0-8b61-88496f5f9a59</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">e2fae638-1ceb-41fd-8424-0aad81c8b275</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">53413b03-4229-49ad-8c24-f517dcf33667</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">3d7add97-c40a-49fe-a15a-b7296392b88f</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Editing</attribute>
+                    <attribute name="RuntimeName">Editing</attribute>
+                    <attribute name="id">08e5f719-707d-45b0-8b61-88496f5f9a59</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

@@ -1,0 +1,90 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">AcceptedInvoiceCost in package EuradSystem</h1>
+    <p><DIV>Class representing an object which is created when an object of&nbsp;<A id=D#ininvoiceamount.htm title=InInvoiceAmount href="http://localhost/ininvoiceamount.htm"><SPAN style="FONT-STYLE: italic">InInvoiceAmount</SPAN></A><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class is connected&nbsp;to an object of&nbsp;<A id=D#executeditemcost.htm title=ExecutedItemCost href="http://localhost/executeditemcost.htm"><SPAN style="FONT-STYLE: italic">ExecutedItemCost</SPAN></A></SPAN><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class. It happens when a real cost from incoming invoice is connected to an expected cost from a customer's order.</SPAN></DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DifferenceInExpCurr: Decimal</td>
+        <td class="style1"><DIV>Derived. Amount of a difference between amounts of connected costs expressed in an expected cost's currency.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DifferenceInInvCurr: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Amount of a difference between amounts of connected costs expressed in an&nbsp;invoice's currency.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DiffTypeIsSetIfNeeded: Boolean</td>
+        <td class="style1"><DIV>Derived. Used for checking if a&nbsp;type of difference between amounts of&nbsp;connected&nbsp;costs should be set.&nbsp;<SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if DifferenceInInvCurr &gt; 0.1</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExpAmountInInvCurr: Decimal</td>
+        <td class="style1"><DIV>Derived. Amount of an expected cost used in this connection&nbsp;expressed in an invoice's currency.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExpectedCostAmount: Decimal</td>
+        <td class="style1"><DIV>Amount of an expected cost used in this connection.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsExpectedCostAmountOk: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsExpectedCostLeftToConnectOk: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealAmountInExpCurr: Decimal</td>
+        <td class="style1"><DIV>Derived. Amount of a real cost used in this connection expressed in an expected cost's currency.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealAmountInInvCurr: Decimal</td>
+        <td class="style1"><DIV>Derived. Amount of a real cost used in this connection expressed in an invoice's currency.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealCostAmount: Decimal</td>
+        <td class="style1"><DIV>Amount of a real cost used in this connection.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealCostInExpCurr: Decimal</td>
+        <td class="style1"><DIV>Derived. Amount of a whole real cost expressed in an&nbsp;expected cost's&nbsp;currency.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CostDiffType : <a href="costdifftype.htm">costdifftype</a> 0..1</td>
+        <td class="style1"><DIV>Points to a&nbsp;type of difference between amounts of connected costs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchangeRates : <a href="fixedtoexrates.htm">fixedtoexrates</a> 1</td>
+        <td class="style1"><DIV>Derived. Points to a table of an exchange rates used for a real cost.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionAmount : <a href="navisionamount.htm">navisionamount</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object of a <SPAN style="FONT-STYLE: italic">NavisionAmount </SPAN><SPAN>class in which information about this connection are pushed to Navision buffer.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.01_amounts.htm">00.01 Amounts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

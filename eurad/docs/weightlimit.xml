@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="weightlimit">
+    <doc><![CDATA[<DIV>Limit for weight condition</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">WeightLimit</attribute>
+    <attribute name="RuntimeName">WeightLimit</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{6c7cbceb-65ae-4ea1-b909-e2af981209f1}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived: minWeight which is efective.</DIV>]]></doc>
+        <modlrstring>EffectiveMinWeight: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EffectiveMinWeight</attribute>
+        <attribute name="RuntimeName">EffectiveMinWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{17305232-98fc-43e0-be12-b129a2520da8}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived: If the limit is for empty transport (no weight)</DIV>]]></doc>
+        <modlrstring>IsEmpty: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsEmpty</attribute>
+        <attribute name="RuntimeName">IsEmpty</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{181fb7be-246f-46ea-8bb2-652985b6dc7a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Methode for checking if parameter weight is included in this limit</DIV></DIV>]]></doc>
+        <modlrstring>IncludesWeight(weight:Decimal):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IncludesWeight</attribute>
+        <attribute name="RuntimeName">IncludesWeight</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{18c3119f-4e87-4d4d-98cd-da530accd80a}_EMDUPEID_2</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">weight</attribute>
+            <attribute name="RuntimeName">weight</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Decimal</attribute>
+                <attribute name="RuntimeName">Decimal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Value for min weight in case of Min LimitType</DIV>]]></doc>
+        <modlrstring>Min: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Min</attribute>
+        <attribute name="RuntimeName">Min</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{1b63fbe5-072e-44b6-a5f8-9ad8f0c86cd2}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Value for case of Between of LimitType</DIV>]]></doc>
+        <modlrstring>LesOrEqThen: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LesOrEqThen</attribute>
+        <attribute name="RuntimeName">LesOrEqThen</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{55d0d6b4-ce94-4551-ac52-5a1b803e5175}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Value in case of MoreThen and Between of LimitType</DIV>]]></doc>
+        <modlrstring>MoreThen: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MoreThen</attribute>
+        <attribute name="RuntimeName">MoreThen</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{63360654-ced0-4fb5-805b-21262742b645}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Type of the limit: </DIV>
+<DIV>&nbsp; Empty - empty transport; </DIV>
+<DIV>&nbsp; Min - minimum weight defined; </DIV>
+<DIV>&nbsp; MoreThen - only filed MoreThen is effective</DIV>
+<DIV>&nbsp; Between - weight between MoreThen and LesOrEqualThen</DIV>]]></doc>
+        <modlrstring>LimitType: WeightLimitType</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LimitType</attribute>
+        <attribute name="RuntimeName">LimitType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{8687ac16-75c3-4712-9658-2811ee3d8644}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">WeightLimitType</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WeightLimitType</attribute>
+            <attribute name="RuntimeName">WeightLimitType</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Methode for geting respresentation text of this limit</DIV>]]></doc>
+        <modlrstring>GetWeightLimitText():String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetWeightLimitText</attribute>
+        <attribute name="RuntimeName">GetWeightLimitText</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">5b928c8a-bf39-4361-84fe-48c310551cfd</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">returnparam</attribute>
+            <attribute name="RuntimeName">returnparam</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV><I>Methode for geting limit type text</I></DIV>]]></doc>
+        <modlrstring>GetWeightTypeName():String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetWeightTypeName</attribute>
+        <attribute name="RuntimeName">GetWeightTypeName</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">b8f101cd-abfe-4d66-94cd-66a3e57c8bf5</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">returnparam</attribute>
+            <attribute name="RuntimeName">returnparam</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="weightlimit">
+        <doc><![CDATA[<DIV>Pointing the weight limit to which condition belongs</DIV>]]></doc>
+        <modlrstring>WeightLimit (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WeightLimit</attribute>
+        <attribute name="RuntimeName">WeightLimit</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">WeightLimit</attribute>
+        <attribute name="id">{ba8c346a-d756-491f-881d-2b1bbe374836}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WLCWeightLimit</attribute>
+            <attribute name="RuntimeName">WLCWeightLimit</attribute>
+            <attribute name="EffectiveName">WLCWeightLimit</attribute>
+            <attribute name="id">{25c1b89e-2509-41e3-ad47-dda7ff3645fc}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="weightlimit">
+            <doc><![CDATA[<DIV>Limit for weight condition</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WeightLimit</attribute>
+            <attribute name="RuntimeName">WeightLimit</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{6c7cbceb-65ae-4ea1-b909-e2af981209f1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="weightlimitcondition">
+            <doc><![CDATA[<DIV>Condition to which this limit belongs</DIV>]]></doc>
+            <modlrstring>Condition (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Condition</attribute>
+            <attribute name="RuntimeName">Condition</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Condition</attribute>
+            <attribute name="id">{9cdf352d-1283-4a75-8237-3037ea04d2cb}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="weightlimitcondition">
+                <doc><![CDATA[<DIV>Condition for weight limits</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">WeightLimitCondition</attribute>
+                <attribute name="RuntimeName">WeightLimitCondition</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{1f136b3a-c413-4120-a4aa-4010d2261018}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="weightlimit">
+        <doc><![CDATA[<DIV>
+<DIV>One way association.</DIV></DIV>]]></doc>
+        <modlrstring>WeightLimitNhm_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">WeightLimitNhm_</attribute>
+        <attribute name="RuntimeName">WeightLimitNhm_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">WeightLimitNhm_</attribute>
+        <attribute name="id">{d75f5b78-793b-4b59-b8f2-d9dcdfc9e633}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WeightLimitNhm</attribute>
+            <attribute name="RuntimeName">WeightLimitNhm</attribute>
+            <attribute name="EffectiveName">WeightLimitNhm</attribute>
+            <attribute name="id">{a66ea7cb-bd23-492e-928c-90f72540c5af}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="weightlimit">
+            <doc><![CDATA[<DIV>Limit for weight condition</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WeightLimit</attribute>
+            <attribute name="RuntimeName">WeightLimit</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{6c7cbceb-65ae-4ea1-b909-e2af981209f1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="nhm">
+            <doc><![CDATA[<DIV>Not in use</DIV>]]></doc>
+            <modlrstring>TransportUnitNhm (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TransportUnitNhm</attribute>
+            <attribute name="RuntimeName">TransportUnitNhm</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TransportUnitNhm</attribute>
+            <attribute name="id">{e140aaf4-e9fc-4a92-8fbc-997fdb91a036}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="nhm">
+                <doc><![CDATA[<DIV>Represents&nbsp;NHM classification's entry. </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Nhm</attribute>
+                <attribute name="RuntimeName">Nhm</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2b83af30-b245-4ae9-97c0-b1edf4cb45f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="weightlimit">
+        <attribute name="RenderedWidth">193</attribute>
+        <attribute name="id">fbf850d2-3005-4104-be83-9aa71bb05690</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">WeightLimit</attribute>
+        <attribute name="RenderedHeight">136</attribute>
+        <attribute name="x">984</attribute>
+        <attribute name="y">344</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{6c7cbceb-65ae-4ea1-b909-e2af981209f1}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.02_price_conditions">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/9bae426e-7b71-4f1d-bea9-967feac5d6d8.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">9bae426e-7b71-4f1d-bea9-967feac5d6d8</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.02 Price Conditions</attribute>
+            <attribute name="ShowMethodSignatures">True</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">True</attribute>
+            <attribute name="SquareNewGeneralizations">True</attribute>
+            <attribute name="ShowMethodReturnTypes">True</attribute>
+            <attribute name="Name">01.02 Price Conditions</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

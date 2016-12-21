@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="orderedservice">
+    <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">OrderedService</attribute>
+    <attribute name="RuntimeName">OrderedService</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>CreateOutInvoiceAmounts():IDictionary&lt;ExecutedItem,IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CreateOutInvoiceAmounts</attribute>
+        <attribute name="RuntimeName">CreateOutInvoiceAmounts</attribute>
+        <attribute name="Visibility">Package</attribute>
+        <attribute name="id">{13b355d0-d30f-460d-afda-80d1526667de}_EMDUPEID_1</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IDictionary&lt;ExecutedItem,IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;&gt;</attribute>
+                <attribute name="RuntimeName">IDictionary&lt;ExecutedItem,IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;&gt;</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter" />
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived.</DIV>]]></doc>
+        <modlrstring>itemsCount: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">itemsCount</attribute>
+        <attribute name="RuntimeName">itemsCount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{77bd62a9-9e4b-44e8-9f1f-40bbc1cbf34d}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Items-&gt;size</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[<DIV>One-way association.<SPAN style="FONT-WEIGHT: bold"></SPAN></DIV>]]></doc>
+        <modlrstring>OrderedServiceOfferedService_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderedServiceOfferedService_</attribute>
+        <attribute name="RuntimeName">OrderedServiceOfferedService_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderedServiceOfferedService_</attribute>
+        <attribute name="id">{9e0b6420-299f-4896-9521-79a11d645503}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedServiceOfferedService</attribute>
+            <attribute name="RuntimeName">OrderedServiceOfferedService</attribute>
+            <attribute name="EffectiveName">OrderedServiceOfferedService</attribute>
+            <attribute name="id">{3b330cd1-0e75-4e51-a27c-a63169ea3163}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredservice">
+            <doc><![CDATA[<DIV>Used to have all single prices and costs for this service.</DIV>]]></doc>
+            <modlrstring>Service (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Service</attribute>
+            <attribute name="RuntimeName">Service</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Service</attribute>
+            <attribute name="id">{b0ea3bd2-4a2d-4074-91a8-8ce26ea13958}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredservice">
+                <doc><![CDATA[<DIV>Class representing an offered service.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedService</attribute>
+                <attribute name="RuntimeName">OfferedService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d01eccae-3bb4-4c6c-aac9-1a395ce9c27d}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[<DIV>A list of services from customer orders which were created upon this offered service.</DIV>]]></doc>
+        <modlrstring>OrderedService (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderedService</attribute>
+        <attribute name="RuntimeName">OrderedService</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderedService</attribute>
+        <attribute name="id">{607b0d30-edf1-428c-bba9-208a5c0e5877}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedServiceOfferedService1</attribute>
+            <attribute name="RuntimeName">OrderedServiceOfferedService1</attribute>
+            <attribute name="EffectiveName">OrderedServiceOfferedService1</attribute>
+            <attribute name="id">{c4d29957-5f3d-4ba3-9ded-d5861ada7ee5}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredservice">
+            <doc><![CDATA[<DIV>Points to a service from an offer upon which this service was created.</DIV>]]></doc>
+            <modlrstring>OfferService (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferService</attribute>
+            <attribute name="RuntimeName">OfferService</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OfferService</attribute>
+            <attribute name="id">{f44d3013-7ccd-448d-b899-ef5eed3504cd}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredservice">
+                <doc><![CDATA[<DIV>Class representing an offered service.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedService</attribute>
+                <attribute name="RuntimeName">OfferedService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d01eccae-3bb4-4c6c-aac9-1a395ce9c27d}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[<DIV>Not in use.</DIV>]]></doc>
+        <modlrstring>OrderedService (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderedService</attribute>
+        <attribute name="RuntimeName">OrderedService</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderedService</attribute>
+        <attribute name="id">{1c17475f-f17a-4a4f-9e6e-59a5f93b9251}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedServiceQList</attribute>
+            <attribute name="RuntimeName">OrderedServiceQList</attribute>
+            <attribute name="EffectiveName">OrderedServiceQList</attribute>
+            <attribute name="id">{cc05a140-3289-4346-9e57-79584358c49d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="qlist">
+            <doc><![CDATA[<DIV>Not in use.</DIV>]]></doc>
+            <modlrstring>QList (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">QList</attribute>
+            <attribute name="RuntimeName">QList</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">QList</attribute>
+            <attribute name="id">{ea1c59b2-eb7a-4dd6-92f5-c61a86460d06}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="qlist">
+                <doc><![CDATA[<DIV>Class representing a list of quantities used for an executed item.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">QList</attribute>
+                <attribute name="RuntimeName">QList</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c0e9ee2d-9386-470e-971e-2c288eb50344}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[<DIV>Points to a service from an order to which this item belongs.</DIV>]]></doc>
+        <modlrstring>Service (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Service</attribute>
+        <attribute name="RuntimeName">Service</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Service</attribute>
+        <attribute name="id">{345eb7b3-97a9-4276-9d1b-de8b22284c41}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GeneralCustomerOrderExecutedItem</attribute>
+            <attribute name="RuntimeName">GeneralCustomerOrderExecutedItem</attribute>
+            <attribute name="EffectiveName">GeneralCustomerOrderExecutedItem</attribute>
+            <attribute name="id">{d7f405c8-b380-48ab-a743-31ed750be8b0}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditem">
+            <doc><![CDATA[<DIV>A list of executed items which are registered in this service.</DIV>]]></doc>
+            <modlrstring>Items (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Items</attribute>
+            <attribute name="RuntimeName">Items</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Items</attribute>
+            <attribute name="id">{65afe5db-c825-4350-990f-b71e6a64ad4f}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditem">
+                <doc><![CDATA[<DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">IEcoOnSave</attribute>
+                <attribute name="id">{78395a97-455d-4f97-a366-8607343fd841}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+        <modlrstring>OrderedServiceCargo_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderedServiceCargo_</attribute>
+        <attribute name="RuntimeName">OrderedServiceCargo_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderedServiceCargo_</attribute>
+        <attribute name="id">{406c5aed-5c5c-4992-8406-3bd03e04b749}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedServiceCargo</attribute>
+            <attribute name="RuntimeName">OrderedServiceCargo</attribute>
+            <attribute name="EffectiveName">OrderedServiceCargo</attribute>
+            <attribute name="id">{dc8bf594-cdb7-4b40-8cf7-27e14566ecac}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cargo">
+            <doc><![CDATA[<DIV>Points to a cargo.</DIV>]]></doc>
+            <modlrstring>Cargo (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Cargo</attribute>
+            <attribute name="RuntimeName">Cargo</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Cargo</attribute>
+            <attribute name="id">{9ca4c1d6-8a49-4d1f-84f6-bb99959561ea}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="cargo">
+                <doc><![CDATA[<DIV>Describes cargo.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Cargo</attribute>
+                <attribute name="RuntimeName">Cargo</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4e894279-beb2-4957-9534-22b00c136e3b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[<DIV>A list of services.</DIV>]]></doc>
+        <modlrstring>OrderedServices (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderedServices</attribute>
+        <attribute name="RuntimeName">OrderedServices</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderedServices</attribute>
+        <attribute name="id">{28bb913b-5280-4248-b456-ddb2901c88d4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GeneralCustomerOrderOfferedService</attribute>
+            <attribute name="RuntimeName">GeneralCustomerOrderOfferedService</attribute>
+            <attribute name="EffectiveName">GeneralCustomerOrderOfferedService</attribute>
+            <attribute name="id">{e9473900-cf4f-4950-b5af-c32c244dd008}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customerorder">
+            <doc><![CDATA[<DIV>Points to a customer's order to which this service belongs.</DIV>]]></doc>
+            <modlrstring>Order (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Order</attribute>
+            <attribute name="RuntimeName">Order</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Order</attribute>
+            <attribute name="id">{b861bf69-58d2-49f2-8755-e31f43e06d40}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="customerorder">
+                <doc><![CDATA[<DIV>Abstract class representing an order from a customer.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomerOrder</attribute>
+                <attribute name="RuntimeName">CustomerOrder</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{390c0a85-34e9-4d0e-90bf-f74e36401949}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>MasterOrderedService (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MasterOrderedService</attribute>
+        <attribute name="RuntimeName">MasterOrderedService</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">MasterOrderedService</attribute>
+        <attribute name="id">4a08109c-371e-4958-a76b-8e6d2ac4f3d7</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">OrderedServiceOrderedServicesMasterOrderedServiceOrderedServiceMasterOrderedService</attribute>
+            <attribute name="EffectiveName">OrderedServiceOrderedServicesMasterOrderedServiceOrderedServiceMasterOrderedService</attribute>
+            <attribute name="id">09a1f3f3-7e7a-4079-b0cc-c2ddc9c12e81</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="orderedservice">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>OrderedServicesMasterOrderedService (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">OrderedServicesMasterOrderedService</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OrderedServicesMasterOrderedService</attribute>
+            <attribute name="id">bfad0bca-48d2-4cb0-9934-4ef2e81c69cb</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="orderedservice">
+                <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OrderedService</attribute>
+                <attribute name="RuntimeName">OrderedService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">self.Order.General.OrderedServices-&gt;select(c | c.OfferService = self.OfferService)-&gt;first</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="orderedservice">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>OrderedServicesMasterOrderedService (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">OrderedServicesMasterOrderedService</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderedServicesMasterOrderedService</attribute>
+        <attribute name="id">bfad0bca-48d2-4cb0-9934-4ef2e81c69cb</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">OrderedServiceOrderedServicesMasterOrderedServiceOrderedServiceMasterOrderedService</attribute>
+            <attribute name="EffectiveName">OrderedServiceOrderedServicesMasterOrderedServiceOrderedServiceMasterOrderedService</attribute>
+            <attribute name="id">09a1f3f3-7e7a-4079-b0cc-c2ddc9c12e81</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="orderedservice">
+            <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OrderedService</attribute>
+            <attribute name="RuntimeName">OrderedService</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="orderedservice">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>MasterOrderedService (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MasterOrderedService</attribute>
+            <attribute name="RuntimeName">MasterOrderedService</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MasterOrderedService</attribute>
+            <attribute name="id">4a08109c-371e-4958-a76b-8e6d2ac4f3d7</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="orderedservice">
+                <doc><![CDATA[<DIV>Class representing a service from an customer's order.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OrderedService</attribute>
+                <attribute name="RuntimeName">OrderedService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="orderedservice">
+        <attribute name="RenderedWidth">122</attribute>
+        <attribute name="id">66382b67-0793-4bdf-9c44-37ed64732d76</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OrderedService</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">360</attribute>
+        <attribute name="y">736</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">HideOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.00_customer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/fb15b843-df27-42c4-83cb-925ccdf9cce3.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">fb15b843-df27-42c4-83cb-925ccdf9cce3</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.00 Customer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">True</attribute>
+            <attribute name="SquareNewGeneralizations">True</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.00 Customer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="orderedservice">
+        <attribute name="RenderedWidth">133</attribute>
+        <attribute name="id">7bb9f467-45b2-4589-af51-6b15584a1b7b</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">OrderedService</attribute>
+        <attribute name="RenderedHeight">65</attribute>
+        <attribute name="x">1504</attribute>
+        <attribute name="y">136</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{bc5245f4-9862-4c38-9ccb-bc98060779d5}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.04_invoice_costs">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b7389669-a43a-4ab3-bb81-2d85a84a4991.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b7389669-a43a-4ab3-bb81-2d85a84a4991</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.04 Invoice costs</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.04 Invoice costs</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

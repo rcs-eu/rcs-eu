@@ -1,0 +1,212 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">InInvoice in package EuradSystem</h1>
+    <p><DIV>Represents invoice received from a deliverer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ConnectedAmount: Decimal</td>
+        <td class="style1"><DIV>Derived. The total amount connected to customer orders.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContractNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>The contract number as specified on the invoice by the deliverer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelOrderNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>The number of the deliverer order as printed on the invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocumentInAccount: Boolean</td>
+        <td class="style1"><DIV>The document was passed to the accounting department.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EnteredAmount: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived. The total amount&nbsp;of the invoice specification.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncomeDate: DateTime</td>
+        <td class="style1"><DIV>The date when this invoice has been delivered.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoiceNr: String</td>
+        <td class="style1"><DIV>The invoice number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsAdminInvoice: Boolean</td>
+        <td class="style1"><DIV>Determines whether this invoice is an administratove invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayDeadlineAccept: DateTime</td>
+        <td class="style1"><DIV>Accepted due date.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayDeadlineDaysAccept: Integer</td>
+        <td class="style1"><DIV>
+<DIV>Accepted due date days.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayDeadlineDaysFromInv: Integer</td>
+        <td class="style1"><DIV>
+<DIV>Due date days&nbsp;as&nbsp;printed on the invoice.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayDeadlineFromInv: DateTime</td>
+        <td class="style1"><DIV>Due date as&nbsp;printed on the invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ReclamedAmount: Decimal</td>
+        <td class="style1"><DIV>The total amount of costs placed on invoice reclamation documents.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RegisterDate: DateTime</td>
+        <td class="style1"><DIV>The date of registration of the invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_ininvoice_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Determines the state of this document.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Book()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Close()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoBook()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoClose()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoOpen()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoUnbook()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Open()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unbook()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CorrectedBy : <a href="ininvoice.htm">ininvoice</a> 0..*</td>
+        <td class="style1"><DIV>A list of invoices which correct this invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrectionFor : <a href="ininvoice.htm">ininvoice</a> 0..1</td>
+        <td class="style1"><DIV>Points to the invoice this invoice corrects.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Deliverer : <a href="deliverer.htm">deliverer</a> 1</td>
+        <td class="style1"><DIV>The deliverer who issued this invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemsInInvoices : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GeneratedFromOutInvoiceNote : <a href="outinvoicenote.htm">outinvoicenote</a> 0..1</td>
+        <td class="style1"><DIV>A note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InInvImportPack : <a href="ininvimportpack.htm">ininvimportpack</a> 0..1</td>
+        <td class="style1"><DIV>Points to import pack of imported&nbsp;invoices.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InInvoiceReclamPosInInvoice_ : <a href="ininvoicereclampos.htm">ininvoicereclampos</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageInInvInternalNewInInvoice_ : <a href="messageininvinternalnew.htm">messageininvinternalnew</a> 0..*</td>
+        <td class="style1"><DIV>One way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageInInvNewCbrImportInInvoice_ : <a href="messageininvnewcbrimport.htm">messageininvnewcbrimport</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageInInvUnbookedInInvoice_ : <a href="messageininvunbooked.htm">messageininvunbooked</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavAcceptInInvoiceInInvoice_ : <a href="navacceptininvoice.htm">navacceptininvoice</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavUnAcceptInInvoiceInInvoice_ : <a href="navunacceptininvoice.htm">navunacceptininvoice</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.03_cbrimportconfig.htm">01.03 CbrImportConfig</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.13_imports.htm">01.13 Imports</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.05_ininvoice.htm">12.05 InInvoice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_13.00_ininvoice_reclamation.htm">13.00 InInvoice Reclamation</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

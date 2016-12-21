@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="exchangeratesinglelist">
+    <doc><![CDATA[<DIV>Class representing a list of exchange rates in which from and to currencies can be different.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">ExchangeRateSingleList</attribute>
+    <attribute name="RuntimeName">ExchangeRateSingleList</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{365a8f33-655b-446e-836a-fe11f7d09317}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="custorderexchangelist">
+        <doc><![CDATA[<DIV>Class representing a table of exchange rates used in customer order.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustOrderExchangeList</attribute>
+        <attribute name="RuntimeName">CustOrderExchangeList</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{3b0608ee-39b7-4cf0-8eb3-c318ba3d0791}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="offerexchagelist">
+        <doc><![CDATA[<DIV>Class representing a list of exchange rates used in <SPAN style="FONT-STYLE: italic">CustomerOffer</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OfferExchageList</attribute>
+        <attribute name="RuntimeName">OfferExchageList</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{6024bb4f-804d-4472-9eb1-6f7ea9ec863c}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. fromCurr value = toCurr x . Returns x</DIV>]]></doc>
+        <modlrstring>Recalculate(fromCurr:Curr; toCurr:Curr; value:Decimal):Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Recalculate</attribute>
+        <attribute name="RuntimeName">Recalculate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{62b14906-840e-414c-9d4f-1f9fd32862ca}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Decimal</attribute>
+                <attribute name="RuntimeName">Decimal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">fromCurr</attribute>
+            <attribute name="RuntimeName">fromCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">toCurr</attribute>
+            <attribute name="RuntimeName">toCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">value</attribute>
+            <attribute name="RuntimeName">value</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Decimal</attribute>
+                <attribute name="RuntimeName">Decimal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Copies all exchange rates from <SPAN style="FONT-STYLE: italic">exchangeList</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>CopyFrom(exchangeList:ExchangeRateSingleList)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CopyFrom</attribute>
+        <attribute name="RuntimeName">CopyFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{7f5628b4-7e5e-4440-84fb-dac320f2bf79}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">exchangeList</attribute>
+            <attribute name="RuntimeName">exchangeList</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExchangeRateSingleList</attribute>
+                <attribute name="RuntimeName">ExchangeRateSingleList</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>A whole list as one string expressed in a user-friendly way.</DIV>]]></doc>
+        <modlrstring>Representation: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Representation</attribute>
+        <attribute name="RuntimeName">Representation</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{96897320-dd6b-4ffd-9465-a31f0dfabd69}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">100</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. If rate from&nbsp;<SPAN style="FONT-STYLE: italic">fromCurr </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">toCurr </SPAN><SPAN>not exists in the list then it adds such a rate. If </SPAN><SPAN style="FONT-STYLE: italic">addDefaultValues </SPAN><SPAN>is </SPAN><SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>then it gets counter and value from NBM exchange rate table.</SPAN></DIV>]]></doc>
+        <modlrstring>AddRateIfNotExists(fromCurr:Curr; toCurr:Curr; addDefaultValues:Boolean):ExchangeRateSingle</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AddRateIfNotExists</attribute>
+        <attribute name="RuntimeName">AddRateIfNotExists</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{bc9b6571-c27e-42e1-833a-682b8c7be7f0}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExchangeRateSingle</attribute>
+                <attribute name="RuntimeName">ExchangeRateSingle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">fromCurr</attribute>
+            <attribute name="RuntimeName">fromCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">toCurr</attribute>
+            <attribute name="RuntimeName">toCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">addDefaultValues</attribute>
+            <attribute name="RuntimeName">addDefaultValues</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Gets <SPAN style="FONT-STYLE: italic">ExchangeRateSingle </SPAN><SPAN>for rate from </SPAN><SPAN style="FONT-STYLE: italic">fromCurr </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">toCurr</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>GetRate(fromCurr:Curr; toCurr:Curr):ExchangeRateSingle</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetRate</attribute>
+        <attribute name="RuntimeName">GetRate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{f2166f9f-5d79-4a18-b79f-aec5e0d50952}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExchangeRateSingle</attribute>
+                <attribute name="RuntimeName">ExchangeRateSingle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">fromCurr</attribute>
+            <attribute name="RuntimeName">fromCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">toCurr</attribute>
+            <attribute name="RuntimeName">toCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Returns elementary amount for rate from <SPAN style="FONT-STYLE: italic">fromCurr </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">toCurr</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>Rate(fromCurr:Curr; toCurr:Curr):Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Rate</attribute>
+        <attribute name="RuntimeName">Rate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">25edefa3-34d3-44c4-975d-d04c45963f73</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Decimal</attribute>
+                <attribute name="RuntimeName">Decimal</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">fromCurr</attribute>
+            <attribute name="RuntimeName">fromCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">toCurr</attribute>
+            <attribute name="RuntimeName">toCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="exchangeratesinglelist">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>ExchangeRateSingleList (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExchangeRateSingleList</attribute>
+        <attribute name="RuntimeName">ExchangeRateSingleList</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ExchangeRateSingleList</attribute>
+        <attribute name="id">{828d9a17-9109-45e6-8f5a-2ff9c01bb7d2}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SimpleOfferPriceCalculatorExchangeRateSingleList</attribute>
+            <attribute name="RuntimeName">SimpleOfferPriceCalculatorExchangeRateSingleList</attribute>
+            <attribute name="EffectiveName">SimpleOfferPriceCalculatorExchangeRateSingleList</attribute>
+            <attribute name="id">{48d67afb-7bb7-46c0-8ca0-e7898062b921}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="exchangeratesinglelist">
+            <doc><![CDATA[<DIV>Class representing a list of exchange rates in which from and to currencies can be different.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateSingleList</attribute>
+            <attribute name="RuntimeName">ExchangeRateSingleList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{365a8f33-655b-446e-836a-fe11f7d09317}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="simpleofferpricecalculator">
+            <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+            <modlrstring>SimpleOfferPriceCalculatorExchangeRateSingleList_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SimpleOfferPriceCalculatorExchangeRateSingleList_</attribute>
+            <attribute name="RuntimeName">SimpleOfferPriceCalculatorExchangeRateSingleList_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SimpleOfferPriceCalculatorExchangeRateSingleList_</attribute>
+            <attribute name="id">{cc17c771-f6bb-496a-8aaa-d05b600e7244}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="simpleofferpricecalculator">
+                <doc><![CDATA[<DIV>Transiant class for calculating prices</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SimpleOfferPriceCalculator</attribute>
+                <attribute name="RuntimeName">SimpleOfferPriceCalculator</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{12cf2d6c-6d6b-4ddb-a9ff-ab6d4b7447cf}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="exchangeratesinglelist">
+        <doc><![CDATA[<DIV>Points to a list to which this rate belongs.</DIV>]]></doc>
+        <modlrstring>RateList (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RateList</attribute>
+        <attribute name="RuntimeName">RateList</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">RateList</attribute>
+        <attribute name="id">{2d768b9a-7f3f-490e-a41c-9dad4d81d4a4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateSingleExchangeRateSingleList</attribute>
+            <attribute name="RuntimeName">ExchangeRateSingleExchangeRateSingleList</attribute>
+            <attribute name="EffectiveName">ExchangeRateSingleExchangeRateSingleList</attribute>
+            <attribute name="id">{6d4a29f1-67d8-4209-8b21-b817979efc3b}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="exchangeratesinglelist">
+            <doc><![CDATA[<DIV>Class representing a list of exchange rates in which from and to currencies can be different.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateSingleList</attribute>
+            <attribute name="RuntimeName">ExchangeRateSingleList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{365a8f33-655b-446e-836a-fe11f7d09317}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="exchangeratesingle">
+            <doc><![CDATA[<DIV>A list of rates.</DIV>]]></doc>
+            <modlrstring>Rates (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Rates</attribute>
+            <attribute name="RuntimeName">Rates</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Rates</attribute>
+            <attribute name="id">{a18d5592-cf68-4fe5-ba1e-16f7d4514d75}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="exchangeratesingle">
+                <doc><![CDATA[<DIV>Class representing an exchange rate from <SPAN style="FONT-STYLE: italic">FromCurr </SPAN><SPAN>currency defined in a superclass to </SPAN><SPAN style="FONT-STYLE: italic">ToCurr </SPAN><SPAN>currency.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExchangeRateSingle</attribute>
+                <attribute name="RuntimeName">ExchangeRateSingle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{32543ca0-7593-4807-82d9-eb8f4132df32}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">4f6e01e6-ebe6-426a-81c6-e5281638f8b1</attribute>
+        <attribute name="x">66,5</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">1</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">c1307c66-9b3a-45fa-ae47-1762e96f9cb2</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="exchangeratesinglelist">
+        <attribute name="RenderedWidth">185</attribute>
+        <attribute name="id">17689659-703c-45bf-8dd8-ec9ef70ddd5b</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ExchangeRateSingleList</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">1104</attribute>
+        <attribute name="y">328</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{365a8f33-655b-446e-836a-fe11f7d09317}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.00_offers">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7a04f235-c98c-462a-89f5-4d1b18e61279.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7a04f235-c98c-462a-89f5-4d1b18e61279</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.00 Offers</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.00 Offers</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="exchangeratesinglelist">
+        <attribute name="RenderedWidth">185</attribute>
+        <attribute name="id">91c8029d-7af7-4c89-ad52-6f0d467270a7</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ExchangeRateSingleList</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">320</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{365a8f33-655b-446e-836a-fe11f7d09317}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.00_customer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/fb15b843-df27-42c4-83cb-925ccdf9cce3.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">fb15b843-df27-42c4-83cb-925ccdf9cce3</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.00 Customer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">True</attribute>
+            <attribute name="SquareNewGeneralizations">True</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.00 Customer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="exchangeratesinglelist">
+        <attribute name="RenderedWidth">416</attribute>
+        <attribute name="id">6910e32e-f9d4-4bdf-9335-951dab16d392</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ExchangeRateSingleList</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">1104</attribute>
+        <attribute name="y">1400</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{365a8f33-655b-446e-836a-fe11f7d09317}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.02_exchange_rates">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/116e1866-4f8e-49be-bcb1-48b5027e292a.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">116e1866-4f8e-49be-bcb1-48b5027e292a</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.02 Exchange Rates</attribute>
+            <attribute name="ShowMethodSignatures">True</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">True</attribute>
+            <attribute name="Name">02.02 Exchange Rates</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

@@ -1,0 +1,67 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CustomerRequestRel in package EuradSystem</h1>
+    <p><DIV>Class representing a service in a customer request.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Nr: Integer</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Reference number of a&nbsp;service in a list of&nbsp;services for a request's item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RelationFrom: String</td>
+        <td class="style1"><DIV>Derived. States what is a starting station&nbsp;for transport in this service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RelationTo: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. States what is a&nbsp;ending station&nbsp;for transport in this service.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceName: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Service's name.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CustomerRequestItem : <a href="customerrequestitem.htm">customerrequestitem</a> 1</td>
+        <td class="style1"><DIV>Points to a request's item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedService : <a href="offeredservice.htm">offeredservice</a> 0..1</td>
+        <td class="style1"><DIV>Points to a service from an offer which was created upon this request's service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceRequestSeg : <a href="pricerequestseg.htm">pricerequestseg</a> 0..1</td>
+        <td class="style1"><DIV>If this request was created from an internal&nbsp;price request it points to a corresponding service from a price request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Segments : <a href="custreqcostgroup.htm">custreqcostgroup</a> 0..*</td>
+        <td class="style1"><DIV>A list of cost groups.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_08.00_customer_requests.htm">08.00 Customer requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_16.00_internal_price_request.htm">16.00 Internal Price Request</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

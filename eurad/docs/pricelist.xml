@@ -1,0 +1,920 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="pricelist">
+    <doc><![CDATA[<DIV>Represents a list of prices.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">PriceList</attribute>
+    <attribute name="RuntimeName">PriceList</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Determines whether each price has a condition.</DIV>]]></doc>
+        <modlrstring>HasConditions: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">HasConditions</attribute>
+        <attribute name="RuntimeName">HasConditions</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4c3054dc-2c21-47d5-8225-c9683e15ff92}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Prices.HasConditions-&gt;forAll(c|c=true)</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="pricelist">
+        <doc><![CDATA[<DIV>Points to a list of prices for this service.</DIV>]]></doc>
+        <modlrstring>PriceList (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PriceList</attribute>
+        <attribute name="RuntimeName">PriceList</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PriceList</attribute>
+        <attribute name="id">{c8b51322-1af7-40c8-97fa-ba38364cd767}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferedServicePriceList</attribute>
+            <attribute name="RuntimeName">OfferedServicePriceList</attribute>
+            <attribute name="EffectiveName">OfferedServicePriceList</attribute>
+            <attribute name="id">{097f101a-39c8-473c-adc6-1da5c2fc606d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="pricelist">
+            <doc><![CDATA[<DIV>Represents a list of prices.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceList</attribute>
+            <attribute name="RuntimeName">PriceList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredservice">
+            <doc><![CDATA[<DIV>One way association.</DIV>]]></doc>
+            <modlrstring>OfferedServicePriceList_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferedServicePriceList_</attribute>
+            <attribute name="RuntimeName">OfferedServicePriceList_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OfferedServicePriceList_</attribute>
+            <attribute name="id">{fd367522-b287-4259-b01d-9da2dfa13ded}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredservice">
+                <doc><![CDATA[<DIV>Class representing an offered service.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedService</attribute>
+                <attribute name="RuntimeName">OfferedService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d01eccae-3bb4-4c6c-aac9-1a395ce9c27d}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="pricelist">
+        <doc><![CDATA[<DIV>Points to a price list to which this price belongs.</DIV>]]></doc>
+        <modlrstring>PriceList (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PriceList</attribute>
+        <attribute name="RuntimeName">PriceList</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PriceList</attribute>
+        <attribute name="id">{f93ec489-a95d-4593-8f46-474fe5b44d35}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferedServiceOfferedServicePrice</attribute>
+            <attribute name="RuntimeName">OfferedServiceOfferedServicePrice</attribute>
+            <attribute name="EffectiveName">OfferedServiceOfferedServicePrice</attribute>
+            <attribute name="id">{0adb9998-c347-4ff4-9b81-4a10bed42221}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="pricelist">
+            <doc><![CDATA[<DIV>Represents a list of prices.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceList</attribute>
+            <attribute name="RuntimeName">PriceList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredserviceprice">
+            <doc><![CDATA[<DIV>A list of prices.</DIV>]]></doc>
+            <modlrstring>Prices (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Prices</attribute>
+            <attribute name="RuntimeName">Prices</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Prices</attribute>
+            <attribute name="id">{5ff3e4d1-d249-439b-ad73-d8a0191b144a}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredserviceprice">
+                <doc><![CDATA[<DIV>Class representing a&nbsp;price per unit.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedServicePrice</attribute>
+                <attribute name="RuntimeName">OfferedServicePrice</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{823d359b-1974-4c8a-a664-a9196eddedaa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="pricelist">
+        <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Points to the price list for this service expressed as fixed price values</SPAN><SPAN style="FONT-FAMILY: Verdana">. Is null if </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana">IsDiscount</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;is </SPAN><SPAN style="FONT-FAMILY: Verdana; FONT-WEIGHT: bold">true</SPAN><SPAN style="FONT-FAMILY: Verdana">.</SPAN></DIV>]]></doc>
+        <modlrstring>PriceList (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PriceList</attribute>
+        <attribute name="RuntimeName">PriceList</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PriceList</attribute>
+        <attribute name="id">{80e55860-1b8e-409b-9728-96faa75e8241}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DelivererContractServicePriceList</attribute>
+            <attribute name="RuntimeName">DelivererContractServicePriceList</attribute>
+            <attribute name="EffectiveName">DelivererContractServicePriceList</attribute>
+            <attribute name="id">{51ada233-b028-473f-8eb0-f4d0c77dc09c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="pricelist">
+            <doc><![CDATA[<DIV>Represents a list of prices.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceList</attribute>
+            <attribute name="RuntimeName">PriceList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="deliverercontractservice">
+            <doc><![CDATA[<DIV>
+<DIV>One way association.</DIV></DIV>]]></doc>
+            <modlrstring>DelivererContractServicePriceList_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DelivererContractServicePriceList_</attribute>
+            <attribute name="RuntimeName">DelivererContractServicePriceList_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DelivererContractServicePriceList_</attribute>
+            <attribute name="id">{5bc7ad7d-61c2-4e54-9972-cec803cf542e}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="deliverercontractservice">
+                <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Specifies a contracted service.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DelivererContractService</attribute>
+                <attribute name="RuntimeName">DelivererContractService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a1ea411d-c656-4a9a-841d-29c31bbb2201}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="pricelist">
+        <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">One way association.</SPAN></DIV></SPAN></DIV>]]></doc>
+        <modlrstring>PriceListMUnit_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PriceListMUnit_</attribute>
+        <attribute name="RuntimeName">PriceListMUnit_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PriceListMUnit_</attribute>
+        <attribute name="id">{094015ea-a4f4-4789-b699-b0e0ba797be8}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceListMUnit</attribute>
+            <attribute name="RuntimeName">PriceListMUnit</attribute>
+            <attribute name="EffectiveName">PriceListMUnit</attribute>
+            <attribute name="id">{772722e8-097f-41c9-b621-fb710764e5ce}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="pricelist">
+            <doc><![CDATA[<DIV>Represents a list of prices.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceList</attribute>
+            <attribute name="RuntimeName">PriceList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="munit">
+            <doc><![CDATA[<DIV>The measure unit of the prices.</DIV>]]></doc>
+            <modlrstring>MUnits (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MUnits</attribute>
+            <attribute name="RuntimeName">MUnits</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MUnits</attribute>
+            <attribute name="id">{72440468-d909-42c9-a78a-4e148647b84b}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="munit">
+                <doc><![CDATA[<DIV><SPAN style="FONT-FAMILY: Verdana">Represents a measure unit.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MUnit</attribute>
+                <attribute name="RuntimeName">MUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e423a987-abe5-441e-94a6-637ec5da7b74}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="pricelist">
+        <doc><![CDATA[<DIV>Points to a price list.</DIV>]]></doc>
+        <modlrstring>PriceList (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PriceList</attribute>
+        <attribute name="RuntimeName">PriceList</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PriceList</attribute>
+        <attribute name="id">{22596752-62e7-401b-a7dd-2d71d066e7c1}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceRequestAnswerPriceList</attribute>
+            <attribute name="RuntimeName">PriceRequestAnswerPriceList</attribute>
+            <attribute name="EffectiveName">PriceRequestAnswerPriceList</attribute>
+            <attribute name="id">{caf3b503-4679-4f0f-ae8e-c1db9f418a6c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="pricelist">
+            <doc><![CDATA[<DIV>Represents a list of prices.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceList</attribute>
+            <attribute name="RuntimeName">PriceList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="pricerequestseg">
+            <doc><![CDATA[<DIV>
+<DIV>One way association.</DIV></DIV>]]></doc>
+            <modlrstring>PriceRequestAnswerPriceList_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceRequestAnswerPriceList_</attribute>
+            <attribute name="RuntimeName">PriceRequestAnswerPriceList_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PriceRequestAnswerPriceList_</attribute>
+            <attribute name="id">{58d19995-8588-4df1-917b-a2c0a0da38e2}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="pricerequestseg">
+                <doc><![CDATA[<DIV>Class representing a service from a price request.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PriceRequestSeg</attribute>
+                <attribute name="RuntimeName">PriceRequestSeg</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e0ad5687-3752-4ced-b394-c082a121a0af}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="pricelist">
+        <doc><![CDATA[<DIV>Points to a list of single prices of this item.</DIV>]]></doc>
+        <modlrstring>PriceList (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PriceList</attribute>
+        <attribute name="RuntimeName">PriceList</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PriceList</attribute>
+        <attribute name="id">{f45b3c2f-e0df-4ccb-bc1f-396bc8b23e41}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedItemPriceList</attribute>
+            <attribute name="RuntimeName">ExecutedItemPriceList</attribute>
+            <attribute name="EffectiveName">ExecutedItemPriceList</attribute>
+            <attribute name="id">{ec7d78fa-a1a6-48f2-b7e6-7aed4a5f74d2}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="pricelist">
+            <doc><![CDATA[<DIV>Represents a list of prices.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceList</attribute>
+            <attribute name="RuntimeName">PriceList</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditem">
+            <doc><![CDATA[<DIV>
+<DIV>One way association.</DIV></DIV>]]></doc>
+            <modlrstring>ExecutedItemPriceList_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedItemPriceList_</attribute>
+            <attribute name="RuntimeName">ExecutedItemPriceList_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExecutedItemPriceList_</attribute>
+            <attribute name="id">{d085e591-5a3f-49a7-aa84-825f3a10ef7c}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditem">
+                <doc><![CDATA[<DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">IEcoOnSave</attribute>
+                <attribute name="id">{78395a97-455d-4f97-a366-8607343fd841}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">276e7200-f360-47b5-b2bf-9c5fc24a6c12</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">600</attribute>
+        <attribute name="y">760</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.00_offers">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7a04f235-c98c-462a-89f5-4d1b18e61279.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7a04f235-c98c-462a-89f5-4d1b18e61279</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.00 Offers</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.00 Offers</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">68250c6d-0657-4f39-85db-a07bf4e0e3a2</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">192</attribute>
+        <attribute name="y">1000</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.01_offers_singlecost_and_offeredprice">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b330daed-216c-496b-93ba-65ee0be8c09d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b330daed-216c-496b-93ba-65ee0be8c09d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.01 Offers SingleCost and OfferedPrice</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.01 Offers SingleCost and OfferedPrice</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">004a1a1a-83cf-4b24-a8f2-3d102601f8a3</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">896</attribute>
+        <attribute name="y">1192</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_09.00_deliverercontracts">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/5acd3612-8da9-418a-963f-ef034a80df79.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">5acd3612-8da9-418a-963f-ef034a80df79</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">09.00 DelivererContracts</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">09.00 DelivererContracts</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">9d694fac-8d91-4e34-8439-d6ca6ba68497</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">568</attribute>
+        <attribute name="y">864</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_10.00_pricerequest">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/542d90a9-e453-41ef-a92e-bfa2153b29a0.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">542d90a9-e453-41ef-a92e-bfa2153b29a0</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">10.00 PriceRequest</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">10.00 PriceRequest</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">128</attribute>
+        <attribute name="id">386750ed-d39a-458e-8681-4afe8effca4f</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">1520</attribute>
+        <attribute name="y">976</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.00_customer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/fb15b843-df27-42c4-83cb-925ccdf9cce3.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">fb15b843-df27-42c4-83cb-925ccdf9cce3</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.00 Customer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">True</attribute>
+            <attribute name="SquareNewGeneralizations">True</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.00 Customer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">128</attribute>
+        <attribute name="id">ba8e21c4-ba7f-40d0-9838-ec7e22ec066d</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">96</attribute>
+        <attribute name="y">1136</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.00_customer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/fb15b843-df27-42c4-83cb-925ccdf9cce3.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">fb15b843-df27-42c4-83cb-925ccdf9cce3</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.00 Customer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">True</attribute>
+            <attribute name="SquareNewGeneralizations">True</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.00 Customer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">03320497-977b-4bb4-a9ad-ce8bad738cf4</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">240</attribute>
+        <attribute name="y">992</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_11.00_deliverer_order">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/79a39408-8580-44c8-ba52-0b554ee17b3c.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">79a39408-8580-44c8-ba52-0b554ee17b3c</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">11.00 Deliverer Order</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">11.00 Deliverer Order</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">edad4f2d-7510-4e92-81f4-0ca909ee94d9</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">672</attribute>
+        <attribute name="y">1056</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_15.00_internal_deliverer_contracts">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/e770bab4-fc11-46fa-82c4-8d78266b6c2b.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">e770bab4-fc11-46fa-82c4-8d78266b6c2b</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">15.00 Internal Deliverer Contracts</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">15.00 Internal Deliverer Contracts</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">146ed3e9-4d23-4bfb-9c17-7d9940d66a98</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">160</attribute>
+        <attribute name="y">904</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_16.00_internal_price_request">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/aff78746-bd41-4f10-af71-45b7a01b8ec9.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">aff78746-bd41-4f10-af71-45b7a01b8ec9</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">16.00 Internal Price Request</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">16.00 Internal Price Request</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="pricelist">
+        <attribute name="RenderedWidth">120</attribute>
+        <attribute name="id">4d61b147-bbd5-4d1e-ab4c-799ac458de58</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">PriceList</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">1480</attribute>
+        <attribute name="y">704</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3ea1ec9d-3c48-4dd9-b0c2-bffc8f6a5be0}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_16.00_internal_price_request">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/aff78746-bd41-4f10-af71-45b7a01b8ec9.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">aff78746-bd41-4f10-af71-45b7a01b8ec9</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">16.00 Internal Price Request</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">16.00 Internal Price Request</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

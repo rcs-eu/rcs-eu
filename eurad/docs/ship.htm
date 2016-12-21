@@ -1,0 +1,138 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Ship in package EuradSystem</h1>
+    <p><DIV>Class representing ship</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DispatchDate: DateTime</td>
+        <td class="style1"><DIV>Dispatch date of the ship</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveRealWeight: Decimal</td>
+        <td class="style1"><DIV>Derived. Efective weight of the cargo. Depending if it is UTI transport or mass transport</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FromDock: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Dock in dispatching harbor</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsUtiTransport: Boolean</td>
+        <td class="style1"><DIV>If it is UTI transport</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealWeight: Decimal</td>
+        <td class="style1"><DIV>Weight of the cargo</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ShipName: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Name of the ship</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ToDock: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Dock in destination harbor</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UtiStr: String</td>
+        <td class="style1"><DIV>Derived. Representing list of UTI</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():Ship</td>
+        <td class="style1"><DIV>
+<DIV>Method. Cloning the ship</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(ship:Ship)</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine1():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returning Line1 for ship</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine2():String</td>
+        <td class="style1"><DIV>Method. Returning Line2 for ship</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine3():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returning Line3 for ship</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine4():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returning Line4 for ship</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine5():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returning Line5 for ship</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine6():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returning Line6 for ship</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetTypeStr():String</td>
+        <td class="style1"><DIV>Method. Returning "Ship"</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CargoHolderShipShip_ : <a href="cargoholdership.htm">cargoholdership</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecItemShipShip_ : <a href="execitemship.htm">execitemship</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FromHarbor : <a href="harbor.htm">harbor</a> 1</td>
+        <td class="style1"><DIV>
+<DIV>Dispatching harbor</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nhm : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"><DIV>Nhm of the cargo</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemShipShip_ : <a href="specitemship.htm">specitemship</a> 0..1</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ToHarbor : <a href="harbor.htm">harbor</a> 1</td>
+        <td class="style1"><DIV>Destination harbor</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Uti : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"><DIV>List of transported UTI</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.03_executed_ship_transport.htm">07.03 Executed Ship Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.10_cargo_holders.htm">07.10 Cargo Holders</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

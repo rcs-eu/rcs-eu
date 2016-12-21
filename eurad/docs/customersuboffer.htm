@@ -1,0 +1,106 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CustomerSubOffer in package EuradSystem</h1>
+    <p><DIV>Class representing a sub-offer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nr: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Reference number of a&nbsp;sub-offer in a list of&nbsp;sub-offers for an offer.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Period: TransportPeriodEnum</td>
+        <td class="style1"><DIV>Connected with <SPAN style="FONT-STYLE: italic">WeightInPeriod </SPAN><SPAN>states a period in which </SPAN><SPAN style="FONT-STYLE: italic">WeightInPeriod </SPAN><SPAN>tones of cargo was declared by customer to transport. Enum:</SPAN></DIV>
+<DIV><SPAN>- Year,</SPAN></DIV>
+<DIV><SPAN>- Month,</SPAN></DIV>
+<DIV><SPAN>- Week.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceRounding: PriceRoundingEnum</td>
+        <td class="style1"><DIV>States how price should be rounded. Enum:</DIV>
+<DIV>- Round1 - to whole numbers,</DIV>
+<DIV>- Round01 - one place after a point,</DIV>
+<DIV>- Round001 - two places after a point.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WeightInPeriod: Decimal</td>
+        <td class="style1"><DIV>With a connection to <SPAN style="FONT-STYLE: italic">WeightInPeriod </SPAN><SPAN>states how many tones of cargo was declared by a customer to transport in </SPAN><SPAN style="FONT-STYLE: italic">Period</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WeightRounding: WeightRoundingEnum</td>
+        <td class="style1"><DIV>States how weight should be rounded. Enum:</DIV>
+<DIV>- To1t = 0,</DIV>
+<DIV>- To100kg = 1,</DIV>
+<DIV>- To10kg = 2,</DIV>
+<DIV>- To1kg = 3.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WeightRoundingType: WeightRoundingTypeEnum</td>
+        <td class="style1"><DIV>Type of weight rounding. Enum:</DIV>
+<DIV>- Math,</DIV>
+<DIV>- Up.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateEmptyTransportSubOffer():CustomerSubOffer</td>
+        <td class="style1"><DIV>Method. Creates an empty sub-offer for empty transport upon this sub-offer.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Cargo : <a href="cargo.htm">cargo</a> 1</td>
+        <td class="style1"><DIV>Points to a cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOffer : <a href="customeroffer.htm">customeroffer</a> 1</td>
+        <td class="style1"><DIV>Points to an offer to which this sub-offer belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererContractItem : <a href="deliverercontractitem.htm">deliverercontractitem</a> 0..1</td>
+        <td class="style1"><DIV>If <SPAN style="FONT-STYLE: italic">CustomerOffer </SPAN><SPAN>is a part of price list this points to an item from a contract's deliverer.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedServices : <a href="offeredservice.htm">offeredservice</a> 0..*</td>
+        <td class="style1"><DIV>A list of services.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceType : <a href="servicetype.htm">servicetype</a> 1</td>
+        <td class="style1"><DIV>Points to a service's type.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_16.00_internal_price_request.htm">16.00 Internal Price Request</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

@@ -1,0 +1,1282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="truckdetails">
+    <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">TruckDetails</attribute>
+    <attribute name="RuntimeName">TruckDetails</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. If it is a vechicle with a trailer</DIV>]]></doc>
+        <modlrstring>TrailerEnabled: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TrailerEnabled</attribute>
+        <attribute name="RuntimeName">TrailerEnabled</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{32bf5200-64e0-420e-9b8b-363db41730c8}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Loadeble volumne for truck in m3</DIV>]]></doc>
+        <modlrstring>LoadableVolumeM3: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LoadableVolumeM3</attribute>
+        <attribute name="RuntimeName">LoadableVolumeM3</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4bb93ef1-43e0-470c-96b8-8cb0ca285dc5}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Loadeble volumne for trailer/semitrailer in m3</DIV></DIV>]]></doc>
+        <modlrstring>TrailerLoadableVolumeM3: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TrailerLoadableVolumeM3</attribute>
+        <attribute name="RuntimeName">TrailerLoadableVolumeM3</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4bb93ef1-43e0-470c-96b8-8cb0ca285dc5}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Methode for copying truck details</DIV>]]></doc>
+        <modlrstring>CopyTo(truckDetails:TruckDetails)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CopyTo</attribute>
+        <attribute name="RuntimeName">CopyTo</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{526890b8-8d21-49db-92a1-d3af94f81499}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">True</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">truckDetails</attribute>
+            <attribute name="RuntimeName">truckDetails</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckDetails</attribute>
+                <attribute name="RuntimeName">TruckDetails</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Registration plate number of truck</DIV>]]></doc>
+        <modlrstring>RegPlate: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RegPlate</attribute>
+        <attribute name="RuntimeName">RegPlate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{5cc5d61f-fcd6-41d7-9ae0-d9f30c0692f2}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Registration plate number of trailer</DIV></DIV>]]></doc>
+        <modlrstring>TrailerRegPlate: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TrailerRegPlate</attribute>
+        <attribute name="RuntimeName">TrailerRegPlate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{5cc5d61f-fcd6-41d7-9ae0-d9f30c0692f2}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Note for a body type</DIV>]]></doc>
+        <modlrstring>BodyTypeNote: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">BodyTypeNote</attribute>
+        <attribute name="RuntimeName">BodyTypeNote</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{7535ffa8-f26a-413b-aa58-0cb5a5d305a1}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">200</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Loadable weight for truck in tones</DIV>]]></doc>
+        <modlrstring>LoadableWeightT: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LoadableWeightT</attribute>
+        <attribute name="RuntimeName">LoadableWeightT</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{7de7be9b-f90b-47d0-9600-037b31f69d23}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Loadable weight for&nbsp;trailer/semitrailer in tones</DIV></DIV>]]></doc>
+        <modlrstring>TrailerLoadableWeightT: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TrailerLoadableWeightT</attribute>
+        <attribute name="RuntimeName">TrailerLoadableWeightT</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{7de7be9b-f90b-47d0-9600-037b31f69d23}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Vechicle type: </DIV>
+<DIV>&nbsp; Truck - truck only;</DIV>
+<DIV>&nbsp; TractorWithSemiTrailer - tractor with semi trailer;</DIV>
+<DIV>&nbsp;&nbsp;Truck with trailer - truck with trailer</DIV>]]></doc>
+        <modlrstring>DetailsType: TruckDetailsType</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DetailsType</attribute>
+        <attribute name="RuntimeName">DetailsType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{9f792c65-4da3-483a-8e10-cfbd43fa798d}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">TruckDetailsType</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetailsType</attribute>
+            <attribute name="RuntimeName">TruckDetailsType</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Notes</DIV>]]></doc>
+        <modlrstring>Notes: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Notes</attribute>
+        <attribute name="RuntimeName">Notes</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b86020d9-291d-4b01-b495-7daac1a081b2}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Loadable length for truck in M</DIV>]]></doc>
+        <modlrstring>LoadableLengthM: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LoadableLengthM</attribute>
+        <attribute name="RuntimeName">LoadableLengthM</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{cb47611f-7bc4-4685-953e-9f663e2f7c9a}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Loadable length for&nbsp;trailer/semitrailer in M</DIV></DIV>]]></doc>
+        <modlrstring>TrailerLoadableLengthM: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TrailerLoadableLengthM</attribute>
+        <attribute name="RuntimeName">TrailerLoadableLengthM</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{cb47611f-7bc4-4685-953e-9f663e2f7c9a}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV><I>Derived. If loadable parameters for truck are in use (DetailsType != TractorWithSemiTrailer)</I></DIV>]]></doc>
+        <modlrstring>LoadableEnabled: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LoadableEnabled</attribute>
+        <attribute name="RuntimeName">LoadableEnabled</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ed138b8e-69e2-4606-8888-0057b5354190}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>If truck and trailer/semitrailer&nbsp;are ADR ready.</DIV>]]></doc>
+        <modlrstring>AdrReady: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AdrReady</attribute>
+        <attribute name="RuntimeName">AdrReady</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{f8a5e3ab-0aa9-4c42-afdf-e36a167f6350}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>CopyFromVehicles(frontVehicle:Vehicle; rearVehicle:Vehicle)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CopyFromVehicles</attribute>
+        <attribute name="RuntimeName">CopyFromVehicles</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">451757ff-b748-4478-b5f1-2fba25dbb26e</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">frontVehicle</attribute>
+            <attribute name="RuntimeName">frontVehicle</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vehicle</attribute>
+                <attribute name="RuntimeName">Vehicle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">rearVehicle</attribute>
+            <attribute name="RuntimeName">rearVehicle</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vehicle</attribute>
+                <attribute name="RuntimeName">Vehicle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="truckdetails">
+        <doc><![CDATA[<DIV>
+<DIV>Points to a&nbsp;truck on which cargo was transported.</DIV></DIV>]]></doc>
+        <modlrstring>Truck (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Truck</attribute>
+        <attribute name="RuntimeName">Truck</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Truck</attribute>
+        <attribute name="id">{87ab2b4e-66ef-4026-885f-34f93809c480}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CargoHolderTruckTruckDetails</attribute>
+            <attribute name="RuntimeName">CargoHolderTruckTruckDetails</attribute>
+            <attribute name="EffectiveName">CargoHolderTruckTruckDetails</attribute>
+            <attribute name="id">{09dacf25-5c43-49b8-9884-7d68dfc3eac3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="truckdetails">
+            <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetails</attribute>
+            <attribute name="RuntimeName">TruckDetails</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cargoholdertruck">
+            <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+            <modlrstring>CargoHolderTruckTruckDetails_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CargoHolderTruckTruckDetails_</attribute>
+            <attribute name="RuntimeName">CargoHolderTruckTruckDetails_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CargoHolderTruckTruckDetails_</attribute>
+            <attribute name="id">{b4f72ba9-26d4-438a-b09e-793b21323eb8}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="cargoholdertruck">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing a holder for cargo for&nbsp;truck transports.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CargoHolderTruck</attribute>
+                <attribute name="RuntimeName">CargoHolderTruck</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{7dffc0ab-c8f4-4b85-b23b-8b9b662a8d99}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="truckdetails">
+        <doc><![CDATA[<DIV>Truck details</DIV>]]></doc>
+        <modlrstring>TruckDetails (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TruckDetails</attribute>
+        <attribute name="RuntimeName">TruckDetails</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">TruckDetails</attribute>
+        <attribute name="id">{b05c6468-be9f-4286-bf5c-06bb3e1afe44}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SpecItemTruckTruckDetails</attribute>
+            <attribute name="RuntimeName">SpecItemTruckTruckDetails</attribute>
+            <attribute name="EffectiveName">SpecItemTruckTruckDetails</attribute>
+            <attribute name="id">{af3664a6-ecd1-45af-af3b-ff472a44bc03}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="truckdetails">
+            <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetails</attribute>
+            <attribute name="RuntimeName">TruckDetails</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="specitemtruck">
+            <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+            <modlrstring>SpecItemTruckTruckDetails_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SpecItemTruckTruckDetails_</attribute>
+            <attribute name="RuntimeName">SpecItemTruckTruckDetails_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SpecItemTruckTruckDetails_</attribute>
+            <attribute name="id">{1289648b-b009-40e8-ac82-614acb6b29a2}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="specitemtruck">
+                <doc><![CDATA[<DIV>Class representing truck service on an invoice (incoming and outgoing)</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SpecItemTruck</attribute>
+                <attribute name="RuntimeName">SpecItemTruck</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{34d475b3-bb4b-442d-9547-5c6eba4029f2}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="truckdetails">
+        <doc><![CDATA[<DIV>Associated truck details</DIV>]]></doc>
+        <modlrstring>Details (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Details</attribute>
+        <attribute name="RuntimeName">Details</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Details</attribute>
+        <attribute name="id">{cac5d5f5-c8e0-442a-8576-8b7d067d2256}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTruckDetails</attribute>
+            <attribute name="RuntimeName">TruckTruckDetails</attribute>
+            <attribute name="EffectiveName">TruckTruckDetails</attribute>
+            <attribute name="id">{afd1a82c-ace5-4448-be45-5255c8c9cd9d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="truckdetails">
+            <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetails</attribute>
+            <attribute name="RuntimeName">TruckDetails</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="truck">
+            <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+            <modlrstring>TruckTruckDetails_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTruckDetails_</attribute>
+            <attribute name="RuntimeName">TruckTruckDetails_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TruckTruckDetails_</attribute>
+            <attribute name="id">{67249094-3d14-4ddb-a57b-9c8c207027ea}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="truck">
+                <doc><![CDATA[<DIV>Class representing a truck as executed service</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Truck</attribute>
+                <attribute name="RuntimeName">Truck</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{9f3faad5-3480-4af5-8ba5-deed7aa1eb4f}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="truckdetails">
+        <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+        <modlrstring>TruckTruckBodyType_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TruckTruckBodyType_</attribute>
+        <attribute name="RuntimeName">TruckTruckBodyType_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">TruckTruckBodyType_</attribute>
+        <attribute name="id">{7a587af2-a971-4556-85bd-561312aa05d5}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTruckBodyType</attribute>
+            <attribute name="RuntimeName">TruckTruckBodyType</attribute>
+            <attribute name="EffectiveName">TruckTruckBodyType</attribute>
+            <attribute name="id">{cf53dc3d-a415-4a8a-ab8b-ab4b6c8535e2}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="truckdetails">
+            <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetails</attribute>
+            <attribute name="RuntimeName">TruckDetails</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="truckbodytype">
+            <doc><![CDATA[<DIV>Body type of the truck and trailer/semitrailer</DIV>]]></doc>
+            <modlrstring>BodyType (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BodyType</attribute>
+            <attribute name="RuntimeName">BodyType</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">BodyType</attribute>
+            <attribute name="id">{b932adda-7db8-4a33-a947-cd10ce79341d}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="truckbodytype">
+                <doc><![CDATA[<DIV>Class representing&nbsp;body type for a truck. Used as a defined list.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckBodyType</attribute>
+                <attribute name="RuntimeName">TruckBodyType</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{54fecf13-5fdd-421d-80e9-cab3886b9fb0}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="truckdetails">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>FleetTransports (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FleetTransports</attribute>
+        <attribute name="RuntimeName">FleetTransports</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">FleetTransports</attribute>
+        <attribute name="id">be6cddea-9b9c-48a1-b0e5-00ca5751fcfe</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">TruckDetailsFleetTransportsVehicleFleetVehicles</attribute>
+            <attribute name="EffectiveName">TruckDetailsFleetTransportsVehicleFleetVehicles</attribute>
+            <attribute name="id">3868119f-6d2e-4163-82fd-cdd5a814063f</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="truckdetails">
+            <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetails</attribute>
+            <attribute name="RuntimeName">TruckDetails</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="vehicle">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>FleetVehicles (0..2)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">FleetVehicles</attribute>
+            <attribute name="RuntimeName">FleetVehicles</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">FleetVehicles</attribute>
+            <attribute name="id">4b81f35b-e9fa-4aa3-9862-a49ccd877c11</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..2</attribute>
+            <link name="Participant">
+              <object type="Class" href="vehicle">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vehicle</attribute>
+                <attribute name="RuntimeName">Vehicle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">36a841cb-7508-42e8-ad30-0e21b7924e33</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="truckdetails">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>TruckDetailsOnRear (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TruckDetailsOnRear</attribute>
+        <attribute name="RuntimeName">TruckDetailsOnRear</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">TruckDetailsOnRear</attribute>
+        <attribute name="id">42a5e1b4-ab3c-4c2f-bb7a-314adf697c75</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">VehicleRearVehicleTruckDetailsTruckDetailsOnRear</attribute>
+            <attribute name="EffectiveName">VehicleRearVehicleTruckDetailsTruckDetailsOnRear</attribute>
+            <attribute name="id">3b05020b-ad26-4b02-be49-439d9446fe5c</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="truckdetails">
+            <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetails</attribute>
+            <attribute name="RuntimeName">TruckDetails</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="vehicle">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>RearVehicle (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RearVehicle</attribute>
+            <attribute name="RuntimeName">RearVehicle</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">RearVehicle</attribute>
+            <attribute name="id">fd8a31b0-dd99-4d2b-bb40-000b8257e8a2</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="vehicle">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vehicle</attribute>
+                <attribute name="RuntimeName">Vehicle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">36a841cb-7508-42e8-ad30-0e21b7924e33</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="truckdetails">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>TruckDetailsOnFront (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TruckDetailsOnFront</attribute>
+        <attribute name="RuntimeName">TruckDetailsOnFront</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">TruckDetailsOnFront</attribute>
+        <attribute name="id">e4564875-22cd-4078-8bd1-9300e7f001d7</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">TruckDetailsTruckDetailsOnFrontVehicleFrontVehicle</attribute>
+            <attribute name="EffectiveName">TruckDetailsTruckDetailsOnFrontVehicleFrontVehicle</attribute>
+            <attribute name="id">82a0e539-b421-4950-bcd0-c9201e45d822</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="truckdetails">
+            <doc><![CDATA[<DIV>Class representing truck details</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckDetails</attribute>
+            <attribute name="RuntimeName">TruckDetails</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="vehicle">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>FrontVehicle (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">FrontVehicle</attribute>
+            <attribute name="RuntimeName">FrontVehicle</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">FrontVehicle</attribute>
+            <attribute name="id">5684ad74-0828-4579-ae31-b2580ed5aa75</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="vehicle">
+                <doc><![CDATA[]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vehicle</attribute>
+                <attribute name="RuntimeName">Vehicle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">36a841cb-7508-42e8-ad30-0e21b7924e33</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="truckdetails">
+        <attribute name="RenderedWidth">164</attribute>
+        <attribute name="id">77d86af1-f3d0-4906-ba11-e487e4decdd5</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">TruckDetails</attribute>
+        <attribute name="RenderedHeight">208</attribute>
+        <attribute name="x">984</attribute>
+        <attribute name="y">928</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.02_executed_truck_transport">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/6e607d94-9a2b-4b65-9f45-8d2981da78a6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">6e607d94-9a2b-4b65-9f45-8d2981da78a6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.02 Executed Truck Transport</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.02 Executed Truck Transport</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="truckdetails">
+        <attribute name="RenderedWidth">164</attribute>
+        <attribute name="id">528c720c-e19c-4aac-bf96-7390b266bd6c</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">TruckDetails</attribute>
+        <attribute name="RenderedHeight">208</attribute>
+        <attribute name="x">752</attribute>
+        <attribute name="y">632</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.01_invoice_specitems">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4e688bb0-c589-4275-92a0-3d060494e148.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4e688bb0-c589-4275-92a0-3d060494e148</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.01 Invoice SpecItems</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.01 Invoice SpecItems</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="truckdetails">
+        <attribute name="RenderedWidth">164</attribute>
+        <attribute name="id">7981afe2-88d0-4a85-8d1d-31300ddf1772</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">TruckDetails</attribute>
+        <attribute name="RenderedHeight">208</attribute>
+        <attribute name="x">136</attribute>
+        <attribute name="y">152</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{97103da0-55b2-4c18-9d80-4845aa609765}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.10_cargo_holders">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/991a97f5-b326-4c27-ad0f-7d83cc7feee4.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">991a97f5-b326-4c27-ad0f-7d83cc7feee4</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.10 Cargo Holders</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.10 Cargo Holders</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

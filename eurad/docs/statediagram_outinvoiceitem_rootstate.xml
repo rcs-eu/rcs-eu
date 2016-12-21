@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_outinvoiceitem_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/65d421d1-efb9-4d54-ad39-7c44a5176ae5.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">65d421d1-efb9-4d54-ad39-7c44a5176ae5</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:OutInvoiceItem.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_outinvoiceitem_rootstate">
+        <doc><![CDATA[<DIV>Determines the state of this item.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{d8dcf8df-125c-40e6-8a35-738525fb1b12}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="outinvoiceitem">
+            <doc><![CDATA[<DIV>Represents outgoing invoice item.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OutInvoiceItem</attribute>
+            <attribute name="RuntimeName">OutInvoiceItem</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{1c96dac4-a8dd-4f2f-96d0-56ea12ea1b22}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">63</attribute>
+        <attribute name="id">9783091f-6788-4724-936b-aac85ef2cd3e</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Manual</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">128</attribute>
+        <attribute name="y">144</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Manual</attribute>
+            <attribute name="RuntimeName">Manual</attribute>
+            <attribute name="id">b235ce99-d84a-4e7b-8b36-2983e0646bfc</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">cb3b3fa6-1a43-480a-961a-6ac9de889545</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Auto</attribute>
+                    <attribute name="RuntimeName">Auto</attribute>
+                    <attribute name="id">4c8a404b-7bb8-4fd9-94ea-5dab303993ca</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">e82cf49b-9f1e-40ca-9ab0-9cbdf9757366</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">7e9c9b09-1080-4594-922d-0f6fa65e6d95</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d53a2186-8b4d-4493-88e8-12dff4038a4e</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Auto</attribute>
+                    <attribute name="RuntimeName">Auto</attribute>
+                    <attribute name="id">4c8a404b-7bb8-4fd9-94ea-5dab303993ca</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureCurrencies(); self.NetValue := if self.Quantity &lt;&gt; 0 then (self.invoicedAmount/self.Quantity).Round(2) else 0 endif</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">e202b9d2-ec18-4b42-a48f-379d886eed69</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">128</attribute>
+        <attribute name="y">48</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">43</attribute>
+        <attribute name="id">f7c77b1f-e469-438f-9f16-09305c955662</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Auto</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">128</attribute>
+        <attribute name="y">264</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Auto</attribute>
+            <attribute name="RuntimeName">Auto</attribute>
+            <attribute name="id">4c8a404b-7bb8-4fd9-94ea-5dab303993ca</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d53a2186-8b4d-4493-88e8-12dff4038a4e</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Manual</attribute>
+                    <attribute name="RuntimeName">Manual</attribute>
+                    <attribute name="id">b235ce99-d84a-4e7b-8b36-2983e0646bfc</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureCurrencies(); self.NetValue := if self.Quantity &lt;&gt; 0 then (self.invoicedAmount/self.Quantity).Round(2) else 0 endif</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">cb3b3fa6-1a43-480a-961a-6ac9de889545</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Manual</attribute>
+                    <attribute name="RuntimeName">Manual</attribute>
+                    <attribute name="id">b235ce99-d84a-4e7b-8b36-2983e0646bfc</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

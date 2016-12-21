@@ -1,0 +1,158 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">AbstractRoot in package EuradSystem</h1>
+    <p><DIV><SUMMARY>The root class for most of the model classes.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CreatedOn: DateTime</td>
+        <td class="style1"><DIV>Records the moment of creation of this object.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AttachObserver(observer:AbstractRoot)</td>
+        <td class="style1"><DIV>Method.&nbsp;Adds <SPAN style="FONT-STYLE: italic">observer </SPAN><SPAN>to the list of objects&nbsp;receiving change&nbsp;notifications.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DeriveMLString(fieldName:String):MLString</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DetachObserver(observer:AbstractRoot)</td>
+        <td class="style1"><DIV>Method. Removes <SPAN style="FONT-STYLE: italic">observer </SPAN><SPAN>from the list of objects receiving change&nbsp;notifications.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasCurrUserPriv(priv:String; inUnit:SysCompanyUnit):Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NotifyObservers(value:AbstractRoot)</td>
+        <td class="style1"><DIV>Method. Notifies all observers about a change of this object. Calls each attached&nbsp;observer's <SPAN style="FONT-STYLE: italic">ObserverUpdate()</SPAN> method passing <SPAN style="FONT-STYLE: italic">value</SPAN> as a parameter.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ObserverUpdate(value:AbstractRoot)</td>
+        <td class="style1"><DIV>Method. Notifies about a change in the observed object (there can be only one observed object at a time).</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AbstractCargoHolderAbstractRoot_ : <a href="abstractcargoholder.htm">abstractcargoholder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AutoNum : <a href="autonum.htm">autonum</a> 0..1</td>
+        <td class="style1"><DIV>Points&nbsp;to an object&nbsp;with information about auto-numeration for this object. It's set for all objects which are auto-numerated documents.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContactListsOwner : <a href="contactlist.htm">contactlist</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostSourceAbstrAbstractRoot_ : <a href="costsourceabstr.htm">costsourceabstr</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreatedBy : <a href="sysuser.htm">sysuser</a> 0..1</td>
+        <td class="style1"><DIV>Points to&nbsp;the user who was logged in at the time&nbsp;this object was created.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererOrderAbstractRoot_ : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InAttachments : <a href="attachdocument.htm">attachdocument</a> 0..*</td>
+        <td class="style1"><DIV>A list of&nbsp;attachments&nbsp;in which this object (document) is pointed as an attachment.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IntegrationActionAbstractRoot_ : <a href="integrationaction.htm">integrationaction</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageAbstractRoot_ : <a href="message.htm">message</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Observers : <a href="abstractroot.htm">abstractroot</a> 0..*</td>
+        <td class="style1"><DIV>A list of attached&nbsp;Observers. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ReportOptionLinkAbstractRoot_ : <a href="reportoptionlink.htm">reportoptionlink</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Subject : <a href="abstractroot.htm">abstractroot</a> 0..1</td>
+        <td class="style1"><DIV>Observed object. <SPAN style="FONT-STYLE: italic">Subject</SPAN> will notify this object about a change by calling this object's <SPAN style="FONT-STYLE: italic">ObserverUpdate</SPAN>().</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.00_root.htm">00.00 Root</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.03_common_patterns.htm">00.03 Common Patterns</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.03_common_patterns.htm">00.03 Common Patterns</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.11_reports_and_tariffs_framework.htm">01.11 Reports and Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.04_autoinc.htm">02.04 AutoInc</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.06_locations.htm">02.06 Locations</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.00_messaging.htm">03.00 Messaging</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.10_cargo_holders.htm">07.10 Cargo Holders</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.00_integration.htm">99.00 Integration</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

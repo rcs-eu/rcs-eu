@@ -1,0 +1,151 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">OfferedServicePrice in package EuradSystem</h1>
+    <p><DIV>Class representing a&nbsp;price per unit.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AutoCalculated: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if this&nbsp;price was automatically calculated upon set of costs.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveName: String</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasConditions: Boolean</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasPriceValues: Boolean</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasUnknownValue: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if a price has unknown value at the moment of offer.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HaveCorrectPriceValueConditions: Boolean</td>
+        <td class="style1"><DIV>Derived.&nbsp;</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsAdditionalPrice: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if this price is an additional price.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Name: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Price's name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nr: Integer</td>
+        <td class="style1"><DIV>Derived. A reference number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValueText: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Text describing a price if a price value is unknown at the moment of offer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddPriceWithCondition(condition:PriceCodition)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CountCostSum(costs:IList&lt;SingleCost&gt;; exRateList:ExchangeRateSingleList; mUnitRates:MUnitRates)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetCalculator(calculator:OfferPriceCalculator)</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AmountRounding : <a href="amountrounding.htm">amountrounding</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Calculator : <a href="offerpricecalculator.htm">offerpricecalculator</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object which is responsible for automatic price calculation.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostGroup : <a href="costgroup.htm">costgroup</a> 0..1</td>
+        <td class="style1"><DIV>Points to a cost group to which this price belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostSourceAbstrOfferedServicePrice_ : <a href="costsourceabstr.htm">costsourceabstr</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Curr : <a href="curr.htm">curr</a> 1</td>
+        <td class="style1"><DIV>Currency of a price.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemOfferedServicePrice_ : <a href="executeditem.htm">executeditem</a> 0..1</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludedCosts : <a href="singlecost.htm">singlecost</a> 0..*</td>
+        <td class="style1"><DIV>A list of single costs which make this price.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MasterOfferedServicePrice : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..1</td>
+        <td class="style1"><DIV>When this price is a price for an execute item then it points to a price from an offer upon which this price was created.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MUnit : <a href="munit.htm">munit</a> 1</td>
+        <td class="style1"><DIV>Points to a measure unit.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MUnitRounding : <a href="munitrounding.htm">munitrounding</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedServicePriceOfferedServicePrice_ : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceList : <a href="pricelist.htm">pricelist</a> 1</td>
+        <td class="style1"><DIV>Points to a price list to which this price belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceValues : <a href="pricevalue.htm">pricevalue</a> 0..*</td>
+        <td class="style1"><DIV>A list of this price's values.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Vat : <a href="vat.htm">vat</a> 1</td>
+        <td class="style1"><DIV>Points to a VAT used for this price.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.04_roundings.htm">00.04 Roundings</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

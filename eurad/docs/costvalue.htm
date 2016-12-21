@@ -1,0 +1,73 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CostValue in package EuradSystem</h1>
+    <p><DIV>Class representing a cost's value.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Discount: Decimal</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-STYLE: italic">EfectiveNet </SPAN><SPAN>minus </SPAN><SPAN style="FONT-STYLE: italic">Net</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DiscountStr: String</td>
+        <td class="style1"><DIV>Derived. Discount expressed in a user-friendly way.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EfectiveNet: Decimal</td>
+        <td class="style1"><DIV>Derived. Net value of a cost after all increases and discounts.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Net: Decimal</td>
+        <td class="style1"><DIV>Net value of a cost without any increases and discounts.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddIncrease(name:String; isPercent:Boolean; value:Decimal; generatedByCostSource:Boolean):Increase</td>
+        <td class="style1"><DIV>Method. Adds a discount/increase to <SPAN style="FONT-STYLE: italic">Increases </SPAN><SPAN>list of this cost's value.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clear(keepUserIncreases:Boolean)</td>
+        <td class="style1"><DIV>Method. Sets <SPAN style="FONT-STYLE: italic">Net </SPAN><SPAN>to zero. If </SPAN><SPAN style="FONT-STYLE: italic">keepUserIncreases </SPAN><SPAN>is&nbsp;</SPAN><SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>then it deletes all objects in </SPAN><SPAN style="FONT-STYLE: italic">Increases </SPAN><SPAN>list.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemCosts : <a href="executeditemcost.htm">executeditemcost</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExpectedPrice : <a href="singlecost.htm">singlecost</a> 1</td>
+        <td class="style1"><DIV>Points to a cost for which this value belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Increases : <a href="increase.htm">increase</a> 0..*</td>
+        <td class="style1"><DIV>A list of all increases and discounts of this cost's value.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceCodition : <a href="pricecodition.htm">pricecodition</a> 1</td>
+        <td class="style1"><DIV>Points to a condition for which this value is applied.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

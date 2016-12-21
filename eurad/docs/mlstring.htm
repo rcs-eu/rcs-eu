@@ -1,0 +1,240 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">MLString in package EuradSystem</h1>
+    <p><DIV>Class representing a multilanguage string.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CurrLangValue: String</td>
+        <td class="style1"><DIV>Derived. Value of this string in current language.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsEmpty: Boolean</td>
+        <td class="style1"><DIV>Derived. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if there is no value in any of languages.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetInLanguage(language:Language):String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetMLStringValueInLanguage(language:Language):MLStringValue</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsEmptyInLanguage(language:Language):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RecreateMLStringValues()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetInLanguage(language:Language; value:String)</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UpdatePersistanceValue()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AmountName : <a href="amount.htm">amount</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AmountRoundingsName : <a href="amountrounding.htm">amountrounding</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoPackageName : <a href="cargo.htm">cargo</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoPackagingTypeMLString_ : <a href="cargopackagingtype.htm">cargopackagingtype</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoTypeMLString_ : <a href="cargotype.htm">cargotype</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ConfigForSysCompanyMLString_ : <a href="configforsyscompany.htm">configforsyscompany</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemMLString_ : <a href="executeditem.htm">executeditem</a> 0..1</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoiceItemTypeDesc : <a href="invoiceitemtype.htm">invoiceitemtype</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoicesDocumentType : <a href="invoice.htm">invoice</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Language : <a href="language.htm">language</a> 0..*</td>
+        <td class="style1"><DIV>A list of all languages in a system.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MUnitMLString_ : <a href="munit.htm">munit</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MUnitRoundingsName : <a href="munitrounding.htm">munitrounding</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmMLString_ : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedServiceMLString_ : <a href="offeredservice.htm">offeredservice</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferEndNoteMLString_ : <a href="offerabstractnote.htm">offerabstractnote</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceItemsDesc : <a href="outinvoiceitem.htm">outinvoiceitem</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaidDocumentsDocumentType : <a href="paiddocument.htm">paiddocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayableDocumentsDocumentType : <a href="payabledocument.htm">payabledocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SelectedMUnitRoundingValuesMUnitName : <a href="selectedmunitroundingvalue.htm">selectedmunitroundingvalue</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceNameMLString_ : <a href="servicename.htm">servicename</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceTPPackageName : <a href="servicetp.htm">servicetp</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemOtherMLString_ : <a href="specitemother.htm">specitemother</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemTPPackageName : <a href="specitemtp.htm">specitemtp</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TruckOfferPlacePackageName : <a href="truckofferplace.htm">truckofferplace</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TruckTransportPackageName : <a href="trucktransport.htm">trucktransport</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.01_amounts.htm">00.01 Amounts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.04_roundings.htm">00.04 Roundings</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.04_roundings.htm">00.04 Roundings</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.01_multilanguage.htm">01.01 Multilanguage</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.04_configuration.htm">01.04 Configuration</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.03_cargo_(nhm_rid_adr).htm">02.03 Cargo (NHM,RID,ADR)</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.05_measure_units.htm">02.05 Measure Units</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.05_ininvoice.htm">12.05 InInvoice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

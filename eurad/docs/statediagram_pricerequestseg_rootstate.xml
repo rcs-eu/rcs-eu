@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_pricerequestseg_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/2cdab27c-5ba9-4833-9da9-47a5108785db.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">2cdab27c-5ba9-4833-9da9-47a5108785db</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:PriceRequestSeg.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_pricerequestseg_rootstate">
+        <doc><![CDATA[<DIV>Service's state.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b6df5fb4-abd3-495a-bae4-1fdc03b1c295}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="pricerequestseg">
+            <doc><![CDATA[<DIV>Class representing a service from a price request.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceRequestSeg</attribute>
+            <attribute name="RuntimeName">PriceRequestSeg</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{e0ad5687-3752-4ced-b394-c082a121a0af}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">61</attribute>
+        <attribute name="id">8739e136-1595-4a20-a349-46cd3a2846e1</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InWork</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">288</attribute>
+        <attribute name="y">176</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InWork</attribute>
+            <attribute name="RuntimeName">InWork</attribute>
+            <attribute name="id">5a13789b-854e-49f1-9dfc-f08e73f25618</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">15f485d9-d90a-4bdc-8d68-76db002a39b5</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">6a34d116-0d88-41b2-8da5-4ea01ee717e4</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">4fe92e56-ff3b-4221-bd8a-7174c232d596</attribute>
+                <attribute name="Guard">OCL: self.PriceRequestItem.PriceRequest.RootState = 'Sent'</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Answered</attribute>
+                    <attribute name="RuntimeName">Answered</attribute>
+                    <attribute name="id">0a356eb0-bc5c-45e5-8442-0ad702601a72</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsAnswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">ac86361e-93e6-466a-b995-65594e583ebf</attribute>
+                <attribute name="Guard">OCL: self.PriceRequestItem.PriceRequest.RootState = 'Sent'</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">UnAnswered</attribute>
+                    <attribute name="RuntimeName">UnAnswered</attribute>
+                    <attribute name="id">6d3937b0-7b74-4d3f-8695-1e5d8e9f9912</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsUnanswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">9633f1c7-ad6e-4484-baa4-643683f80f16</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">288</attribute>
+        <attribute name="y">56</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">81</attribute>
+        <attribute name="id">cffadaa4-93b5-43f4-85be-98d60fcac37f</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Answered</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">120</attribute>
+        <attribute name="y">328</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Answered</attribute>
+            <attribute name="RuntimeName">Answered</attribute>
+            <attribute name="id">0a356eb0-bc5c-45e5-8442-0ad702601a72</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">4fe92e56-ff3b-4221-bd8a-7174c232d596</attribute>
+                <attribute name="Guard">OCL: self.PriceRequestItem.PriceRequest.RootState = 'Sent'</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">5a13789b-854e-49f1-9dfc-f08e73f25618</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsAnswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">66b061ac-2416-45b5-99d3-77de096adb9c</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">UnAnswered</attribute>
+                    <attribute name="RuntimeName">UnAnswered</attribute>
+                    <attribute name="id">6d3937b0-7b74-4d3f-8695-1e5d8e9f9912</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsAnswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">bee27460-b123-477a-b5eb-a642e62c4328</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">UnAnswered</attribute>
+                    <attribute name="RuntimeName">UnAnswered</attribute>
+                    <attribute name="id">6d3937b0-7b74-4d3f-8695-1e5d8e9f9912</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsUnanswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">102</attribute>
+        <attribute name="id">db4d69a9-26c7-47bd-a16a-d8719ceb2905</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">UnAnswered</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">424</attribute>
+        <attribute name="y">328</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">UnAnswered</attribute>
+            <attribute name="RuntimeName">UnAnswered</attribute>
+            <attribute name="id">6d3937b0-7b74-4d3f-8695-1e5d8e9f9912</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">ac86361e-93e6-466a-b995-65594e583ebf</attribute>
+                <attribute name="Guard">OCL: self.PriceRequestItem.PriceRequest.RootState = 'Sent'</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">5a13789b-854e-49f1-9dfc-f08e73f25618</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsUnanswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">bee27460-b123-477a-b5eb-a642e62c4328</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Answered</attribute>
+                    <attribute name="RuntimeName">Answered</attribute>
+                    <attribute name="id">0a356eb0-bc5c-45e5-8442-0ad702601a72</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsUnanswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">66b061ac-2416-45b5-99d3-77de096adb9c</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Answered</attribute>
+                    <attribute name="RuntimeName">Answered</attribute>
+                    <attribute name="id">0a356eb0-bc5c-45e5-8442-0ad702601a72</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoAsAnswered</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

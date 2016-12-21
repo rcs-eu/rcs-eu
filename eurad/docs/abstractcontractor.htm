@@ -1,0 +1,116 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">AbstractContractor in package EuradSystem</h1>
+    <p><DIV>Abstract class representing a contractor.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">FCooperationState: CooperationState</td>
+        <td class="style1"><DIV>Cooperation state of a contractor. It is&nbsp;<SPAN style="FONT-STYLE: italic">enum</SPAN>&nbsp;property. It can have the following values:</DIV>
+<DIV>- Ok = 0,</DIV>
+<DIV>- Warning = 1,</DIV>
+<DIV>- Bad = 2.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FCooperationStateDesc: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Description&nbsp;for cooperation state with&nbsp;a contractor. Connected with FCooperationState property.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FFullName: String</td>
+        <td class="style1"><DIV>First line for a&nbsp;contractor's full name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FFullNameSec: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Second line for a contractor's&nbsp;full name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FFullNameThr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Third line for a contractor's full name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FIdentifier: String</td>
+        <td class="style1"><DIV>Contractor's short identifier.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsCustomer: Boolean</td>
+        <td class="style1"><DIV>Derived. It is a flag informing if a contractor can&nbsp;have a customer role.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsDeliverer: Boolean</td>
+        <td class="style1"><DIV>Derived. It is a flag informing if a contractor&nbsp;can&nbsp;have&nbsp;a deliverer role.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsRecipient: Boolean</td>
+        <td class="style1"><DIV>Derived. It is a flag informing if a contractor&nbsp;can&nbsp;have&nbsp;a recipient of a cargo role.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsSender: Boolean</td>
+        <td class="style1"><DIV>Derived. It is a flag informing if a contractor&nbsp;can&nbsp;have&nbsp;a sender of a cargo role.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddRole(roleType:Type):ContractorRole</td>
+        <td class="style1"><DIV>Method. Adds a <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role for a contractor and returns an added&nbsp;</SPAN><SPAN style="FONT-STYLE: italic">ContractorRole </SPAN><SPAN>object.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetHaveCorrespondAddress(ref res:Boolean)</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetRole(roleType:Type; out role:ContractorRole):Boolean</td>
+        <td class="style1"><DIV>Method. Gets a contractor's role. If a contractor has a <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role it returns </SPAN><SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>and role objects is assigned to </SPAN><SPAN style="FONT-STYLE: italic">role </SPAN><SPAN>parameter. If a contractor has not a </SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role it returns </SPAN><SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>and </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>is assigned to </SPAN><SPAN style="FONT-STYLE: italic">role </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetRole(roleType:Type):ContractorRole</td>
+        <td class="style1"><DIV>Method. Gets a contractor's role of a <SPAN style="FONT-STYLE: italic">roleType</SPAN> role. If a contractor has a <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role it returns a </SPAN><SPAN style="FONT-STYLE: italic">ContractorRole </SPAN><SPAN>object for a </SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role. If a contractor has not a </SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role it </SPAN><SPAN>throws </SPAN><SPAN style="FONT-STYLE: italic">EuradException </SPAN><SPAN>with a message "Role </SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>not found".</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasRole(roleType:Type):Boolean</td>
+        <td class="style1"><DIV>Method. Returns <SPAN style="FONT-WEIGHT: bold">true</SPAN> if a contractor can have a <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role, otherwise it returns </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RemoveRole(roleType:Type)</td>
+        <td class="style1"><DIV>Method. Removes a <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role from a contractor. If a contractor has not a </SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>role it throws&nbsp;</SPAN><SPAN style="FONT-STYLE: italic">EuradException </SPAN><SPAN>with a message "Role&nbsp;</SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>not found".</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetHaveCorrespondAddress(value:Boolean)</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">FAddress : <a href="addresforcontractor.htm">addresforcontractor</a> 1</td>
+        <td class="style1"><DIV>Points&nbsp;to the contractor's address.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FCorrespondAddress : <a href="address.htm">address</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Roles : <a href="contractorrole.htm">contractorrole</a> 0..*</td>
+        <td class="style1"><DIV>A list of&nbsp;contractor's roles.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_04.00_contractor.htm">04.00 Contractor</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

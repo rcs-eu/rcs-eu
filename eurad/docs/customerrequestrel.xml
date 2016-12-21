@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="customerrequestrel">
+    <doc><![CDATA[<DIV>Class representing a service in a customer request.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">CustomerRequestRel</attribute>
+    <attribute name="RuntimeName">CustomerRequestRel</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. States what is a starting station&nbsp;for transport in this service.</DIV>]]></doc>
+        <modlrstring>RelationFrom: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RelationFrom</attribute>
+        <attribute name="RuntimeName">RelationFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{20d9d444-e17a-4213-bed7-091dacb8e1d4}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Service's name.</DIV>]]></doc>
+        <modlrstring>ServiceName: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServiceName</attribute>
+        <attribute name="RuntimeName">ServiceName</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{37c12362-cf49-4d42-a087-ad2eb6da549a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">200</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived. Reference number of a&nbsp;service in a list of&nbsp;services for a request's item.</DIV></DIV>]]></doc>
+        <modlrstring>Nr: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Nr</attribute>
+        <attribute name="RuntimeName">Nr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{507c461e-8ca9-4812-96a4-69ed74a5452e}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.CustomerRequestItem.Relations-&gt;indexOf(self) + 1</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived. States what is a&nbsp;ending station&nbsp;for transport in this service.</DIV></DIV>]]></doc>
+        <modlrstring>RelationTo: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RelationTo</attribute>
+        <attribute name="RuntimeName">RelationTo</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6021c595-d154-4ffc-927e-41a7c680ebe8}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="customerrequestrel">
+        <doc><![CDATA[<DIV>If a price request is internal then it points to a corresponding service from an internal&nbsp;customer request which was created upon a price request.</DIV>]]></doc>
+        <modlrstring>CustomerRequestRel (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerRequestRel</attribute>
+        <attribute name="RuntimeName">CustomerRequestRel</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerRequestRel</attribute>
+        <attribute name="id">{f157261a-0d24-4464-a26c-f904827b3a27}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceRequestSegCustomerRequestRel</attribute>
+            <attribute name="RuntimeName">PriceRequestSegCustomerRequestRel</attribute>
+            <attribute name="EffectiveName">PriceRequestSegCustomerRequestRel</attribute>
+            <attribute name="id">{1b407d07-d544-47c6-b1be-d468d3e89c65}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customerrequestrel">
+            <doc><![CDATA[<DIV>Class representing a service in a customer request.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestRel</attribute>
+            <attribute name="RuntimeName">CustomerRequestRel</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="pricerequestseg">
+            <doc><![CDATA[<DIV>If this request was created from an internal&nbsp;price request it points to a corresponding service from a price request.</DIV>]]></doc>
+            <modlrstring>PriceRequestSeg (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PriceRequestSeg</attribute>
+            <attribute name="RuntimeName">PriceRequestSeg</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PriceRequestSeg</attribute>
+            <attribute name="id">{be993541-0d10-4a7d-9618-f17e4b13c328}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="pricerequestseg">
+                <doc><![CDATA[<DIV>Class representing a service from a price request.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PriceRequestSeg</attribute>
+                <attribute name="RuntimeName">PriceRequestSeg</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e0ad5687-3752-4ced-b394-c082a121a0af}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="customerrequestrel">
+        <doc><![CDATA[<DIV>If an offer was created upon a request from a customer then this points to a corresponding service from a request.</DIV>]]></doc>
+        <modlrstring>CustomerRequestRel (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerRequestRel</attribute>
+        <attribute name="RuntimeName">CustomerRequestRel</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerRequestRel</attribute>
+        <attribute name="id">{eb19dea1-bb55-426a-a52f-9906af8f73b5}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestRelOfferedService</attribute>
+            <attribute name="RuntimeName">CustomerRequestRelOfferedService</attribute>
+            <attribute name="EffectiveName">CustomerRequestRelOfferedService</attribute>
+            <attribute name="id">{7333df2b-5833-496e-b110-a82dac95919a}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customerrequestrel">
+            <doc><![CDATA[<DIV>Class representing a service in a customer request.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestRel</attribute>
+            <attribute name="RuntimeName">CustomerRequestRel</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="offeredservice">
+            <doc><![CDATA[<DIV>Points to a service from an offer which was created upon this request's service.</DIV>]]></doc>
+            <modlrstring>OfferedService (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">OfferedService</attribute>
+            <attribute name="RuntimeName">OfferedService</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">OfferedService</attribute>
+            <attribute name="id">{327eae4c-3ee6-4316-9cf9-b4e3f39b1129}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="offeredservice">
+                <doc><![CDATA[<DIV>Class representing an offered service.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">OfferedService</attribute>
+                <attribute name="RuntimeName">OfferedService</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d01eccae-3bb4-4c6c-aac9-1a395ce9c27d}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="customerrequestrel">
+        <doc><![CDATA[<DIV>Points to customer request's service to which this group belongs.</DIV>]]></doc>
+        <modlrstring>CustomerRequestRel (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomerRequestRel</attribute>
+        <attribute name="RuntimeName">CustomerRequestRel</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomerRequestRel</attribute>
+        <attribute name="id">{a7feb51d-daa9-47a3-aedd-5e4159605039}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestRelCostGroupDetail</attribute>
+            <attribute name="RuntimeName">CustomerRequestRelCostGroupDetail</attribute>
+            <attribute name="EffectiveName">CustomerRequestRelCostGroupDetail</attribute>
+            <attribute name="id">{a375dbd3-bc96-4a94-be19-4b2b7b83b49b}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customerrequestrel">
+            <doc><![CDATA[<DIV>Class representing a service in a customer request.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestRel</attribute>
+            <attribute name="RuntimeName">CustomerRequestRel</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="custreqcostgroup">
+            <doc><![CDATA[<DIV>A list of cost groups.</DIV>]]></doc>
+            <modlrstring>Segments (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Segments</attribute>
+            <attribute name="RuntimeName">Segments</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Segments</attribute>
+            <attribute name="id">{4b28504f-2660-44e2-b4fe-22d6c039c3a0}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="custreqcostgroup">
+                <doc><![CDATA[<DIV>Class representing a cost group used in&nbsp;a customer request.&nbsp;</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustReqCostGroup</attribute>
+                <attribute name="RuntimeName">CustReqCostGroup</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a3edccea-fd1e-4878-b63b-995a6f9334f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="customerrequestrel">
+        <doc><![CDATA[<DIV>A list of service of the request's item.</DIV>]]></doc>
+        <modlrstring>Relations (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Relations</attribute>
+        <attribute name="RuntimeName">Relations</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Relations</attribute>
+        <attribute name="id">{bae8ced8-d00b-48fb-a586-dda93856ed60}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestRelCustomerRequestItem</attribute>
+            <attribute name="RuntimeName">CustomerRequestRelCustomerRequestItem</attribute>
+            <attribute name="EffectiveName">CustomerRequestRelCustomerRequestItem</attribute>
+            <attribute name="id">{e0415244-6b94-4cfe-9904-a5f6747053ee}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="customerrequestrel">
+            <doc><![CDATA[<DIV>Class representing a service in a customer request.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestRel</attribute>
+            <attribute name="RuntimeName">CustomerRequestRel</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customerrequestitem">
+            <doc><![CDATA[<DIV>Points to a request's item.</DIV>]]></doc>
+            <modlrstring>CustomerRequestItem (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerRequestItem</attribute>
+            <attribute name="RuntimeName">CustomerRequestItem</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomerRequestItem</attribute>
+            <attribute name="id">{76c2f092-5724-42a3-84f3-350bc5aaabac}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="customerrequestitem">
+                <doc><![CDATA[<DIV>Class representing an item of a customer request.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomerRequestItem</attribute>
+                <attribute name="RuntimeName">CustomerRequestItem</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c4328a45-7095-4ba2-b875-6cd8d9c06e39}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="customerrequestrel">
+        <attribute name="RenderedWidth">163</attribute>
+        <attribute name="id">74ba5215-4f7c-467e-9d3b-a4666feb18d6</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CustomerRequestRel</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">360</attribute>
+        <attribute name="y">520</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_08.00_customer_requests">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b2f02078-b55b-4568-9785-9a6c2ac271fa.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b2f02078-b55b-4568-9785-9a6c2ac271fa</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">08.00 Customer requests</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">08.00 Customer requests</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="customerrequestrel">
+        <attribute name="RenderedWidth">163</attribute>
+        <attribute name="id">49ce34bb-74e2-44fb-b0c5-a1a23c00f88f</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CustomerRequestRel</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">880</attribute>
+        <attribute name="y">856</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_06.02_similar_offers_and_requests">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/36204166-b6ab-45af-b99c-5002e2d2b25d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">36204166-b6ab-45af-b99c-5002e2d2b25d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">06.02 Similar Offers and Requests</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">06.02 Similar Offers and Requests</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="customerrequestrel">
+        <attribute name="RenderedWidth">163</attribute>
+        <attribute name="id">ac8e7ef6-d313-40d1-a1f5-313887179e9c</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CustomerRequestRel</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">632</attribute>
+        <attribute name="y">680</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{38a4f2fc-8a09-419c-b0e5-7192fae43738}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_16.00_internal_price_request">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/aff78746-bd41-4f10-af71-45b7a01b8ec9.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">aff78746-bd41-4f10-af71-45b7a01b8ec9</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">16.00 Internal Price Request</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">16.00 Internal Price Request</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

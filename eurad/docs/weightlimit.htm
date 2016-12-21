@@ -1,0 +1,74 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">WeightLimit in package EuradSystem</h1>
+    <p><DIV>Limit for weight condition</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">EffectiveMinWeight: Decimal</td>
+        <td class="style1"><DIV>Derived: minWeight which is efective.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsEmpty: Boolean</td>
+        <td class="style1"><DIV>Derived: If the limit is for empty transport (no weight)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LesOrEqThen: Decimal</td>
+        <td class="style1"><DIV>Value for case of Between of LimitType</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LimitType: WeightLimitType</td>
+        <td class="style1"><DIV>Type of the limit: </DIV>
+<DIV>&nbsp; Empty - empty transport; </DIV>
+<DIV>&nbsp; Min - minimum weight defined; </DIV>
+<DIV>&nbsp; MoreThen - only filed MoreThen is effective</DIV>
+<DIV>&nbsp; Between - weight between MoreThen and LesOrEqualThen</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Min: Decimal</td>
+        <td class="style1"><DIV>Value for min weight in case of Min LimitType</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MoreThen: Decimal</td>
+        <td class="style1"><DIV>Value in case of MoreThen and Between of LimitType</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetWeightLimitText():String</td>
+        <td class="style1"><DIV>Methode for geting respresentation text of this limit</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetWeightTypeName():String</td>
+        <td class="style1"><DIV><I>Methode for geting limit type text</I></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludesWeight(weight:Decimal):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Methode for checking if parameter weight is included in this limit</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Condition : <a href="weightlimitcondition.htm">weightlimitcondition</a> 0..1</td>
+        <td class="style1"><DIV>Condition to which this limit belongs</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TransportUnitNhm : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"><DIV>Not in use</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.02_price_conditions.htm">01.02 Price Conditions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

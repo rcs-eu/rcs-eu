@@ -1,0 +1,63 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">DelivererContractService in package EuradSystem</h1>
+    <p><DIV><SPAN style="FONT-FAMILY: Verdana">Specifies a contracted service.</SPAN></DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">IsDiscount: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">Determines whether this service prices' are expressed as a discount from a rail tariff.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():DelivererContractService</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">Method.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DelivererContractItem : <a href="deliverercontractitem.htm">deliverercontractitem</a> 1</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">The contract item for this contract service.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Detail : <a href="costgroupdetail.htm">costgroupdetail</a> 1</td>
+        <td class="style1"><DIV>Holds the details of this service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DiscountList : <a href="discountlist.htm">discountlist</a> 1</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">Points to the price</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;list for this service expressed as</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;a list of</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;discounts from a rail tariff. </SPAN><SPAN style="FONT-FAMILY: Verdana">Is null if </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">IsDiscount</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;is </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">false</SPAN><SPAN style="FONT-FAMILY: Verdana">.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferCostGroup : <a href="costgroup.htm">costgroup</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">If this contract service</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">'s contract</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;is internal, then </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">OfferCostGroup</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;points to the customer </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">offer's service</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;on wich this contract&nbsp;service </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">is based. Otherwise it is null.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedService : <a href="offeredservice.htm">offeredservice</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">If this contract service</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">'s contract</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;is internal, then&nbsp;</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">OfferedService</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;points to the customer </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">offer's service</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;on wich this contract&nbsp;service</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;is based. Otherwise it is null.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceList : <a href="pricelist.htm">pricelist</a> 1</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">Points to the price list for this service expressed as fixed price values</SPAN><SPAN style="FONT-FAMILY: Verdana">. Is null if </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana">IsDiscount</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;is </SPAN><SPAN style="FONT-FAMILY: Verdana; FONT-WEIGHT: bold">true</SPAN><SPAN style="FONT-FAMILY: Verdana">.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_09.00_deliverercontracts.htm">09.00 DelivererContracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

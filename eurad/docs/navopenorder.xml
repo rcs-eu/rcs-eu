@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="navopenorder">
+    <doc><![CDATA[<DIV>Integration action which places information about customer order's state change to the Navision buffer. This information reflects customer order state change to 'Opened'.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">NavOpenOrder</attribute>
+    <attribute name="RuntimeName">NavOpenOrder</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{3db7e03f-2050-4897-bf9f-fc75954f2044}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="integrationaction">
+        <doc><![CDATA[<DIV>Represents the&nbsp;smallest unit of an&nbsp;integration task.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IntegrationAction</attribute>
+        <attribute name="RuntimeName">IntegrationAction</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{d117665c-b836-4009-9d6b-5ee4d0257984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">BussinessObject=self.SingleCustomerOrder</attribute>
+        <attribute name="Tag">Eco.DerivationExpressions</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Executes this integration&nbsp;action.</DIV>]]></doc>
+        <modlrstring>Execute(taskExecutionInfo:TaskExecutionInfo)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Execute</attribute>
+        <attribute name="RuntimeName">Execute</attribute>
+        <attribute name="Visibility">Package</attribute>
+        <attribute name="id">{20cb62f6-7695-4403-9272-08d80fcf926c}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">taskExecutionInfo</attribute>
+            <attribute name="RuntimeName">taskExecutionInfo</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TaskExecutionInfo</attribute>
+                <attribute name="RuntimeName">TaskExecutionInfo</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="navopenorder">
+        <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+        <modlrstring>NavOpenOrderSingleCustomerOrder_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">NavOpenOrderSingleCustomerOrder_</attribute>
+        <attribute name="RuntimeName">NavOpenOrderSingleCustomerOrder_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">NavOpenOrderSingleCustomerOrder_</attribute>
+        <attribute name="id">{ef11f0df-da33-48a4-b9e0-9dc47f17caea}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavOpenOrderSingleCustomerOrder</attribute>
+            <attribute name="RuntimeName">NavOpenOrderSingleCustomerOrder</attribute>
+            <attribute name="EffectiveName">NavOpenOrderSingleCustomerOrder</attribute>
+            <attribute name="id">{ce706156-6ab6-46dc-baa4-90abf5479343}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="navopenorder">
+            <doc><![CDATA[<DIV>Integration action which places information about customer order's state change to the Navision buffer. This information reflects customer order state change to 'Opened'.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavOpenOrder</attribute>
+            <attribute name="RuntimeName">NavOpenOrder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3db7e03f-2050-4897-bf9f-fc75954f2044}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="singlecustomerorder">
+            <doc><![CDATA[<DIV>
+<DIV>The customer order that was opened.</DIV></DIV>]]></doc>
+            <modlrstring>SingleCustomerOrder (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCustomerOrder</attribute>
+            <attribute name="RuntimeName">SingleCustomerOrder</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SingleCustomerOrder</attribute>
+            <attribute name="id">{8aa7235c-ff6e-4cb4-88c7-095ad27f2a33}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="singlecustomerorder">
+                <doc><![CDATA[<DIV>Class representing single customer order</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SingleCustomerOrder</attribute>
+                <attribute name="RuntimeName">SingleCustomerOrder</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{78e625e9-5c04-49aa-9bfe-0f2cb1b7fbd9}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="navopenorder">
+        <attribute name="RenderedWidth">118</attribute>
+        <attribute name="id">83a55c07-8627-4cc6-a176-1947d1f5acf6</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">NavOpenOrder</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">400</attribute>
+        <attribute name="y">352</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3db7e03f-2050-4897-bf9f-fc75954f2044}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.02_integration_actions">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7fdd5b70-7fa0-4efa-8c9b-cf35e2681486.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7fdd5b70-7fa0-4efa-8c9b-cf35e2681486</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.02 Integration Actions</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.02 Integration Actions</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

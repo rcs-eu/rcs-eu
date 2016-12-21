@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="gostrain">
+    <doc><![CDATA[<DIV>Class representing a train which was registered in GOS.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">GosTrain</attribute>
+    <attribute name="RuntimeName">GosTrain</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{ff1365a6-381d-4320-9449-37f377d067a3}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="officeentityautonum">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing a autonumerated document in a system, e.g. offer, order, invoice etc.</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OfficeEntityAutoNum</attribute>
+        <attribute name="RuntimeName">OfficeEntityAutoNum</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces">IAutoNumGeneratorProvider</attribute>
+        <attribute name="id">{f876b969-db95-4873-bad5-c76e1b97015d}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Departure date.</DIV>]]></doc>
+        <modlrstring>DepartureDate: DateTime = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DepartureDate</attribute>
+        <attribute name="RuntimeName">DepartureDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{1a8af008-ca98-40f9-8071-31384de64a33}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Train's number.</DIV>]]></doc>
+        <modlrstring>TrainNr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TrainNr</attribute>
+        <attribute name="RuntimeName">TrainNr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{231ec598-5e6e-41b3-be1b-b32400a51906}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Relation direction of a train. Enum:</DIV>
+<DIV>- None = 0,</DIV>
+<DIV>- Arrival = 1,</DIV>
+<DIV>- Departure = 2,</DIV>
+<DIV>- EmptyReturn = 3.</DIV>]]></doc>
+        <modlrstring>Direction: GosTrainDirection = Arrival</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Direction</attribute>
+        <attribute name="RuntimeName">Direction</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6977fe66-9f53-4602-aaee-3ac985b937ed}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">GosTrainDirection</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">Arrival</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrainDirection</attribute>
+            <attribute name="RuntimeName">GosTrainDirection</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">1</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Date and time of&nbsp;transport's documents receiving.</DIV>]]></doc>
+        <modlrstring>DocReceiveDateTime: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DocReceiveDateTime</attribute>
+        <attribute name="RuntimeName">DocReceiveDateTime</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{8d94d0cb-f9f5-43ca-b1c5-6756ccf42f06}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Date of train's arrival.</DIV>]]></doc>
+        <modlrstring>ArrivalDate: DateTime = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ArrivalDate</attribute>
+        <attribute name="RuntimeName">ArrivalDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{98e08edb-1028-4feb-9ad8-f86fe47a8acb}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Internal note.</DIV>]]></doc>
+        <modlrstring>Note: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Note</attribute>
+        <attribute name="RuntimeName">Note</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{bc12956e-31eb-4c51-a710-7ffac950dc6b}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">2000000</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">StringAsMemo</attribute>
+            <attribute name="Tag">Eco.PMapper</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>GetArrReport(customer:Customer):GosTrainArrReport</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetArrReport</attribute>
+        <attribute name="RuntimeName">GetArrReport</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">1d936dc4-e18a-44e8-910c-8633f5f482a9</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GosTrainArrReport</attribute>
+                <attribute name="RuntimeName">GosTrainArrReport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">customer</attribute>
+            <attribute name="RuntimeName">customer</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Customer</attribute>
+                <attribute name="RuntimeName">Customer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method.</DIV></DIV>]]></doc>
+        <modlrstring>GetOrCreateArrReport(customer:Customer; session:IEcoSession):GosTrainArrReport</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetOrCreateArrReport</attribute>
+        <attribute name="RuntimeName">GetOrCreateArrReport</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">ef36b26f-413c-4874-9ea3-c08a20865984</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GosTrainArrReport</attribute>
+                <attribute name="RuntimeName">GosTrainArrReport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">customer</attribute>
+            <attribute name="RuntimeName">customer</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Customer</attribute>
+                <attribute name="RuntimeName">Customer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">session</attribute>
+            <attribute name="RuntimeName">session</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IEcoSession</attribute>
+                <attribute name="RuntimeName">IEcoSession</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="gostrain">
+        <doc><![CDATA[<DIV>Points to a GOS registry which corresponds to a train.</DIV>]]></doc>
+        <modlrstring>GosTrain (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosTrain</attribute>
+        <attribute name="RuntimeName">GosTrain</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosTrain</attribute>
+        <attribute name="id">{3dcf9ef5-eab7-48de-960d-479afdc0928c}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WaggonOnGosTrainTrain</attribute>
+            <attribute name="RuntimeName">WaggonOnGosTrainTrain</attribute>
+            <attribute name="EffectiveName">WaggonOnGosTrainTrain</attribute>
+            <attribute name="id">{1513f1b5-0253-4b43-b213-bfd19f30fd4a}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="gostrain">
+            <doc><![CDATA[<DIV>Class representing a train which was registered in GOS.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrain</attribute>
+            <attribute name="RuntimeName">GosTrain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{ff1365a6-381d-4320-9449-37f377d067a3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="gosbill">
+            <doc><![CDATA[<DIV>A list of railway bills registered for this train at GOS registry.</DIV>]]></doc>
+            <modlrstring>GosBills (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosBills</attribute>
+            <attribute name="RuntimeName">GosBills</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">GosBills</attribute>
+            <attribute name="id">{a9277d9a-c003-4a57-8e04-e8a5359d6f59}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="gosbill">
+                <doc><![CDATA[<DIV>Class representing a railway bill registered in a GOS registry.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GosBill</attribute>
+                <attribute name="RuntimeName">GosBill</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{7a7e00d7-e4cd-4126-9702-d18f3a9d99bc}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="gostrain">
+        <doc><![CDATA[<DIV>Points to a GOS registry from which all data are taken.</DIV>]]></doc>
+        <modlrstring>GosTrain (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosTrain</attribute>
+        <attribute name="RuntimeName">GosTrain</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosTrain</attribute>
+        <attribute name="id">{47f0c9fc-bbe1-4197-bf8a-8b85db291c7f}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrainArrReportGosTrain</attribute>
+            <attribute name="RuntimeName">GosTrainArrReportGosTrain</attribute>
+            <attribute name="EffectiveName">GosTrainArrReportGosTrain</attribute>
+            <attribute name="id">{16e51930-4683-44d2-8c8c-9cc31f4f3a50}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="gostrain">
+            <doc><![CDATA[<DIV>Class representing a train which was registered in GOS.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrain</attribute>
+            <attribute name="RuntimeName">GosTrain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{ff1365a6-381d-4320-9449-37f377d067a3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="gostrainarrreport">
+            <doc><![CDATA[<DIV>Points to a report of train's arrival.</DIV>]]></doc>
+            <modlrstring>ArrReport (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ArrReport</attribute>
+            <attribute name="RuntimeName">ArrReport</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ArrReport</attribute>
+            <attribute name="id">{bab7ac87-17c2-49e6-bd22-022f9ca1b694}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="gostrainarrreport">
+                <doc><![CDATA[<DIV>Class representing a report of transport's arrival to GOS.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GosTrainArrReport</attribute>
+                <attribute name="RuntimeName">GosTrainArrReport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{cf8d3f3d-23a6-4815-92cb-8fcd9909d181}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="gostrain">
+        <doc><![CDATA[<DIV>A train for which all waggons from <SPAN style="FONT-STYLE: italic">CargoHolderWaggon </SPAN><SPAN>were registered.</SPAN></DIV>]]></doc>
+        <modlrstring>GosTrain (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosTrain</attribute>
+        <attribute name="RuntimeName">GosTrain</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosTrain</attribute>
+        <attribute name="id">{3bf45435-1b97-4805-9eb3-0c8cf8f57077}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrainGosWaggons</attribute>
+            <attribute name="RuntimeName">GosTrainGosWaggons</attribute>
+            <attribute name="EffectiveName">GosTrainGosWaggons</attribute>
+            <attribute name="id">{826a3db4-05bd-4704-9664-b709d88acbe3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="gostrain">
+            <doc><![CDATA[<DIV>Class representing a train which was registered in GOS.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrain</attribute>
+            <attribute name="RuntimeName">GosTrain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{ff1365a6-381d-4320-9449-37f377d067a3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="goswaggons">
+            <doc><![CDATA[<DIV>Points to a list of waggons registered for this train at GOS registry.</DIV>]]></doc>
+            <modlrstring>WaggonList (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">WaggonList</attribute>
+            <attribute name="RuntimeName">WaggonList</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">WaggonList</attribute>
+            <attribute name="id">{f1e4bf97-3aa4-49e8-b9a0-352c8bff77a1}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="goswaggons">
+                <doc><![CDATA[<DIV>Class representing a list of waggons registered in <SPAN style="FONT-STYLE: italic">GosTrain</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GosWaggons</attribute>
+                <attribute name="RuntimeName">GosWaggons</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{f8626a16-7ca9-481c-82c3-808f44bce64e}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="gostrain">
+        <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+        <modlrstring>GosTrainSingleCustomerOrder_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosTrainSingleCustomerOrder_</attribute>
+        <attribute name="RuntimeName">GosTrainSingleCustomerOrder_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosTrainSingleCustomerOrder_</attribute>
+        <attribute name="id">{20fad652-21ef-445b-b08f-d85aa6086393}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrainSingleCustomerOrder</attribute>
+            <attribute name="RuntimeName">GosTrainSingleCustomerOrder</attribute>
+            <attribute name="EffectiveName">GosTrainSingleCustomerOrder</attribute>
+            <attribute name="id">{b8e28d1c-c582-4092-9973-246d14d3f3e4}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="gostrain">
+            <doc><![CDATA[<DIV>Class representing a train which was registered in GOS.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosTrain</attribute>
+            <attribute name="RuntimeName">GosTrain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{ff1365a6-381d-4320-9449-37f377d067a3}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="customerorder">
+            <doc><![CDATA[<DIV>Derived. A list of customer orders to which rail bills from GOS registry were connected.</DIV>]]></doc>
+            <modlrstring>CustomerOrders (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerOrders</attribute>
+            <attribute name="RuntimeName">CustomerOrders</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomerOrders</attribute>
+            <attribute name="id">{fb91ea3e-46d2-4546-bbdd-b00fb08121bb}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="customerorder">
+                <doc><![CDATA[<DIV>Abstract class representing an order from a customer.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CustomerOrder</attribute>
+                <attribute name="RuntimeName">CustomerOrder</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{390c0a85-34e9-4d0e-90bf-f74e36401949}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="gostrain">
+        <attribute name="RenderedWidth">170</attribute>
+        <attribute name="id">653e72b7-e6b1-45f2-9f0e-d44a6c610108</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">GosTrain</attribute>
+        <attribute name="RenderedHeight">126</attribute>
+        <attribute name="x">688</attribute>
+        <attribute name="y">1240</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{ff1365a6-381d-4320-9449-37f377d067a3}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.05_executed_gos_servce">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3570b341-3b9d-4b50-a216-a75190baaacb.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3570b341-3b9d-4b50-a216-a75190baaacb</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.05 Executed GOS Servce</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.05 Executed GOS Servce</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

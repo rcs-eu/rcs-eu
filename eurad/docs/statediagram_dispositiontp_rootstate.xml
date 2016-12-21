@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_dispositiontp_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/1abf02fc-620c-4256-86af-a402559ecb82.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">1abf02fc-620c-4256-86af-a402559ecb82</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:DispositionTP.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_dispositiontp_rootstate">
+        <doc><![CDATA[<DIV>
+<DIV>A string determining the state of the document.</DIV></DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{444deefa-175f-4173-b64a-e8c9fe4d081f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="dispositiontp">
+            <doc><![CDATA[<DIV>Represents a transloading terminal&nbsp;disposition.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DispositionTP</attribute>
+            <attribute name="RuntimeName">DispositionTP</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{0610f577-bd43-4b97-95fa-9e795ea0e448}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">2dcc5a15-1617-46f6-94d8-063ba2128f10</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">352</attribute>
+        <attribute name="y">8</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">79</attribute>
+        <attribute name="id">35a9b816-f75e-4792-a8c1-2cd80f9fd008</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Preparing</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">352</attribute>
+        <attribute name="y">72</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Preparing</attribute>
+            <attribute name="RuntimeName">Preparing</attribute>
+            <attribute name="id">b36dcb64-3536-4d97-b25f-a08e75144611</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">15137496-41cf-4b5a-a653-a453477799ad</attribute>
+                <attribute name="Guard">OCL: not(self.Deliverer.IsInternal)</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Active</attribute>
+                    <attribute name="RuntimeName">Active</attribute>
+                    <attribute name="id">6c822338-c660-46c9-8e78-26afed3a9f27</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">6790fa6b-4e96-417e-8e12-ac1884507038</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">ef079e8a-1f96-4748-b892-2821b99860a1</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">7baa95ac-0313-4917-9249-642001e9e78a</attribute>
+                <attribute name="Guard">OCL: (not(self.Deliverer.IsInternal)) or (SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN')</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Queed</attribute>
+                    <attribute name="RuntimeName">Queed</attribute>
+                    <attribute name="id">6dce5ad5-7b32-4b52-b97f-39220a47c6de</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">0cee715e-c8cd-4ae2-9038-7281629f2dfc</attribute>
+                <attribute name="Guard">OCL: not(self.Deliverer.IsInternal)</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Active</attribute>
+                    <attribute name="RuntimeName">Active</attribute>
+                    <attribute name="id">6c822338-c660-46c9-8e78-26afed3a9f27</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureFullNr; self.EnsureServiceExecuted</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">e97244c3-f247-47df-923b-3c666fc8d2c2</attribute>
+                <attribute name="Guard">OCL: self.Deliverer.IsInternal</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Queed</attribute>
+                    <attribute name="RuntimeName">Queed</attribute>
+                    <attribute name="id">6dce5ad5-7b32-4b52-b97f-39220a47c6de</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureFullNr</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">58</attribute>
+        <attribute name="id">6d7b20f0-7274-4c60-be84-426f88d208b5</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Queed</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">344</attribute>
+        <attribute name="y">232</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Queed</attribute>
+            <attribute name="RuntimeName">Queed</attribute>
+            <attribute name="id">6dce5ad5-7b32-4b52-b97f-39220a47c6de</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">06871146-6ec9-4be3-982f-052557accd56</attribute>
+                <attribute name="Guard">OCL: self.ServiceExecuted-&gt;size = 0</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Active</attribute>
+                    <attribute name="RuntimeName">Active</attribute>
+                    <attribute name="id">6c822338-c660-46c9-8e78-26afed3a9f27</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">e97244c3-f247-47df-923b-3c666fc8d2c2</attribute>
+                <attribute name="Guard">OCL: self.Deliverer.IsInternal</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Preparing</attribute>
+                    <attribute name="RuntimeName">Preparing</attribute>
+                    <attribute name="id">b36dcb64-3536-4d97-b25f-a08e75144611</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureFullNr</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">7baa95ac-0313-4917-9249-642001e9e78a</attribute>
+                <attribute name="Guard">OCL: (not(self.Deliverer.IsInternal)) or (SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN')</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Preparing</attribute>
+                    <attribute name="RuntimeName">Preparing</attribute>
+                    <attribute name="id">b36dcb64-3536-4d97-b25f-a08e75144611</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">b9914aa5-a022-480e-bfd1-51b87208803e</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Active</attribute>
+                    <attribute name="RuntimeName">Active</attribute>
+                    <attribute name="id">6c822338-c660-46c9-8e78-26afed3a9f27</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureServiceExecuted</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">54</attribute>
+        <attribute name="id">c1e53c4e-ace2-45ec-80fe-6e182319768b</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Active</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">344</attribute>
+        <attribute name="y">408</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Active</attribute>
+            <attribute name="RuntimeName">Active</attribute>
+            <attribute name="id">6c822338-c660-46c9-8e78-26afed3a9f27</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">0cee715e-c8cd-4ae2-9038-7281629f2dfc</attribute>
+                <attribute name="Guard">OCL: not(self.Deliverer.IsInternal)</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Preparing</attribute>
+                    <attribute name="RuntimeName">Preparing</attribute>
+                    <attribute name="id">b36dcb64-3536-4d97-b25f-a08e75144611</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureFullNr; self.EnsureServiceExecuted</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">a35bea8a-3f53-44e0-965a-3ea78248582e</attribute>
+                <attribute name="Guard">OCL: SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN'</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Executed</attribute>
+                    <attribute name="RuntimeName">Executed</attribute>
+                    <attribute name="id">af4d2929-d588-42ed-9b5d-cae61ea8a6ca</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">b9914aa5-a022-480e-bfd1-51b87208803e</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Queed</attribute>
+                    <attribute name="RuntimeName">Queed</attribute>
+                    <attribute name="id">6dce5ad5-7b32-4b52-b97f-39220a47c6de</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.EnsureServiceExecuted</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">06871146-6ec9-4be3-982f-052557accd56</attribute>
+                <attribute name="Guard">OCL: self.ServiceExecuted-&gt;size = 0</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Queed</attribute>
+                    <attribute name="RuntimeName">Queed</attribute>
+                    <attribute name="id">6dce5ad5-7b32-4b52-b97f-39220a47c6de</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">15137496-41cf-4b5a-a653-a453477799ad</attribute>
+                <attribute name="Guard">OCL: not(self.Deliverer.IsInternal)</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Preparing</attribute>
+                    <attribute name="RuntimeName">Preparing</attribute>
+                    <attribute name="id">b36dcb64-3536-4d97-b25f-a08e75144611</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">2f3154eb-9225-4f2f-aee6-9069a8c362db</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Executed</attribute>
+                    <attribute name="RuntimeName">Executed</attribute>
+                    <attribute name="id">af4d2929-d588-42ed-9b5d-cae61ea8a6ca</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">DoFinish(selectTPOrderedService)</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">77</attribute>
+        <attribute name="id">ecbc676c-775a-4709-a93b-dbdd1641ffe0</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Executed</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">352</attribute>
+        <attribute name="y">584</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Executed</attribute>
+            <attribute name="RuntimeName">Executed</attribute>
+            <attribute name="id">af4d2929-d588-42ed-9b5d-cae61ea8a6ca</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">2f3154eb-9225-4f2f-aee6-9069a8c362db</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Active</attribute>
+                    <attribute name="RuntimeName">Active</attribute>
+                    <attribute name="id">6c822338-c660-46c9-8e78-26afed3a9f27</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">DoFinish(selectTPOrderedService)</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">a35bea8a-3f53-44e0-965a-3ea78248582e</attribute>
+                <attribute name="Guard">OCL: SysApp.allInstances-&gt;first.SysUser.Login.ToUpper = 'ADMIN'</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Active</attribute>
+                    <attribute name="RuntimeName">Active</attribute>
+                    <attribute name="id">6c822338-c660-46c9-8e78-26afed3a9f27</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

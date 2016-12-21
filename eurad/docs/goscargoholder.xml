@@ -1,0 +1,1223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="goscargoholder">
+    <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">GosCargoHolder</attribute>
+    <attribute name="RuntimeName">GosCargoHolder</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">CargoHolder.CargoHolderType +' '+ CargoHolder.CargoHolderId</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived. Indicates if this holder be edited.</DIV></DIV>]]></doc>
+        <modlrstring>CanEdit: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CanEdit</attribute>
+        <attribute name="RuntimeName">CanEdit</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{2ed13f06-b6cf-489a-84e4-d663a30b1396}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.SingleCustomerOrder-&gt;isEmpty and self.GeneralCustomerOrder-&gt;isEmpty</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute" href="statediagram_goscargoholder_rootstate">
+        <doc><![CDATA[<DIV>Holder's state.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{391d056b-008e-4c50-8b62-99bedb37617f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsStateAttribute</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Indicates if this holder be deleted.</DIV>]]></doc>
+        <modlrstring>CanDelete: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CanDelete</attribute>
+        <attribute name="RuntimeName">CanDelete</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{41e61d22-817a-4727-acf3-9cba21f67ce7}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.SingleCustomerOrder-&gt;isEmpty and self.GeneralCustomerOrder-&gt;isEmpty</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method.</DIV>]]></doc>
+        <modlrstring>Unfinish()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Unfinish</attribute>
+        <attribute name="RuntimeName">Unfinish</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4b59c639-e1d0-4153-8577-5dd191ac60dc}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method.</DIV></DIV>]]></doc>
+        <modlrstring>AddExecutedItem(executedItem:ExecutedItem)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AddExecutedItem</attribute>
+        <attribute name="RuntimeName">AddExecutedItem</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b7907723-8943-4a18-b539-4cccaca4b62f}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">executedItem</attribute>
+            <attribute name="RuntimeName">executedItem</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method.</DIV></DIV>]]></doc>
+        <modlrstring>Finish()</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Finish</attribute>
+        <attribute name="RuntimeName">Finish</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{fad64d02-deae-42a3-a167-2de1b78c0e6c}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter" />
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.IsTrigger</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>Derived. Points to holder registered in a GOS registry.</DIV>]]></doc>
+        <modlrstring>GosCargoHolder (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosCargoHolder</attribute>
+        <attribute name="RuntimeName">GosCargoHolder</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosCargoHolder</attribute>
+        <attribute name="id">{26abb971-b9c3-478e-a2d9-1fcf271bb91f}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageGosCargoHolderConnectedToOrdGosCargoHolder</attribute>
+            <attribute name="RuntimeName">MessageGosCargoHolderConnectedToOrdGosCargoHolder</attribute>
+            <attribute name="EffectiveName">MessageGosCargoHolderConnectedToOrdGosCargoHolder</attribute>
+            <attribute name="id">{083f5a51-0c3a-4e94-96f1-528edd51a925}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="messagegoscargoholderconnectedtoord">
+            <doc><![CDATA[<DIV>
+<DIV>Derived. One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>MessageGosCargoHolderConnectedToOrdGosCargoHolder_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageGosCargoHolderConnectedToOrdGosCargoHolder_</attribute>
+            <attribute name="RuntimeName">MessageGosCargoHolderConnectedToOrdGosCargoHolder_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MessageGosCargoHolderConnectedToOrdGosCargoHolder_</attribute>
+            <attribute name="id">{8a0d173c-3de0-420c-b99f-c4481862a2c6}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="messagegoscargoholderconnectedtoord">
+                <doc><![CDATA[<DIV>Message sent when a&nbsp;<SPAN style="FONT-STYLE: italic">GosCargoHolder</SPAN> from a GOS registry was connected to a single customer order meaning that a service is realized.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MessageGosCargoHolderConnectedToOrd</attribute>
+                <attribute name="RuntimeName">MessageGosCargoHolderConnectedToOrd</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{7b18b4e0-af49-45cd-9b14-883be412e536}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Documents-&gt;filterOnType(GosCargoHolder)-&gt;first</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>A list of waggons from GOS registry connected to this item.</DIV>]]></doc>
+        <modlrstring>GosCargoHolders (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosCargoHolders</attribute>
+        <attribute name="RuntimeName">GosCargoHolders</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosCargoHolders</attribute>
+        <attribute name="id">{04fdee8e-ba36-494f-b6d0-76c22c2df54b}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolderExecutedItem</attribute>
+            <attribute name="RuntimeName">GosCargoHolderExecutedItem</attribute>
+            <attribute name="EffectiveName">GosCargoHolderExecutedItem</attribute>
+            <attribute name="id">{131cf4bb-4d06-4ae7-bf86-aa95ebc4aa01}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditem">
+            <doc><![CDATA[<DIV>A list of&nbsp;services which were executed for this holder.</DIV>]]></doc>
+            <modlrstring>ExecutedItems (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExecutedItems</attribute>
+            <attribute name="RuntimeName">ExecutedItems</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExecutedItems</attribute>
+            <attribute name="id">{ce933eb2-d917-4326-a6ac-f7fed618b023}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditem">
+                <doc><![CDATA[<DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">IEcoOnSave</attribute>
+                <attribute name="id">{78395a97-455d-4f97-a366-8607343fd841}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>List of cargo holders which belongs to this GOS service </DIV>
+<DIV>(holding the information which units are obtained in this service)</DIV>]]></doc>
+        <modlrstring>ServicedCargoHolders (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ServicedCargoHolders</attribute>
+        <attribute name="RuntimeName">ServicedCargoHolders</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ServicedCargoHolders</attribute>
+        <attribute name="id">{dc2aa25a-d73a-4541-967f-cc80d5839ea8}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceGOSGosCargoHolder</attribute>
+            <attribute name="RuntimeName">ServiceGOSGosCargoHolder</attribute>
+            <attribute name="EffectiveName">ServiceGOSGosCargoHolder</attribute>
+            <attribute name="id">{3ab04b0c-4158-41cb-a97d-31151b40f605}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="servicegos">
+            <doc><![CDATA[<DIV>Points to a GOS service&nbsp;in which this holder is serviced.</DIV>]]></doc>
+            <modlrstring>ServiceGOS (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceGOS</attribute>
+            <attribute name="RuntimeName">ServiceGOS</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ServiceGOS</attribute>
+            <attribute name="id">{8bc50cde-a4f7-4ba3-970d-6f9e550e4e85}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="servicegos">
+                <doc><![CDATA[<DIV>Class representing GOS service</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ServiceGOS</attribute>
+                <attribute name="RuntimeName">ServiceGOS</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{42995073-b178-4df7-a80d-df3bef28c909}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>Not in use</DIV>]]></doc>
+        <modlrstring>GosCargoHoldersSent (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosCargoHoldersSent</attribute>
+        <attribute name="RuntimeName">GosCargoHoldersSent</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosCargoHoldersSent</attribute>
+        <attribute name="id">{0cdea49a-2cc8-4de6-85d9-53a53bc81c59}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolderServiceGOS</attribute>
+            <attribute name="RuntimeName">GosCargoHolderServiceGOS</attribute>
+            <attribute name="EffectiveName">GosCargoHolderServiceGOS</attribute>
+            <attribute name="id">{53fd54eb-574f-4044-9d55-5b7437d2f410}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="servicegos">
+            <doc><![CDATA[<DIV>Not in use.</DIV>]]></doc>
+            <modlrstring>ServiceGOSSender (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceGOSSender</attribute>
+            <attribute name="RuntimeName">ServiceGOSSender</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ServiceGOSSender</attribute>
+            <attribute name="id">{75540712-82d3-4209-b763-ae36e531bede}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="servicegos">
+                <doc><![CDATA[<DIV>Class representing GOS service</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ServiceGOS</attribute>
+                <attribute name="RuntimeName">ServiceGOS</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{42995073-b178-4df7-a80d-df3bef28c909}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>A list of all&nbsp;waggons registered in this registry.</DIV>]]></doc>
+        <modlrstring>GosCargoHolders (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosCargoHolders</attribute>
+        <attribute name="RuntimeName">GosCargoHolders</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosCargoHolders</attribute>
+        <attribute name="id">{2790aeea-9e0b-4542-922c-bf1ce8000e17}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCaseGosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCaseGosCargoHolder</attribute>
+            <attribute name="EffectiveName">GosCaseGosCargoHolder</attribute>
+            <attribute name="id">{9277c1a1-0df4-43c5-9d6c-0478580ed75f}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="goscase">
+            <doc><![CDATA[<DIV>Points to a GOS registry.</DIV>]]></doc>
+            <modlrstring>GosCase (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCase</attribute>
+            <attribute name="RuntimeName">GosCase</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">GosCase</attribute>
+            <attribute name="id">{bf50ed57-3bf5-4216-936f-ed98d58ffcff}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="goscase">
+                <doc><![CDATA[<DIV>Abstract class. In connection to <SPAN style="FONT-STYLE: italic">GosTrain&nbsp;</SPAN><SPAN>it composes a GOS registry.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GosCase</attribute>
+                <attribute name="RuntimeName">GosCase</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{f990b7d7-fab7-4215-b454-b869142055f4}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>
+<DIV>Derived. Points to holder registered in a GOS registry.</DIV></DIV>]]></doc>
+        <modlrstring>GosCargoHolder (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosCargoHolder</attribute>
+        <attribute name="RuntimeName">GosCargoHolder</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosCargoHolder</attribute>
+        <attribute name="id">{0aabcad4-ab13-4c73-9da4-9a70e046f3dc}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageGosCargoHolderNewAvisoGosCargoHolder</attribute>
+            <attribute name="RuntimeName">MessageGosCargoHolderNewAvisoGosCargoHolder</attribute>
+            <attribute name="EffectiveName">MessageGosCargoHolderNewAvisoGosCargoHolder</attribute>
+            <attribute name="id">{95487797-b4b5-43db-99f7-f12813d0c308}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="messagegoscargoholdernewaviso">
+            <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+            <modlrstring>MessageGosCargoHolderNewAvisoGosCargoHolder_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageGosCargoHolderNewAvisoGosCargoHolder_</attribute>
+            <attribute name="RuntimeName">MessageGosCargoHolderNewAvisoGosCargoHolder_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MessageGosCargoHolderNewAvisoGosCargoHolder_</attribute>
+            <attribute name="id">{de618434-351d-4376-8317-50efaebe4a8a}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="messagegoscargoholdernewaviso">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Message sent when a&nbsp;</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">GosCargoHolder</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;from a GOS registry was connected to a&nbsp;general customer order which is treated as a arrival aviso.</SPAN></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MessageGosCargoHolderNewAviso</attribute>
+                <attribute name="RuntimeName">MessageGosCargoHolderNewAviso</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{917b77a6-2d02-4f4f-92fa-5142c78e0761}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Documents-&gt;filterOnType(GosCargoHolder)-&gt;first</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+        <modlrstring>GosCargoHolderAbstractCargoHolder_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GosCargoHolderAbstractCargoHolder_</attribute>
+        <attribute name="RuntimeName">GosCargoHolderAbstractCargoHolder_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">GosCargoHolderAbstractCargoHolder_</attribute>
+        <attribute name="id">{61105227-8587-4db2-ab47-c5bd1f3fc9ca}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolderAbstractCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolderAbstractCargoHolder</attribute>
+            <attribute name="EffectiveName">GosCargoHolderAbstractCargoHolder</attribute>
+            <attribute name="id">{9e932139-c0b1-4891-b014-33db755608ac}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="abstractcargoholder">
+            <doc><![CDATA[<DIV>Points to a cargo holder which now can only be a waggon cargo holder.</DIV>]]></doc>
+            <modlrstring>CargoHolder (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CargoHolder</attribute>
+            <attribute name="RuntimeName">CargoHolder</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CargoHolder</attribute>
+            <attribute name="id">{f8eeb4b8-ce5b-4d68-88ac-aba3994d42cc}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="abstractcargoholder">
+                <doc><![CDATA[<DIV>Abstract class representing a holder for cargo, i.e. waggon holder, truck holder, ship holder&nbsp;etc.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AbstractCargoHolder</attribute>
+                <attribute name="RuntimeName">AbstractCargoHolder</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{27dcffbc-0af1-429c-961b-b66ca1f5ecd1}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>A list of all waggons from GOS registries which were connected to this order.</DIV>]]></doc>
+        <modlrstring>AssignedGosCargoHolders (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AssignedGosCargoHolders</attribute>
+        <attribute name="RuntimeName">AssignedGosCargoHolders</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AssignedGosCargoHolders</attribute>
+        <attribute name="id">{5f11123b-b234-49fe-a972-18c6036fe6c4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GeneralCustomerOrderGosCargoHolder</attribute>
+            <attribute name="RuntimeName">GeneralCustomerOrderGosCargoHolder</attribute>
+            <attribute name="EffectiveName">GeneralCustomerOrderGosCargoHolder</attribute>
+            <attribute name="id">{dbbeb6db-b683-41cd-b83d-94997bbb81e3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="generalcustomerorder">
+            <doc><![CDATA[<DIV>Points to a general order from a customer to which this holder is connected.</DIV>]]></doc>
+            <modlrstring>GeneralCustomerOrder (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GeneralCustomerOrder</attribute>
+            <attribute name="RuntimeName">GeneralCustomerOrder</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">GeneralCustomerOrder</attribute>
+            <attribute name="id">{cd734691-7038-4261-92c8-607979f539fa}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="generalcustomerorder">
+                <doc><![CDATA[<DIV>Class representing a general order from a customer.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">GeneralCustomerOrder</attribute>
+                <attribute name="RuntimeName">GeneralCustomerOrder</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{fcb27b38-3732-486f-bbd2-576d2e3abd82}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>CargoHolders for GOS which are associated with this order.</DIV>]]></doc>
+        <modlrstring>AssignedGosCargoHolders (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AssignedGosCargoHolders</attribute>
+        <attribute name="RuntimeName">AssignedGosCargoHolders</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AssignedGosCargoHolders</attribute>
+        <attribute name="id">{bc058b29-3083-4bf0-8c6c-9c05dfa34574}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolderSingleCustomerOrder</attribute>
+            <attribute name="RuntimeName">GosCargoHolderSingleCustomerOrder</attribute>
+            <attribute name="EffectiveName">GosCargoHolderSingleCustomerOrder</attribute>
+            <attribute name="id">{dfddd74b-9eb9-45b9-b898-bfaa06503d1c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="singlecustomerorder">
+            <doc><![CDATA[<DIV>
+<DIV>Points to a&nbsp;single order from a customer to which this holder is connected.</DIV></DIV>]]></doc>
+            <modlrstring>SingleCustomerOrder (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SingleCustomerOrder</attribute>
+            <attribute name="RuntimeName">SingleCustomerOrder</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SingleCustomerOrder</attribute>
+            <attribute name="id">{71d37f7f-0808-4aa5-b113-98b20832bcba}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="singlecustomerorder">
+                <doc><![CDATA[<DIV>Class representing single customer order</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SingleCustomerOrder</attribute>
+                <attribute name="RuntimeName">SingleCustomerOrder</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{78e625e9-5c04-49aa-9bfe-0f2cb1b7fbd9}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="goscargoholder">
+        <doc><![CDATA[<DIV>A list of waggons from GOS registry to which this item was connected by a user from internal company&nbsp;which is an internal customer.</DIV>]]></doc>
+        <modlrstring>OrderedGosCargoHolders (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">OrderedGosCargoHolders</attribute>
+        <attribute name="RuntimeName">OrderedGosCargoHolders</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">OrderedGosCargoHolders</attribute>
+        <attribute name="id">{a4d67e37-33ea-4e05-8518-afec0bbaa2b7}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolderExecutedItem1</attribute>
+            <attribute name="RuntimeName">GosCargoHolderExecutedItem1</attribute>
+            <attribute name="EffectiveName">GosCargoHolderExecutedItem1</attribute>
+            <attribute name="id">{e7602906-44c9-4c4d-ae18-2dcd11bf2ca2}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="goscargoholder">
+            <doc><![CDATA[<DIV>Class representing cargo holder in GOS registry.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">GosCargoHolder</attribute>
+            <attribute name="RuntimeName">GosCargoHolder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditem">
+            <doc><![CDATA[<DIV>Points to an executed item which was registered by&nbsp;an internal customer in their orders. It's used for creating a proper single customer order in <SPAN style="FONT-STYLE: italic">GeneralCustomerOrder</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+            <modlrstring>ExternalExecutedItem (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExternalExecutedItem</attribute>
+            <attribute name="RuntimeName">ExternalExecutedItem</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExternalExecutedItem</attribute>
+            <attribute name="id">{dcfc41a0-4ba4-4f7f-b92d-d70322bfd76f}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditem">
+                <doc><![CDATA[<DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">IEcoOnSave</attribute>
+                <attribute name="id">{78395a97-455d-4f97-a366-8607343fd841}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine">
+      <object type="StateMachine">
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StateMachine1</attribute>
+        <attribute name="RuntimeName">StateMachine1</attribute>
+        <attribute name="id">30dedc3d-f759-4fcb-bfa1-ca5155ab3cf6</attribute>
+      </object>
+    </link>
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="goscargoholder">
+        <attribute name="RenderedWidth">130</attribute>
+        <attribute name="id">412099e3-6175-41d2-9448-6049365f1b48</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">GosCargoHolder</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">400</attribute>
+        <attribute name="y">1440</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.05_executed_gos_servce">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3570b341-3b9d-4b50-a216-a75190baaacb.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3570b341-3b9d-4b50-a216-a75190baaacb</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.05 Executed GOS Servce</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.05 Executed GOS Servce</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="goscargoholder">
+        <attribute name="RenderedWidth">130</attribute>
+        <attribute name="id">f9399d66-9ab0-4286-96cf-2a7309f22484</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">GosCargoHolder</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">880</attribute>
+        <attribute name="y">240</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.05_executed_gos_servce">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3570b341-3b9d-4b50-a216-a75190baaacb.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3570b341-3b9d-4b50-a216-a75190baaacb</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.05 Executed GOS Servce</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.05 Executed GOS Servce</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="goscargoholder">
+        <attribute name="RenderedWidth">130</attribute>
+        <attribute name="id">4771210d-41a5-4d3a-84cf-07264c26329f</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">GosCargoHolder</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">520</attribute>
+        <attribute name="y">768</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2550785b-fee7-45c7-8e70-460ebe635ed1}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_03.01_system_messages">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/aaca3789-20a7-4b7c-85b6-8df71e4ee48e.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">aaca3789-20a7-4b7c-85b6-8df71e4ee48e</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">03.01 System Messages</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">03.01 System Messages</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

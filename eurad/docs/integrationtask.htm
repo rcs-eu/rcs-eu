@@ -1,0 +1,61 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">IntegrationTask in package EuradSystem</h1>
+    <p><DIV>Represents named&nbsp;integration task which can be executed.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Executed: Boolean</td>
+        <td class="style1"><DIV>Indicates whether this task has been successfully&nbsp;executed.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Name: String</td>
+        <td class="style1"><DIV>The name of the task.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">QueuedAt: DateTime</td>
+        <td class="style1"><DIV>The date and time when this task has been queued for execution.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Execute(taskExecutionInfo:TaskExecutionInfo)</td>
+        <td class="style1"><DIV>Method. Executes the task. A task can only be executed if <SPAN style="FONT-STYLE: italic">Executed</SPAN> is <SPAN style="FONT-WEIGHT: bold">false</SPAN>.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Actions : <a href="integrationaction.htm">integrationaction</a> 0..*</td>
+        <td class="style1"><DIV>Ordered list of actions for this task. All actions must be successfully executed for the task to be successfully executed.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Job : <a href="integrationjob.htm">integrationjob</a> 0..*</td>
+        <td class="style1"><DIV>A list of integration jobs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Queue : <a href="integrationqueue.htm">integrationqueue</a> 0..1</td>
+        <td class="style1"><DIV>The queue of this task.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">QueuedByUser : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>Points to the user who queued this task.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.00_integration.htm">99.00 Integration</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

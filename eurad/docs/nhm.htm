@@ -1,0 +1,209 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Nhm in package EuradSystem</h1>
+    <p><DIV>Represents&nbsp;NHM classification's entry. </DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Code: String</td>
+        <td class="style1"><DIV>The code of the cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NameML: String</td>
+        <td class="style1"><DIV>Stores different language versions of the <SPAN style="FONT-STYLE: italic">Name</SPAN>.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetNhm(serviceProvider:IEcoServiceProvider; code:String):Nhm</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetNhm(serviceProvider:IEcoServiceProvider; code:String; out nhm:Nhm):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludesCode(nhmCode:String):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MatchesCode(nhmCode:String):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CargosOneNhm : <a href="cargo.htm">cargo</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsDocumentNhm_ : <a href="customsdocument.htm">customsdocument</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemNhm : <a href="executeditem.htm">executeditem</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Name : <a href="mlstring.htm">mlstring</a> 1</td>
+        <td class="style1"><DIV>The name of the cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmExcludedNhm_ : <a href="nhmrange.htm">nhmrange</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmExcludedNhm1_ : <a href="nhmrange.htm">nhmrange</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmForEmptyWag : <a href="nhmforemptywag.htm">nhmforemptywag</a> 0..1</td>
+        <td class="style1"><DIV>Determines whether this NHM represents empty waggon.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmGroupNhm_ : <a href="nhmgroup.htm">nhmgroup</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmGroupNhm1_ : <a href="nhmgroup.htm">nhmgroup</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmValuesValue : <a href="nhmvalue.htm">nhmvalue</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RailwayBillNhm_ : <a href="railwaybill.htm">railwaybill</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RailwayBillNhm1_ : <a href="railwaybill.htm">railwaybill</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Rids : <a href="ridun.htm">ridun</a> 0..*</td>
+        <td class="style1"><DIV>A list of RID entries.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceAcDetailNhm : <a href="serviceacdetail.htm">serviceacdetail</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceAcOthersCn : <a href="serviceacother.htm">serviceacother</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceOthers : <a href="serviceother.htm">serviceother</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ShipNhm_ : <a href="ship.htm">ship</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemTPNhm_ : <a href="specitemtp.htm">specitemtp</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TruckTransportsNhm : <a href="trucktransport.htm">trucktransport</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UtiNhm_ : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UtiNhm1_ : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonNhm1_ : <a href="waggon.htm">waggon</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonsNhms : <a href="waggon.htm">waggon</a> 0..*</td>
+        <td class="style1"><DIV>One way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WeightLimitNhm_ : <a href="weightlimit.htm">weightlimit</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.01_multilanguage.htm">01.01 Multilanguage</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.02_price_conditions.htm">01.02 Price Conditions</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.04_configuration.htm">01.04 Configuration</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.03_cargo_(nhm_rid_adr).htm">02.03 Cargo (NHM,RID,ADR)</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.03_cargo_(nhm_rid_adr).htm">02.03 Cargo (NHM,RID,ADR)</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.03_cargo_(nhm_rid_adr).htm">02.03 Cargo (NHM,RID,ADR)</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.01_executed_railway_transport.htm">07.01 Executed Railway Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.02_executed_truck_transport.htm">07.02 Executed Truck Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.03_executed_ship_transport.htm">07.03 Executed Ship Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.04_executed_ac_servce.htm">07.04 Executed AC Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.06_executed_tp_servce.htm">07.06 Executed TP Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.07_executed_other.htm">07.07 Executed Other</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

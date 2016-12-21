@@ -1,0 +1,149 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">NhmGroup in package EuradSystem</h1>
+    <p><DIV>Represents a set of NHM codes.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ContainsNhm2: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>This string contains all two digit codes in this set.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContainsNhm4: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>This string contains all four digit codes in this set.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExcludeNhmStr: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludedNhmStr: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsNhmSet: Boolean</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsOneNhm: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmStr: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RequiresNhm: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():NhmGroup</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetContainedNhms2():String[]</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetContainedNhms4():String[]</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetCountOfCommonNhms2(nhmGroup:NhmGroup):Integer</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetCountOfCommonNhms4(nhmGroup:NhmGroup):Integer</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludesNhm(nhmCode:String):Boolean</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RecalculateNhm2()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RecalculateNhm4()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SameAs(nhmGroup:NhmGroup):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AllNhms : <a href="nhm.htm">nhm</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BusinessDomain : <a href="businessdomain.htm">businessdomain</a> 0..1</td>
+        <td class="style1"><DIV>Points to the business domain which uses this particular set.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerSubOfferNhmGroup_ : <a href="cargo.htm">cargo</a> 0..*</td>
+        <td class="style1"><DIV>One way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Excluded : <a href="nhmexcluded.htm">nhmexcluded</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>A list of NHM ranges&nbsp;excluded&nbsp;from this set.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Included : <a href="nhmincluded.htm">nhmincluded</a> 0..*</td>
+        <td class="style1"><DIV>A list of NHM ranges included in this set.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OneNhm : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StcNhm : <a href="stcnhm.htm">stcnhm</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.03_cargo_(nhm_rid_adr).htm">02.03 Cargo (NHM,RID,ADR)</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.03_service_tags.htm">99.03 Service Tags</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.03_service_tags.htm">99.03 Service Tags</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

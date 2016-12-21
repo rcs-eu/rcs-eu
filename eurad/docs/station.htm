@@ -1,0 +1,169 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Station in package EuradSystem</h1>
+    <p><DIV>Class representing railway station</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DocDispStr: String</td>
+        <td class="style1"><DIV>Derived. Text for displaying station in GUI</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsCountryBorder: Boolean</td>
+        <td class="style1"><DIV>If it is country border</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsRailwayBorder: Boolean</td>
+        <td class="style1"><DIV>If it is railway border (connecting two railways)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Name: String</td>
+        <td class="style1"><DIV>Stations name (without localize letters)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NameOrg: String</td>
+        <td class="style1"><DIV>Original station name</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nr: String</td>
+        <td class="style1"><DIV>Statioins number</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetStation(serviceProvider:IEcoServiceProvider; railway:Railway; nr:String; out station:Station):Boolean</td>
+        <td class="style1"><DIV>Methode. Returning station upon its numeber and in which railway. False if station was not found.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetStation(serviceProvider:IEcoServiceProvider; railway:Railway; nr:String):Station</td>
+        <td class="style1"><DIV>
+<DIV>Methode. Returning station upon its numeber and in which railway.&nbsp;Raising error&nbsp;if station was not found.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Country : <a href="country.htm">country</a> 0..1</td>
+        <td class="style1"><DIV>Country in which this station is located</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Distances1 : <a href="stationsdistance.htm">stationsdistance</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>List of StationDistance object to which this station appear as Station1</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Distances2 : <a href="stationsdistance.htm">stationsdistance</a> 0..*</td>
+        <td class="style1"><DIV>List of StationDistance object to which this station appear as Station2</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DistanceTables : <a href="distancetable.htm">distancetable</a> 0..*</td>
+        <td class="style1"><DIV>Distance table on which this station appear</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DistResultSegmentStation_ : <a href="distresultsegment.htm">distresultsegment</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DistResultSegmentStation1_ : <a href="distresultsegment.htm">distresultsegment</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DSWaggonGroupsFromStation : <a href="dswaggongroup.htm">dswaggongroup</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DSWaggonGroupsToStation : <a href="dswaggongroup.htm">dswaggongroup</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OtherSideBorder : <a href="station.htm">station</a> 0..1</td>
+        <td class="style1"><DIV>Station that is on other side of the border if the statino is a border.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Railway : <a href="railway.htm">railway</a> 1</td>
+        <td class="style1"><DIV>Railway to which this station belongs</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SCWaggonStation_ : <a href="scwaggon.htm">scwaggon</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SCWaggonStation1_ : <a href="scwaggon.htm">scwaggon</a> 0..*</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SCWaggonStation2_ : <a href="scwaggon.htm">scwaggon</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StationDistOverStation_ : <a href="stationdistover.htm">stationdistover</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StationDistSearchingStation_ : <a href="stationdistsearching.htm">stationdistsearching</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StationDistSearchingStation1_ : <a href="stationdistsearching.htm">stationdistsearching</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StationStation_ : <a href="station.htm">station</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.00_common.htm">02.00 Common</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.06_locations.htm">02.06 Locations</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.01_executed_railway_transport.htm">07.01 Executed Railway Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_station_distances_searching.htm">Station distances searching</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_station_distances_searching.htm">Station distances searching</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_station_distances_searching.htm">Station distances searching</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

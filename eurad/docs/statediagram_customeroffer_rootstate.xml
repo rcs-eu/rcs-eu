@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_customeroffer_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/fcb24cda-b107-4bac-88d4-06b37eebe468.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">fcb24cda-b107-4bac-88d4-06b37eebe468</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:CustomerOffer.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_customeroffer_rootstate">
+        <doc><![CDATA[<DIV>Offer's state.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{e7eac7a3-b8aa-4863-bcf8-362c8299b0fb}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="customeroffer">
+            <doc><![CDATA[<DIV>Class representing an offer for a customer.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerOffer</attribute>
+            <attribute name="RuntimeName">CustomerOffer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces">ICompanyLastDoc, ISimilarOffer</attribute>
+            <attribute name="id">{c2c05be5-e38d-415a-98cf-e4d7d7062b0b}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">226</attribute>
+        <attribute name="id">40f035a0-7f24-4481-95b3-298916fc96b1</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Sent</attribute>
+        <attribute name="RenderedHeight">48</attribute>
+        <attribute name="x">288</attribute>
+        <attribute name="y">488</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Sent</attribute>
+            <attribute name="RuntimeName">Sent</attribute>
+            <attribute name="id">2c543607-8d73-4bd5-9055-494562d74116</attribute>
+            <link name="Entry">
+              <object type="Activity">
+                <attribute name="Body">self.AcceptIfInternal() 			</attribute>
+              </object>
+            </link>
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d6f0f1ed-0f31-4438-aeeb-ee718c311e7e</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Prepared</attribute>
+                    <attribute name="RuntimeName">Prepared</attribute>
+                    <attribute name="id">8e49fd30-a3ff-47c9-a13b-3f31ba806ef1</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoSend()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">9d960a55-c603-40b8-bad2-6192caaf16ed</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Rejected</attribute>
+                    <attribute name="RuntimeName">Rejected</attribute>
+                    <attribute name="id">8e6b6322-0355-4b2c-81c9-b0b2fdb4f41a</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">fbd6c701-b030-4456-8b4a-da4e8117156a</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Accepted</attribute>
+                    <attribute name="RuntimeName">Accepted</attribute>
+                    <attribute name="id">d569c56e-5d10-4ef4-93ff-0bf89ef09575</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">80a2efcd-09c3-461d-8e53-cac2b18ff32c</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">288</attribute>
+        <attribute name="y">72</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">61</attribute>
+        <attribute name="id">8b1ac5e8-6b0a-430d-8515-4cf0a45a6ee5</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InWork</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">288</attribute>
+        <attribute name="y">176</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InWork</attribute>
+            <attribute name="RuntimeName">InWork</attribute>
+            <attribute name="id">5e9d92b1-7771-4c18-b189-c5418e71cd0b</attribute>
+            <link name="Entry" />
+            <link name="Exit">
+              <object type="Activity">
+                <attribute name="Body"></attribute>
+              </object>
+            </link>
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">5071f197-e349-40c4-a97c-7e2e1a575d8b</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Prepared</attribute>
+                    <attribute name="RuntimeName">Prepared</attribute>
+                    <attribute name="id">8e49fd30-a3ff-47c9-a13b-3f31ba806ef1</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">8c3f42f8-5ae6-4672-b7c9-2ce3ad5b4d7d</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">9ccb7272-5125-483b-92d5-7a13100bf009</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">6039ee7d-53b3-4f74-9b17-588c92d92475</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Prepared</attribute>
+                    <attribute name="RuntimeName">Prepared</attribute>
+                    <attribute name="id">8e49fd30-a3ff-47c9-a13b-3f31ba806ef1</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.CanPrepare() and self.DoPrepare(ensureDelivererContractCostGroups)</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">76db07df-4f60-4325-93e2-f48fc23f3e9d</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Abounded</attribute>
+                    <attribute name="RuntimeName">Abounded</attribute>
+                    <attribute name="id">45d5820a-aeab-4afb-b7a1-4fedeeccf4d4</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">73</attribute>
+        <attribute name="id">9222431e-6bab-49e4-93ca-9810db678d39</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Rejected</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">312</attribute>
+        <attribute name="y">608</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Rejected</attribute>
+            <attribute name="RuntimeName">Rejected</attribute>
+            <attribute name="id">8e6b6322-0355-4b2c-81c9-b0b2fdb4f41a</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">9d960a55-c603-40b8-bad2-6192caaf16ed</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Sent</attribute>
+                    <attribute name="RuntimeName">Sent</attribute>
+                    <attribute name="id">2c543607-8d73-4bd5-9055-494562d74116</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing" />
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">83</attribute>
+        <attribute name="id">980e411a-8dff-4c93-bdf6-1f193a7e3af4</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Abounded</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">536</attribute>
+        <attribute name="y">232</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Abounded</attribute>
+            <attribute name="RuntimeName">Abounded</attribute>
+            <attribute name="id">45d5820a-aeab-4afb-b7a1-4fedeeccf4d4</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">4a7b489f-bc46-4bbb-86e2-7171dec76399</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Prepared</attribute>
+                    <attribute name="RuntimeName">Prepared</attribute>
+                    <attribute name="id">8e49fd30-a3ff-47c9-a13b-3f31ba806ef1</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">76db07df-4f60-4325-93e2-f48fc23f3e9d</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">5e9d92b1-7771-4c18-b189-c5418e71cd0b</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">b290a28d-c521-4499-9d78-93532d5f8f18</attribute>
+                <attribute name="Guard">OCL: self.CustomerOrders-&gt;isEmpty or (self.CustomerOrders-&gt;select(RootState &lt;&gt; 'Abounded')-&gt;select(RootState &lt;&gt; 'Rejected')-&gt;isEmpty)</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Accepted</attribute>
+                    <attribute name="RuntimeName">Accepted</attribute>
+                    <attribute name="id">d569c56e-5d10-4ef4-93ff-0bf89ef09575</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing" />
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">76</attribute>
+        <attribute name="id">a23d2ae5-8130-4c7d-8ad6-16d795d42cdc</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Prepared</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">288</attribute>
+        <attribute name="y">360</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Prepared</attribute>
+            <attribute name="RuntimeName">Prepared</attribute>
+            <attribute name="id">8e49fd30-a3ff-47c9-a13b-3f31ba806ef1</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">6039ee7d-53b3-4f74-9b17-588c92d92475</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">5e9d92b1-7771-4c18-b189-c5418e71cd0b</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.CanPrepare() and self.DoPrepare(ensureDelivererContractCostGroups)</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">4a7b489f-bc46-4bbb-86e2-7171dec76399</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Abounded</attribute>
+                    <attribute name="RuntimeName">Abounded</attribute>
+                    <attribute name="id">45d5820a-aeab-4afb-b7a1-4fedeeccf4d4</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">5071f197-e349-40c4-a97c-7e2e1a575d8b</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">5e9d92b1-7771-4c18-b189-c5418e71cd0b</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d6f0f1ed-0f31-4438-aeeb-ee718c311e7e</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Sent</attribute>
+                    <attribute name="RuntimeName">Sent</attribute>
+                    <attribute name="id">2c543607-8d73-4bd5-9055-494562d74116</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoSend()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">77</attribute>
+        <attribute name="id">b2f32134-11eb-437b-9343-d626fc785684</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Accepted</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">544</attribute>
+        <attribute name="y">488</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Accepted</attribute>
+            <attribute name="RuntimeName">Accepted</attribute>
+            <attribute name="id">d569c56e-5d10-4ef4-93ff-0bf89ef09575</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">fbd6c701-b030-4456-8b4a-da4e8117156a</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Sent</attribute>
+                    <attribute name="RuntimeName">Sent</attribute>
+                    <attribute name="id">2c543607-8d73-4bd5-9055-494562d74116</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">b290a28d-c521-4499-9d78-93532d5f8f18</attribute>
+                <attribute name="Guard">OCL: self.CustomerOrders-&gt;isEmpty or (self.CustomerOrders-&gt;select(RootState &lt;&gt; 'Abounded')-&gt;select(RootState &lt;&gt; 'Rejected')-&gt;isEmpty)</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Abounded</attribute>
+                    <attribute name="RuntimeName">Abounded</attribute>
+                    <attribute name="id">45d5820a-aeab-4afb-b7a1-4fedeeccf4d4</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

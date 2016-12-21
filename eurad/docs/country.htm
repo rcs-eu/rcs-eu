@@ -1,0 +1,119 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Country in package EuradSystem</h1>
+    <p><DIV>Abstract class representing a country.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Code: String</td>
+        <td class="style1"><DIV>Country's code.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Iso2: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Country's iso2 code.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Iso3: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Country's iso3 <SPAN class=res_phr_translation>code.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Name: String</td>
+        <td class="style1"><DIV>Country's name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetCountry(serviceProvider:IEcoServiceProvider; code:String; out country:Country):Boolean</td>
+        <td class="style1"><DIV>Method. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if a country with </SPAN><SPAN style="FONT-STYLE: italic">code </SPAN><SPAN>exists in a system and sets this country to a </SPAN><SPAN style="FONT-STYLE: italic">country </SPAN><SPAN>parameter. Otherwise returns </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>&nbsp;and sets </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to a </SPAN><SPAN style="FONT-STYLE: italic">country </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetCountry(serviceProvider:IEcoServiceProvider; code:String):Country</td>
+        <td class="style1"><DIV>Method. Gets a country with a <SPAN style="FONT-STYLE: italic">code</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">BankAccountCountry_ : <a href="bankaccount.htm">bankaccount</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerSubOfferCountry_ : <a href="cargo.htm">cargo</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerSubOfferCountry1_ : <a href="cargo.htm">cargo</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DSShipGroupCountry_ : <a href="dsshipgroup.htm">dsshipgroup</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DSShipGroupCountry1_ : <a href="dsshipgroup.htm">dsshipgroup</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Harbors : <a href="harbor.htm">harbor</a> 0..*</td>
+        <td class="style1"><DIV>A list of all harbours in this country.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NationalRailway : <a href="railway.htm">railway</a> 0..1</td>
+        <td class="style1"><DIV>Points to a national railway in this country.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SCShipCountry_ : <a href="scship.htm">scship</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SCShipCountry1_ : <a href="scship.htm">scship</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StationDistOverCountrySingle1_ : <a href="stationdistover.htm">stationdistover</a> 0..1</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Stations : <a href="station.htm">station</a> 0..*</td>
+        <td class="style1"><DIV>A list of all stations in this country.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SystemBanks : <a href="systembank.htm">systembank</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.00_common.htm">02.00 Common</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.03_cargo_(nhm_rid_adr).htm">02.03 Cargo (NHM,RID,ADR)</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.06_locations.htm">02.06 Locations</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_station_distances_searching.htm">Station distances searching</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

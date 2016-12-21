@@ -1,0 +1,133 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Invoice in package EuradSystem</h1>
+    <p><DIV>Represents invoice document.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AcceptedPaymentDate: DateTime</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocumentDueDate: DateTime</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocumentNr: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveGrossValue: Decimal</td>
+        <td class="style1"><DIV>Derived. The effective gross value of the invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveNetValue: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived. The effective&nbsp;net value of the invoice.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveVatValue: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived. The effective&nbsp;VAT value of the invoice.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FDocumentType: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GrossValue: Decimal</td>
+        <td class="style1"><DIV>Invoice gross value.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Internal note.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoiceDate: DateTime</td>
+        <td class="style1"><DIV>The date of the invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NetValue: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Invoice&nbsp;net value.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaidOn: DateTime</td>
+        <td class="style1"><DIV>The real&nbsp;day of payment.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PlnDate: DateTime</td>
+        <td class="style1"><DIV>Exchange rates table date used to calculate the PLN amounts of this invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UniqueIndex: String</td>
+        <td class="style1"><DIV>The unique index string&nbsp;of this invoice. <SPAN style="FONT-STYLE: italic">There is a unique index in the database for this field.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatValue: Decimal</td>
+        <td class="style1"><DIV>Invoice total VAT value.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DocumentType : <a href="mlstring.htm">mlstring</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionInvoice : <a href="navisioninvoice.htm">navisioninvoice</a> 0..1</td>
+        <td class="style1"><DIV>Points to the document reflecting this document in the Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayableInvoice : <a href="payableinvoice.htm">payableinvoice</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Payee : <a href="contractor.htm">contractor</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Payer : <a href="contractor.htm">contractor</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Specification : <a href="invoicespecification.htm">invoicespecification</a> 1</td>
+        <td class="style1"><DIV>The specification of the invoice.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.05_ininvoice.htm">12.05 InInvoice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

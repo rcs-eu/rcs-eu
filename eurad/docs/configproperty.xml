@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="configproperty">
+    <doc><![CDATA[<DIV>Abstract.&nbsp;Represents single configuration property.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">ConfigProperty</attribute>
+    <attribute name="RuntimeName">ConfigProperty</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{fcb32e39-c477-49b9-b02d-5743e95db6c6}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractroot">
+        <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractRoot</attribute>
+        <attribute name="RuntimeName">AbstractRoot</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="userproperty">
+        <doc><![CDATA[<DIV>User configuration property.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">UserProperty</attribute>
+        <attribute name="RuntimeName">UserProperty</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{d314fab1-1eb1-466d-9989-24cdd9b88184}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="globalproperty">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GlobalProperty</attribute>
+        <attribute name="RuntimeName">GlobalProperty</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">b8c28a2c-078b-4fd4-973d-b55734f69bf8</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="systemproperty">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SystemProperty</attribute>
+        <attribute name="RuntimeName">SystemProperty</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">d52350ed-1bb9-4849-b993-8fd1dc98cc6a</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">String.Format('{0} | {1}', self.group, self.caption)</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Caption of the configuration property.</DIV>]]></doc>
+        <modlrstring>Caption: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Caption</attribute>
+        <attribute name="RuntimeName">Caption</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{68a2dbd5-245d-4a36-a993-10185159ef1a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Unique&nbsp;identificator of the configuration property.</DIV>]]></doc>
+        <modlrstring>Id: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Id</attribute>
+        <attribute name="RuntimeName">Id</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{80f87393-c1f7-4c96-a45e-ecabc3491964}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>A&nbsp;name of the group of configuration&nbsp;properties this property belongs to.</DIV>]]></doc>
+        <modlrstring>Group: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Group</attribute>
+        <attribute name="RuntimeName">Group</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{a1d547bd-3f56-45b4-9884-0c9a6129c151}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>A detailed&nbsp;description of the configuration property.</DIV>]]></doc>
+        <modlrstring>Description: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Description</attribute>
+        <attribute name="RuntimeName">Description</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{d6114987-6594-485c-8c13-f3723e2072ad}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">2000000</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">StringAsMemo</attribute>
+            <attribute name="Tag">Eco.PMapper</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">''</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="configproperty">
+        <doc><![CDATA[<DIV>A list of configuration&nbsp;properties with changed values (values different from the configuration&nbsp;property's DefaultValue).</DIV>]]></doc>
+        <modlrstring>ChangedProperties (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ChangedProperties</attribute>
+        <attribute name="RuntimeName">ChangedProperties</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ChangedProperties</attribute>
+        <attribute name="id">{b26495df-ea41-4613-8fb8-0b1b4d1c774f}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PropertyValue</attribute>
+            <attribute name="RuntimeName">PropertyValue</attribute>
+            <attribute name="EffectiveName">PropertyValue</attribute>
+            <attribute name="id">{5c439f20-a5be-4c00-aaae-a837c7e59252}</attribute>
+            <link name="Class">
+              <object type="Class" href="propertyvalue">
+                <doc><![CDATA[<DIV>Represents&nbsp;a changed&nbsp;value of a configuration property. </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PropertyValue</attribute>
+                <attribute name="RuntimeName">PropertyValue</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4967a2ce-1f20-4339-96b4-43da2735e346}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="configproperty">
+            <doc><![CDATA[<DIV>Abstract.&nbsp;Represents single configuration property.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ConfigProperty</attribute>
+            <attribute name="RuntimeName">ConfigProperty</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{fcb32e39-c477-49b9-b02d-5743e95db6c6}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="configuration">
+            <doc><![CDATA[<DIV>A list of&nbsp;configurations <SPAN>this configuration property belongs to.</SPAN></DIV>]]></doc>
+            <modlrstring>Configuration (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Configuration</attribute>
+            <attribute name="RuntimeName">Configuration</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Configuration</attribute>
+            <attribute name="id">{48075c12-53f4-4eb7-a631-32db47868364}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="configuration">
+                <doc><![CDATA[<DIV>Abstract class representing a set of configuration properties.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Configuration</attribute>
+                <attribute name="RuntimeName">Configuration</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{bba6a94a-fe03-4765-a1bf-6290a0a0d5f6}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="configproperty">
+        <doc><![CDATA[<DIV>Derived. The configuration&nbsp;properties of this configuration.</DIV>]]></doc>
+        <modlrstring>AllProperties (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AllProperties</attribute>
+        <attribute name="RuntimeName">AllProperties</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AllProperties</attribute>
+        <attribute name="id">{28e30453-cc74-4a89-9be3-0f999b8faf53}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ConfigurationConfigProperty</attribute>
+            <attribute name="RuntimeName">ConfigurationConfigProperty</attribute>
+            <attribute name="EffectiveName">ConfigurationConfigProperty</attribute>
+            <attribute name="id">{78275e0d-106a-40a9-b2eb-e25e0f85711e}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="configproperty">
+            <doc><![CDATA[<DIV>Abstract.&nbsp;Represents single configuration property.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ConfigProperty</attribute>
+            <attribute name="RuntimeName">ConfigProperty</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{fcb32e39-c477-49b9-b02d-5743e95db6c6}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="configuration">
+            <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+            <modlrstring>ConfigurationConfigProperty_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ConfigurationConfigProperty_</attribute>
+            <attribute name="RuntimeName">ConfigurationConfigProperty_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ConfigurationConfigProperty_</attribute>
+            <attribute name="id">{d19b89ab-0e5c-4028-8939-bea2598ccbef}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="configuration">
+                <doc><![CDATA[<DIV>Abstract class representing a set of configuration properties.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Configuration</attribute>
+                <attribute name="RuntimeName">Configuration</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{bba6a94a-fe03-4765-a1bf-6290a0a0d5f6}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">ConfigProperty.emptyList</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="configproperty">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>DefaultForProperty (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DefaultForProperty</attribute>
+        <attribute name="RuntimeName">DefaultForProperty</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">DefaultForProperty</attribute>
+        <attribute name="id">92570a9e-b1e7-44ff-9e30-9a18609f0a21</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ConfigPropertyDefaultForPropertyAnyValueDefaultValue</attribute>
+            <attribute name="EffectiveName">ConfigPropertyDefaultForPropertyAnyValueDefaultValue</attribute>
+            <attribute name="id">4721c347-d373-4972-ba2d-58fd96b5cbe2</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="configproperty">
+            <doc><![CDATA[<DIV>Abstract.&nbsp;Represents single configuration property.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ConfigProperty</attribute>
+            <attribute name="RuntimeName">ConfigProperty</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{fcb32e39-c477-49b9-b02d-5743e95db6c6}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="anyvalue">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>DefaultValue (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DefaultValue</attribute>
+            <attribute name="RuntimeName">DefaultValue</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DefaultValue</attribute>
+            <attribute name="id">1c161670-b0a9-4f0c-821f-59f9892469a8</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="anyvalue">
+                <doc><![CDATA[<DIV>Abstract class representing&nbsp;user configuration's property value.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AnyValue</attribute>
+                <attribute name="RuntimeName">AnyValue</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{5de878e7-b5e3-476d-bb82-f3db20788b94}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">46b94be8-1081-4587-80ae-b7e58cbcfa8d</attribute>
+        <attribute name="x">-52</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">8213050a-427e-4f8e-ad56-f063cd0ade10</attribute>
+        <attribute name="x">-58,5</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">True</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">e5b1d2d0-1dd1-49ee-a313-cc6d151abe47</attribute>
+        <attribute name="x">-62</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">8</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">True</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="configproperty">
+        <attribute name="RenderedWidth">138</attribute>
+        <attribute name="id">0d667781-05c6-44dd-93ac-e82450a48356</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ConfigProperty</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">680</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{fcb32e39-c477-49b9-b02d-5743e95db6c6}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.04_configuration">
+            <doc><![CDATA[<DIV>Configuration properties diagram.</DIV>]]></doc>
+            <modlrdiagram>diagramimages/dcb9fc02-9bf5-4cdc-babd-e4b6cfb065b2.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">dcb9fc02-9bf5-4cdc-babd-e4b6cfb065b2</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.04 Configuration</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.04 Configuration</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

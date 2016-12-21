@@ -1,0 +1,69 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">OrderedService in package EuradSystem</h1>
+    <p><DIV>Class representing a service from an customer's order.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">itemsCount: Integer</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateOutInvoiceAmounts():IDictionary&lt;ExecutedItem,IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;&gt;</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Cargo : <a href="cargo.htm">cargo</a> 1</td>
+        <td class="style1"><DIV>Points to a cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Items : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>A list of executed items which are registered in this service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MasterOrderedService : <a href="orderedservice.htm">orderedservice</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferService : <a href="offeredservice.htm">offeredservice</a> 0..1</td>
+        <td class="style1"><DIV>Points to a service from an offer upon which this service was created.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Order : <a href="customerorder.htm">customerorder</a> 1</td>
+        <td class="style1"><DIV>Points to a customer's order to which this service belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderedServicesMasterOrderedService : <a href="orderedservice.htm">orderedservice</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">QList : <a href="qlist.htm">qlist</a> 1</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Service : <a href="offeredservice.htm">offeredservice</a> 1</td>
+        <td class="style1"><DIV>Used to have all single prices and costs for this service.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

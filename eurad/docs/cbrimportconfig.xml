@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="cbrimportconfig">
+    <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">CbrImportConfig</attribute>
+    <attribute name="RuntimeName">CbrImportConfig</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Gets internal company unit from&nbsp;<SPAN style="FONT-STYLE: italic">SysUnits</SPAN>&nbsp;list with <SPAN style="FONT-STYLE: italic">sysUnitCode</SPAN><SPAN>. If company unit was not found then it throws </SPAN><SPAN style="FONT-STYLE: italic">ApplicationException </SPAN><SPAN>with a message "Company unit for this code not found!".</SPAN></DIV>]]></doc>
+        <modlrstring>GetSysCompanyFor(sysUnitCode:String):SysCompanyUnit</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetSysCompanyFor</attribute>
+        <attribute name="RuntimeName">GetSysCompanyFor</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{643ed52a-4a1a-41e5-8210-b1fa658969ed}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">sysUnitCode</attribute>
+            <attribute name="RuntimeName">sysUnitCode</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Gets&nbsp;VAT from <SPAN style="FONT-STYLE: italic">VatCodes </SPAN><SPAN>list with </SPAN><SPAN style="FONT-STYLE: italic">vatCode</SPAN><SPAN>. Returns </SPAN><SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if&nbsp;VAT was found and sets this found&nbsp;VAT to </SPAN><SPAN style="FONT-STYLE: italic">vat </SPAN><SPAN>parameter. Returns </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN> if&nbsp;VAT was not found and sets <SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">vat </SPAN><SPAN>parameter.</SPAN></DIV>]]></doc>
+        <modlrstring>GetVatFor(vatCode:String; out vat:Vat):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetVatFor</attribute>
+        <attribute name="RuntimeName">GetVatFor</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b22747a9-1475-45a7-89cb-8500faa5cc09}_EMDUPEID_0</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">vatCode</attribute>
+            <attribute name="RuntimeName">vatCode</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">vat</attribute>
+            <attribute name="RuntimeName">vat</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vat</attribute>
+                <attribute name="RuntimeName">Vat</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Gets an object of <SPAN style="FONT-STYLE: italic">Vat </SPAN><SPAN>class from </SPAN><SPAN style="FONT-STYLE: italic">VatCodes </SPAN><SPAN>list with </SPAN><SPAN style="FONT-STYLE: italic">vatCode</SPAN><SPAN>. If&nbsp;VAT was not found then it throws </SPAN><SPAN style="FONT-STYLE: italic">ApplicationException </SPAN><SPAN>with a message "VAT seting for this code not found!".</SPAN></DIV>]]></doc>
+        <modlrstring>GetVatFor(vatCode:String):Vat</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetVatFor</attribute>
+        <attribute name="RuntimeName">GetVatFor</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b22747a9-1475-45a7-89cb-8500faa5cc09}_EMDUPEID_1</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vat</attribute>
+                <attribute name="RuntimeName">Vat</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">vatCode</attribute>
+            <attribute name="RuntimeName">vatCode</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Static method. Gets an object of this class.</DIV>]]></doc>
+        <modlrstring>GetConfig(serviceProvider:IEcoServiceProvider):CbrImportConfig</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetConfig</attribute>
+        <attribute name="RuntimeName">GetConfig</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{d5180c5e-b15d-41c7-9103-5cf16300df75}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">True</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CbrImportConfig</attribute>
+                <attribute name="RuntimeName">CbrImportConfig</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">serviceProvider</attribute>
+            <attribute name="RuntimeName">serviceProvider</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IEcoServiceProvider</attribute>
+                <attribute name="RuntimeName">IEcoServiceProvider</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method. Gets internal company unit from&nbsp;<SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">SysUnits</SPAN>&nbsp;list with <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">sysUnitCode</SPAN>. Returns&nbsp;<SPAN style="FONT-WEIGHT: bold">true</SPAN>&nbsp;if company unit was&nbsp;found and sets this found company unit to&nbsp;<SPAN style="FONT-STYLE: italic">unit</SPAN>&nbsp;parameter. Returns <SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>if company unit was not found and sets </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">unit </SPAN><SPAN>parameter.</SPAN></DIV></DIV>]]></doc>
+        <modlrstring>GetSysCompanyFor(sysUnitCode:String; out unit:SysCompanyUnit):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetSysCompanyFor</attribute>
+        <attribute name="RuntimeName">GetSysCompanyFor</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">02318828-1b75-4f41-ad8d-77da9a0009a3</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">sysUnitCode</attribute>
+            <attribute name="RuntimeName">sysUnitCode</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">unit</attribute>
+            <attribute name="RuntimeName">unit</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="cbrimportconfig">
+        <doc><![CDATA[<DIV>Points to a configuration in which this object is used.</DIV>]]></doc>
+        <modlrstring>CbrImportConfig (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CbrImportConfig</attribute>
+        <attribute name="RuntimeName">CbrImportConfig</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CbrImportConfig</attribute>
+        <attribute name="id">{136f1d98-e473-4927-a2ce-e74a2b3163dd}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrSysUnitsCbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrSysUnitsCbrImportConfig</attribute>
+            <attribute name="EffectiveName">CbrSysUnitsCbrImportConfig</attribute>
+            <attribute name="id">{06bbf76a-79cb-425e-95e7-7af2e8362722}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="cbrimportconfig">
+            <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrImportConfig</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cbrsysunit">
+            <doc><![CDATA[<DIV>A list of internal company units configured in this configuration.</DIV>]]></doc>
+            <modlrstring>SysUnits (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUnits</attribute>
+            <attribute name="RuntimeName">SysUnits</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysUnits</attribute>
+            <attribute name="id">{9e14896f-f4e5-477b-9dfa-70599bc81957}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="cbrsysunit">
+                <doc><![CDATA[<DIV>Class representing an object which translates a code of a&nbsp;company unit from CBR file to an object of <SPAN style="FONT-STYLE: italic">SysCompanyUnit </SPAN><SPAN>class.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CbrSysUnit</attribute>
+                <attribute name="RuntimeName">CbrSysUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4e0fd2c6-0821-430f-8b70-fd87216dc77d}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="cbrimportconfig">
+        <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+        <modlrstring>CbrImportConfigSysUserGroup_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CbrImportConfigSysUserGroup_</attribute>
+        <attribute name="RuntimeName">CbrImportConfigSysUserGroup_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CbrImportConfigSysUserGroup_</attribute>
+        <attribute name="id">{b332298b-112d-4028-bb34-72239aa1c697}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfigSysUserGroup</attribute>
+            <attribute name="RuntimeName">CbrImportConfigSysUserGroup</attribute>
+            <attribute name="EffectiveName">CbrImportConfigSysUserGroup</attribute>
+            <attribute name="id">{11b7e5a5-76ae-4a2f-8238-9425addcfe6d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="cbrimportconfig">
+            <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrImportConfig</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysusergroup">
+            <doc><![CDATA[<DIV>Points to a group of users for which a message is sent when import finishes.</DIV>]]></doc>
+            <modlrstring>MessageToGroup (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageToGroup</attribute>
+            <attribute name="RuntimeName">MessageToGroup</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">MessageToGroup</attribute>
+            <attribute name="id">{3d40e746-1e36-4c08-b964-717961818aef}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysusergroup">
+                <doc><![CDATA[<DIV>CLass representing user groups for automatic messiging</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUserGroup</attribute>
+                <attribute name="RuntimeName">SysUserGroup</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="cbrimportconfig">
+        <doc><![CDATA[<DIV>
+<DIV>Points to a configuration in which this object is used.</DIV></DIV>]]></doc>
+        <modlrstring>CbrImportConfig (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CbrImportConfig</attribute>
+        <attribute name="RuntimeName">CbrImportConfig</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CbrImportConfig</attribute>
+        <attribute name="id">{5712ecd4-9357-4136-915f-b4030ddfe864}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrVatCodesCbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrVatCodesCbrImportConfig</attribute>
+            <attribute name="EffectiveName">CbrVatCodesCbrImportConfig</attribute>
+            <attribute name="id">{c8350cdf-9698-4a2c-976d-c7e7091b476c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="cbrimportconfig">
+            <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrImportConfig</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cbrvatcode">
+            <doc><![CDATA[<DIV>A list of VAT codes configured in this configuration.</DIV>]]></doc>
+            <modlrstring>VatCodes (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">VatCodes</attribute>
+            <attribute name="RuntimeName">VatCodes</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">VatCodes</attribute>
+            <attribute name="id">{18a5ace7-f50a-4a7d-938b-a92a2766201a}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="cbrvatcode">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing an object which translates a code of&nbsp;VAT from CBR file to an object of <SPAN style="FONT-STYLE: italic">Vat </SPAN>class.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CbrVatCode</attribute>
+                <attribute name="RuntimeName">CbrVatCode</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a06c6fc8-74dc-4639-bd65-81accc26d857}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="cbrimportconfig">
+        <doc><![CDATA[<DIV>
+<DIV>Owa way association.</DIV></DIV>]]></doc>
+        <modlrstring>CbrImportConfigDeliverer_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CbrImportConfigDeliverer_</attribute>
+        <attribute name="RuntimeName">CbrImportConfigDeliverer_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CbrImportConfigDeliverer_</attribute>
+        <attribute name="id">{6dea0bb4-a145-40a7-b46d-ace087d4c028}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfigDeliverer</attribute>
+            <attribute name="RuntimeName">CbrImportConfigDeliverer</attribute>
+            <attribute name="EffectiveName">CbrImportConfigDeliverer</attribute>
+            <attribute name="id">{fe972851-9f3f-4db5-8245-015bf7c93278}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="cbrimportconfig">
+            <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrImportConfig</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="deliverer">
+            <doc><![CDATA[<DIV>A deliverer configured in this configuration&nbsp;from whom&nbsp;data&nbsp;is received.</DIV>]]></doc>
+            <modlrstring>Deliverer (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Deliverer</attribute>
+            <attribute name="RuntimeName">Deliverer</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Deliverer</attribute>
+            <attribute name="id">{4c396337-047f-4088-8997-778c8b39ee6b}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="deliverer">
+                <doc><![CDATA[<DIV>Represents a contractor which is a Deliverer. </DIV>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt">Note: </SPAN><SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt">Deliverer should have all deliverer related properties (Ubezpieczenia, konta bankowe, ...). These properties are now improperly located in Company.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Deliverer</attribute>
+                <attribute name="RuntimeName">Deliverer</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d1a96093-feec-4669-b41d-861ff44f9690}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="cbrimportconfig">
+        <doc><![CDATA[<DIV>
+<DIV>Points to the&nbsp;configuration of this import engine.</DIV></DIV>]]></doc>
+        <modlrstring>Config (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Config</attribute>
+        <attribute name="RuntimeName">Config</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Config</attribute>
+        <attribute name="id">0e1be7c9-74a2-442c-8b2d-f6b74907b3f1</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">InInvoiceCbrImportInInvoiceCbrImportsCbrImportConfigConfig</attribute>
+            <attribute name="EffectiveName">InInvoiceCbrImportInInvoiceCbrImportsCbrImportConfigConfig</attribute>
+            <attribute name="id">5660cece-0fa6-4eec-88bc-d9ccbb200b9d</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="cbrimportconfig">
+            <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrImportConfig</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="ininvoicecbrimport">
+            <doc><![CDATA[<DIV>A list of import plugins&nbsp;on which this configuration is used.</DIV>]]></doc>
+            <modlrstring>InInvoiceCbrImports (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">InInvoiceCbrImports</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">InInvoiceCbrImports</attribute>
+            <attribute name="id">7479b260-bc0a-4f0f-9504-e05ad900bfb1</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="ininvoicecbrimport">
+                <doc><![CDATA[<DIV>
+<DIV>Represents configured import engine which&nbsp;is capable of importing&nbsp;CBR invoices&nbsp;data from&nbsp;CBR specific&nbsp;files.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">InInvoiceCbrImport</attribute>
+                <attribute name="RuntimeName">InInvoiceCbrImport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">81de9e9a-6482-43ed-8c76-27abaaa07703</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="cbrimportconfig">
+        <attribute name="RenderedWidth">127</attribute>
+        <attribute name="id">36141863-13f2-466d-b5b8-db30192acdaf</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CbrImportConfig</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">336</attribute>
+        <attribute name="y">32</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.03_cbrimportconfig">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/08c94708-d2ea-4011-a5f9-48b2e45def53.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">08c94708-d2ea-4011-a5f9-48b2e45def53</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.03 CbrImportConfig</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.03 CbrImportConfig</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="cbrimportconfig">
+        <attribute name="RenderedWidth">127</attribute>
+        <attribute name="id">5dd9407b-087f-4502-8b22-c077a388b159</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CbrImportConfig</attribute>
+        <attribute name="RenderedHeight">85</attribute>
+        <attribute name="x">432</attribute>
+        <attribute name="y">512</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.13_imports">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/82af5431-3937-4322-bdeb-f1edaceeb5a6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">82af5431-3937-4322-bdeb-f1edaceeb5a6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.13 Imports</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.13 Imports</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

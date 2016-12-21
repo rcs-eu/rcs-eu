@@ -1,0 +1,135 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">SingleCost in package EuradSystem</h1>
+    <p><DIV>Class representing cost per measure unit</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CostSourceType: CostSourceType</td>
+        <td class="style1"><DIV>Type of source of the cost:</DIV>
+<DIV>&nbsp; NotSet - not set;</DIV>
+<DIV>&nbsp; Deliverer - only deliverer is known for this cost;</DIV>
+<DIV>&nbsp; Contract - cost comes from a contract;</DIV>
+<DIV>&nbsp; Request - cost comes from a request from deliverer;</DIV>
+<DIV>&nbsp; Tariff - cost is calculated upon a tariff (not always automatecaly)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DisplayString: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Derived. String representing cost in GUI</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasCostValues: Boolean</td>
+        <td class="style1"><DIV>Derived. If list of cost values is not empty</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasUnknownValue: Boolean</td>
+        <td class="style1"><DIV>Defining if cost is uknown - derscribed with field ValueText</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInternal: Boolean</td>
+        <td class="style1"><DIV>Derived. If cost is from/for internal deliverer</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ShortNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Short - one line note</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValueText: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>This is text of the cost if cost have no values but only described with this entry</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddCostWithCondition(condition:PriceCodition)</td>
+        <td class="style1"><DIV>Methode.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreatePriceRequest(deliverer:Deliverer; requestNr:String; cargo:Cargo; cgd:CostGroupDetail):PriceRequest</td>
+        <td class="style1"><DIV>
+<DIV>Methode. Creates price request upon this cost.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AmountRounding : <a href="amountrounding.htm">amountrounding</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostList : <a href="costlist.htm">costlist</a> 1</td>
+        <td class="style1"><DIV>Points to the CostList to which this cost belongs</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostSource : <a href="costsourceabstr.htm">costsourceabstr</a> 0..1</td>
+        <td class="style1"><DIV>Points to CostSource of the cost</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostType : <a href="singlecosttype.htm">singlecosttype</a> 1</td>
+        <td class="style1"><DIV>CostType of the cost</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostValues : <a href="costvalue.htm">costvalue</a> 0..*</td>
+        <td class="style1"><DIV>List of the cost values</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Curr : <a href="curr.htm">curr</a> 1</td>
+        <td class="style1"><DIV>Points to currecny of the cost</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemSingleCost_ : <a href="executeditem.htm">executeditem</a> 0..1</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOutInvoiceAmount : <a href="outinvoiceamount.htm">outinvoiceamount</a> 0..1</td>
+        <td class="style1"><DIV>Points to OutInvoiceAmounts in which this cost was use</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOutInvoiceAmounts : <a href="outinvoiceamount.htm">outinvoiceamount</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MUnit : <a href="munit.htm">munit</a> 1</td>
+        <td class="style1"><DIV>Points to measure unit of the cost</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MUnitRounding : <a href="munitrounding.htm">munitrounding</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedServicePrice : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..1</td>
+        <td class="style1"><DIV>Points to OfferedServicePrice to which this cost belongs</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceRequestSegs : <a href="pricerequestseg.htm">pricerequestseg</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.04_roundings.htm">00.04 Roundings</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_10.00_pricerequest.htm">10.00 PriceRequest</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

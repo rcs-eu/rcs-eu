@@ -1,0 +1,147 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">AbstractCargoHolder in package EuradSystem</h1>
+    <p><DIV>Abstract class representing a holder for cargo, i.e. waggon holder, truck holder, ship holder&nbsp;etc.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CargoHolderId: String</td>
+        <td class="style1"><DIV>Derived. Id of a cargo holder:</DIV>
+<DIV>
+<DIV>- waggon's number for CargoHolderWaggon class,</DIV></DIV>
+<DIV>- registration plate's number for CargoHolderTruck class,</DIV>
+<DIV>- ship's name for CargoHolderShip class,</DIV>
+<DIV>-&nbsp;container's number for CargoHolderUti class,</DIV>
+<DIV>- storage unit's name for CargoHolderStorageUnit.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoHolderType: String</td>
+        <td class="style1"><DIV>Derived. Type of a cargo holder:</DIV>
+<DIV>- "Wagon" for CargoHolderWaggon class,</DIV>
+<DIV>- "Samochód" for CargoHolderTruck class,</DIV>
+<DIV>- "Statek" for CargoHolderShip class,</DIV>
+<DIV>- "UTI" for CargoHolderUti class,</DIV>
+<DIV>- "Magazyn" for CargoHolderStorageUnit class.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealWeight: Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():AbstractCargoHolder</td>
+        <td class="style1"><DIV>Method. Clones this object and returns cloned object.&nbsp;</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(cargoHolder:AbstractCargoHolder)</td>
+        <td class="style1"><DIV>Method. Copies information from <SPAN style="FONT-STYLE: italic">cargoHolder </SPAN><SPAN>object to this object.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DeleteItem()</td>
+        <td class="style1"><DIV>Method. Deletes an object connected with this object.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsSameCargoHolder(cargoHolder:AbstractCargoHolder):Boolean</td>
+        <td class="style1"><DIV>Method. Compares <SPAN style="FONT-STYLE: italic">cargoHolder </SPAN><SPAN>with this object for similarity. Returns </SPAN><SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if objects have the same properties, returns </SPAN><SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>if objects have not the same properties.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemAbstractCargoHolder_ : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GosCargoHolderAbstractCargoHolder_ : <a href="goscargoholder.htm">goscargoholder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OtherServiceCargoHolderAbstractCargoHolder_ : <a href="otherservicecargoholder.htm">otherservicecargoholder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealCargoHolder : <a href="abstractroot.htm">abstractroot</a> 1</td>
+        <td class="style1"><DIV>Derived. It points&nbsp;to an object which is a real holder of a cargo, i.e. waggon, truck, ship etc.:</DIV>
+<DIV>- waggon for CargoHolderWaggon class,</DIV>
+<DIV>- truck for CargoHolderTruck class,</DIV>
+<DIV>- ship for CargoHolderShip class,</DIV>
+<DIV>- container for CargoHolderUti class,</DIV>
+<DIV>- storage unit for CargoHolderStorageUnit.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ReloadUnitAbstractCargoHolder_ : <a href="reloadunit.htm">reloadunit</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceAcCargoHolderAbstractCargoHolder_ : <a href="serviceaccargoholder.htm">serviceaccargoholder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceTPStorageAbstractCargoHolder_ : <a href="servicetpstorage.htm">servicetpstorage</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemGosAbstractCargoHolder_ : <a href="specitemgos.htm">specitemgos</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemOtherCargoHolders : <a href="specitemother.htm">specitemother</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemOtherOneCargoHolder : <a href="specitemother.htm">specitemother</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Utis : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.04_executed_ac_servce.htm">07.04 Executed AC Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.06_executed_tp_servce.htm">07.06 Executed TP Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.07_executed_other.htm">07.07 Executed Other</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.08_executed_proxy.htm">07.08 Executed Proxy</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.10_cargo_holders.htm">07.10 Cargo Holders</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

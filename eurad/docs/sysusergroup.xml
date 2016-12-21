@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="sysusergroup">
+    <doc><![CDATA[<DIV>CLass representing user groups for automatic messiging</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">SysUserGroup</attribute>
+    <attribute name="RuntimeName">SysUserGroup</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Name of the group</DIV>]]></doc>
+        <modlrstring>Name: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Name</attribute>
+        <attribute name="RuntimeName">Name</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{0047d810-6358-47fe-b237-cb6a17c52f50}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">30</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="sysusergroup">
+        <doc><![CDATA[<DIV>Points to a group of users for which a message is sent when import finishes.</DIV>]]></doc>
+        <modlrstring>MessageToGroup (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MessageToGroup</attribute>
+        <attribute name="RuntimeName">MessageToGroup</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">MessageToGroup</attribute>
+        <attribute name="id">{3d40e746-1e36-4c08-b964-717961818aef}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfigSysUserGroup</attribute>
+            <attribute name="RuntimeName">CbrImportConfigSysUserGroup</attribute>
+            <attribute name="EffectiveName">CbrImportConfigSysUserGroup</attribute>
+            <attribute name="id">{11b7e5a5-76ae-4a2f-8238-9425addcfe6d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="sysusergroup">
+            <doc><![CDATA[<DIV>CLass representing user groups for automatic messiging</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUserGroup</attribute>
+            <attribute name="RuntimeName">SysUserGroup</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cbrimportconfig">
+            <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+            <modlrstring>CbrImportConfigSysUserGroup_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfigSysUserGroup_</attribute>
+            <attribute name="RuntimeName">CbrImportConfigSysUserGroup_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CbrImportConfigSysUserGroup_</attribute>
+            <attribute name="id">{b332298b-112d-4028-bb34-72239aa1c697}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="cbrimportconfig">
+                <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CbrImportConfig</attribute>
+                <attribute name="RuntimeName">CbrImportConfig</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="sysusergroup">
+        <doc><![CDATA[<DIV>Group associated with this configuration</DIV>]]></doc>
+        <modlrstring>SysUserGroup (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SysUserGroup</attribute>
+        <attribute name="RuntimeName">SysUserGroup</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">SysUserGroup</attribute>
+        <attribute name="id">{c3b411a1-fae1-46e2-a703-42b6f3283036}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUserGroupConfigSysUserGroup</attribute>
+            <attribute name="RuntimeName">SysUserGroupConfigSysUserGroup</attribute>
+            <attribute name="EffectiveName">SysUserGroupConfigSysUserGroup</attribute>
+            <attribute name="id">{69b2e901-f403-4620-9cb1-da90b878850f}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="sysusergroup">
+            <doc><![CDATA[<DIV>CLass representing user groups for automatic messiging</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUserGroup</attribute>
+            <attribute name="RuntimeName">SysUserGroup</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysusergroupconfig">
+            <doc><![CDATA[<DIV>List of users configuration group</DIV>]]></doc>
+            <modlrstring>SysUserGroupConfig (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUserGroupConfig</attribute>
+            <attribute name="RuntimeName">SysUserGroupConfig</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysUserGroupConfig</attribute>
+            <attribute name="id">{8aa1f824-b228-4323-a970-696b8e20de26}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysusergroupconfig">
+                <doc><![CDATA[<DIV>Class mapping user group to system configuration. Used for messiging system. </DIV>
+<DIV>When a event of a type that this object raise notification (message) is sent to appropreate users associated with this object.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUserGroupConfig</attribute>
+                <attribute name="RuntimeName">SysUserGroupConfig</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{de0b2b88-31aa-47c8-844c-c59c207ac3df}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="sysusergroup">
+        <doc><![CDATA[<DIV>A list of user groups this user belongs to. </DIV>]]></doc>
+        <modlrstring>BelongsToGroups (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">BelongsToGroups</attribute>
+        <attribute name="RuntimeName">BelongsToGroups</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">BelongsToGroups</attribute>
+        <attribute name="id">{5b6eda02-e312-40a6-bf9d-311ea0d7cbeb}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUsersInGroups</attribute>
+            <attribute name="RuntimeName">SysUsersInGroups</attribute>
+            <attribute name="EffectiveName">SysUsersInGroups</attribute>
+            <attribute name="id">{d6100549-170e-4bc2-8f1b-83ac6b16dc9b}</attribute>
+            <link name="Class">
+              <object type="Class" href="sysusersingroups">
+                <doc><![CDATA[<DIV>Association class for linking SysUser and SysUserGroup (see diagram 01.00)</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUsersInGroups</attribute>
+                <attribute name="RuntimeName">SysUsersInGroups</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c6294ff6-feef-484f-b66d-3723b8f0a540}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="sysusergroup">
+            <doc><![CDATA[<DIV>CLass representing user groups for automatic messiging</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUserGroup</attribute>
+            <attribute name="RuntimeName">SysUserGroup</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="sysuser">
+            <doc><![CDATA[<DIV>Users which belongs to this group</DIV>]]></doc>
+            <modlrstring>SysUsers (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysUsers</attribute>
+            <attribute name="RuntimeName">SysUsers</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysUsers</attribute>
+            <attribute name="id">{227a80fd-a1d6-4ba6-ba27-ef663e541952}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="sysuser">
+                <doc><![CDATA[<DIV><SUMMARY />Represents&nbsp;a user of the system.&nbsp; </DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysUser</attribute>
+                <attribute name="RuntimeName">SysUser</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0469cc7f-5155-4220-8957-727b0f7b3a86}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="sysusergroup">
+        <attribute name="RenderedWidth">115</attribute>
+        <attribute name="id">87e3f63c-4249-41ae-b078-9aca96045eb7</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SysUserGroup</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">792</attribute>
+        <attribute name="y">528</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.00_system">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/f194685b-5e46-44b5-b970-0f246770e701.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">f194685b-5e46-44b5-b970-0f246770e701</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.00 System</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.00 System</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="sysusergroup">
+        <attribute name="RenderedWidth">115</attribute>
+        <attribute name="id">9363d32c-7192-4bfd-87ed-7505a85bdf6f</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SysUserGroup</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">872</attribute>
+        <attribute name="y">1232</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.00_system">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/f194685b-5e46-44b5-b970-0f246770e701.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">f194685b-5e46-44b5-b970-0f246770e701</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.00 System</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.00 System</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="sysusergroup">
+        <attribute name="RenderedWidth">115</attribute>
+        <attribute name="id">4e8a1e0a-20da-4ec3-8060-ae8e66aa70e0</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SysUserGroup</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">768</attribute>
+        <attribute name="y">88</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.03_cbrimportconfig">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/08c94708-d2ea-4011-a5f9-48b2e45def53.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">08c94708-d2ea-4011-a5f9-48b2e45def53</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.03 CbrImportConfig</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.03 CbrImportConfig</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="sysusergroup">
+        <attribute name="RenderedWidth">115</attribute>
+        <attribute name="id">66f34f55-c89b-48b2-9bde-19f4e0c1c0b2</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">SysUserGroup</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">776</attribute>
+        <attribute name="y">568</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{a7e064c5-2c17-45ff-b865-345f158e25d2}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.13_imports">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/82af5431-3937-4322-bdeb-f1edaceeb5a6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">82af5431-3937-4322-bdeb-f1edaceeb5a6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.13 Imports</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.13 Imports</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

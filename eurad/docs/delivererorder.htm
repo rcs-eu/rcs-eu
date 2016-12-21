@@ -1,0 +1,184 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">DelivererOrder in package EuradSystem</h1>
+    <p><DIV>Represents a document which places an order with&nbsp;a deliverer of services.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CanEdit: Boolean</td>
+        <td class="style1"><DIV>Indicates whether this order can be edited.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanReject: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInternal: Boolean</td>
+        <td class="style1"><DIV>Indicates whether this order is internal.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderDate: DateTime</td>
+        <td class="style1"><DIV>Date of issue&nbsp;of the order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderDescription: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A text describing what is ordered.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RejectDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>If this order was rejected, a date and time when it was rejected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RejectReason: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>If this order was rejected, a text describing the reason why this order was rejected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_delivererorder_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>A string determining the state of the document.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Accept()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Close()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(officeEntity:OfficeEntity; deepCopy:Boolean)</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoAccept()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoClose()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoReject(reason:String)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoSend()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoSendInnerDelivererOrder()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OnSave()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Reject(reason:String)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Send()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Deliverer : <a href="deliverer.htm">deliverer</a> 1</td>
+        <td class="style1"><DIV>Points to the deliverer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererContract : <a href="deliverercontract.htm">deliverercontract</a> 0..1</td>
+        <td class="style1"><DIV>Points to&nbsp;the deliverer contract, if this order is placed in accordance to a deliverer contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EndNotes : <a href="delorderuendnote.htm">delorderuendnote</a> 0..*</td>
+        <td class="style1"><DIV>Ending notes of this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">General : <a href="generaldelivererorder.htm">generaldelivererorder</a> 0..1</td>
+        <td class="style1"><DIV>Derived. Points to the general deliverer order of this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOffer : <a href="customeroffer.htm">customeroffer</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Points to&nbsp;the internal deliverer's customer offer, if this order&nbsp;was placed with an internal deliverer. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOfferedServices : <a href="offeredservice.htm">offeredservice</a> 0..*</td>
+        <td class="style1"><DIV>A list of services from the internal customer offer, if this order&nbsp;was placed with an internal deliverer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOrder : <a href="customerorder.htm">customerorder</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to&nbsp;the issued&nbsp;internal customer's order, if this order&nbsp;was placed with an internal deliverer. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OldGenratedCustomerOrder : <a href="customerorder.htm">customerorder</a> 0..1</td>
+        <td class="style1"><DIV><SPAN style="TEXT-DECORATION: line-through">Not in use.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderDetails : <a href="delivererorderdetails.htm">delivererorderdetails</a> 1</td>
+        <td class="style1"><DIV>Points to the details of this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayTermDetail : <a href="paytermdetail.htm">paytermdetail</a> 1</td>
+        <td class="style1"><DIV>
+<DIV>Points to the due date details.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PersonalContact : <a href="abstractpersonalcontact.htm">abstractpersonalcontact</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to the deliverer contact information details.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RejectedBy : <a href="sysuser.htm">sysuser</a> 0..1</td>
+        <td class="style1"><DIV>Points to the user who rejected this order, if this order was rejected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleUser : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>Points to the user responsible for this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Source : <a href="abstractroot.htm">abstractroot</a> 0..1</td>
+        <td class="style1"><DIV>Derived. Points to the cost source of this deliverer.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

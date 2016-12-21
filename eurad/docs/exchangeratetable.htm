@@ -1,0 +1,69 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">ExchangeRateTable in package EuradSystem</h1>
+    <p><DIV>Class representing a table of exchange rates in which <SPAN style="FONT-STYLE: italic">ToCurr </SPAN><SPAN>currency is constant.</SPAN></DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Bank: String</td>
+        <td class="style1"><DIV>Bank's name that published this table.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TableDate: DateTime</td>
+        <td class="style1"><DIV>Date of&nbsp;table's publishing.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TableNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Table's number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidFrom: DateTime</td>
+        <td class="style1"><DIV>A date from which this table is valid.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetRate(serviceProvider:IEcoServiceProvider; inBank:String; atDate:DateTime; fromCurr:Curr; toCurr:Curr):ExchangeRate</td>
+        <td class="style1"><DIV>Method. Gets a rate from <SPAN style="FONT-STYLE: italic">ExchangeRates </SPAN><SPAN>for </SPAN><SPAN style="FONT-STYLE: italic">inBank </SPAN><SPAN>bank, obliging </SPAN><SPAN style="FONT-STYLE: italic">atDate </SPAN><SPAN>and from </SPAN><SPAN style="FONT-STYLE: italic">fromCurr </SPAN><SPAN>currency to </SPAN><SPAN style="FONT-STYLE: italic">toCurr </SPAN><SPAN>currency.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ExchangeRates : <a href="exchangerate.htm">exchangerate</a> 0..*</td>
+        <td class="style1"><DIV>A list of exchange rates.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionExRateTable : <a href="navisionexratetables.htm">navisionexratetables</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object of exchange rate table used in Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavPublishExRatesTableExchangeRateTable_ : <a href="navpublishexratestable.htm">navpublishexratestable</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ToCurr : <a href="curr.htm">curr</a> 1</td>
+        <td class="style1"><DIV>Points to a currency to which all <SPAN style="FONT-STYLE: italic">EchangeRates </SPAN><SPAN>are obliged.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.02_exchange_rates.htm">02.02 Exchange Rates</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

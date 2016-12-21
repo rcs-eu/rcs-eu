@@ -1,0 +1,144 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">OutInvoiceItem in package EuradSystem</h1>
+    <p><DIV>Represents outgoing invoice item.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Adnot: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Adnotation.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AdnotInSecLang: String</td>
+        <td class="style1"><DIV>
+<DIV>Adnotation&nbsp;of this item in invoice's second language.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrGrossValue: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrNetChanged: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrNetTotalValue: Decimal</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrVatChanged: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrVatValue: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DescML: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoicedAmount: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsCorrected: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsPositionOnCorrection: Boolean</td>
+        <td class="style1"><DIV>Indicates whether this&nbsp;item belongs to a correction invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MeasureUnit: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>The name of the measure units of this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NameInSecLang: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>The name of this item in invoice's second language.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Quantity: Decimal</td>
+        <td class="style1"><DIV>Quantity&nbsp;of measure units.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_outinvoiceitem_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Determines the state of this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SadNumbers: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EnsureCurrencies()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsAuto()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsManual()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RateChanged()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetVatValue(value:Decimal)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CorrectingItem : <a href="outinvoiceitem.htm">outinvoiceitem</a> 0..1</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Desc : <a href="mlstring.htm">mlstring</a> 1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceItemOutInvoiceItem_ : <a href="outinvoiceitem.htm">outinvoiceitem</a> 0..1</td>
+        <td class="style1"><DIV>One way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PKWiU : <a href="invoiceitemtype.htm">invoiceitemtype</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

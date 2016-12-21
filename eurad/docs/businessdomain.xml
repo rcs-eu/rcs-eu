@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="businessdomain">
+    <doc><![CDATA[<DIV>Class representing business domain of an executed item.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">BusinessDomain</attribute>
+    <attribute name="RuntimeName">BusinessDomain</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass" />
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Business domain value pushed to Navision buffer.</DIV>]]></doc>
+        <modlrstring>ObszarBiznesowy: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ObszarBiznesowy</attribute>
+        <attribute name="RuntimeName">ObszarBiznesowy</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">51fc5455-8c11-47f4-901f-0d6ff461b982</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Checks if for given parameters this business domain is suitable.</DIV>]]></doc>
+        <modlrstring>Matches(sysUnit:SysCompanyUnit; serviceType:ServiceType; nhm:Nhm):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Matches</attribute>
+        <attribute name="RuntimeName">Matches</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">5a96ebbd-0a38-4822-9985-4e0b4b857d23</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">returnparam</attribute>
+            <attribute name="RuntimeName">returnparam</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">sysUnit</attribute>
+            <attribute name="RuntimeName">sysUnit</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">serviceType</attribute>
+            <attribute name="RuntimeName">serviceType</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ServiceType</attribute>
+                <attribute name="RuntimeName">ServiceType</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">nhm</attribute>
+            <attribute name="RuntimeName">nhm</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Nhm</attribute>
+                <attribute name="RuntimeName">Nhm</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="businessdomain">
+        <doc><![CDATA[<DIV>Points to a business domain of this item.</DIV>]]></doc>
+        <modlrstring>BusinessDomain (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">BusinessDomain</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">BusinessDomain</attribute>
+        <attribute name="id">4e0c85ee-4db2-4e02-978c-9edbf9bd8884</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ExecutedItemExecutedItemsBusinessDomainBusinessDomain</attribute>
+            <attribute name="EffectiveName">ExecutedItemExecutedItemsBusinessDomainBusinessDomain</attribute>
+            <attribute name="id">0fc636c0-0044-4cd9-8567-53945859ba0c</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="businessdomain">
+            <doc><![CDATA[<DIV>Class representing business domain of an executed item.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BusinessDomain</attribute>
+            <attribute name="RuntimeName">BusinessDomain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="executeditem">
+            <doc><![CDATA[<DIV>A list of executed items for which this business domain is set.</DIV>]]></doc>
+            <modlrstring>ExecutedItems (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ExecutedItems</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExecutedItems</attribute>
+            <attribute name="id">79f86603-4225-45b7-ac9c-ee5bcca6e6e2</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="executeditem">
+                <doc><![CDATA[<DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExecutedItem</attribute>
+                <attribute name="RuntimeName">ExecutedItem</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces">IEcoOnSave</attribute>
+                <attribute name="id">{78395a97-455d-4f97-a366-8607343fd841}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="businessdomain">
+        <doc><![CDATA[<DIV>List of busines domains to which service type belongs</DIV>]]></doc>
+        <modlrstring>BusinessDomains (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">BusinessDomains</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">BusinessDomains</attribute>
+        <attribute name="id">b28013f1-1868-4bdd-a303-6c4e948be1f6</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ServiceTypeServiceTypeBusinessDomainBusinessDomains</attribute>
+            <attribute name="EffectiveName">ServiceTypeServiceTypeBusinessDomainBusinessDomains</attribute>
+            <attribute name="id">af9d1c5d-8f44-47db-b61f-c4f70738ebde</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="businessdomain">
+            <doc><![CDATA[<DIV>Class representing business domain of an executed item.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BusinessDomain</attribute>
+            <attribute name="RuntimeName">BusinessDomain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="servicetype">
+            <doc><![CDATA[<DIV>Points to a service type for which this business domain is suitable.</DIV>]]></doc>
+            <modlrstring>ServiceType (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ServiceType</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ServiceType</attribute>
+            <attribute name="id">eb454f2c-7ac6-44b6-bddc-5d5cd8a55218</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="servicetype">
+                <doc><![CDATA[<DIV>Class representing type of a service (used as list in admin module)</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ServiceType</attribute>
+                <attribute name="RuntimeName">ServiceType</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c3820b66-5e3c-4c3c-878b-4c7e6fa6e350}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="businessdomain">
+        <doc><![CDATA[<DIV>Bussines domains for this unit</DIV>]]></doc>
+        <modlrstring>BusinessDomains (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">BusinessDomains</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">BusinessDomains</attribute>
+        <attribute name="id">7d11af29-e48b-4db9-ade1-a4efa1f275d9</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">BusinessDomainBusinessDomainsSysCompanyUnitSysCompanyUnit</attribute>
+            <attribute name="EffectiveName">BusinessDomainBusinessDomainsSysCompanyUnitSysCompanyUnit</attribute>
+            <attribute name="id">e4e58017-0075-4bf8-8204-69b5a91082b3</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="businessdomain">
+            <doc><![CDATA[<DIV>Class representing business domain of an executed item.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BusinessDomain</attribute>
+            <attribute name="RuntimeName">BusinessDomain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="syscompanyunit">
+            <doc><![CDATA[<DIV>
+<DIV>Points to a&nbsp;internal company unit&nbsp;for which this business domain is suitable.</DIV></DIV>]]></doc>
+            <modlrstring>SysCompanyUnit (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SysCompanyUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysCompanyUnit</attribute>
+            <attribute name="id">76e17079-197b-44ea-9822-378c9194bfa0</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="syscompanyunit">
+                <doc><![CDATA[<DIV><SUMMARY>Class defining companies using the system </SUMMARY></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{ad158864-18dc-4bf0-8046-3527ce03f54a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="businessdomain">
+        <doc><![CDATA[<DIV>Points to the business domain which uses this particular set.</DIV>]]></doc>
+        <modlrstring>BusinessDomain (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">BusinessDomain</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">BusinessDomain</attribute>
+        <attribute name="id">c0c4670f-a6bd-48f1-bd2d-60d7303a0f3c</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">BusinessDomainBusinessDomainNhmGroupNhmGroup</attribute>
+            <attribute name="EffectiveName">BusinessDomainBusinessDomainNhmGroupNhmGroup</attribute>
+            <attribute name="id">e6bb035c-c78b-490f-b00f-a78de3b9208b</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="businessdomain">
+            <doc><![CDATA[<DIV>Class representing business domain of an executed item.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BusinessDomain</attribute>
+            <attribute name="RuntimeName">BusinessDomain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="nhmgroup">
+            <doc><![CDATA[<DIV>
+<DIV>Points to a&nbsp;group of NHMs&nbsp;for which this business domain is suitable.</DIV></DIV>]]></doc>
+            <modlrstring>NhmGroup (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">NhmGroup</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NhmGroup</attribute>
+            <attribute name="id">b9857d8c-841c-4e01-95b6-ec6fb2402972</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="nhmgroup">
+                <doc><![CDATA[<DIV>Represents a set of NHM codes.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NhmGroup</attribute>
+                <attribute name="RuntimeName">NhmGroup</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{23b01a96-515f-4ea7-ba7c-036c1b81a6de}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="businessdomain">
+        <doc><![CDATA[<DIV>A list of business domains.</DIV>]]></doc>
+        <modlrstring>BusinessDomains (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">BusinessDomains</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">BusinessDomains</attribute>
+        <attribute name="id">81f5261d-6d0c-4102-a556-e108a8a93104</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">BusinessDomainBusinessDomainsConfigForSystemConfigForSystem</attribute>
+            <attribute name="EffectiveName">BusinessDomainBusinessDomainsConfigForSystemConfigForSystem</attribute>
+            <attribute name="id">fdf12d82-5e9b-4fbd-a580-f0551f839a08</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="businessdomain">
+            <doc><![CDATA[<DIV>Class representing business domain of an executed item.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BusinessDomain</attribute>
+            <attribute name="RuntimeName">BusinessDomain</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="configforsystem">
+            <doc><![CDATA[<DIV>Points to <SPAN style="FONT-STYLE: italic">ConfigForSystem </SPAN><SPAN>object (1 object for whole system) to make possible searching for suitable business domain in a </SPAN><SPAN style="FONT-STYLE: italic">ConfigForSystem.BusinessDomains </SPAN><SPAN>list.</SPAN></DIV>]]></doc>
+            <modlrstring>ConfigForSystem (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">ConfigForSystem</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ConfigForSystem</attribute>
+            <attribute name="id">3c929011-f31b-42f0-9f66-16b146cf8365</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="configforsystem">
+                <doc><![CDATA[<DIV>Class representing configuration for whole system.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ConfigForSystem</attribute>
+                <attribute name="RuntimeName">ConfigForSystem</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{640385e8-15f1-41cb-8cdf-e35dc8b7bf29}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="businessdomain">
+        <attribute name="RenderedWidth">130</attribute>
+        <attribute name="id">e606ffa5-0dfa-4ad2-9a73-2b1f51002549</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">BusinessDomain</attribute>
+        <attribute name="RenderedHeight">65</attribute>
+        <attribute name="x">1848</attribute>
+        <attribute name="y">600</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.01_navision">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4eb5d6cd-7264-4dd2-8d3d-20e57027436d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4eb5d6cd-7264-4dd2-8d3d-20e57027436d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.01 Navision</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.01 Navision</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="businessdomain">
+        <attribute name="RenderedWidth">130</attribute>
+        <attribute name="id">dee5f70a-2f8e-456c-af73-c2ba45725232</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">BusinessDomain</attribute>
+        <attribute name="RenderedHeight">65</attribute>
+        <attribute name="x">752</attribute>
+        <attribute name="y">352</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">f3c0263e-7f10-4105-b882-f16b08382f82</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.03_service_tags">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7b91939a-240f-49be-9e87-a7aec43c70b5.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7b91939a-240f-49be-9e87-a7aec43c70b5</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.03 Service Tags</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.03 Service Tags</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

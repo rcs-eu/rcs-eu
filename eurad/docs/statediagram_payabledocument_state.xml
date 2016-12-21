@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_payabledocument_state">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/63477ee3-0d92-4e5a-852e-47d6d4b9c645.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">63477ee3-0d92-4e5a-852e-47d6d4b9c645</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:PayableDocument.State</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_payabledocument_state">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>State: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">State</attribute>
+        <attribute name="RuntimeName">State</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">93900a51-b190-4adc-98c1-13d86731ac40</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="payabledocument">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PayableDocument</attribute>
+            <attribute name="RuntimeName">PayableDocument</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">18549b81-12d4-44f1-ae4e-a094cfe82db6</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">38</attribute>
+        <attribute name="id">135aa10c-cc9c-4182-9443-4cafd2cfa4b8</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Edit</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">216</attribute>
+        <attribute name="y">360</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Edit</attribute>
+            <attribute name="RuntimeName">Edit</attribute>
+            <attribute name="id">3802378e-603d-4e5f-8c3c-2f155b0c3e1c</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">da0703e9-bbb2-4df8-a6a1-9e63a9f68eb8</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Frozen</attribute>
+                    <attribute name="RuntimeName">Frozen</attribute>
+                    <attribute name="id">d4616066-a5d6-46ae-9cdc-4f54780ae491</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">22fb8ba4-ea77-4132-b0c3-0a9631e5d255</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Frozen</attribute>
+                    <attribute name="RuntimeName">Frozen</attribute>
+                    <attribute name="id">d4616066-a5d6-46ae-9cdc-4f54780ae491</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.PaidGrossValue := self.PaidDocument.PaidGrossValue-&gt;sum()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RootRegion</attribute>
+                <attribute name="RuntimeName">RootRegion</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">32dc8bc8-2fdb-49b3-8b3d-053cc9dc7a12</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Start4</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">208</attribute>
+        <attribute name="y">96</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">60</attribute>
+        <attribute name="id">fae8f7ee-b5c2-45dd-8557-1dd870a00ee0</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Frozen</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">216</attribute>
+        <attribute name="y">232</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Frozen</attribute>
+            <attribute name="RuntimeName">Frozen</attribute>
+            <attribute name="id">d4616066-a5d6-46ae-9cdc-4f54780ae491</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">22fb8ba4-ea77-4132-b0c3-0a9631e5d255</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Edit</attribute>
+                    <attribute name="RuntimeName">Edit</attribute>
+                    <attribute name="id">3802378e-603d-4e5f-8c3c-2f155b0c3e1c</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.PaidGrossValue := self.PaidDocument.PaidGrossValue-&gt;sum()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">eaca5b0f-3293-43f2-8ad9-9345d247462b</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Start4</attribute>
+                    <attribute name="RuntimeName">Start4</attribute>
+                    <attribute name="id">d15f45ae-eca7-44e4-ad9b-ad37ac8ac8a6</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">da0703e9-bbb2-4df8-a6a1-9e63a9f68eb8</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Edit</attribute>
+                    <attribute name="RuntimeName">Edit</attribute>
+                    <attribute name="id">3802378e-603d-4e5f-8c3c-2f155b0c3e1c</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RootRegion</attribute>
+                <attribute name="RuntimeName">RootRegion</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

@@ -1,0 +1,132 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">ServiceType in package EuradSystem</h1>
+    <p><DIV>Class representing type of a service (used as list in admin module)</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">GroupName: String</td>
+        <td class="style1"><DIV>NAme of the group to which service type belongs</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsForAc: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsForGos: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsForOther: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsForRail: Boolean</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsForShip: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsForTP: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsForTruck: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">KindOfService: KindOfService</td>
+        <td class="style1"><DIV>Code of the service type:</DIV>
+<DIV>&nbsp; None = 0,<BR>&nbsp; Rail = 1,<BR>&nbsp; Truck = 2,<BR>&nbsp; Ship = 4,<BR>&nbsp; GOS = 8,<BR>&nbsp; TP = 16,<BR>&nbsp; AC = 32,<BR>&nbsp; Other = 64,<BR>&nbsp; NeedsNhm = Rail | Ship | AC,<BR>&nbsp; OptionalNhm = TP | GOS,<BR>&nbsp; NeedsCargoType = Truck,<BR>&nbsp; AllowsNhm = NeedsNhm | OptionalNhm,<BR>&nbsp; AllowsCargoType = NeedsCargoType</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionId: Integer = 0</td>
+        <td class="style1"><DIV>ID of the service type in Navision</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Representation: String</td>
+        <td class="style1"><DIV>Derived. Representation string of the service type</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceName: String</td>
+        <td class="style1"><DIV>Name of the service</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">BusinessDomains : <a href="businessdomain.htm">businessdomain</a> 0..*</td>
+        <td class="style1"><DIV>List of busines domains to which service type belongs</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerSubOfferServiceType_ : <a href="customersuboffer.htm">customersuboffer</a> 0..*</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItems : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>List of executed item of this service type</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceTypeValues : <a href="servicetypevalue.htm">servicetypevalue</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StcServiceTypes : <a href="stcservicetype.htm">stcservicetype</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.04_configuration.htm">01.04 Configuration</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.03_cargo_(nhm_rid_adr).htm">02.03 Cargo (NHM,RID,ADR)</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.03_service_tags.htm">99.03 Service Tags</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.03_service_tags.htm">99.03 Service Tags</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

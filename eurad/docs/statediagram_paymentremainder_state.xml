@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_paymentremainder_state">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/1de204e1-caef-48dc-a340-868ef0cbc9af.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">1de204e1-caef-48dc-a340-868ef0cbc9af</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:PaymentRemainder.State</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_paymentremainder_state">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>State: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">State</attribute>
+        <attribute name="RuntimeName">State</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">b05999d4-7210-4f89-b615-71e271c31504</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="paymentremainder">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PaymentRemainder</attribute>
+            <attribute name="RuntimeName">PaymentRemainder</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">e5211cad-9f4b-4b81-abee-38334abfd403</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">43</attribute>
+        <attribute name="id">80e186bd-18e9-4b52-95c9-259b08be1e39</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Sent</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">192</attribute>
+        <attribute name="y">312</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Sent</attribute>
+            <attribute name="RuntimeName">Sent</attribute>
+            <attribute name="id">b0dfbf80-d44a-440f-980f-7d35da36caaf</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">ed0b45d5-8a3a-4e87-a64e-9b185f08847c</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">cc467052-e71b-48f7-a97e-226b494281ef</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoSend</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">090f1d83-1d4f-4e56-93fe-abbf513473ec</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InWork</attribute>
+                    <attribute name="RuntimeName">InWork</attribute>
+                    <attribute name="id">cc467052-e71b-48f7-a97e-226b494281ef</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoUnsend</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RootRegion</attribute>
+                <attribute name="RuntimeName">RootRegion</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">61</attribute>
+        <attribute name="id">8ae2cd4c-d92a-43d9-a89d-fb1892ac7090</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InWork</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">192</attribute>
+        <attribute name="y">152</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">InWork</attribute>
+            <attribute name="RuntimeName">InWork</attribute>
+            <attribute name="id">cc467052-e71b-48f7-a97e-226b494281ef</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">090f1d83-1d4f-4e56-93fe-abbf513473ec</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Sent</attribute>
+                    <attribute name="RuntimeName">Sent</attribute>
+                    <attribute name="id">b0dfbf80-d44a-440f-980f-7d35da36caaf</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoUnsend</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">7ae1c693-5e21-49ef-bfd4-e16bbc6850c4</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Start1</attribute>
+                    <attribute name="RuntimeName">Start1</attribute>
+                    <attribute name="id">c3961f87-d3a5-4c56-ab16-5da6892eea5b</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">ed0b45d5-8a3a-4e87-a64e-9b185f08847c</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Sent</attribute>
+                    <attribute name="RuntimeName">Sent</attribute>
+                    <attribute name="id">b0dfbf80-d44a-440f-980f-7d35da36caaf</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.DoSend</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RootRegion</attribute>
+                <attribute name="RuntimeName">RootRegion</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">a7d41d5a-5408-466a-86d6-3ed34d3c0249</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Start1</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">192</attribute>
+        <attribute name="y">64</attribute>
+        <link name="Vertex" />
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

@@ -1,0 +1,73 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">ReportInstance in package EuradSystem</h1>
+    <p><DIV>Provides&nbsp;specific&nbsp;report generation&nbsp;functionality.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">SaveOptions: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddOption(caption:String; defaultValue:object; allowNull:Boolean):ReportOption</td>
+        <td class="style1"><DIV>Method. Adds a new oprtion to the list of options of this report instance.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Constructor(report:Report; user:SysUser; implementation:IReportImplementation)</td>
+        <td class="style1"><DIV>Constructor. Instantiates a new report instance for the specified <SPAN style="FONT-STYLE: italic">report</SPAN>.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EnsureOptions()</td>
+        <td class="style1"><DIV>Method. Clears all options and requests the implementation of this report to add all options to <SPAN style="FONT-STYLE: italic">Options</SPAN>.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FillOptionsFromExecution(execution:ReportExecution)</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GenerateReport(ecoSession:EcoSession; out generatedReport:object):ReportExecution</td>
+        <td class="style1"><DIV>Method. Generates a new printable&nbsp;report and returns it in the <SPAN style="FONT-STYLE: italic">generatedReport</SPAN> out parameter. The result returns report execution.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOptionsFrame():object</td>
+        <td class="style1"><DIV>Method. Returns GUI object allowing the user to set the properties of this report instance.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MakeOption(defaultValue:object):ReportOption</td>
+        <td class="style1"><DIV>Method. Adds a new oprtion to the list of options of this report instance.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NewExecution(generationStart:DateTime; generationStop:DateTime):ReportExecution</td>
+        <td class="style1"><DIV>Instantiates a new report execution.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Options : <a href="reportoption.htm">reportoption</a> 0..*</td>
+        <td class="style1"><DIV>A list of&nbsp;options (parameters)&nbsp;of&nbsp;this report instance.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Report : <a href="report.htm">report</a> 1</td>
+        <td class="style1"><DIV>The report of the report instance.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">User : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>The user of the report instance.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.11_reports_and_tariffs_framework.htm">01.11 Reports and Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

@@ -1,0 +1,82 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">RailTariff in package EuradSystem</h1>
+    <p><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">A separate functional&nbsp;unit which represents a rail tariff. It can be executed by the main part of the application.</SPAN></DIV></DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ValidFrom: DateTime</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Specifies the first&nbsp;day of validity of the tariff.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidTo: DateTime</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">Specifies the last day of validity of the tariff.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FindTariff(serviceProvider:IEcoServiceProvider; name:String; validOn:DateTime; out tariff:RailTariff):Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">Static method. Returns&nbsp;the&nbsp;tariff</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;with the specified name in </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">tariff</SPAN><SPAN style="FONT-FAMILY: Verdana">. The tariff must be valid at the specified </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana">validOn</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;date. The result determines whether the&nbsp;requested&nbsp;tariff was found.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetInstance(user:SysUser):RailTariffInstance</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-FAMILY: Verdana">Method. Instantiates a new&nbsp;tariff instance. </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">RailTariffInstance</SPAN><SPAN style="FONT-FAMILY: Verdana">&nbsp;provides&nbsp;specific&nbsp;report generation&nbsp;functionality.</SPAN></DIV></SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CostSourceTariffRailTariff_ : <a href="costsourcetariff.htm">costsourcetariff</a> 0..*</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">One way association.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Deliverer : <a href="deliverer.htm">deliverer</a> 1</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">The deliverer of the tariff.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DiscountListRailTariff_ : <a href="discountlist.htm">discountlist</a> 0..*</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">One way association.</SPAN></DIV></SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RailTariffInstanceRailTariff_ : <a href="railtariffinstance.htm">railtariffinstance</a> 0..*</td>
+        <td class="style1"><DIV><SPAN style="FONT-FAMILY: Verdana">
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">One way association.</SPAN></DIV></SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.11_reports_and_tariffs_framework.htm">01.11 Reports and Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.12_tariffs_framework.htm">01.12 Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.00_common.htm">02.00 Common</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_09.00_deliverercontracts.htm">09.00 DelivererContracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

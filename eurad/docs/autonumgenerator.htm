@@ -1,0 +1,67 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">AutoNumGenerator in package EuradSystem</h1>
+    <p><DIV>Class representing an object which is responsible for generating next number for autonumeration.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Enabled: Boolean = true</td>
+        <td class="style1"><DIV>If <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>generator is enabled. Otherwise it is disabled.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EntityName: String</td>
+        <td class="style1"><DIV>User-friendly name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EntityTypeNames: String</td>
+        <td class="style1"><DIV>Containes names of classes for which this AutoNumGenerator generates numbers.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StrategyData: String</td>
+        <td class="style1"><DIV>Containes data&nbsp;of <SPAN style="FONT-STYLE: italic">StrategyId&nbsp;</SPAN>strategy, i.e.:</DIV>
+<DIV>- mask, i.e. {2}/{1:yyMM}/{0:00000},</DIV>
+<DIV>- last generated number for a strategy.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StrategyId: String</td>
+        <td class="style1"><DIV>Specifies how auto numbers are generated. It can have following values:</DIV>
+<DIV>- KeyMaskedStrategy: sequence is never restarted,</DIV>
+<DIV>- MonthMaskedStrategy: each month has a seperate sequence,</DIV>
+<DIV>- YearMaskedStrategy: each year has a seperate sequence.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UseParentGenerator: Boolean = false</td>
+        <td class="style1"><DIV>If <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>generator from company unit's parent is taken to generate next number. Otherwise this generator is taken to generate next number.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ConfigForSystemAutoNumGenerator_ : <a href="configforsystem.htm">configforsystem</a> 0..1</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SysCompanyUnit : <a href="syscompanyunit.htm">syscompanyunit</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.04_autoinc.htm">02.04 AutoInc</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

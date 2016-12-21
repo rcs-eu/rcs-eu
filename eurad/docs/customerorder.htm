@@ -1,0 +1,296 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CustomerOrder in package EuradSystem</h1>
+    <p><DIV>Abstract class representing an order from a customer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CanEdit: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if this order can be edited. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClientsContractNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Number of customer's contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CloseDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Date of closing an order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExternalOrderNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>External number of an order (one that is from a client).</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInternal: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if this order is for internal customer. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">itemsCount: Integer</td>
+        <td class="style1"><DIV>Derived. Number of executed items belonging to all services of this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MustHaveCustomerOffer: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OpenDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Date of last opening of an order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderDate: DateTime</td>
+        <td class="style1"><DIV>Order's date.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RejectNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Note stating a reason of order's rejection.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_customerorder_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Order's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Accept(genDelOrdersSender:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>Method. Changed an order's state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Accept()()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Accept(genDelOrdersSender)()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AcceptFinished()</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Finished </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddOfferedServices(customerOffer:CustomerOffer; offeredServices:IList&lt;OfferedService&gt;)</td>
+        <td class="style1"><DIV>Method. Adds services to this order upon on <SPAN style="FONT-STYLE: italic">customerOffer </SPAN><SPAN>and </SPAN><SPAN style="FONT-STYLE: italic">offeredServices </SPAN><SPAN>list.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanModify():Boolean</td>
+        <td class="style1"><DIV>Method. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if an order's state can be changed from </SPAN><SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>. </SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Change()</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangingCustomerOffer(toCustomerOffer:CustomerOffer)</td>
+        <td class="style1"><DIV>Method. Is executed when another <SPAN style="FONT-STYLE: italic">toCustomerOffer </SPAN><SPAN>is set to this order. It sets a customer from </SPAN><SPAN style="FONT-STYLE: italic">toCustomerOffer</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Close()</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Executed </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Closed</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(officeEntity:OfficeEntity; deepCopy:Boolean)</td>
+        <td class="style1"><DIV>Method. Copies information from <SPAN style="FONT-STYLE: italic">officeEntity </SPAN><SPAN>to this order.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateOutInvoiceAmounts():IDictionary&lt;ExecutedItem,IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;&gt;</td>
+        <td class="style1"><DIV>Method. Creates amounts from this order for outgoing invoices.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoAccept(genDelOrdersSender:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>&nbsp;Method. Is executed when an order's state is changed from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>. It does a couple of things:</SPAN></DIV>
+<DIV><SPAN>- checks for user's privileges for accepting orders from a temporary customer,</SPAN></DIV>
+<DIV><SPAN>- checks for user's privileges for accepting order where a payer is temporary,</SPAN></DIV>
+<DIV><SPAN>- checks if internal order does not have internal costs,</SPAN></DIV>
+<DIV><SPAN>- creats required deliverer orders.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoAcceptFinished()</td>
+        <td class="style1"><DIV>Method. Is executed when an order's state is changed from <SPAN style="FONT-STYLE: italic">Finished </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>. It adds an OpenOrder task for Navision integration queue.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoAcceptInnerDelivererOrder()</td>
+        <td class="style1"><DIV>Method. Is executed on entry to state <SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>. If this order is internal this method accepts all internal deliverer orders connected to this order.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoExecute(custOrderEcexuteParams:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoExecuteInnerDelivererOrder()</td>
+        <td class="style1"><DIV>Method. Is executed on entry to state <SPAN style="FONT-STYLE: italic">Executed</SPAN><SPAN>. If this order is internal it changes states of all internal deliverer orders connected to this order to </SPAN><SPAN style="FONT-STYLE: italic">Closed</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoFinish(canDoFinish:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>Method. Is executed when an order's state is changed from <SPAN style="FONT-STYLE: italic">Closed </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Finished</SPAN><SPAN>. It adds an CloseOrder task for Navision integration queue.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoOpenFinished()</td>
+        <td class="style1"><DIV>Method. Is executed when an order's state is changed from <SPAN style="FONT-STYLE: italic">Finished </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Executed</SPAN><SPAN>. It adds an OpenOrder task for Navision integration queue.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoReject()</td>
+        <td class="style1"><DIV>Method. Is executed when an order's state is changed from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Accepted </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Rejected</SPAN><SPAN>. It rejects all internal deliverer orders connected to this order.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoUnexecute()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Execute(custOrderEcexuteParams:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Accepted </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Executed</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Finish(canDoFinish:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Closed </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Finished</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetGeneralDelivererOrderForSource(source:AbstractRoot):GeneralDelivererOrder</td>
+        <td class="style1"><DIV>Method. Returns <SPAN style="FONT-STYLE: italic">GeneralDelivererOrder </SPAN><SPAN>for </SPAN><SPAN style="FONT-STYLE: italic">source </SPAN><SPAN>which is a customer order.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Modify()</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Rejected </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Accepted </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">InWork</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Open()</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Closed </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Executed</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Reject()</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Accepted </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Rejected</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unexecute()</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Closed&nbsp;</SPAN><SPAN>or&nbsp;</SPAN><SPAN style="FONT-STYLE: italic">Executed</SPAN><SPAN>&nbsp;</SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unfinish()</td>
+        <td class="style1"><DIV>Method. Changes an order's state from <SPAN style="FONT-STYLE: italic">Finished </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Executed</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Customer : <a href="customer.htm">customer</a> 0..1</td>
+        <td class="style1"><DIV>Points to a customer. Set when this order is not internal.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerContract : <a href="customercontract.htm">customercontract</a> 0..1</td>
+        <td class="style1"><DIV>Points to a contract with a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOffer : <a href="customeroffer.htm">customeroffer</a> 0..1</td>
+        <td class="style1"><DIV>Points to a customer offer upon which this order was created.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveCustomers : <a href="customer.htm">customer</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. A list of customers. For internal orders it is taken from deliverer orders connected to this order (these are customers of an employer). For non-internal orders is <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Customer</SPAN>.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectivePayers : <a href="customer.htm">customer</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of payers. For internal orders it is taken from deliverer orders connected (internal company units)&nbsp;to this order. For non-internal orders is <SPAN style="FONT-STYLE: italic">Payer</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchangeList : <a href="custorderexchangelist.htm">custorderexchangelist</a> 1</td>
+        <td class="style1"><DIV>Points to an exchange list used in this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemsCustomerOrder : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">General : <a href="generalcustomerorder.htm">generalcustomerorder</a> 1</td>
+        <td class="style1"><DIV>Derived. Points to a general order to which this order belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GosBillCustomerOrder_ : <a href="gosbill.htm">gosbill</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GosTrainSingleCustomerOrder_ : <a href="gostrain.htm">gostrain</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOrders : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. Only for orders from internal customers.&nbsp;A list of orders to internal deliverers connected to this order (This order was generated upon one of these deliverer orders.)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Items : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>A list of executed items belonging to all services of this order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionClosedOrder : <a href="navisionclosedorder.htm">navisionclosedorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of objects which have an information about closing an order. This list is used for Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionOrder : <a href="navisionorder.htm">navisionorder</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object which has order's data for Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OldGenratedFromDelivererOrder : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderedServices : <a href="orderedservice.htm">orderedservice</a> 0..*</td>
+        <td class="style1"><DIV>A list of services.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderTotalCurr : <a href="curr.htm">curr</a> 0..1</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceCustomerOrder_ : <a href="outinvoiceoriginal.htm">outinvoiceoriginal</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Payer : <a href="customer.htm">customer</a> 0..1</td>
+        <td class="style1"><DIV>Points to a customer who is a payer for this order. Set when this order is not internal.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleUser : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>An user who created this order.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

@@ -1,0 +1,688 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">ExecutedItem in package EuradSystem</h1>
+    <p><DIV>
+<DIV>Abstract class representing an executed item&nbsp;which corresponds to services&nbsp;accomplished&nbsp;by deliverers for our customers. It&nbsp;can be registered in a customer order.</DIV></DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AllCostsHaveCostSource: Boolean</td>
+        <td class="style1"><DIV>Derived. Checks if all single costs have their sources set.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllDelivOrdersAccepted: Boolean</td>
+        <td class="style1"><DIV>Derived. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if there is no deliverer order connected to this item with its state equal to "InWork" or "Sent". Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllInnerGeneralOrdersExists: Boolean</td>
+        <td class="style1"><DIV>Derived. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if for</SPAN><SPAN>&nbsp;all single costs with internal deliverers are generated deliverer orders. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllSingleCostsHaveValues: Boolean</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Derived. Returns </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">true </SPAN><SPAN style="FONT-FAMILY: Verdana">if all single&nbsp;costs have their values set. Otherwise </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">false</SPAN><SPAN style="FONT-FAMILY: Verdana">.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllSinglePricesHaveValues: Boolean</td>
+        <td class="style1"><DIV>Derived. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if all single prices have their values set. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanOrder: Boolean</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanPreorder: Boolean</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostRepresentation: String</td>
+        <td class="style1"><DIV>Derived. If <SPAN style="FONT-STYLE: italic">RootState </SPAN><SPAN>is "Ordered</SPAN><SPAN>" then it informs about count of single costs and single prices. If </SPAN><SPAN style="FONT-STYLE: italic">RootState </SPAN><SPAN>is "Executed" then it informs about count of calculated costs and prices.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrderFullNr: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelOrderNrs: String</td>
+        <td class="style1"><DIV>Derived. Comma separated list of all deliverer orders created for this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DetailsRtf: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExpectedMargin: Decimal</td>
+        <td class="style1"><DIV>Derived. Returns an expected&nbsp;margin for this item expressed in PLN.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FName: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Used for storing </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Name </SPAN><SPAN style="FONT-FAMILY: Verdana">value.</SPAN></DIV></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InInvoiceNrs: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line1: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. First&nbsp;line of information for user regarding this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line2: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Second&nbsp;line of information for user regarding this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line3: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Third&nbsp;line of information for user regarding this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line4: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Fourth&nbsp;line of information for user regarding this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line5: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Fifth&nbsp;line of information for user regarding this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line6: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Sixth&nbsp;line of information for user regarding this executed item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">lp: Integer</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Reference number of an&nbsp;item in a list of&nbsp;order services.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Notes: String</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceNrs: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Comma separated list of all&nbsp;outgoing invoices&nbsp;on which&nbsp;this item is invoiced.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">QuantitiesCompletelySplit: Boolean</td>
+        <td class="style1"><DIV>Derived. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if all quantities are fully split. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>. It's used for items which were registered in general customer order and split to single customer orders.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RealMargin: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Returns a real&nbsp;margin for this item expressed in PLN.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_executeditem_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>This item's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceDate: DateTime</td>
+        <td class="style1"><DIV>Derived. Date of service which now is date of order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ShortInfoString: String</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TypeStr: String</td>
+        <td class="style1"><DIV>Derived. Informing what kind of service this item represents. It can have one of the following values: Wagon, Statek, TP, Samochód, Inna usługa, GOS, Usługa celna.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UtiStr: String</td>
+        <td class="style1"><DIV>Derived. Comma separated list of all containers connected to this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllInnerCostsHaveGeneralOrders():Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllRequiredDelivererOrdersExecuted():Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BeginEdit()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Cancel()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanExecute():Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanExecuteRegistered():Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanReadyToExecute():Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanUnExecute()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CheckPrimaryMeasureUnitSet()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClearCosts()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClearKnownQuantities()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClearPrices()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClearSingleCostsAndPrices()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Close()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateInvoiceSpecItem():SpecItemInInv</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateOutInvoiceAmounts():IDictionary&lt;OutInvoiceAmount,InvoiceSpecification&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Delete()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoClose()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoEndEdit()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoExecute()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoOpen()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoOrder()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoPreorder()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoReject()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EndEdit()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Execute(execItemExecuteParams:TriggerParamWrapper)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecuteRegistered()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExitExecutedState()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GenerateCosts()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GeneratePrices()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GenerateQuantities()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine1():String</td>
+        <td class="style1"><DIV>Method. Used to retrieve <SPAN style="FONT-STYLE: italic">Line1 </SPAN><SPAN>data.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine2():String</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Method. Used to retrieve </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Line2 </SPAN><SPAN style="FONT-FAMILY: Verdana">data.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine3():String</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Method. Used to retrieve </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Line3 </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">data.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine4():String</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Method. Used to retrieve </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Line4 </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">data.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine5():String</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Method. Used to retrieve </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Line5 </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">data.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine6():String</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Method. Used to retrieve </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Line6 </SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">data.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOffersToConnect():IObjectList</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOrderedServicesToConnect():IDictionary&lt;OrderedService, CostGroup&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetQuntitiesFromUser(execItemExecuteParams:TriggerParamWrapper)</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetSingleCostsAndPrices()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasShipFreight():Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsPrzeladunekWagonSamochod():Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsPrzeladunekWagonWagon():Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsStorageDystrybucja():Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MakeReady()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsDeleted()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MeetsPriceCondition(priceCondition:PriceCodition):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Open()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Order()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ReCheck()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Reject()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RestrainInv()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetKnownQuantities()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Split(splitter:IExecutedItemSplitter):IList&lt;ExecutedItemProxy&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TryConnectToGosCargoHolder()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unexecute()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unorder()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unreject()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UnrestrainInv()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AddCosts : <a href="amountlist.htm">amountlist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of calculated additional costs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddPrices : <a href="amountlist.htm">amountlist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of calculated additional prices.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllCostAmounts : <a href="executeditemcost.htm">executeditemcost</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of all calculated cost amounts for this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AllPriceAmounts : <a href="executeditemprice.htm">executeditemprice</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. A list of all calculated&nbsp;price amounts for this item.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BusinessDomain : <a href="businessdomain.htm">businessdomain</a> 0..1</td>
+        <td class="style1"><DIV>Points to a business domain of this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CargoHolders : <a href="abstractcargoholder.htm">abstractcargoholder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of waggons from GOS registry for which this item was executed.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostGroup : <a href="costgroup.htm">costgroup</a> 0..1</td>
+        <td class="style1"><DIV>Points to a cost's group.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostList : <a href="costlist.htm">costlist</a> 0..1</td>
+        <td class="style1"><DIV>Points to a list of single costs of this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Costs : <a href="amountlist.htm">amountlist</a> 1</td>
+        <td class="style1"><DIV>A list of calculated cost amounts.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrder : <a href="customerorder.htm">customerorder</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrderExecutedItem_ : <a href="customerorder.htm">customerorder</a> 0..1</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemCostExecutedItem_ : <a href="executeditemcost.htm">executeditemcost</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemServiceGOS1_ : <a href="servicegos.htm">servicegos</a> 0..1</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemsFinderExecutedItem_ : <a href="executeditemsfinder.htm">executeditemsfinder</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExternalItem : <a href="executeditem.htm">executeditem</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GosCargoHolders : <a href="goscargoholder.htm">goscargoholder</a> 0..*</td>
+        <td class="style1"><DIV>A list of waggons from GOS registry connected to this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InInvoices : <a href="ininvoice.htm">ininvoice</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalItem : <a href="executeditem.htm">executeditem</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoicedPrices : <a href="outinvoiceamount.htm">outinvoiceamount</a> 0..*</td>
+        <td class="style1"><DIV>A list of prices invoiced for this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Name : <a href="mlstring.htm">mlstring</a> 1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Multilanguage name of this item.&nbsp;</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionProduct : <a href="navisionproduct.htm">navisionproduct</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object which determines a product for this item. Used in Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionService : <a href="navisionservice.htm">navisionservice</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object which contains service data for Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nhm : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderedGosCargoHolders : <a href="goscargoholder.htm">goscargoholder</a> 0..*</td>
+        <td class="style1"><DIV>A list of waggons from GOS registry to which this item was connected by a user from internal company&nbsp;which is an internal customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OtherServices : <a href="serviceother.htm">serviceother</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoices : <a href="outinvoice.htm">outinvoice</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of outgoing invoices on which this item was invoiced.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceList : <a href="pricelist.htm">pricelist</a> 0..1</td>
+        <td class="style1"><DIV>Points to a list of single prices of this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Prices : <a href="amountlist.htm">amountlist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of calculated prices.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Proxies : <a href="executeditemproxy.htm">executeditemproxy</a> 0..*</td>
+        <td class="style1"><DIV>A list of items which were created by splitting this item. Used when this item was registered in general customer order and was split to single customer orders.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">QList : <a href="qlist.htm">qlist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of quantities.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Route : <a href="location.htm">location</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Service : <a href="orderedservice.htm">orderedservice</a> 0..1</td>
+        <td class="style1"><DIV>Points to a service from an order to which this item belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceGOS : <a href="servicegos.htm">servicegos</a> 0..1</td>
+        <td class="style1"><DIV>Points to GOS service to which this item is connected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceType : <a href="servicetype.htm">servicetype</a> 0..1</td>
+        <td class="style1"><DIV>Points to a type of service for this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SingleCosts : <a href="singlecost.htm">singlecost</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of all single costs of this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SingleDelivererOrder : <a href="singledelivererorder.htm">singledelivererorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of single deliverer orders on which this item was used.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SinglePrices : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of all single prices of this item.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TagValues : <a href="servicetagvalue.htm">servicetagvalue</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Utis : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.01_executed_railway_transport.htm">07.01 Executed Railway Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.02_executed_truck_transport.htm">07.02 Executed Truck Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.02_executed_truck_transport.htm">07.02 Executed Truck Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.03_executed_ship_transport.htm">07.03 Executed Ship Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.04_executed_ac_servce.htm">07.04 Executed AC Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.06_executed_tp_servce.htm">07.06 Executed TP Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.07_executed_other.htm">07.07 Executed Other</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.08_executed_proxy.htm">07.08 Executed Proxy</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.02_executeditemsearching.htm">12.02 ExecutedItemSearching</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.05_ininvoice.htm">12.05 InInvoice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.03_service_tags.htm">99.03 Service Tags</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.03_service_tags.htm">99.03 Service Tags</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

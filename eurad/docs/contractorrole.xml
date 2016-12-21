@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="contractorrole">
+    <doc><![CDATA[<DIV>Abstract class representing a contractor's role.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">ContractorRole</attribute>
+    <attribute name="RuntimeName">ContractorRole</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{104da001-cd60-42fc-96ee-e3e2deaa60ec}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="contractor">
+        <doc><![CDATA[<DIV>Abstract class representing a contractor.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Contractor</attribute>
+        <attribute name="RuntimeName">Contractor</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{808e9d4d-c6e3-4aeb-a2e7-3109801131de}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="recipient">
+        <doc><![CDATA[<DIV>Class representing a recipient role of a contractor.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Recipient</attribute>
+        <attribute name="RuntimeName">Recipient</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{6c274bbd-8ace-4263-a5a0-9ae2622f92e5}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="customer">
+        <doc><![CDATA[<DIV>Class representing a customer role for contractors.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Customer</attribute>
+        <attribute name="RuntimeName">Customer</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{783da978-7a38-4693-b3cf-8003d849a906}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="sender">
+        <doc><![CDATA[<DIV>Class representing sender</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Sender</attribute>
+        <attribute name="RuntimeName">Sender</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{c5eaf131-e130-497a-a2c9-ec2b9087d605}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="deliverer">
+        <doc><![CDATA[<DIV>Represents a contractor which is a Deliverer. </DIV>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt">Note: </SPAN><SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt">Deliverer should have all deliverer related properties (Ubezpieczenia, konta bankowe, ...). These properties are now improperly located in Company.</SPAN></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Deliverer</attribute>
+        <attribute name="RuntimeName">Deliverer</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{d1a96093-feec-4669-b41d-861ff44f9690}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">ContractorNr=self.Contractor.ContractorNr,IsInternal=self.Contractor.IsInternal,CooperationStateDesc=self.Contractor.CooperationStateDesc,FullNameSec=self.Contractor.FullNameSec,FullName=self.Contractor.FullName,Identifier=self.Contractor.Identifier,CooperationState=self.Contractor.CooperationState,FullNameThr=self.Contractor.FullNameThr,ContractorWithRoles=self.Contractor.ContractorWithRoles,ChildContractors=self.Contractor.ChildContractors,ParentContractor=self.Contractor.ParentContractor,CoresspondAddress=self.Contractor.FCorrespondAddress,Address=self.Contractor.Address</attribute>
+        <attribute name="Tag">Eco.DerivationExpressions</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">Children</attribute>
+        <attribute name="Tag">Eco.TableMapping</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method. Adds a role of <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">roleType </SPAN>type to <SPAN style="FONT-STYLE: italic">Contractor</SPAN><SPAN style="FONT-STYLE: italic"></SPAN>.</DIV></DIV>]]></doc>
+        <modlrstring>AddRole(roleType:Type):ContractorRole</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AddRole</attribute>
+        <attribute name="RuntimeName">AddRole</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{06711093-57b7-4e20-b0c6-0b6c4a924269}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ContractorRole</attribute>
+                <attribute name="RuntimeName">ContractorRole</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">roleType</attribute>
+            <attribute name="RuntimeName">roleType</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Type</attribute>
+                <attribute name="RuntimeName">Type</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method. Removes a role of <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">roleType </SPAN>type from <SPAN style="FONT-STYLE: italic">Contractor</SPAN>.</DIV></DIV>]]></doc>
+        <modlrstring>RemoveRole(roleType:Type)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RemoveRole</attribute>
+        <attribute name="RuntimeName">RemoveRole</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{219eeec5-c148-4920-9cf2-98b2f5030e3c}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">roleType</attribute>
+            <attribute name="RuntimeName">roleType</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Type</attribute>
+                <attribute name="RuntimeName">Type</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method. Gets a role from <SPAN style="FONT-STYLE: italic">Contractor</SPAN><SPAN style="FONT-STYLE: italic"></SPAN>. Returns <SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">true </SPAN>if a <SPAN style="FONT-STYLE: italic">Contractor</SPAN> has a role of <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">roleType </SPAN>and sets this <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">ContractorRole</SPAN>&nbsp;to a&nbsp;<SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">role </SPAN>parameter. Returns <SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">false </SPAN>if a <SPAN style="FONT-STYLE: italic">Contractor</SPAN> has&nbsp;not a role of <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">roleType </SPAN>and sets <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">null </SPAN>to a <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">role </SPAN>parameter.</DIV></DIV>]]></doc>
+        <modlrstring>GetRole(roleType:Type; out role:ContractorRole):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetRole</attribute>
+        <attribute name="RuntimeName">GetRole</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b1a9ac64-ea83-4348-a051-48635299b1d7}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">True</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">roleType</attribute>
+            <attribute name="RuntimeName">roleType</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Type</attribute>
+                <attribute name="RuntimeName">Type</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">role</attribute>
+            <attribute name="RuntimeName">role</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ContractorRole</attribute>
+                <attribute name="RuntimeName">ContractorRole</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method. Gets a role of a <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">roleType</SPAN>type&nbsp;for <SPAN style="FONT-STYLE: italic">Contractor</SPAN>.</DIV></DIV>]]></doc>
+        <modlrstring>GetRole(roleType:Type):ContractorRole</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetRole</attribute>
+        <attribute name="RuntimeName">GetRole</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b5ae0c20-dacb-44a3-b064-c348f8a60a75}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">True</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ContractorRole</attribute>
+                <attribute name="RuntimeName">ContractorRole</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">roleType</attribute>
+            <attribute name="RuntimeName">roleType</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Type</attribute>
+                <attribute name="RuntimeName">Type</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>
+<DIV>Method. Checks if&nbsp;<SPAN style="FONT-STYLE: italic">Contractor</SPAN> has role of <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">roleType</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Times New Roman; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;</SPAN>type.</DIV></DIV>]]></doc>
+        <modlrstring>HasRole(roleType:Type):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">HasRole</attribute>
+        <attribute name="RuntimeName">HasRole</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{f0ad4f16-87b9-45f3-b004-3352d3acbbaa}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">True</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">roleType</attribute>
+            <attribute name="RuntimeName">roleType</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Type</attribute>
+                <attribute name="RuntimeName">Type</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>GetHaveCorrespondAddress(ref res:Boolean)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetHaveCorrespondAddress</attribute>
+        <attribute name="RuntimeName">GetHaveCorrespondAddress</attribute>
+        <attribute name="Visibility">Package</attribute>
+        <attribute name="id">5fd7a078-82f4-43c8-b2df-70cdaa83782f</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">res</attribute>
+            <attribute name="RuntimeName">res</attribute>
+            <attribute name="Kind">InOut</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Method">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>SetHaveCorrespondAddress(value:Boolean)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">SetHaveCorrespondAddress</attribute>
+        <attribute name="RuntimeName">SetHaveCorrespondAddress</attribute>
+        <attribute name="Visibility">Package</attribute>
+        <attribute name="id">ba517ba3-c054-4338-9fc4-6c9a645f4186</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">True</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">value</attribute>
+            <attribute name="RuntimeName">value</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="contractorrole">
+        <doc><![CDATA[<DIV>A list of&nbsp;contractor's roles.</DIV>]]></doc>
+        <modlrstring>Roles (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Roles</attribute>
+        <attribute name="RuntimeName">Roles</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Roles</attribute>
+        <attribute name="id">{5d51c4cc-8fa7-4964-b3fb-12262c9487d8}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AbstractContractorContractorRole</attribute>
+            <attribute name="RuntimeName">AbstractContractorContractorRole</attribute>
+            <attribute name="EffectiveName">AbstractContractorContractorRole</attribute>
+            <attribute name="id">{fa373bc7-211d-4344-81ce-5ab8dfb14064}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="contractorrole">
+            <doc><![CDATA[<DIV>Abstract class representing a contractor's role.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ContractorRole</attribute>
+            <attribute name="RuntimeName">ContractorRole</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{104da001-cd60-42fc-96ee-e3e2deaa60ec}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="abstractcontractor">
+            <doc><![CDATA[<DIV>Points to a contractor which has this role.</DIV>]]></doc>
+            <modlrstring>Contractor (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Contractor</attribute>
+            <attribute name="RuntimeName">Contractor</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Contractor</attribute>
+            <attribute name="id">{9462acef-2bae-422f-ad58-3aa4483defb9}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="abstractcontractor">
+                <doc><![CDATA[<DIV>Abstract class representing a contractor.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AbstractContractor</attribute>
+                <attribute name="RuntimeName">AbstractContractor</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{c70da7fc-9e8f-48a5-afde-08ea43f979c4}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">234cceba-d71f-479b-a94d-5e908f362cc5</attribute>
+        <attribute name="x">-38,5</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">8</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">f169de1e-54af-43ae-b186-35afc4c639e6</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">16829fe4-3560-495c-851f-3be7809aa3b6</attribute>
+        <attribute name="x">-31</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">a75bfef3-0df3-4215-9968-917a4f72df20</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="contractorrole">
+        <attribute name="RenderedWidth">143</attribute>
+        <attribute name="id">23bfc8cb-eba5-4f94-86c8-e3f9525f1252</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ContractorRole</attribute>
+        <attribute name="RenderedHeight">105</attribute>
+        <attribute name="x">520</attribute>
+        <attribute name="y">432</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{104da001-cd60-42fc-96ee-e3e2deaa60ec}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_04.00_contractor">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/3d8dd9a8-0a1f-4cfe-b08b-a7f586903262.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">3d8dd9a8-0a1f-4cfe-b08b-a7f586903262</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">04.00 Contractor</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">04.00 Contractor</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

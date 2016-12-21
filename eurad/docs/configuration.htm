@@ -1,0 +1,63 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Configuration in package EuradSystem</h1>
+    <p><DIV>Abstract class representing a set of configuration properties.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_configuration_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>A configuration's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BeginEdit()</td>
+        <td class="style1"><DIV>Method. Is triggered when a configuration enters the <SPAN style="FONT-STYLE: italic">Edit</SPAN> state. Fills <SPAN style="FONT-STYLE: italic">ChangedProperties</SPAN> association with <SPAN style="FONT-STYLE: italic">AllProperties</SPAN>. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Edit()</td>
+        <td class="style1"><DIV>Method. Changes a configuration's state from <SPAN style="FONT-STYLE: italic">Ready </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Editing</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EndEdit()</td>
+        <td class="style1"><DIV>
+<DIV>Method. Is triggered when a configuration&nbsp;exits the <SPAN style="FONT-STYLE: italic">Edit</SPAN> state. Removes unchanged&nbsp;configuration properties from the <SPAN style="FONT-STYLE: italic">ChangedProperties</SPAN> list.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetPropertyValue(property:ConfigProperty):AnyValue</td>
+        <td class="style1"><DIV>Method. Gets a value for a <SPAN style="FONT-STYLE: italic">property</SPAN><SPAN>. Returns </SPAN><SPAN style="FONT-STYLE: italic">AnyValue </SPAN>representing the value&nbsp;of the specified <SPAN style="FONT-STYLE: italic">property</SPAN>.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetPropertyValue(id:String):AnyValue</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Ready()</td>
+        <td class="style1"><DIV>
+<DIV>Method. Changes a configuration's state from <SPAN style="FONT-STYLE: italic">Editing </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Ready</SPAN><SPAN>.</SPAN></DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AllProperties : <a href="configproperty.htm">configproperty</a> 0..*</td>
+        <td class="style1"><DIV>Derived. The configuration&nbsp;properties of this configuration.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangedProperties : <a href="configproperty.htm">configproperty</a> 0..*</td>
+        <td class="style1"><DIV>A list of configuration&nbsp;properties with changed values (values different from the configuration&nbsp;property's DefaultValue).</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.04_configuration.htm">01.04 Configuration</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

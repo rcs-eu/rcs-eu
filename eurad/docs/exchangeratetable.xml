@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="exchangeratetable">
+    <doc><![CDATA[<DIV>Class representing a table of exchange rates in which <SPAN style="FONT-STYLE: italic">ToCurr </SPAN><SPAN>currency is constant.</SPAN></DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">ExchangeRateTable</attribute>
+    <attribute name="RuntimeName">ExchangeRateTable</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">bank + ' - ' + tablenr + ': ' + tabledate.formatDateTime('d')</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Date of&nbsp;table's publishing.</DIV>]]></doc>
+        <modlrstring>TableDate: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TableDate</attribute>
+        <attribute name="RuntimeName">TableDate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{66478732-8167-40ce-8291-94c27d4e76ce}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Bank's name that published this table.</DIV>]]></doc>
+        <modlrstring>Bank: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Bank</attribute>
+        <attribute name="RuntimeName">Bank</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{954117b5-f98c-4e26-bd0e-b48f7a2ea720}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">10</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Table's number.</DIV>]]></doc>
+        <modlrstring>TableNr: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TableNr</attribute>
+        <attribute name="RuntimeName">TableNr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{9fe4b608-d355-4535-a83c-e03c0b437bfb}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">30</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Gets a rate from <SPAN style="FONT-STYLE: italic">ExchangeRates </SPAN><SPAN>for </SPAN><SPAN style="FONT-STYLE: italic">inBank </SPAN><SPAN>bank, obliging </SPAN><SPAN style="FONT-STYLE: italic">atDate </SPAN><SPAN>and from </SPAN><SPAN style="FONT-STYLE: italic">fromCurr </SPAN><SPAN>currency to </SPAN><SPAN style="FONT-STYLE: italic">toCurr </SPAN><SPAN>currency.</SPAN></DIV>]]></doc>
+        <modlrstring>GetRate(serviceProvider:IEcoServiceProvider; inBank:String; atDate:DateTime; fromCurr:Curr; toCurr:Curr):ExchangeRate</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetRate</attribute>
+        <attribute name="RuntimeName">GetRate</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b9f160c8-8922-44cb-8c7c-4d91645242e5}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">True</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExchangeRate</attribute>
+                <attribute name="RuntimeName">ExchangeRate</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">serviceProvider</attribute>
+            <attribute name="RuntimeName">serviceProvider</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IEcoServiceProvider</attribute>
+                <attribute name="RuntimeName">IEcoServiceProvider</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">inBank</attribute>
+            <attribute name="RuntimeName">inBank</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">atDate</attribute>
+            <attribute name="RuntimeName">atDate</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DateTime</attribute>
+                <attribute name="RuntimeName">DateTime</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">fromCurr</attribute>
+            <attribute name="RuntimeName">fromCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">toCurr</attribute>
+            <attribute name="RuntimeName">toCurr</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>A date from which this table is valid.</DIV>]]></doc>
+        <modlrstring>ValidFrom: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ValidFrom</attribute>
+        <attribute name="RuntimeName">ValidFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{f059673c-7a65-45de-9d72-6b2935455f3c}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="exchangeratetable">
+        <doc><![CDATA[<DIV>The exchange rates table that has been published.</DIV>]]></doc>
+        <modlrstring>ExchangeRateTable (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExchangeRateTable</attribute>
+        <attribute name="RuntimeName">ExchangeRateTable</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ExchangeRateTable</attribute>
+        <attribute name="id">{255f4ec6-8b75-4762-ad6a-fa517cf5f753}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavPublishExRatesTableExchangeRateTable</attribute>
+            <attribute name="RuntimeName">NavPublishExRatesTableExchangeRateTable</attribute>
+            <attribute name="EffectiveName">NavPublishExRatesTableExchangeRateTable</attribute>
+            <attribute name="id">{3e81a5e5-0137-4f53-84e0-2bdd8daa2651}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="exchangeratetable">
+            <doc><![CDATA[<DIV>Class representing a table of exchange rates in which <SPAN style="FONT-STYLE: italic">ToCurr </SPAN><SPAN>currency is constant.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateTable</attribute>
+            <attribute name="RuntimeName">ExchangeRateTable</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navpublishexratestable">
+            <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+            <modlrstring>NavPublishExRatesTableExchangeRateTable_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavPublishExRatesTableExchangeRateTable_</attribute>
+            <attribute name="RuntimeName">NavPublishExRatesTableExchangeRateTable_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NavPublishExRatesTableExchangeRateTable_</attribute>
+            <attribute name="id">{615970cd-f173-4583-8dab-682dbf7edb03}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="navpublishexratestable">
+                <doc><![CDATA[<DIV>
+<DIV>Integration action which places information about&nbsp;new&nbsp;exchange rates table&nbsp;to the Navision buffer.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavPublishExRatesTable</attribute>
+                <attribute name="RuntimeName">NavPublishExRatesTable</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{b6fe8a20-190c-41f4-81d1-1b390352b598}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="exchangeratetable">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>ExchangeRateTable (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExchangeRateTable</attribute>
+        <attribute name="RuntimeName">ExchangeRateTable</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ExchangeRateTable</attribute>
+        <attribute name="id">{90c716bc-3f25-4793-a98a-cb971b26d933}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionExRateTablesExchangeRateTable</attribute>
+            <attribute name="RuntimeName">NavisionExRateTablesExchangeRateTable</attribute>
+            <attribute name="EffectiveName">NavisionExRateTablesExchangeRateTable</attribute>
+            <attribute name="id">{84184a66-3f77-4ab0-914d-ded657b6d151}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="exchangeratetable">
+            <doc><![CDATA[<DIV>Class representing a table of exchange rates in which <SPAN style="FONT-STYLE: italic">ToCurr </SPAN><SPAN>currency is constant.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateTable</attribute>
+            <attribute name="RuntimeName">ExchangeRateTable</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionexratetables">
+            <doc><![CDATA[<DIV>Points to an object of exchange rate table used in Navision buffer.</DIV>]]></doc>
+            <modlrstring>NavisionExRateTable (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionExRateTable</attribute>
+            <attribute name="RuntimeName">NavisionExRateTable</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NavisionExRateTable</attribute>
+            <attribute name="id">{965d8eab-8227-46d0-9fae-b778e0f686b6}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionexratetables">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents&nbsp;exchange rate table&nbsp;from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionExRateTables</attribute>
+                <attribute name="RuntimeName">NavisionExRateTables</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{15e05355-fd09-44fa-a4f6-c6d7557b428f}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="exchangeratetable">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>ExchangeRateTableCurr_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExchangeRateTableCurr_</attribute>
+        <attribute name="RuntimeName">ExchangeRateTableCurr_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ExchangeRateTableCurr_</attribute>
+        <attribute name="id">{1f191897-70d2-4f05-9c0e-4b8479fca1dd}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateTableCurr</attribute>
+            <attribute name="RuntimeName">ExchangeRateTableCurr</attribute>
+            <attribute name="EffectiveName">ExchangeRateTableCurr</attribute>
+            <attribute name="id">{b12e1457-9da4-4d0c-9586-6e91377d3ac6}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="exchangeratetable">
+            <doc><![CDATA[<DIV>Class representing a table of exchange rates in which <SPAN style="FONT-STYLE: italic">ToCurr </SPAN><SPAN>currency is constant.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateTable</attribute>
+            <attribute name="RuntimeName">ExchangeRateTable</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="curr">
+            <doc><![CDATA[<DIV>Points to a currency to which all <SPAN style="FONT-STYLE: italic">EchangeRates </SPAN><SPAN>are obliged.</SPAN></DIV>]]></doc>
+            <modlrstring>ToCurr (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ToCurr</attribute>
+            <attribute name="RuntimeName">ToCurr</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ToCurr</attribute>
+            <attribute name="id">{b62a36f8-40bf-4453-b233-958e88c2d880}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="curr">
+                <doc><![CDATA[<DIV>Class representing a currency.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a16a47ef-1b40-4645-bb62-08fd1b044d7b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="exchangeratetable">
+        <doc><![CDATA[<DIV>Points to a table which&nbsp;contains this rate.</DIV>]]></doc>
+        <modlrstring>ExchangeRateTable (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExchangeRateTable</attribute>
+        <attribute name="RuntimeName">ExchangeRateTable</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ExchangeRateTable</attribute>
+        <attribute name="id">{db96e90a-2439-4bf1-811f-6d5f72aea877}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateExchangeRateTable</attribute>
+            <attribute name="RuntimeName">ExchangeRateExchangeRateTable</attribute>
+            <attribute name="EffectiveName">ExchangeRateExchangeRateTable</attribute>
+            <attribute name="id">{cddcdaa3-663f-4c9d-a602-b364250e9030}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="exchangeratetable">
+            <doc><![CDATA[<DIV>Class representing a table of exchange rates in which <SPAN style="FONT-STYLE: italic">ToCurr </SPAN><SPAN>currency is constant.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRateTable</attribute>
+            <attribute name="RuntimeName">ExchangeRateTable</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="exchangerate">
+            <doc><![CDATA[<DIV>A list of exchange rates.</DIV>]]></doc>
+            <modlrstring>ExchangeRates (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRates</attribute>
+            <attribute name="RuntimeName">ExchangeRates</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExchangeRates</attribute>
+            <attribute name="id">{d4c23b02-da92-4d16-8f89-804cd5b154a3}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="exchangerate">
+                <doc><![CDATA[<DIV>Class representing an exchange rate.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ExchangeRate</attribute>
+                <attribute name="RuntimeName">ExchangeRate</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{32dd5ae3-779c-472a-b4e3-365805e8cae4}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment">Value ToCurr = Counter FromCurr</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="exchangeratetable">
+        <attribute name="RenderedWidth">518</attribute>
+        <attribute name="id">2d1058b3-c57b-4c5a-be4b-3bb280d8e826</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ExchangeRateTable</attribute>
+        <attribute name="RenderedHeight">96</attribute>
+        <attribute name="x">600</attribute>
+        <attribute name="y">1400</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.02_exchange_rates">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/116e1866-4f8e-49be-bcb1-48b5027e292a.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">116e1866-4f8e-49be-bcb1-48b5027e292a</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.02 Exchange Rates</attribute>
+            <attribute name="ShowMethodSignatures">True</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">True</attribute>
+            <attribute name="Name">02.02 Exchange Rates</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="exchangeratetable">
+        <attribute name="RenderedWidth">155</attribute>
+        <attribute name="id">86f496ce-827e-4828-9101-34d676bb1c27</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ExchangeRateTable</attribute>
+        <attribute name="RenderedHeight">96</attribute>
+        <attribute name="x">1824</attribute>
+        <attribute name="y">200</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.01_navision">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4eb5d6cd-7264-4dd2-8d3d-20e57027436d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4eb5d6cd-7264-4dd2-8d3d-20e57027436d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.01 Navision</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.01 Navision</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="exchangeratetable">
+        <attribute name="RenderedWidth">155</attribute>
+        <attribute name="id">6b938bcb-a8d4-47c4-9a33-629909c40518</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">ExchangeRateTable</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">728</attribute>
+        <attribute name="y">760</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{141c54cf-22a1-40e5-b0ae-b47b59c2427d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.02_integration_actions">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7fdd5b70-7fa0-4efa-8c9b-cf35e2681486.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7fdd5b70-7fa0-4efa-8c9b-cf35e2681486</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.02 Integration Actions</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.02 Integration Actions</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

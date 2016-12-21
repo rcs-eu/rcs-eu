@@ -1,0 +1,149 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">InvoiceSpecItem in package EuradSystem</h1>
+    <p><DIV>Represents invoiced service. For InInvoices this should provide all kinds of single ExecutedItem details. For OutInvoice this should be linked with single ExecutedService.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DefaultExRateDate: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>The default&nbsp;date of the exchange rates table for this service.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchRateTable: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>The name of the exchange rates table used.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExRatesTableDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>The date of the exchange rates table used.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line1: String</td>
+        <td class="style1"><DIV>
+<DIV>Text representation of the service - line 1.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line2: String</td>
+        <td class="style1"><DIV>
+<DIV>Text representation of the service - line 2.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line3: String</td>
+        <td class="style1"><DIV>Text representation of the service - line 3.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line4: String</td>
+        <td class="style1"><DIV>
+<DIV>Text representation of the service - line 4.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line5: String</td>
+        <td class="style1"><DIV>
+<DIV>Text representation of the service - line 5.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Line6: String</td>
+        <td class="style1"><DIV>
+<DIV>Text representation of the service - line 6.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Text representation of the service - line 1.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceDate: DateTime</td>
+        <td class="style1"><DIV>The date of the service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TypeStr: String</td>
+        <td class="style1"><DIV>Text representation of the type of the service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine1():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine2():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine3():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine4():String</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine5():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine6():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Amounts : <a href="invoiceamount.htm">invoiceamount</a> 1..*</td>
+        <td class="style1"><DIV>
+<DIV>A list of invoiced&nbsp;amounts&nbsp;for this&nbsp;service.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExchangeRates : <a href="invoicespecitemexchangerates.htm">invoicespecitemexchangerates</a> 1</td>
+        <td class="style1"><DIV>
+<DIV>Points to the exchange rates table for this service.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemsFinderInvoiceSpecItem_ : <a href="executeditemsfinder.htm">executeditemsfinder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Specification : <a href="invoicespecification.htm">invoicespecification</a> 1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Points to the invoice specification of this service.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.02_executeditemsearching.htm">12.02 ExecutedItemSearching</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.05_ininvoice.htm">12.05 InInvoice</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

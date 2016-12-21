@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="trucktransportplace">
+    <doc><![CDATA[<DIV>Class representing place of acction (loading, unloading) for truck transport</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">TruckTransportPlace</attribute>
+    <attribute name="RuntimeName">TruckTransportPlace</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="truckofferplace">
+        <doc><![CDATA[<DIV>
+<DIV>Class representing place of action (loading, unloading) for truck transport in offer</DIV></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TruckOfferPlace</attribute>
+        <attribute name="RuntimeName">TruckOfferPlace</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{71c3e9f4-dff4-4cdb-a6ac-88025c15775e}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Time when action starts</DIV>]]></doc>
+        <modlrstring>RealToTime: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealToTime</attribute>
+        <attribute name="RuntimeName">RealToTime</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{81c63feb-4d78-492d-bd2a-dd22e2a79a23}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AsNullable</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Time when action ends</DIV>]]></doc>
+        <modlrstring>RealFromTime: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealFromTime</attribute>
+        <attribute name="RuntimeName">RealFromTime</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{8b0ce622-e564-44fc-817b-0cddec88afbf}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AsNullable</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="trucktransportplace">
+        <doc><![CDATA[<DIV>Derived. Transport to place</DIV>]]></doc>
+        <modlrstring>ToPlace (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ToPlace</attribute>
+        <attribute name="RuntimeName">ToPlace</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ToPlace</attribute>
+        <attribute name="id">{9519f37b-d1ab-425a-b09d-1ad4a10806f9}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckRelationAddress1</attribute>
+            <attribute name="RuntimeName">TruckRelationAddress1</attribute>
+            <attribute name="EffectiveName">TruckRelationAddress1</attribute>
+            <attribute name="id">{0e9c3691-6b49-4689-b371-151a35154687}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="trucktransportplace">
+            <doc><![CDATA[<DIV>Class representing place of acction (loading, unloading) for truck transport</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportPlace</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="trucktransport">
+            <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+            <modlrstring>TruckRelationAddress1_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckRelationAddress1_</attribute>
+            <attribute name="RuntimeName">TruckRelationAddress1_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TruckRelationAddress1_</attribute>
+            <attribute name="id">{28796bea-8f41-457e-882c-b44f7173e8ad}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="trucktransport">
+                <doc><![CDATA[<DIV>Class representing truck transport</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckTransport</attribute>
+                <attribute name="RuntimeName">TruckTransport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{466e1e50-fdce-4ec3-81d3-c98f3b02c8f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Places-&gt;last</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="trucktransportplace">
+        <doc><![CDATA[<DIV>Derived. Customs places for transport</DIV>]]></doc>
+        <modlrstring>CustomsPlaces (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CustomsPlaces</attribute>
+        <attribute name="RuntimeName">CustomsPlaces</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CustomsPlaces</attribute>
+        <attribute name="id">{ebc2b176-261f-40c9-8911-f74baa935262}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportTruckTransportPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportTruckTransportPlace</attribute>
+            <attribute name="EffectiveName">TruckTransportTruckTransportPlace</attribute>
+            <attribute name="id">{3faec5e7-4fda-4fcb-8105-522478a9d119}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="trucktransportplace">
+            <doc><![CDATA[<DIV>Class representing place of acction (loading, unloading) for truck transport</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportPlace</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="trucktransport">
+            <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+            <modlrstring>TruckTransportTruckTransportPlace_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportTruckTransportPlace_</attribute>
+            <attribute name="RuntimeName">TruckTransportTruckTransportPlace_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TruckTransportTruckTransportPlace_</attribute>
+            <attribute name="id">{0f8285e2-d636-4a44-9a32-4717de8ae1fb}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="trucktransport">
+                <doc><![CDATA[<DIV>Class representing truck transport</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckTransport</attribute>
+                <attribute name="RuntimeName">TruckTransport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{466e1e50-fdce-4ec3-81d3-c98f3b02c8f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Places-&gt;select(c|c.PlaceOperation=#CargoCustoms)</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="trucktransportplace">
+        <doc><![CDATA[<DIV>List of all places (loading, unloading, customs)</DIV>]]></doc>
+        <modlrstring>Places (2..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Places</attribute>
+        <attribute name="RuntimeName">Places</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Places</attribute>
+        <attribute name="id">{35beba2f-1edf-40cf-9155-b6325af9cbc4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">2..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportTruckOfferPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportTruckOfferPlace</attribute>
+            <attribute name="EffectiveName">TruckTransportTruckOfferPlace</attribute>
+            <attribute name="id">{69069de5-04e2-4d7c-8436-ee2e09061e2b}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="trucktransportplace">
+            <doc><![CDATA[<DIV>Class representing place of acction (loading, unloading) for truck transport</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportPlace</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="trucktransport">
+            <doc><![CDATA[<DIV>Associated truck transport</DIV>]]></doc>
+            <modlrstring>Transport (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Transport</attribute>
+            <attribute name="RuntimeName">Transport</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Transport</attribute>
+            <attribute name="id">{c2e7a99a-1b81-45b3-acb6-79ac9cfb8c6f}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="trucktransport">
+                <doc><![CDATA[<DIV>Class representing truck transport</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckTransport</attribute>
+                <attribute name="RuntimeName">TruckTransport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{466e1e50-fdce-4ec3-81d3-c98f3b02c8f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="trucktransportplace">
+        <doc><![CDATA[<DIV>Derived. Loading places</DIV>]]></doc>
+        <modlrstring>LoadPlaces (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LoadPlaces</attribute>
+        <attribute name="RuntimeName">LoadPlaces</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">LoadPlaces</attribute>
+        <attribute name="id">{8de7c25b-ec3e-4c5f-a6be-9314a99099b4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportTruckOfferPlace1</attribute>
+            <attribute name="RuntimeName">TruckTransportTruckOfferPlace1</attribute>
+            <attribute name="EffectiveName">TruckTransportTruckOfferPlace1</attribute>
+            <attribute name="id">{9588de24-ebbe-4078-89b0-897e432e2083}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="trucktransportplace">
+            <doc><![CDATA[<DIV>Class representing place of acction (loading, unloading) for truck transport</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportPlace</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="trucktransport">
+            <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+            <modlrstring>TruckTransportTruckOfferPlace1_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportTruckOfferPlace1_</attribute>
+            <attribute name="RuntimeName">TruckTransportTruckOfferPlace1_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TruckTransportTruckOfferPlace1_</attribute>
+            <attribute name="id">{0836a5ab-1268-49ae-89cf-29ba649f5a7a}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="trucktransport">
+                <doc><![CDATA[<DIV>Class representing truck transport</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckTransport</attribute>
+                <attribute name="RuntimeName">TruckTransport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{466e1e50-fdce-4ec3-81d3-c98f3b02c8f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Places-&gt;select(c|c.PlaceOperation=#CargoLoad)</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="trucktransportplace">
+        <doc><![CDATA[<DIV>Derived. Unloading places</DIV>]]></doc>
+        <modlrstring>UnloadPlaces (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">UnloadPlaces</attribute>
+        <attribute name="RuntimeName">UnloadPlaces</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">UnloadPlaces</attribute>
+        <attribute name="id">{295a3c80-3833-43c5-87bd-ea025a1cf8b4}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportTruckOfferPlace2</attribute>
+            <attribute name="RuntimeName">TruckTransportTruckOfferPlace2</attribute>
+            <attribute name="EffectiveName">TruckTransportTruckOfferPlace2</attribute>
+            <attribute name="id">{c2b77f0c-4e07-433a-a334-3f947d68bf52}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="trucktransportplace">
+            <doc><![CDATA[<DIV>Class representing place of acction (loading, unloading) for truck transport</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportPlace</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="trucktransport">
+            <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+            <modlrstring>TruckTransportTruckOfferPlace2_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportTruckOfferPlace2_</attribute>
+            <attribute name="RuntimeName">TruckTransportTruckOfferPlace2_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TruckTransportTruckOfferPlace2_</attribute>
+            <attribute name="id">{d3c0822f-dfc0-41a0-b452-08f9bd7603c2}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="trucktransport">
+                <doc><![CDATA[<DIV>Class representing truck transport</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckTransport</attribute>
+                <attribute name="RuntimeName">TruckTransport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{466e1e50-fdce-4ec3-81d3-c98f3b02c8f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Places-&gt;select(c|c.PlaceOperation=#CargoUnload)</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="trucktransportplace">
+        <doc><![CDATA[<DIV>Derived. Loading places.</DIV>]]></doc>
+        <modlrstring>FromPlace (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FromPlace</attribute>
+        <attribute name="RuntimeName">FromPlace</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">FromPlace</attribute>
+        <attribute name="id">{15aee83c-71b7-4804-af20-8b4e4fb7db87}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckRelationAddress</attribute>
+            <attribute name="RuntimeName">TruckRelationAddress</attribute>
+            <attribute name="EffectiveName">TruckRelationAddress</attribute>
+            <attribute name="id">{d0148719-d004-4fc2-80ea-c96764991de6}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="trucktransportplace">
+            <doc><![CDATA[<DIV>Class representing place of acction (loading, unloading) for truck transport</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckTransportPlace</attribute>
+            <attribute name="RuntimeName">TruckTransportPlace</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="trucktransport">
+            <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+            <modlrstring>TruckRelationAddress_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TruckRelationAddress_</attribute>
+            <attribute name="RuntimeName">TruckRelationAddress_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">TruckRelationAddress_</attribute>
+            <attribute name="id">{7842c532-aecb-410e-b11a-66e7a831c88e}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="trucktransport">
+                <doc><![CDATA[<DIV>Class representing truck transport</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">TruckTransport</attribute>
+                <attribute name="RuntimeName">TruckTransport</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{466e1e50-fdce-4ec3-81d3-c98f3b02c8f8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.Places-&gt;first</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="trucktransportplace">
+        <attribute name="RenderedWidth">159</attribute>
+        <attribute name="id">bfd50794-9827-4475-980e-090dd7a7bc26</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">TruckTransportPlace</attribute>
+        <attribute name="RenderedHeight">54</attribute>
+        <attribute name="x">144</attribute>
+        <attribute name="y">456</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{a9cb39ac-3e4c-4ac5-8c7c-a1584861bc24}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.02_executed_truck_transport">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/6e607d94-9a2b-4b65-9f45-8d2981da78a6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">6e607d94-9a2b-4b65-9f45-8d2981da78a6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.02 Executed Truck Transport</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.02 Executed Truck Transport</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

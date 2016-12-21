@@ -1,0 +1,102 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CustomerContract in package EuradSystem</h1>
+    <p><DIV>Abstract class representing a contract with a customer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A note for this contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_customercontract_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>A contract's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidFrom: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>A date&nbsp;from which&nbsp;this contract&nbsp;is valid.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidTill: DateTime</td>
+        <td class="style1"><DIV>A date to which&nbsp;this contract&nbsp;is valid.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Abond()</td>
+        <td class="style1"><DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">WaitingForAccept </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Accepted </SPAN><SPAN>or </SPAN><SPAN style="FONT-STYLE: italic">Sent </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Abounden</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Accept()</td>
+        <td class="style1"><DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">WaitingForAccept </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Accepted</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InWork()</td>
+        <td class="style1"><DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">WaitingForAccept </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">InWork</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkForAcception()</td>
+        <td class="style1"><DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">WaitingForAccept</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Send()</td>
+        <td class="style1"><DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">Accept </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Sent</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Signed()</td>
+        <td class="style1"><DIV>Method. Changes state from <SPAN style="FONT-STYLE: italic">S</SPAN><SPAN style="FONT-STYLE: italic">ent </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Signed</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ConcerningOffers : <a href="customeroffer.htm">customeroffer</a> 0..*</td>
+        <td class="style1"><DIV>A list of customer offers which are connected to this contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Customer : <a href="customer.htm">customer</a> 1</td>
+        <td class="style1"><DIV>Points to a customer with whom this contract is signed.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerContact : <a href="personalcontact.htm">personalcontact</a> 0..1</td>
+        <td class="style1"><DIV>Points to a person who </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrders : <a href="customerorder.htm">customerorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of customer orders which are connected to this contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FileList : <a href="attachfilelist.htm">attachfilelist</a> 1</td>
+        <td class="style1"><DIV>Point to a list of attachments.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PreparedBy : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>Points to an user who prepared this contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ShouldBeSignedBy : <a href="sysuser.htm">sysuser</a> 0..*</td>
+        <td class="style1"><DIV>Points to an user by whom this contract should be signed.&nbsp;</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_14.00_customercontracts.htm">14.00 CustomerContracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

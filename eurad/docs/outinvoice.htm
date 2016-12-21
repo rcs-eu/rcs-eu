@@ -1,0 +1,263 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">OutInvoice in package EuradSystem</h1>
+    <p><DIV>Abstract class representing an outgoing invoice for a customer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DocumentIsPrinted: Boolean</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocumentPrintDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Date and time of last time of invoice printing.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FooterNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Note</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GrossInDefCurr: Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoiceType: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInvoiceDateOk: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NetInDefCurr: Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NoteOnInvoice: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Note on invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaymentDate: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaymentType: PaymentType</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_outinvoice_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Invoice's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SecondLanguage: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Second language of invoice printing.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatExchRateCounter: Decimal</td>
+        <td class="style1"><DIV>Exchange rate counter value from invoice's currency to "PLN". Used for accounting purposes.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatExchRateStr: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatExchRateTableDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Exchange rate table's date. Used for accounting purposes.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatExchRateTableNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Exchange rate table's number. Used for accounting purposes.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatExchRateValue: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Exchange rate value from invoice's currency to "PLN". Used for accounting purposes.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatInPLN: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatPaidByClient: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Book()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Close()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateCorrection():OutInvoice</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoSend()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoUnbook()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoUnsend()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetInvoiceType():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetPaymentDate():DateTime?</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MakeItReady()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Open()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Send()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unbook()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unsend()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AutoNumOutInv : <a href="autonumoutinv.htm">autonumoutinv</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BankAccount : <a href="outinvoicebankaccount.htm">outinvoicebankaccount</a> 1</td>
+        <td class="style1"><DIV>Points to a bank account to which a customer will pay money.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BasisOutInvoices : <a href="basisoutinvoice.htm">basisoutinvoice</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Customer : <a href="customer.htm">customer</a> 1</td>
+        <td class="style1"><DIV>Points to a customer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerData : <a href="outinvcustdata.htm">outinvcustdata</a> 1</td>
+        <td class="style1"><DIV>Points to a customer's data used in this invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemOutInvoice_ : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageOutInvUnbookedOutInvoice_ : <a href="messageoutinvunbooked.htm">messageoutinvunbooked</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavSendOutInvoiceOutInvoice_ : <a href="navsendoutinvoice.htm">navsendoutinvoice</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavUnsendOutInvoiceOutInvoice_ : <a href="navunsendoutinvoice.htm">navunsendoutinvoice</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NextInvAutoNum : <a href="autonumoutinv.htm">autonumoutinv</a> 0..1</td>
+        <td class="style1"><DIV>Points to an object which contains autonumber of a next invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NextInvoice : <a href="outinvoice.htm">outinvoice</a> 0..1</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceCorrectionOutInvoice_ : <a href="outinvoicecorrection.htm">outinvoicecorrection</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayTermDetail : <a href="paytermdetail.htm">paytermdetail</a> 1</td>
+        <td class="style1"><DIV>Payment's termin.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PrevInvoice : <a href="outinvoice.htm">outinvoice</a> 0..1</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleUser : <a href="sysuser.htm">sysuser</a> 0..1</td>
+        <td class="style1"><DIV>Points to an user who prepared this invoice.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.04_autoinc.htm">02.04 AutoInc</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_19.00_rcswien_special.htm">19.00 RcsWien Special</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

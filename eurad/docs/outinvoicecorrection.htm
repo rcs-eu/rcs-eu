@@ -1,0 +1,101 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">OutInvoiceCorrection in package EuradSystem</h1>
+    <p><DIV>Class representing a correction for outgoing invoice.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CorrectionNr: Integer</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrGrossTotal: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrNetValue: Decimal</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrVatInPLN: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CorrVatValue: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceDate: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CreateCorrection():OutInvoice</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetInvoiceType():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetPaymentDate():DateTime?</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OnSave()</td>
+        <td class="style1"><DIV>
+<DIV>
+<DIV>
+<DIV>Method.</DIV></DIV></DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">NewInvoice : <a href="outinvoiceoriginal.htm">outinvoiceoriginal</a> 0..1</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NextCorrection : <a href="outinvoicecorrection.htm">outinvoicecorrection</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Original : <a href="outinvoiceoriginal.htm">outinvoiceoriginal</a> 1</td>
+        <td class="style1"><DIV>Points to an original outgoing invoice.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceOriginalOutInvoiceCorrection1_ : <a href="outinvoiceoriginal.htm">outinvoiceoriginal</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PrevCorrection : <a href="outinvoicecorrection.htm">outinvoicecorrection</a> 0..1</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PrevCorrectionOrOriginal : <a href="outinvoice.htm">outinvoice</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

@@ -1,0 +1,348 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Company in package EuradSystem</h1>
+    <p><DIV>Class representing an outer contractor.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ComercialLimit: Decimal</td>
+        <td class="style1"><DIV>Not in use. See a <SPAN style="FONT-STYLE: italic">CompanyLimit </SPAN><SPAN>list.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ComercialLimitForMyUnitToday: Decimal</td>
+        <td class="style1"><DIV>Commercial limit given for this company&nbsp;today and for a company unit of a logged user.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ComercialLimitFullToday: Decimal</td>
+        <td class="style1"><DIV>
+<DIV>Derived.&nbsp;Commercial limit given for this company for&nbsp;today in context of all internal company units.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ComercialLimitLeftInMyUnitToday: Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ComercialLimitLeftPrctInMyUnitToday: Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyNrIndx: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Unique DB index.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FullNr: String</td>
+        <td class="style1"><DIV>Company's internal number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FullNrIsOk: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if contractor's number is correct (that is 8 digits). Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InsuranceLimit: Decimal</td>
+        <td class="style1"><DIV>Not in use. See a <SPAN style="FONT-STYLE: italic">CompanyLimit </SPAN><SPAN>list.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InsuranceLimitForMyUnitToday: Decimal</td>
+        <td class="style1"><DIV>Derived.&nbsp;Insurance limit given for this company&nbsp;for today and for a company unit of a logged user.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InsuranceLimitFullToday: Decimal</td>
+        <td class="style1"><DIV>Derived. Insurance limit given for this company for&nbsp;today in context of all internal company units.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InsuranceLimitLeftInMyUnitToday: Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InsuranceLimitLeftPrctInMyUnitToday: Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsBranch: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if a headquarter is not set. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LastDocDate: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Derived. A date of last document created for this company.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LastDocNr: String</td>
+        <td class="style1"><DIV>Derived. Number of last document created for this company.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LastInquiryDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A date of last testing of contractor's satisfaction.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String</td>
+        <td class="style1"><DIV>A note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OtherNrString: String</td>
+        <td class="style1"><DIV>Derived. Returns all other contractor's numbers as one string in a user-friendly way.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Regon: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Regon number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RegonF: String</td>
+        <td class="style1"><DIV>Regon number containing only numbers and letters.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RegonIsOK: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived. <SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">True</SPAN>if&nbsp;regon number for this contractor is correct. Otherwise <SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">false</SPAN>. Is checked only for contractors from Poland.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Relationship: CompanyRelationship = None</td>
+        <td class="style1"><DIV>Defines a reletionship between companies:</DIV>
+<DIV>- None = 0,</DIV>
+<DIV>- Child = 1,</DIV>
+<DIV>- Master = 2.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_company_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Company's state:</DIV>
+<DIV>- Temporary,</DIV>
+<DIV>- Active,</DIV>
+<DIV>- Passive.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootStateStr: String</td>
+        <td class="style1"><DIV>Derived. Returns a contractor's state in a user-friendly way.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SubState: String</td>
+        <td class="style1"><DIV>Substate for <SPAN style="FONT-STYLE: italic">Active </SPAN><SPAN>state:</SPAN></DIV>
+<DIV><SPAN>- Done,</SPAN></DIV>
+<DIV><SPAN>- Editing.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SubState1: String</td>
+        <td class="style1"><DIV>
+<DIV>Substate for&nbsp;<SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Passive</SPAN>state:</DIV>
+<DIV>- Done,</DIV>
+<DIV>- Editing.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TaxNr: String</td>
+        <td class="style1"><DIV>Tax number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TaxNr2: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Second tax number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TaxNr2F: String</td>
+        <td class="style1"><DIV>
+<DIV>Second tax number containing only numbers and letters.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TaxNr2IsOK: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived. <SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">True</SPAN>if a second&nbsp;tax number for this contractor is correct. Otherwise <SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">false</SPAN>. Is checked only for contractors from Poland.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TaxNrF: String</td>
+        <td class="style1"><DIV>Tax number containing only numbers and letters.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TaxNrIsOK: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if tax number for this contractor is correct. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>. Is checked only for contractors from Poland.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BeginEdit()</td>
+        <td class="style1"><DIV>Method. Is triggered when a user begins to edit active or passive&nbsp;company's data.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangeActiveToPassive()</td>
+        <td class="style1"><DIV>
+<DIV>
+<DIV>Method. Changes a state of this company from&nbsp;Active to Passive.</DIV></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangePassiveToActive()</td>
+        <td class="style1"><DIV>
+<DIV>Method. Changes a state of this company from&nbsp;Passive to Active.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangeTempToActive()</td>
+        <td class="style1"><DIV>Method. Changes a state of this company from Temporary to Active.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoChangeActiveToPassive()</td>
+        <td class="style1"><DIV>
+<DIV>Method. Registers in a change log that state of a company changed from&nbsp;Active to Passive.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoChangePassiveToActive()</td>
+        <td class="style1"><DIV>Method. Registers in a change log that state of a company changed from Passive to Active.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoChangeTempToActive()</td>
+        <td class="style1"><DIV>
+<DIV>Method. Registers in a change log that state of a company changed from&nbsp;Temporary to Active and then generates an internal number for this company.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Edit()</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EndEdit()</td>
+        <td class="style1"><DIV>
+<DIV>Method. Is triggered when a user&nbsp;ends to edit active or passive&nbsp;company's data.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EnsureAllCompanyLimitUsages()</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FindCompany(serviceProvider:IEcoServiceProvider; identifier:String; maxAnswers:Integer; offset:Integer):IObjectList</td>
+        <td class="style1"><DIV>Method. Finds a company having as a filter <SPAN style="FONT-STYLE: italic">identifier </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GenerateFullNr()</td>
+        <td class="style1"><DIV>Method. Generates an internal number for this company.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetActualCompamyLimitFor(sysCompanyUnit:SysCompanyUnit):CompanyLimit</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetAutoNumGenerator(out parameters:object[]):AutoNumGenerator</td>
+        <td class="style1"><DIV>Gets a proper generator for autonumeration.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RegisterChanges()</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Temporary()</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Activites : <a href="companyactivity.htm">companyactivity</a> 0..*</td>
+        <td class="style1"><DIV>A list of descriptions&nbsp;of&nbsp;activities which this company keeps.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BankAccounts : <a href="companybankaccount.htm">companybankaccount</a> 0..*</td>
+        <td class="style1"><DIV>A list of PSTT bank accounts for this company having a <SPAN style="FONT-STYLE: italic">Customer </SPAN><SPAN>role to which this customer can transfer money to pay&nbsp;PSTT for services.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Branches : <a href="company.htm">company</a> 0..*</td>
+        <td class="style1"><DIV>A list of the branches of this company.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Bureaus : <a href="companybureau.htm">companybureau</a> 0..*</td>
+        <td class="style1"><DIV>A list of bureaus of this company.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ComercialLimitCurr : <a href="curr.htm">curr</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to a currency of company's&nbsp;commercial limits.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyLimit : <a href="companylimit.htm">companylimit</a> 0..*</td>
+        <td class="style1"><DIV>A list of all&nbsp;financial limits of this company.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyLimitCurr : <a href="curr.htm">curr</a> 0..1</td>
+        <td class="style1"><DIV>Derived. Points to a currency of company's financial limits. It's taken from a default currency of a system configured in an object of <SPAN style="FONT-STYLE: italic">ConfigForSystem </SPAN><SPAN>class.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CompanyLimitUsages : <a href="companylimitusage.htm">companylimitusage</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContactList : <a href="contactlist.htm">contactlist</a> 1</td>
+        <td class="style1"><DIV>Point to a list of company's contacts, i.e. telephone numbers.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Headquarter : <a href="company.htm">company</a> 0..1</td>
+        <td class="style1"><DIV>Points to another object of <SPAN style="FONT-STYLE: italic">Company </SPAN><SPAN>class which is this company's headquarter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InsuranceLimitCurr : <a href="curr.htm">curr</a> 0..1</td>
+        <td class="style1"><DIV>Points to a currency of company's&nbsp;insurance limits.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Insurances : <a href="companyinsurance.htm">companyinsurance</a> 0..*</td>
+        <td class="style1"><DIV>A list of company's insurances when a company has a deliverer role.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LastDocumentHolder : <a href="lastdocumentholder.htm">lastdocumentholder</a> 1</td>
+        <td class="style1"><DIV>Points to an object which holds a pointer to a last created for this company document.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Meetings : <a href="companymeeting.htm">companymeeting</a> 0..*</td>
+        <td class="style1"><DIV>A list of meetings with this company.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageCrmComercialLimitChangedCompany_ : <a href="messagecrmcomerciallimitchanged.htm">messagecrmcomerciallimitchanged</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageCrmCooperationStateChangedCompany_ : <a href="messagecrmcooperationstatechanged.htm">messagecrmcooperationstatechanged</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavisionCompany : <a href="navisioncompany.htm">navisioncompany</a> 0..1</td>
+        <td class="style1"><DIV>Points to an company's data which are in Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NavUpdateCompanyCompany_ : <a href="navupdatecompany.htm">navupdatecompany</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OtherNumbers : <a href="companyothernr.htm">companyothernr</a> 0..*</td>
+        <td class="style1"><DIV>A list of other than tax and regon numbers.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PersonalContacts : <a href="personalcontact.htm">personalcontact</a> 0..*</td>
+        <td class="style1"><DIV>A list of people working at this company.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleUser : <a href="sysuser.htm">sysuser</a> 0..1</td>
+        <td class="style1"><DIV>A user who created this company in the system.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Trade : <a href="companytrade.htm">companytrade</a> 0..1</td>
+        <td class="style1"><DIV>Company's trade.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_04.00_contractor.htm">04.00 Contractor</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_05.00_crm.htm">05.00 CRM</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.02_integration_actions.htm">99.02 Integration Actions</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

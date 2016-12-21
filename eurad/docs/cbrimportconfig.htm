@@ -1,0 +1,70 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CbrImportConfig in package EuradSystem</h1>
+    <p><DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">GetConfig(serviceProvider:IEcoServiceProvider):CbrImportConfig</td>
+        <td class="style1"><DIV>Static method. Gets an object of this class.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetSysCompanyFor(sysUnitCode:String):SysCompanyUnit</td>
+        <td class="style1"><DIV>Method. Gets internal company unit from&nbsp;<SPAN style="FONT-STYLE: italic">SysUnits</SPAN>&nbsp;list with <SPAN style="FONT-STYLE: italic">sysUnitCode</SPAN><SPAN>. If company unit was not found then it throws </SPAN><SPAN style="FONT-STYLE: italic">ApplicationException </SPAN><SPAN>with a message "Company unit for this code not found!".</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetSysCompanyFor(sysUnitCode:String; out unit:SysCompanyUnit):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method. Gets internal company unit from&nbsp;<SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">SysUnits</SPAN>&nbsp;list with <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">sysUnitCode</SPAN>. Returns&nbsp;<SPAN style="FONT-WEIGHT: bold">true</SPAN>&nbsp;if company unit was&nbsp;found and sets this found company unit to&nbsp;<SPAN style="FONT-STYLE: italic">unit</SPAN>&nbsp;parameter. Returns <SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>if company unit was not found and sets </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">unit </SPAN><SPAN>parameter.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetVatFor(vatCode:String; out vat:Vat):Boolean</td>
+        <td class="style1"><DIV>Method. Gets&nbsp;VAT from <SPAN style="FONT-STYLE: italic">VatCodes </SPAN><SPAN>list with </SPAN><SPAN style="FONT-STYLE: italic">vatCode</SPAN><SPAN>. Returns </SPAN><SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if&nbsp;VAT was found and sets this found&nbsp;VAT to </SPAN><SPAN style="FONT-STYLE: italic">vat </SPAN><SPAN>parameter. Returns </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN> if&nbsp;VAT was not found and sets <SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">vat </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetVatFor(vatCode:String):Vat</td>
+        <td class="style1"><DIV>Method. Gets an object of <SPAN style="FONT-STYLE: italic">Vat </SPAN><SPAN>class from </SPAN><SPAN style="FONT-STYLE: italic">VatCodes </SPAN><SPAN>list with </SPAN><SPAN style="FONT-STYLE: italic">vatCode</SPAN><SPAN>. If&nbsp;VAT was not found then it throws </SPAN><SPAN style="FONT-STYLE: italic">ApplicationException </SPAN><SPAN>with a message "VAT seting for this code not found!".</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Deliverer : <a href="deliverer.htm">deliverer</a> 1</td>
+        <td class="style1"><DIV>A deliverer configured in this configuration&nbsp;from whom&nbsp;data&nbsp;is received.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InInvoiceCbrImports : <a href="ininvoicecbrimport.htm">ininvoicecbrimport</a> 0..*</td>
+        <td class="style1"><DIV>A list of import plugins&nbsp;on which this configuration is used.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageToGroup : <a href="sysusergroup.htm">sysusergroup</a> 0..1</td>
+        <td class="style1"><DIV>Points to a group of users for which a message is sent when import finishes.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SysUnits : <a href="cbrsysunit.htm">cbrsysunit</a> 0..*</td>
+        <td class="style1"><DIV>A list of internal company units configured in this configuration.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatCodes : <a href="cbrvatcode.htm">cbrvatcode</a> 0..*</td>
+        <td class="style1"><DIV>A list of VAT codes configured in this configuration.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.03_cbrimportconfig.htm">01.03 CbrImportConfig</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.13_imports.htm">01.13 Imports</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

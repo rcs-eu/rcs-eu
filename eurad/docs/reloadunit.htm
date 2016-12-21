@@ -1,0 +1,67 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">ReloadUnit in package EuradSystem</h1>
+    <p><DIV>Class representing a reload unit.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PackagesAmount: Decimal</td>
+        <td class="style1"><DIV>Amount packages that was reloaded.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">StringRepresentation: String</td>
+        <td class="style1"><DIV>Depending on what kind of cargo holder this unit has it returns an identifier of a unit. For:</DIV>
+<DIV>- waggon it is a waggon's number,</DIV>
+<DIV>- storage unit it is a storage unit's name,</DIV>
+<DIV>- ship it is a ship's name,</DIV>
+<DIV>- truck it is a registration's number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Weight: Decimal</td>
+        <td class="style1"><DIV>Weight of cargo that was reloaded.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CargoHolder : <a href="abstractcargoholder.htm">abstractcargoholder</a> 1</td>
+        <td class="style1"><DIV>Points to a specific cargo holder.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GeneralCustomerOrderDispositionTPLoadedUnits_ : <a href="generalcustomerorder.htm">generalcustomerorder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GeneralCustomerOrderDispositionTPUnloadedUnits_ : <a href="generalcustomerorder.htm">generalcustomerorder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceTPReloadForFromUnit : <a href="servicetpreload.htm">servicetpreload</a> 0..1</td>
+        <td class="style1"><DIV>Points to a reload service on which this unit is on loaded from units list.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceTPReloadForToUnit : <a href="servicetpreload.htm">servicetpreload</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to a reload service on which this unit is on loaded&nbsp;to units list.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.06_executed_tp_servce.htm">07.06 Executed TP Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

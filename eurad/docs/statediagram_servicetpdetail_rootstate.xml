@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_servicetpdetail_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/baf8c3f1-51f3-430a-b057-a1cf73b6364e.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">baf8c3f1-51f3-430a-b057-a1cf73b6364e</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:ServiceTPDetail.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_servicetpdetail_rootstate">
+        <doc><![CDATA[<DIV>State of the service</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{6d62a57b-79e0-4dfd-8f94-b2bf620686b2}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="servicetpdetail">
+            <doc><![CDATA[<DIV>Abstract class representing details of a reloading service</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ServiceTPDetail</attribute>
+            <attribute name="RuntimeName">ServiceTPDetail</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{689b8725-257e-4835-a427-4dc7026343ca}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">77</attribute>
+        <attribute name="id">2a2b2f21-d580-4eff-8a96-32993d80329a</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Executed</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">320</attribute>
+        <attribute name="y">232</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Executed</attribute>
+            <attribute name="RuntimeName">Executed</attribute>
+            <attribute name="id">7dc9d229-dddc-44fc-a146-259e076cc8db</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d09329f9-9d89-4eeb-8ff9-7d5324f0b656</attribute>
+                <attribute name="Guard">OCL: if (self.oclIsTypeOf(ServiceTPReload)) then self.safeCast(ServiceTPReload).ToUnits-&gt; size &gt; 0 else true endif</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Registered</attribute>
+                    <attribute name="RuntimeName">Registered</attribute>
+                    <attribute name="id">564bd19c-7274-4f12-94a6-f6723c15a04a</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">cf01a106-2444-4d63-8678-66f75c67df85</attribute>
+                <attribute name="Guard">OCL: self.ServiceTP.Service-&gt;isEmpty</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Registered</attribute>
+                    <attribute name="RuntimeName">Registered</attribute>
+                    <attribute name="id">564bd19c-7274-4f12-94a6-f6723c15a04a</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">2fc4ec7c-9ac6-4c39-8179-d38015c71a68</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">320</attribute>
+        <attribute name="y">48</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">87</attribute>
+        <attribute name="id">642cdca0-9de6-452d-949a-ea66a14e9053</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Registered</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">320</attribute>
+        <attribute name="y">136</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Registered</attribute>
+            <attribute name="RuntimeName">Registered</attribute>
+            <attribute name="id">564bd19c-7274-4f12-94a6-f6723c15a04a</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">2e75492a-a01e-42a3-bf56-b3533fa1ff0c</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">1e73c6f9-40bc-4c3c-91ae-03217ec7aa4e</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">cf01a106-2444-4d63-8678-66f75c67df85</attribute>
+                <attribute name="Guard">OCL: self.ServiceTP.Service-&gt;isEmpty</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Executed</attribute>
+                    <attribute name="RuntimeName">Executed</attribute>
+                    <attribute name="id">7dc9d229-dddc-44fc-a146-259e076cc8db</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">d09329f9-9d89-4eeb-8ff9-7d5324f0b656</attribute>
+                <attribute name="Guard">OCL: if (self.oclIsTypeOf(ServiceTPReload)) then self.safeCast(ServiceTPReload).ToUnits-&gt; size &gt; 0 else true endif</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Executed</attribute>
+                    <attribute name="RuntimeName">Executed</attribute>
+                    <attribute name="id">7dc9d229-dddc-44fc-a146-259e076cc8db</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

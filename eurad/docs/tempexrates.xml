@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="tempexrates">
+    <doc><![CDATA[<DIV>Transiant class (not in database)</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">TempExRates</attribute>
+    <attribute name="RuntimeName">TempExRates</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{4a66a0f7-55e2-44e0-9241-9673bfaf71d1}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="fixedtoexrates">
+        <doc><![CDATA[<DIV>Remember to define ToCurr derived association in the derived classes, either as a derived expression or in the code.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FixedToExRates</attribute>
+        <attribute name="RuntimeName">FixedToExRates</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{39d96a19-2db4-4b56-a88c-7dee354cad1a}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment">Abstract class (children mapped)</attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">transient</attribute>
+        <attribute name="Tag">persistence</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">ToCurr=self.ExToCurr</attribute>
+        <attribute name="Tag">Eco.DerivationExpressions</attribute>
+      </object>
+    </link>
+    <link name="Feature" />
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="tempexrates">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>TempExRatesCurr_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">TempExRatesCurr_</attribute>
+        <attribute name="RuntimeName">TempExRatesCurr_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">TempExRatesCurr_</attribute>
+        <attribute name="id">{8c6f42cd-d30e-47ff-9ad6-a23669c9de96}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TempExRatesCurr</attribute>
+            <attribute name="RuntimeName">TempExRatesCurr</attribute>
+            <attribute name="EffectiveName">TempExRatesCurr</attribute>
+            <attribute name="id">{d295486b-ccc0-4d27-866f-710bd162efc2}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="tempexrates">
+            <doc><![CDATA[<DIV>Transiant class (not in database)</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">TempExRates</attribute>
+            <attribute name="RuntimeName">TempExRates</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{4a66a0f7-55e2-44e0-9241-9673bfaf71d1}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="curr">
+            <doc><![CDATA[<DIV>Derived. See superclass definition</DIV>]]></doc>
+            <modlrstring>ExToCurr (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExToCurr</attribute>
+            <attribute name="RuntimeName">ExToCurr</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExToCurr</attribute>
+            <attribute name="id">{74caa3bb-4213-4d12-af0f-b7e89d506490}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="curr">
+                <doc><![CDATA[<DIV>Class representing a currency.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Curr</attribute>
+                <attribute name="RuntimeName">Curr</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{a16a47ef-1b40-4645-bb62-08fd1b044d7b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="tempexrates">
+        <attribute name="RenderedWidth">131</attribute>
+        <attribute name="id">66c84228-2bfd-415d-be37-aefbc1fe1371</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">TempExRates</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">704</attribute>
+        <attribute name="y">792</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{4a66a0f7-55e2-44e0-9241-9673bfaf71d1}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.02_exchange_rates">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/116e1866-4f8e-49be-bcb1-48b5027e292a.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">116e1866-4f8e-49be-bcb1-48b5027e292a</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.02 Exchange Rates</attribute>
+            <attribute name="ShowMethodSignatures">True</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">True</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">True</attribute>
+            <attribute name="Name">02.02 Exchange Rates</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

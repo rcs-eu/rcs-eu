@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="cbrvatcode">
+    <doc><![CDATA[<DIV>
+<DIV>Class representing an object which translates a code of&nbsp;VAT from CBR file to an object of <SPAN style="FONT-STYLE: italic">Vat </SPAN>class.</DIV></DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">CbrVatCode</attribute>
+    <attribute name="RuntimeName">CbrVatCode</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{a06c6fc8-74dc-4639-bd65-81accc26d857}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Code of&nbsp;VAT from CBR file.</DIV></DIV>]]></doc>
+        <modlrstring>Code: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Code</attribute>
+        <attribute name="RuntimeName">Code</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{541c1cf3-5de4-40e8-b91b-1f1b18726b4a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">20</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="cbrvatcode">
+        <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+        <modlrstring>CbrVatCodeVat_ (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CbrVatCodeVat_</attribute>
+        <attribute name="RuntimeName">CbrVatCodeVat_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CbrVatCodeVat_</attribute>
+        <attribute name="id">{3e43d72b-23db-481a-9a37-da110d8d52a8}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrVatCodeVat</attribute>
+            <attribute name="RuntimeName">CbrVatCodeVat</attribute>
+            <attribute name="EffectiveName">CbrVatCodeVat</attribute>
+            <attribute name="id">{6b5b5c4d-0299-437c-a08c-30f7968f2509}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="cbrvatcode">
+            <doc><![CDATA[<DIV>
+<DIV>Class representing an object which translates a code of&nbsp;VAT from CBR file to an object of <SPAN style="FONT-STYLE: italic">Vat </SPAN>class.</DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrVatCode</attribute>
+            <attribute name="RuntimeName">CbrVatCode</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a06c6fc8-74dc-4639-bd65-81accc26d857}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="vat">
+            <doc><![CDATA[<DIV>Points to VAT.</DIV>]]></doc>
+            <modlrstring>Vat (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Vat</attribute>
+            <attribute name="RuntimeName">Vat</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Vat</attribute>
+            <attribute name="id">{17ec6fa6-4b22-4a60-a3ef-58401f3470f3}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="vat">
+                <doc><![CDATA[<DIV>Class representing VAT of the amounts</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Vat</attribute>
+                <attribute name="RuntimeName">Vat</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{8f8d3015-d49e-4da8-9e7f-7f038f20729b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="cbrvatcode">
+        <doc><![CDATA[<DIV>A list of VAT codes configured in this configuration.</DIV>]]></doc>
+        <modlrstring>VatCodes (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">VatCodes</attribute>
+        <attribute name="RuntimeName">VatCodes</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">VatCodes</attribute>
+        <attribute name="id">{18a5ace7-f50a-4a7d-938b-a92a2766201a}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrVatCodesCbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrVatCodesCbrImportConfig</attribute>
+            <attribute name="EffectiveName">CbrVatCodesCbrImportConfig</attribute>
+            <attribute name="id">{c8350cdf-9698-4a2c-976d-c7e7091b476c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="cbrvatcode">
+            <doc><![CDATA[<DIV>
+<DIV>Class representing an object which translates a code of&nbsp;VAT from CBR file to an object of <SPAN style="FONT-STYLE: italic">Vat </SPAN>class.</DIV></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrVatCode</attribute>
+            <attribute name="RuntimeName">CbrVatCode</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{a06c6fc8-74dc-4639-bd65-81accc26d857}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cbrimportconfig">
+            <doc><![CDATA[<DIV>
+<DIV>Points to a configuration in which this object is used.</DIV></DIV>]]></doc>
+            <modlrstring>CbrImportConfig (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CbrImportConfig</attribute>
+            <attribute name="RuntimeName">CbrImportConfig</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CbrImportConfig</attribute>
+            <attribute name="id">{5712ecd4-9357-4136-915f-b4030ddfe864}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="cbrimportconfig">
+                <doc><![CDATA[<DIV>Class representing an object which holds configuration of CBR invoices' import.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CbrImportConfig</attribute>
+                <attribute name="RuntimeName">CbrImportConfig</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{1cab120f-ec38-48e7-8708-dac70b40fcfa}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="cbrvatcode">
+        <attribute name="RenderedWidth">98</attribute>
+        <attribute name="id">49010656-3e02-4a16-b7d9-9e61466116c8</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CbrVatCode</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">128</attribute>
+        <attribute name="y">144</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{a06c6fc8-74dc-4639-bd65-81accc26d857}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.03_cbrimportconfig">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/08c94708-d2ea-4011-a5f9-48b2e45def53.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">08c94708-d2ea-4011-a5f9-48b2e45def53</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.03 CbrImportConfig</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.03 CbrImportConfig</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="cbrvatcode">
+        <attribute name="RenderedWidth">98</attribute>
+        <attribute name="id">99d613ac-b5ef-4f02-813b-ef9f7342ab0c</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">CbrVatCode</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">224</attribute>
+        <attribute name="y">600</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{a06c6fc8-74dc-4639-bd65-81accc26d857}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.13_imports">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/82af5431-3937-4322-bdeb-f1edaceeb5a6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">82af5431-3937-4322-bdeb-f1edaceeb5a6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.13 Imports</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.13 Imports</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

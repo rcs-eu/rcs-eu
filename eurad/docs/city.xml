@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="city">
+    <doc><![CDATA[<DIV>Class representing a city</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">City</attribute>
+    <attribute name="RuntimeName">City</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{b72d3281-a9bb-4fa4-8b53-95a1b78e3483}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="location">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Location</attribute>
+        <attribute name="RuntimeName">Location</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">80af204b-66a1-4011-99c7-769b6b96342f</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">"LocationDescription=String.Format('{0}', Name)"</attribute>
+        <attribute name="Tag">Eco.DerivationExpressions</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>City's name.</DIV>]]></doc>
+        <modlrstring>Name: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Name</attribute>
+        <attribute name="RuntimeName">Name</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4dfa33f4-5e63-4f9c-bf7f-060694fb334f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">100</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="city">
+        <doc><![CDATA[<DIV>A list of cities which belong to this region.</DIV>]]></doc>
+        <modlrstring>City (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">City</attribute>
+        <attribute name="RuntimeName">City</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">City</attribute>
+        <attribute name="id">{c0aebb86-757a-404e-a815-9240157c9dfd}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CityRegion</attribute>
+            <attribute name="RuntimeName">CityRegion</attribute>
+            <attribute name="EffectiveName">CityRegion</attribute>
+            <attribute name="id">{7e64e42f-0bb1-4ec3-bdad-a197e61efce9}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="city">
+            <doc><![CDATA[<DIV>Class representing a city</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">City</attribute>
+            <attribute name="RuntimeName">City</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{b72d3281-a9bb-4fa4-8b53-95a1b78e3483}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="countryregion">
+            <doc><![CDATA[<DIV>A region to which this city belongs, i.e. <SPAN class=res_phr_translation>voivodeship, county etc.</SPAN></DIV>]]></doc>
+            <modlrstring>CountryRegion (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CountryRegion</attribute>
+            <attribute name="RuntimeName">CountryRegion</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CountryRegion</attribute>
+            <attribute name="id">{d5bdce84-58e5-4ca2-a83b-6c63200f83bd}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="countryregion">
+                <doc><![CDATA[<DIV>Class representing a country's region, e.g. <SPAN class=res_phr_translation>voivodeship, county etc.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CountryRegion</attribute>
+                <attribute name="RuntimeName">CountryRegion</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{87e87cca-e90e-4ba3-9a3e-d84b10335fb8}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="city">
+        <doc><![CDATA[<DIV>Points to a city to which this postal code belongs.</DIV>]]></doc>
+        <modlrstring>City (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">City</attribute>
+        <attribute name="RuntimeName">City</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">City</attribute>
+        <attribute name="id">{c5a46438-6c31-43ae-b52b-2060ad28bfa3}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CityPostalCode</attribute>
+            <attribute name="RuntimeName">CityPostalCode</attribute>
+            <attribute name="EffectiveName">CityPostalCode</attribute>
+            <attribute name="id">{cea92fe0-ddfa-471b-9443-27aeb0dd562a}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="city">
+            <doc><![CDATA[<DIV>Class representing a city</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">City</attribute>
+            <attribute name="RuntimeName">City</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{b72d3281-a9bb-4fa4-8b53-95a1b78e3483}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="postalcode">
+            <doc><![CDATA[<DIV>A list of postal codes which this city can have.</DIV>]]></doc>
+            <modlrstring>PostalCodes (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">PostalCodes</attribute>
+            <attribute name="RuntimeName">PostalCodes</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">PostalCodes</attribute>
+            <attribute name="id">{35967683-2dab-48fa-a36b-5053ef862085}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="postalcode">
+                <doc><![CDATA[<DIV>Class representing a postal code.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">PostalCode</attribute>
+                <attribute name="RuntimeName">PostalCode</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{e560dde5-8958-4971-8c63-a4a7b291d88f}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="city">
+        <doc><![CDATA[<DIV>A list of all cities which belong to this country.</DIV>]]></doc>
+        <modlrstring>City (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">City</attribute>
+        <attribute name="RuntimeName">City</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">City</attribute>
+        <attribute name="id">{770bdc0e-5cd6-4b62-8616-9fa73cc5ebd6}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CityCountrySingle</attribute>
+            <attribute name="RuntimeName">CityCountrySingle</attribute>
+            <attribute name="EffectiveName">CityCountrySingle</attribute>
+            <attribute name="id">{de09dbd7-ea70-4843-8cbb-e372e16481d4}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="city">
+            <doc><![CDATA[<DIV>Class representing a city</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">City</attribute>
+            <attribute name="RuntimeName">City</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{b72d3281-a9bb-4fa4-8b53-95a1b78e3483}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="countrysingle">
+            <doc><![CDATA[<DIV>Points to a country to which this city belongs.</DIV>]]></doc>
+            <modlrstring>Country (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Country</attribute>
+            <attribute name="id">{9ff8503a-b0b3-4ae3-a198-cc827dcbbf9e}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="countrysingle">
+                <doc><![CDATA[<DIV>Class representing a single country.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CountrySingle</attribute>
+                <attribute name="RuntimeName">CountrySingle</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{86320919-a451-480d-8ab2-4a75bcd6f49c}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="city">
+        <attribute name="RenderedWidth">73</attribute>
+        <attribute name="id">576048c6-fa09-4bb5-8110-00e0f09152eb</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">City</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">344</attribute>
+        <attribute name="y">568</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{b72d3281-a9bb-4fa4-8b53-95a1b78e3483}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.00_common">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/efdd5d61-e1b3-40f7-b238-153cac683a57.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">efdd5d61-e1b3-40f7-b238-153cac683a57</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.00 Common</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.00 Common</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="city">
+        <attribute name="RenderedWidth">73</attribute>
+        <attribute name="id">3855473e-3856-4c06-8e0b-31bb78774eac</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">City</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">344</attribute>
+        <attribute name="y">568</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{b72d3281-a9bb-4fa4-8b53-95a1b78e3483}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.06_locations">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/11f44bd4-3bc6-48d0-970c-bbca5c87225e.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">11f44bd4-3bc6-48d0-970c-bbca5c87225e</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.06 Locations</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.06 Locations</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="acceptedinvoicecost">
+    <doc><![CDATA[<DIV>Class representing an object which is created when an object of&nbsp;<A id=D#ininvoiceamount.htm title=InInvoiceAmount href="http://localhost/ininvoiceamount.htm"><SPAN style="FONT-STYLE: italic">InInvoiceAmount</SPAN></A><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class is connected&nbsp;to an object of&nbsp;<A id=D#executeditemcost.htm title=ExecutedItemCost href="http://localhost/executeditemcost.htm"><SPAN style="FONT-STYLE: italic">ExecutedItemCost</SPAN></A></SPAN><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class. It happens when a real cost from incoming invoice is connected to an expected cost from a customer's order.</SPAN></DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">AcceptedInvoiceCost</attribute>
+    <attribute name="RuntimeName">AcceptedInvoiceCost</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractroot">
+        <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractRoot</attribute>
+        <attribute name="RuntimeName">AbstractRoot</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Amount of an expected cost used in this connection.</DIV>]]></doc>
+        <modlrstring>ExpectedCostAmount: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExpectedCostAmount</attribute>
+        <attribute name="RuntimeName">ExpectedCostAmount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{0dbc3a76-71e2-4e0e-8d38-9160543be5cc}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Used for checking if a&nbsp;type of difference between amounts of&nbsp;connected&nbsp;costs should be set.&nbsp;<SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if DifferenceInInvCurr &gt; 0.1</SPAN></DIV>]]></doc>
+        <modlrstring>DiffTypeIsSetIfNeeded: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DiffTypeIsSetIfNeeded</attribute>
+        <attribute name="RuntimeName">DiffTypeIsSetIfNeeded</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{19819ed9-bd4c-4caa-8bdd-1ad30fb90afc}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Amount of a real cost used in this connection.</DIV>]]></doc>
+        <modlrstring>RealCostAmount: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealCostAmount</attribute>
+        <attribute name="RuntimeName">RealCostAmount</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{418cccd4-8b7c-4831-bb5d-194b6ad13daa}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Amount of an expected cost used in this connection&nbsp;expressed in an invoice's currency.</DIV>]]></doc>
+        <modlrstring>ExpAmountInInvCurr: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ExpAmountInInvCurr</attribute>
+        <attribute name="RuntimeName">ExpAmountInInvCurr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{9a364ddb-9b6a-4929-9a70-167e773dcf7f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Amount of a real cost used in this connection expressed in an expected cost's currency.</DIV>]]></doc>
+        <modlrstring>RealAmountInExpCurr: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealAmountInExpCurr</attribute>
+        <attribute name="RuntimeName">RealAmountInExpCurr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{aad842e5-f7bb-4389-9981-dc05f2953df2}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Amount of a real cost used in this connection expressed in an invoice's currency.</DIV>]]></doc>
+        <modlrstring>RealAmountInInvCurr: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealAmountInInvCurr</attribute>
+        <attribute name="RuntimeName">RealAmountInInvCurr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{aad842e5-f7bb-4389-9981-dc05f2953df2}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Amount of a whole real cost expressed in an&nbsp;expected cost's&nbsp;currency.</DIV>]]></doc>
+        <modlrstring>RealCostInExpCurr: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RealCostInExpCurr</attribute>
+        <attribute name="RuntimeName">RealCostInExpCurr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b88a6c8c-998a-442a-b724-35351bf7602a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.DerivedSettable</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. Amount of a difference between amounts of connected costs expressed in an expected cost's currency.</DIV>]]></doc>
+        <modlrstring>DifferenceInExpCurr: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DifferenceInExpCurr</attribute>
+        <attribute name="RuntimeName">DifferenceInExpCurr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ea45ff44-344b-4679-8345-bf19b2497b70}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.ExpectedCostAmount - self.RealAmountInExpCurr</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>Derived. Amount of a difference between amounts of connected costs expressed in an&nbsp;invoice's currency.</DIV></DIV>]]></doc>
+        <modlrstring>DifferenceInInvCurr: Decimal</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DifferenceInInvCurr</attribute>
+        <attribute name="RuntimeName">DifferenceInInvCurr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{ea45ff44-344b-4679-8345-bf19b2497b70}_EMDUPEID_1</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Decimal</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Decimal</attribute>
+            <attribute name="RuntimeName">Decimal</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">self.ExpAmountInInvCurr - self.RealAmountInInvCurr</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>IsExpectedCostLeftToConnectOk: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsExpectedCostLeftToConnectOk</attribute>
+        <attribute name="RuntimeName">IsExpectedCostLeftToConnectOk</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">78e8d3ce-5f98-48a6-ab84-ed3798adfbd0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>IsExpectedCostAmountOk: Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsExpectedCostAmountOk</attribute>
+        <attribute name="RuntimeName">IsExpectedCostAmountOk</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">e527f5e4-1587-42c2-a5bb-ef492a471fb9</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Boolean</attribute>
+        <attribute name="HasUserCode">True</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Boolean</attribute>
+            <attribute name="RuntimeName">Boolean</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.HasUserCode</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">transient</attribute>
+            <attribute name="Tag">persistence</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="acceptedinvoicecost">
+        <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+        <modlrstring>AcceptedInvoiceCostInvoiceExchangeRates_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AcceptedInvoiceCostInvoiceExchangeRates_</attribute>
+        <attribute name="RuntimeName">AcceptedInvoiceCostInvoiceExchangeRates_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AcceptedInvoiceCostInvoiceExchangeRates_</attribute>
+        <attribute name="id">{65e9c274-ea3d-4ebe-ae02-b2d4ad871d96}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCostInvoiceExchangeRates</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCostInvoiceExchangeRates</attribute>
+            <attribute name="EffectiveName">AcceptedInvoiceCostInvoiceExchangeRates</attribute>
+            <attribute name="id">{0861cd51-6899-495a-9643-bc6e26b63d15}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="acceptedinvoicecost">
+            <doc><![CDATA[<DIV>Class representing an object which is created when an object of&nbsp;<A id=D#ininvoiceamount.htm title=InInvoiceAmount href="http://localhost/ininvoiceamount.htm"><SPAN style="FONT-STYLE: italic">InInvoiceAmount</SPAN></A><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class is connected&nbsp;to an object of&nbsp;<A id=D#executeditemcost.htm title=ExecutedItemCost href="http://localhost/executeditemcost.htm"><SPAN style="FONT-STYLE: italic">ExecutedItemCost</SPAN></A></SPAN><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class. It happens when a real cost from incoming invoice is connected to an expected cost from a customer's order.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCost</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="fixedtoexrates">
+            <doc><![CDATA[<DIV>Derived. Points to a table of an exchange rates used for a real cost.</DIV>]]></doc>
+            <modlrstring>ExchangeRates (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ExchangeRates</attribute>
+            <attribute name="RuntimeName">ExchangeRates</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ExchangeRates</attribute>
+            <attribute name="id">{41db8060-256f-4b25-8005-fdd0e30ac13b}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="fixedtoexrates">
+                <doc><![CDATA[<DIV>Remember to define ToCurr derived association in the derived classes, either as a derived expression or in the code.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">FixedToExRates</attribute>
+                <attribute name="RuntimeName">FixedToExRates</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{39d96a19-2db4-4b56-a88c-7dee354cad1a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment">Abstract class (children mapped)</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="acceptedinvoicecost">
+        <doc><![CDATA[<DIV>&nbsp;</DIV>]]></doc>
+        <modlrstring>AcceptedInvoiceCost (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AcceptedInvoiceCost</attribute>
+        <attribute name="RuntimeName">AcceptedInvoiceCost</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AcceptedInvoiceCost</attribute>
+        <attribute name="id">{61342614-41e2-4528-9a3b-c66fde727040}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCostNavisionAmount</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCostNavisionAmount</attribute>
+            <attribute name="EffectiveName">AcceptedInvoiceCostNavisionAmount</attribute>
+            <attribute name="id">{58f7cde0-1b8c-4a38-9fce-9f46bf13f368}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="acceptedinvoicecost">
+            <doc><![CDATA[<DIV>Class representing an object which is created when an object of&nbsp;<A id=D#ininvoiceamount.htm title=InInvoiceAmount href="http://localhost/ininvoiceamount.htm"><SPAN style="FONT-STYLE: italic">InInvoiceAmount</SPAN></A><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class is connected&nbsp;to an object of&nbsp;<A id=D#executeditemcost.htm title=ExecutedItemCost href="http://localhost/executeditemcost.htm"><SPAN style="FONT-STYLE: italic">ExecutedItemCost</SPAN></A></SPAN><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class. It happens when a real cost from incoming invoice is connected to an expected cost from a customer's order.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCost</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="navisionamount">
+            <doc><![CDATA[<DIV>Points to an object of a <SPAN style="FONT-STYLE: italic">NavisionAmount </SPAN><SPAN>class in which information about this connection are pushed to Navision buffer.</SPAN></DIV>]]></doc>
+            <modlrstring>NavisionAmount (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NavisionAmount</attribute>
+            <attribute name="RuntimeName">NavisionAmount</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NavisionAmount</attribute>
+            <attribute name="id">{0d51ca87-2b25-4365-b78f-95b4bb2e7c9f}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="navisionamount">
+                <doc><![CDATA[<DIV>
+<DIV><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">Represents invoice amount from the Navision buffer. </SPAN>
+<DIV><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">For more detail see "Navision buffer documentation". </SPAN></DIV></DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">NavisionAmount</attribute>
+                <attribute name="RuntimeName">NavisionAmount</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{2ace8dac-0c6b-473f-9d5e-1dac27bed35e}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="acceptedinvoicecost">
+        <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+        <modlrstring>AcceptedInvoiceCostCostDiffType_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AcceptedInvoiceCostCostDiffType_</attribute>
+        <attribute name="RuntimeName">AcceptedInvoiceCostCostDiffType_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AcceptedInvoiceCostCostDiffType_</attribute>
+        <attribute name="id">{5276c6b4-10ec-4da3-a71b-a89aa3d9f6d2}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCostCostDiffType</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCostCostDiffType</attribute>
+            <attribute name="EffectiveName">AcceptedInvoiceCostCostDiffType</attribute>
+            <attribute name="id">{67120bfd-f4f0-4f48-be24-f2302b21abf1}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="acceptedinvoicecost">
+            <doc><![CDATA[<DIV>Class representing an object which is created when an object of&nbsp;<A id=D#ininvoiceamount.htm title=InInvoiceAmount href="http://localhost/ininvoiceamount.htm"><SPAN style="FONT-STYLE: italic">InInvoiceAmount</SPAN></A><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class is connected&nbsp;to an object of&nbsp;<A id=D#executeditemcost.htm title=ExecutedItemCost href="http://localhost/executeditemcost.htm"><SPAN style="FONT-STYLE: italic">ExecutedItemCost</SPAN></A></SPAN><SPAN style="FONT-STYLE: italic"> </SPAN><SPAN>class. It happens when a real cost from incoming invoice is connected to an expected cost from a customer's order.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">AcceptedInvoiceCost</attribute>
+            <attribute name="RuntimeName">AcceptedInvoiceCost</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="costdifftype">
+            <doc><![CDATA[<DIV>Points to a&nbsp;type of difference between amounts of connected costs.</DIV>]]></doc>
+            <modlrstring>CostDiffType (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CostDiffType</attribute>
+            <attribute name="RuntimeName">CostDiffType</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CostDiffType</attribute>
+            <attribute name="id">{fac9c2c1-5103-47ed-95e5-a8503da1e10e}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="costdifftype">
+                <doc><![CDATA[<DIV>Class representing a difference between real cost and expected cost while connecting costs in controlling.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CostDiffType</attribute>
+                <attribute name="RuntimeName">CostDiffType</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{83b3b7d9-67e3-44aa-95a8-7f4339321f25}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="acceptedinvoicecost">
+        <attribute name="RenderedWidth">195</attribute>
+        <attribute name="id">afd804e2-3e1d-4acb-8ed1-694f85d92e24</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">AcceptedInvoiceCost</attribute>
+        <attribute name="RenderedHeight">146</attribute>
+        <attribute name="x">112</attribute>
+        <attribute name="y">320</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_00.01_amounts">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b83dd3a4-8518-4596-8fdb-e4b97138e355.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b83dd3a4-8518-4596-8fdb-e4b97138e355</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">00.01 Amounts</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">00.01 Amounts</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="acceptedinvoicecost">
+        <attribute name="RenderedWidth">195</attribute>
+        <attribute name="id">5e7dca9b-4949-4942-9aab-4521eceae7a8</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">AcceptedInvoiceCost</attribute>
+        <attribute name="RenderedHeight">146</attribute>
+        <attribute name="x">88</attribute>
+        <attribute name="y">1000</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_99.01_navision">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/4eb5d6cd-7264-4dd2-8d3d-20e57027436d.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">4eb5d6cd-7264-4dd2-8d3d-20e57027436d</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">99.01 Navision</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">99.01 Navision</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="acceptedinvoicecost">
+        <attribute name="RenderedWidth">195</attribute>
+        <attribute name="id">ad27df1c-e4bd-4d4e-9f55-2c60e5fb88c7</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">AcceptedInvoiceCost</attribute>
+        <attribute name="RenderedHeight">146</attribute>
+        <attribute name="x">1056</attribute>
+        <attribute name="y">840</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{5a09ab53-14ca-425d-be99-06054634f55a}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_12.04_invoice_costs">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/b7389669-a43a-4ab3-bb81-2d85a84a4991.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">b7389669-a43a-4ab3-bb81-2d85a84a4991</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">12.04 Invoice costs</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">12.04 Invoice costs</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

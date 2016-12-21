@@ -1,0 +1,128 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Vat in package EuradSystem</h1>
+    <p><DIV>Class representing VAT of the amounts</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Adnitation: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Adnotation for VAT code</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Code: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>VAT code if it is a code</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EfectiveValue: Integer</td>
+        <td class="style1"><DIV>Derived. Efective percent value. If is a code then 0.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsCodeVat: Boolean</td>
+        <td class="style1"><DIV>If VAT is as a code</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Prct: Decimal</td>
+        <td class="style1"><DIV>Percent of the VAT if the IsCodeVat is false</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PrintStr: String</td>
+        <td class="style1"><DIV>Derived. Text to be printed</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PrintText: Boolean</td>
+        <td class="style1"><DIV>Text to be printed</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Representation: String</td>
+        <td class="style1"><DIV>Derived. Representation text of VAT in GUI</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(vat:Vat)</td>
+        <td class="style1"><DIV>Copying values from parameter vat</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GrossValue(netValue:Decimal):Decimal</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsTheSameAs(vat:Vat):Boolean</td>
+        <td class="style1"><DIV>Methode for checking if two VAT are same</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">VatValue(netValue:Decimal):Decimal</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CbrVatCodeVat_ : <a href="cbrvatcode.htm">cbrvatcode</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItemPricesVat : <a href="executeditemprice.htm">executeditemprice</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoiceItemVat_ : <a href="invoiceitem.htm">invoiceitem</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedServicePriceVat_ : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One way association</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceAmountVat_ : <a href="outinvoiceamount.htm">outinvoiceamount</a> 0..1</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.01_amounts.htm">00.01 Amounts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.01_amounts.htm">00.01 Amounts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.04_roundings.htm">00.04 Roundings</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.03_cbrimportconfig.htm">01.03 CbrImportConfig</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.13_imports.htm">01.13 Imports</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.00_invoices.htm">12.00 Invoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.04_invoice_costs.htm">12.04 Invoice costs</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

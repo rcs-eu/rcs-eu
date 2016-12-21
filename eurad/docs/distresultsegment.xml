@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="distresultsegment">
+    <doc><![CDATA[<DIV>Represents a route segment. <SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt; FONT-WEIGHT: bold">This class is transient. </SPAN></DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">DistResultSegment</attribute>
+    <attribute name="RuntimeName">DistResultSegment</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{61368c6b-9d35-4ebb-bd3d-3a384815b5d8}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractbusiness">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractBusiness All business classes inherits from this class. Business classes are classes representing business data.</SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractBusiness</attribute>
+        <attribute name="RuntimeName">AbstractBusiness</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{9b899f73-d96c-40ae-9d32-af5d1e3b3fa4}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">transient</attribute>
+        <attribute name="Tag">persistence</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>The distance of the&nbsp;segment in km.</DIV>]]></doc>
+        <modlrstring>dist: Integer</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">dist</attribute>
+        <attribute name="RuntimeName">dist</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{628a4ac0-0b18-48c0-ae0e-da95da0c8971}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">Integer</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Integer</attribute>
+            <attribute name="RuntimeName">Integer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="distresultsegment">
+        <doc><![CDATA[<DIV>The segments of the route. </DIV>]]></doc>
+        <modlrstring>Segments (1..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Segments</attribute>
+        <attribute name="RuntimeName">Segments</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Segments</attribute>
+        <attribute name="id">{765024a2-089a-4dab-af34-af6b22b6608d}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistanceSegment</attribute>
+            <attribute name="RuntimeName">DistanceSegment</attribute>
+            <attribute name="EffectiveName">DistanceSegment</attribute>
+            <attribute name="id">{18a3bd45-1886-44fc-aac0-0dddf6b5414c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="distresultsegment">
+            <doc><![CDATA[<DIV>Represents a route segment. <SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt; FONT-WEIGHT: bold">This class is transient. </SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistResultSegment</attribute>
+            <attribute name="RuntimeName">DistResultSegment</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{61368c6b-9d35-4ebb-bd3d-3a384815b5d8}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="distanceresult">
+            <doc><![CDATA[<DIV>One way association.</DIV>]]></doc>
+            <modlrstring>DistanceSegment_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistanceSegment_</attribute>
+            <attribute name="RuntimeName">DistanceSegment_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DistanceSegment_</attribute>
+            <attribute name="id">{97a23df1-9589-409b-b75c-3a3db622a3fc}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="distanceresult">
+                <doc><![CDATA[<DIV>Represents a route. <SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt; FONT-WEIGHT: bold">This class is transient. </SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DistanceResult</attribute>
+                <attribute name="RuntimeName">DistanceResult</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{96670117-6e59-4f37-a016-34bdfaa79060}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="distresultsegment">
+        <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+        <modlrstring>DistResultSegmentStation1_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DistResultSegmentStation1_</attribute>
+        <attribute name="RuntimeName">DistResultSegmentStation1_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">DistResultSegmentStation1_</attribute>
+        <attribute name="id">{2c4ab35d-f543-40bc-95da-a7b2b3528aa6}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistResultSegmentStation1</attribute>
+            <attribute name="RuntimeName">DistResultSegmentStation1</attribute>
+            <attribute name="EffectiveName">DistResultSegmentStation1</attribute>
+            <attribute name="id">{8c7c8071-cf14-46b1-9fc1-4e5c8ad32a84}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="distresultsegment">
+            <doc><![CDATA[<DIV>Represents a route segment. <SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt; FONT-WEIGHT: bold">This class is transient. </SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistResultSegment</attribute>
+            <attribute name="RuntimeName">DistResultSegment</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{61368c6b-9d35-4ebb-bd3d-3a384815b5d8}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="station">
+            <doc><![CDATA[<DIV>The ending station of the segment.</DIV>]]></doc>
+            <modlrstring>ToStation (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ToStation</attribute>
+            <attribute name="RuntimeName">ToStation</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ToStation</attribute>
+            <attribute name="id">{9f7826fb-cba4-448d-bb7c-8815e83cc390}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="station">
+                <doc><![CDATA[<DIV>Class representing railway station</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Station</attribute>
+                <attribute name="RuntimeName">Station</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0c5000a9-bdf0-495a-ac18-742c9212d199}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="distresultsegment">
+        <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+        <modlrstring>DistResultSegmentStation_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">DistResultSegmentStation_</attribute>
+        <attribute name="RuntimeName">DistResultSegmentStation_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">DistResultSegmentStation_</attribute>
+        <attribute name="id">{6af9c3bc-3934-4d97-9f7a-597db32f134e}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistResultSegmentStation</attribute>
+            <attribute name="RuntimeName">DistResultSegmentStation</attribute>
+            <attribute name="EffectiveName">DistResultSegmentStation</attribute>
+            <attribute name="id">{8cc0d418-100d-4340-b166-eb7a42be63b3}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="distresultsegment">
+            <doc><![CDATA[<DIV>Represents a route segment. <SPAN style="FONT-STYLE: italic; FONT-SIZE: 10pt; FONT-WEIGHT: bold">This class is transient. </SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DistResultSegment</attribute>
+            <attribute name="RuntimeName">DistResultSegment</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{61368c6b-9d35-4ebb-bd3d-3a384815b5d8}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="station">
+            <doc><![CDATA[<DIV>
+<DIV>The&nbsp;begining station of the segment.</DIV></DIV>]]></doc>
+            <modlrstring>FromStation (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">FromStation</attribute>
+            <attribute name="RuntimeName">FromStation</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">FromStation</attribute>
+            <attribute name="id">{07b5f268-288f-4324-bc4b-28217d718415}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="station">
+                <doc><![CDATA[<DIV>Class representing railway station</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Station</attribute>
+                <attribute name="RuntimeName">Station</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0c5000a9-bdf0-495a-ac18-742c9212d199}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="distresultsegment">
+        <attribute name="RenderedWidth">167</attribute>
+        <attribute name="id">fbc4cf1a-21f0-4146-a3e6-2f1504391e3e</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">DistResultSegment</attribute>
+        <attribute name="RenderedHeight">44</attribute>
+        <attribute name="x">368</attribute>
+        <attribute name="y">384</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{61368c6b-9d35-4ebb-bd3d-3a384815b5d8}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_station_distances_searching">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/30b57b5c-21f6-462b-bf02-a907d3c3b9f6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">30b57b5c-21f6-462b-bf02-a907d3c3b9f6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">Station distances searching</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">Station distances searching</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

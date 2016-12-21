@@ -1,0 +1,162 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CustomerRequest in package EuradSystem</h1>
+    <p><DIV>Class representing a request for an offer from a customer.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">IncomeDate: DateTime</td>
+        <td class="style1"><DIV>Date of incoming of this request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInternal: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if this request is from internal customer. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RegisterDate: DateTime</td>
+        <td class="style1"><DIV>Date of registration of this request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RejectNote: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Note which is filled when request's state is changed to <SPAN style="FONT-STYLE: italic">Rejected</SPAN><SPAN>. This note has a reason of rejection.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_customerrequest_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Request's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CalculateSimilarityRate(similarOffer:ISimilarOffer):Int64</td>
+        <td class="style1"><DIV>
+<DIV>Method. Calculates and returns&nbsp;request similarity rate.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Cancel()</td>
+        <td class="style1"><DIV>Method. Changes a request's state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Canceled</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ConnectToOffer()</td>
+        <td class="style1"><DIV>Method. Chagnes a request's state ffom <SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Offered</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DisconnectFromOffers()</td>
+        <td class="style1"><DIV>Method. Changes a request's state from <SPAN style="FONT-STYLE: italic">Offered </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Prepared</SPAN><SPAN>. </SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocNr():String</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns request's number. Used for stating a&nbsp;number of a last prepared document for a customer.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DoReject()</td>
+        <td class="style1"><DIV>Method. Is executed on entry to state <SPAN style="FONT-STYLE: italic">Rejected</SPAN><SPAN>. If this request is internal this method changes a state of connected price request from </SPAN><SPAN style="FONT-STYLE: italic">Sent </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Unanswered</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetDocDate():DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns request's registration&nbsp;date. Used for stating a date of a last prepared document for a customer.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetListOfSimilarOffers():ISimilarOffer[]</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns a list of offers and customer requests which are similar to this request.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOwningCompany(out company:Company):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method. Returns <SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">true</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Times New Roman; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">&nbsp;</SPAN>if this request's customer is an outer company and sets this company to <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">company</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Times New Roman; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;</SPAN>parameter. Otherwise returns&nbsp;<SPAN style="FONT-STYLE: normal; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">false</SPAN><SPAN style="FONT-STYLE: normal; FONT-FAMILY: Times New Roman; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: bold; TEXT-DECORATION: none">&nbsp;</SPAN>and sets <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">null</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Times New Roman; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;</SPAN>to <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">company</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Times New Roman; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">&nbsp;</SPAN>parameter.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetParts():SimilarOfferPart[]</td>
+        <td class="style1"><DIV>
+<DIV>Method. Gets groups of costs from this customer&nbsp;request as parts which are used in searching for similar offers and requests.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsInWork()</td>
+        <td class="style1"><DIV>Method. Changes a request's state from <SPAN style="FONT-STYLE: italic">Prepared </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">InWork</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsPrepared()</td>
+        <td class="style1"><DIV>Method. Changes a request's state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Prepared</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MarkAsPreparedEffect()</td>
+        <td class="style1"><DIV>Method. Is executed when a request's state is changed from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Prepared</SPAN><SPAN>. It checks for similar requests and offers.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Reject()</td>
+        <td class="style1"><DIV>Method. Changes a request's state from <SPAN style="FONT-STYLE: italic">InWork </SPAN><SPAN>to </SPAN><SPAN style="FONT-STYLE: italic">Rejected</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AttachFileList : <a href="attachfilelist.htm">attachfilelist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of attached files to this request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Customer : <a href="customer.htm">customer</a> 1</td>
+        <td class="style1"><DIV>A customer who sent a request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOffer : <a href="customeroffer.htm">customeroffer</a> 0..1</td>
+        <td class="style1"><DIV>Points to a customer offer which was created upon this request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerRequestItem : <a href="customerrequestitem.htm">customerrequestitem</a> 0..*</td>
+        <td class="style1"><DIV>A list ot items of this customer request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageCustReqNewCustomerRequest_ : <a href="messagecustreqnew.htm">messagecustreqnew</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageCustReqRespUserChangedCustomerRequest_ : <a href="messagecustreqrespuserchanged.htm">messagecustreqrespuserchanged</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PersonalContact : <a href="abstractpersonalcontact.htm">abstractpersonalcontact</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to a person who works for a customer.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceRequest : <a href="pricerequest.htm">pricerequest</a> 0..1</td>
+        <td class="style1"><DIV>If this request was created upon internal price request then it points to this price request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleUser : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>
+<DIV>Points to a user&nbsp;who&nbsp;registered this request.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_08.00_customer_requests.htm">08.00 Customer requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_16.00_internal_price_request.htm">16.00 Internal Price Request</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

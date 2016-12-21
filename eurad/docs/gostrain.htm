@@ -1,0 +1,78 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">GosTrain in package EuradSystem</h1>
+    <p><DIV>Class representing a train which was registered in GOS.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ArrivalDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Date of train's arrival.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DepartureDate: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Departure date.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Direction: GosTrainDirection = Arrival</td>
+        <td class="style1"><DIV>Relation direction of a train. Enum:</DIV>
+<DIV>- None = 0,</DIV>
+<DIV>- Arrival = 1,</DIV>
+<DIV>- Departure = 2,</DIV>
+<DIV>- EmptyReturn = 3.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DocReceiveDateTime: DateTime</td>
+        <td class="style1"><DIV>Date and time of&nbsp;transport's documents receiving.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Note: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Internal note.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TrainNr: String</td>
+        <td class="style1"><DIV>Train's number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetArrReport(customer:Customer):GosTrainArrReport</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOrCreateArrReport(customer:Customer; session:IEcoSession):GosTrainArrReport</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ArrReport : <a href="gostrainarrreport.htm">gostrainarrreport</a> 0..*</td>
+        <td class="style1"><DIV>Points to a report of train's arrival.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrders : <a href="customerorder.htm">customerorder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of customer orders to which rail bills from GOS registry were connected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GosBills : <a href="gosbill.htm">gosbill</a> 0..*</td>
+        <td class="style1"><DIV>A list of railway bills registered for this train at GOS registry.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaggonList : <a href="goswaggons.htm">goswaggons</a> 1</td>
+        <td class="style1"><DIV>Points to a list of waggons registered for this train at GOS registry.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

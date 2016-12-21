@@ -1,0 +1,90 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">DelivererContractOrg in package EuradSystem</h1>
+    <p><DIV>Represents the main body of a deliverer contract document.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AllPeriodsFinished: Boolean</td>
+        <td class="style1"><DIV>Indicates that all contract&nbsp;periods have been marked as finished.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EffectiveValidTill: DateTime</td>
+        <td class="style1"><DIV>The last day of validity of this contract. May differ from the derived&nbsp;<SPAN style="FONT-STYLE: italic">ValidTill</SPAN> if annex with later <SPAN style="FONT-STYLE: italic">ValidTill</SPAN>&nbsp;exists.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddAnex(anex:DelivererContractAnex)</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetOwningCompany(out company:Company):Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GuardRegister():Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RegisterPeriod():Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ReorderPeriods()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Anexs : <a href="deliverercontractanex.htm">deliverercontractanex</a> 0..*</td>
+        <td class="style1"><DIV>A list of contract annexes.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContractPeriods : <a href="deliverercontractperiod.htm">deliverercontractperiod</a> 0..*</td>
+        <td class="style1"><DIV>A list of periods with different contract conditions. New annexes always introduce new periods and may alter existing ones.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostSourceContrDelivererContractOrg_ : <a href="costsourcecontr.htm">costsourcecontr</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOffer : <a href="customeroffer.htm">customeroffer</a> 0..1</td>
+        <td class="style1"><DIV>If this contract is internal, then <SPAN style="FONT-STYLE: italic">CustomerOffer</SPAN> points to the customer offer on wich this contract is based. Otherwise it is null.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Deliverer : <a href="deliverer.htm">deliverer</a> 1</td>
+        <td class="style1"><DIV>The deliverer of this contract.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererContractItemDelivererContractOrg1_ : <a href="deliverercontractitem.htm">deliverercontractitem</a> 0..1</td>
+        <td class="style1"><DIV>One way association.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_09.00_deliverercontracts.htm">09.00 DelivererContracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

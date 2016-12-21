@@ -1,0 +1,132 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">OfferedService in package EuradSystem</h1>
+    <p><DIV>Class representing an offered service.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CostGroupsStr: String</td>
+        <td class="style1"><DIV>Derived. Shows all types of cost groups used in this service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsOtherName: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if name of this service is not taken from </SPAN><SPAN style="FONT-STYLE: italic">ServiceName.</SPAN><SPAN></SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NameML: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>Stores different language versions of <SPAN style="FONT-STYLE: italic">Name</SPAN>.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RelationFrom: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Derived. Information about from where cargo&nbsp;is transported.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RelationTo: String</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Information about&nbsp;to where cargo&nbsp;is transported.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AdvancedOfferPriceCalculatorOfferedService_ : <a href="advancedofferpricecalculator.htm">advancedofferpricecalculator</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Calculation : <a href="offeredservicecalc.htm">offeredservicecalc</a> 1</td>
+        <td class="style1"><DIV>Points to a costs' calculation.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CostSourceAbstrOfferedService_ : <a href="costsourceabstr.htm">costsourceabstr</a> 0..*</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerRequestRel : <a href="customerrequestrel.htm">customerrequestrel</a> 0..1</td>
+        <td class="style1"><DIV>If an offer was created upon a request from a customer then this points to a corresponding service from a request.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerSubOffer : <a href="customersuboffer.htm">customersuboffer</a> 0..1</td>
+        <td class="style1"><DIV>Points to a sub-offer to which this service belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererOrderOfferedService_ : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MUnitRates : <a href="munitrates.htm">munitrates</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Name : <a href="mlstring.htm">mlstring</a> 1</td>
+        <td class="style1"><DIV>Service's name. Is considered if <SPAN style="FONT-STYLE: italic">ServiceName </SPAN><SPAN>is not set.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OfferedServiceDelivererContractService_ : <a href="deliverercontractservice.htm">deliverercontractservice</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderedService : <a href="orderedservice.htm">orderedservice</a> 0..*</td>
+        <td class="style1"><DIV>A list of services from customer orders which were created upon this offered service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OrderedServiceOfferedService_ : <a href="orderedservice.htm">orderedservice</a> 0..1</td>
+        <td class="style1"><DIV>One-way association.<SPAN style="FONT-WEIGHT: bold"></SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceList : <a href="pricelist.htm">pricelist</a> 1</td>
+        <td class="style1"><DIV>Points to a list of prices for this service.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceName : <a href="servicename.htm">servicename</a> 0..1</td>
+        <td class="style1"><DIV>Points to a object from a dictionary which contains service's name.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_16.00_internal_price_request.htm">16.00 Internal Price Request</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

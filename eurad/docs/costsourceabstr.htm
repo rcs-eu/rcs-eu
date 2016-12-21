@@ -1,0 +1,79 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">CostSourceAbstr in package EuradSystem</h1>
+    <p><DIV>Abstract class representing a cost's source.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ValidFrom: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Derived. A date&nbsp;from which a cost taken from this source is valid.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ValidTo: DateTime</td>
+        <td class="style1"><DIV>Derived. A date to which a cost taken from this source is valid.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():CostSourceAbstr</td>
+        <td class="style1"><DIV>Method. Clones this cost's source.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetCostValues(cargo:Cargo; gui:IGetPriceListGUI; es:EcoSession; dateFrom:DateTime; dateTill:DateTime; costOverwrite:Boolean)</td>
+        <td class="style1"><DIV>Method. Sets values of <SPAN style="FONT-STYLE: italic">SingleCost </SPAN><SPAN>with values taken from source which is valid from </SPAN><SPAN style="FONT-STYLE: italic">dateFrom </SPAN><SPAN>till </SPAN><SPAN style="FONT-STYLE: italic">dateTill</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CostDeliverer : <a href="deliverer.htm">deliverer</a> 1</td>
+        <td class="style1"><DIV>Derived. Points to a deliverer from which&nbsp;<SPAN style="FONT-STYLE: italic">SingleCost</SPAN> is taken.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GeneralDelivererOrder : <a href="generaldelivererorder.htm">generaldelivererorder</a> 0..1</td>
+        <td class="style1"><DIV>General order for internal deliverer. Thanks to this association system knows that it should create internal general&nbsp;customer order and it knows kinds of services which should be on this general customer order.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOffer : <a href="customeroffer.htm">customeroffer</a> 0..1</td>
+        <td class="style1"><DIV>Derived. Points to an offer of an internal deliverer from which cost is used for <SPAN style="FONT-STYLE: italic">SingleCost</SPAN>. Used in internal document flow.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOfferedService : <a href="offeredservice.htm">offeredservice</a> 0..1</td>
+        <td class="style1"><DIV>Points to an offered service of an internal offer from which cost is used for <SPAN style="FONT-STYLE: italic">SingleCost</SPAN>. Used in internal document flow.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InternalOfferedServicePrice : <a href="offeredserviceprice.htm">offeredserviceprice</a> 0..1</td>
+        <td class="style1"><DIV>Points to a price of an internal offer which is used for&nbsp;<SPAN style="FONT-STYLE: italic">SingleCost</SPAN>. Used in internal document flow.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SingleCost : <a href="singlecost.htm">singlecost</a> 1</td>
+        <td class="style1"><DIV>Points to a cost for which this source belongs.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SingleDelivererOrder : <a href="singledelivererorder.htm">singledelivererorder</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Single&nbsp;order for internal deliverer. Thanks to this association system knows that it should create internal&nbsp;single&nbsp;customer order and it knows kinds of services which should be on this&nbsp;single customer order.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Source : <a href="abstractroot.htm">abstractroot</a> 1</td>
+        <td class="style1"><DIV>Derived. Points directly to a document which is a source of&nbsp;<SPAN style="FONT-STYLE: italic">SingleCost</SPAN>.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.01_offers_singlecost_and_offeredprice.htm">06.01 Offers SingleCost and OfferedPrice</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

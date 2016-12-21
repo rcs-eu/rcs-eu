@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_messagedelivery_rootstate">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/a565a0bb-a40e-43ae-9dfb-dee0bd4a067a.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">a565a0bb-a40e-43ae-9dfb-dee0bd4a067a</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:MessageDelivery.RootState</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_messagedelivery_rootstate">
+        <doc><![CDATA[<DIV>Delivery's state.</DIV>]]></doc>
+        <modlrstring>RootState: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">RootState</attribute>
+        <attribute name="RuntimeName">RootState</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{4a0c4768-1c35-4441-a0fd-490e85bf70f1}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="messagedelivery">
+            <doc><![CDATA[<DIV>Class representing a delivery of a <SPAN style="FONT-STYLE: italic">Message</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageDelivery</attribute>
+            <attribute name="RuntimeName">MessageDelivery</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{171a5991-c367-4976-ba57-b19e9a99aa19}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">65</attribute>
+        <attribute name="id">3912e87d-eb7a-489f-a0ad-f5c5f0aae1dd</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Deleted</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">560</attribute>
+        <attribute name="y">112</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Deleted</attribute>
+            <attribute name="RuntimeName">Deleted</attribute>
+            <attribute name="id">dda59ac9-2917-479b-be23-a85aeca9b3bf</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">04bc02f1-1518-4f9c-8845-8ad7783f9fa4</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Delivered</attribute>
+                    <attribute name="RuntimeName">Delivered</attribute>
+                    <attribute name="id">6809f017-2e20-44d0-a6f3-37bcdcc3ddc9</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.MarkAsDeleted()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">271af432-503e-4788-adde-e803507c8820</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Unread</attribute>
+                    <attribute name="RuntimeName">Unread</attribute>
+                    <attribute name="id">cab9a4e4-7111-4d94-af57-8c1f467e4804</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.MarkAsDeleted()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">3c8f1216-dec8-4f5e-af9d-26cd03697188</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Read</attribute>
+                    <attribute name="RuntimeName">Read</attribute>
+                    <attribute name="id">4b036e4b-c96f-469f-8d74-7bd339a509bd</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.MarkAsDeleted()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing" />
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">76cb2ee9-3f10-44de-910d-53c6728e2b9d</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">InitialState</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">200</attribute>
+        <attribute name="y">32</attribute>
+        <link name="Vertex" />
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">20</attribute>
+        <attribute name="id">792a58e8-b8b2-4ad8-a6e4-91f4abf95424</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">FinalState</attribute>
+        <attribute name="RenderedHeight">20</attribute>
+        <attribute name="x">744</attribute>
+        <attribute name="y">352</attribute>
+        <link name="Vertex">
+          <object type="FinalState">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">FinalState</attribute>
+            <attribute name="RuntimeName">FinalState</attribute>
+            <attribute name="id">6da193f2-f445-41fb-ae8e-35e8252868e7</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming" />
+            <link name="Outgoing" />
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">78</attribute>
+        <attribute name="id">b8481de0-9ef8-4815-ac26-324cc4184b41</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Delivered</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">200</attribute>
+        <attribute name="y">112</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Delivered</attribute>
+            <attribute name="RuntimeName">Delivered</attribute>
+            <attribute name="id">6809f017-2e20-44d0-a6f3-37bcdcc3ddc9</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">7262e137-ad44-4b5d-9e5f-63d2a390bd04</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">InitialState</attribute>
+                    <attribute name="RuntimeName">InitialState</attribute>
+                    <attribute name="id">49145d20-a6ac-4068-bf84-5a7d979e53ff</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">04bc02f1-1518-4f9c-8845-8ad7783f9fa4</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Deleted</attribute>
+                    <attribute name="RuntimeName">Deleted</attribute>
+                    <attribute name="id">dda59ac9-2917-479b-be23-a85aeca9b3bf</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.MarkAsDeleted()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">2de7712b-ec63-44fa-b588-f86432664db2</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Unread</attribute>
+                    <attribute name="RuntimeName">Unread</attribute>
+                    <attribute name="id">cab9a4e4-7111-4d94-af57-8c1f467e4804</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">959811ab-e7d4-49ff-8d2e-32be077a96ea</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Read</attribute>
+                    <attribute name="RuntimeName">Read</attribute>
+                    <attribute name="id">4b036e4b-c96f-469f-8d74-7bd339a509bd</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.ReadAt := DateTime.Now()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">62</attribute>
+        <attribute name="id">bdbb44e7-4241-4380-ac01-06fb0338de82</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Unread</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">200</attribute>
+        <attribute name="y">320</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Unread</attribute>
+            <attribute name="RuntimeName">Unread</attribute>
+            <attribute name="id">cab9a4e4-7111-4d94-af57-8c1f467e4804</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">2de7712b-ec63-44fa-b588-f86432664db2</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Delivered</attribute>
+                    <attribute name="RuntimeName">Delivered</attribute>
+                    <attribute name="id">6809f017-2e20-44d0-a6f3-37bcdcc3ddc9</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">b68a29f0-b250-4f04-9705-74c0064cc067</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Read</attribute>
+                    <attribute name="RuntimeName">Read</attribute>
+                    <attribute name="id">4b036e4b-c96f-469f-8d74-7bd339a509bd</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">271af432-503e-4788-adde-e803507c8820</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Deleted</attribute>
+                    <attribute name="RuntimeName">Deleted</attribute>
+                    <attribute name="id">dda59ac9-2917-479b-be23-a85aeca9b3bf</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.MarkAsDeleted()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">346a5013-5e0d-4e10-a533-a9fd847c3084</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Read</attribute>
+                    <attribute name="RuntimeName">Read</attribute>
+                    <attribute name="id">4b036e4b-c96f-469f-8d74-7bd339a509bd</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.ReadAt := DateTime.Now()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">48</attribute>
+        <attribute name="id">c2d8ac3d-340e-4aef-a19c-f15dd0e74ee1</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Read</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">560</attribute>
+        <attribute name="y">320</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Read</attribute>
+            <attribute name="RuntimeName">Read</attribute>
+            <attribute name="id">4b036e4b-c96f-469f-8d74-7bd339a509bd</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">346a5013-5e0d-4e10-a533-a9fd847c3084</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Unread</attribute>
+                    <attribute name="RuntimeName">Unread</attribute>
+                    <attribute name="id">cab9a4e4-7111-4d94-af57-8c1f467e4804</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.ReadAt := DateTime.Now()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">959811ab-e7d4-49ff-8d2e-32be077a96ea</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Delivered</attribute>
+                    <attribute name="RuntimeName">Delivered</attribute>
+                    <attribute name="id">6809f017-2e20-44d0-a6f3-37bcdcc3ddc9</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.ReadAt := DateTime.Now()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">3c8f1216-dec8-4f5e-af9d-26cd03697188</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Deleted</attribute>
+                    <attribute name="RuntimeName">Deleted</attribute>
+                    <attribute name="id">dda59ac9-2917-479b-be23-a85aeca9b3bf</attribute>
+                  </object>
+                </link>
+                <link name="Effect">
+                  <object type="Activity">
+                    <attribute name="Body">self.MarkAsDeleted()</attribute>
+                  </object>
+                </link>
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">b68a29f0-b250-4f04-9705-74c0064cc067</attribute>
+                <attribute name="Guard">: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Unread</attribute>
+                    <attribute name="RuntimeName">Unread</attribute>
+                    <attribute name="id">cab9a4e4-7111-4d94-af57-8c1f467e4804</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name"></attribute>
+                <attribute name="RuntimeName"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

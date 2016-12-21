@@ -1,0 +1,102 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">GosCargoHolder in package EuradSystem</h1>
+    <p><DIV>Class representing cargo holder in GOS registry.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CanDelete: Boolean</td>
+        <td class="style1"><DIV>Derived. Indicates if this holder be deleted.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CanEdit: Boolean</td>
+        <td class="style1"><DIV>
+<DIV>Derived. Indicates if this holder be edited.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RootState: String <a href="statediagram_goscargoholder_rootstate.htm">State diagram</a></td>
+        <td class="style1"><DIV>Holder's state.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddExecutedItem(executedItem:ExecutedItem)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Finish()</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Unfinish()</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CargoHolder : <a href="abstractcargoholder.htm">abstractcargoholder</a> 1</td>
+        <td class="style1"><DIV>Points to a cargo holder which now can only be a waggon cargo holder.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItems : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>A list of&nbsp;services which were executed for this holder.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExternalExecutedItem : <a href="executeditem.htm">executeditem</a> 0..1</td>
+        <td class="style1"><DIV>Points to an executed item which was registered by&nbsp;an internal customer in their orders. It's used for creating a proper single customer order in <SPAN style="FONT-STYLE: italic">GeneralCustomerOrder</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GeneralCustomerOrder : <a href="generalcustomerorder.htm">generalcustomerorder</a> 0..1</td>
+        <td class="style1"><DIV>Points to a general order from a customer to which this holder is connected.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GosCase : <a href="goscase.htm">goscase</a> 0..1</td>
+        <td class="style1"><DIV>Points to a GOS registry.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageGosCargoHolderConnectedToOrdGosCargoHolder_ : <a href="messagegoscargoholderconnectedtoord.htm">messagegoscargoholderconnectedtoord</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>Derived. One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageGosCargoHolderNewAvisoGosCargoHolder_ : <a href="messagegoscargoholdernewaviso.htm">messagegoscargoholdernewaviso</a> 0..*</td>
+        <td class="style1"><DIV>Derived. One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceGOS : <a href="servicegos.htm">servicegos</a> 0..1</td>
+        <td class="style1"><DIV>Points to a GOS service&nbsp;in which this holder is serviced.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceGOSSender : <a href="servicegos.htm">servicegos</a> 0..1</td>
+        <td class="style1"><DIV>Not in use.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SingleCustomerOrder : <a href="singlecustomerorder.htm">singlecustomerorder</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to a&nbsp;single order from a customer to which this holder is connected.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.01_system_messages.htm">03.01 System Messages</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

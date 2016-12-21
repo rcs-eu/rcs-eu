@@ -1,0 +1,118 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">TruckTransport in package EuradSystem</h1>
+    <p><DIV>Class representing truck transport</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">EffectiveRealWeight: Decimal</td>
+        <td class="style1"><DIV>Derived. Real weight for the trnasport depending if it is UTI transport or not.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsUtiTransport: Boolean</td>
+        <td class="style1"><DIV>If UTI are loaded</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmRequired: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PackageNameML: String</td>
+        <td class="style1"><DIV>Name of the packages type in multilanguage</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UtiStr: String</td>
+        <td class="style1"><DIV>Derived. Text representing UTI transport</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ClearPlaces()</td>
+        <td class="style1"><DIV>Methode for clearinf action list</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():TruckTransport</td>
+        <td class="style1"><DIV>Methode for cloning truck transport</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(truckTransport:TruckTransport)</td>
+        <td class="style1"><DIV>Methode for copying truck transport information</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetPlaces(places:IList&lt;Address&gt;)</td>
+        <td class="style1"><DIV>Methode.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">CargoType : <a href="cargotype.htm">cargotype</a> 0..1</td>
+        <td class="style1"><DIV>Type of the cargo</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsPlaces : <a href="trucktransportplace.htm">trucktransportplace</a> 0..*</td>
+        <td class="style1"><DIV>Derived. Customs places for transport</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FromPlace : <a href="trucktransportplace.htm">trucktransportplace</a> 1</td>
+        <td class="style1"><DIV>Derived. Loading places.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LoadPlaces : <a href="trucktransportplace.htm">trucktransportplace</a> 0..*</td>
+        <td class="style1"><DIV>Derived. Loading places</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nhm : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OldCargoPackagingType : <a href="cargopackagingtype.htm">cargopackagingtype</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Not in use</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PackageName : <a href="mlstring.htm">mlstring</a> 1</td>
+        <td class="style1"><DIV>Derived.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Places : <a href="trucktransportplace.htm">trucktransportplace</a> 2..*</td>
+        <td class="style1"><DIV>List of all places (loading, unloading, customs)</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemTruckTruckTransport_ : <a href="specitemtruck.htm">specitemtruck</a> 0..1</td>
+        <td class="style1"><DIV>One way association</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ToPlace : <a href="trucktransportplace.htm">trucktransportplace</a> 1</td>
+        <td class="style1"><DIV>Derived. Transport to place</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Truck : <a href="truck.htm">truck</a> 0..1</td>
+        <td class="style1"><DIV>Truck info connected to transport</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UnloadPlaces : <a href="trucktransportplace.htm">trucktransportplace</a> 0..*</td>
+        <td class="style1"><DIV>Derived. Unloading places</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Uti : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"><DIV>List of UTI's on truck</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.02_executed_truck_transport.htm">07.02 Executed Truck Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

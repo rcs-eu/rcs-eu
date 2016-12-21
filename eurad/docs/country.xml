@@ -1,0 +1,1507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="country">
+    <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">Country</attribute>
+    <attribute name="RuntimeName">Country</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="location">
+        <doc><![CDATA[]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Location</attribute>
+        <attribute name="RuntimeName">Location</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">80af204b-66a1-4011-99c7-769b6b96342f</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="countrygroup">
+        <doc><![CDATA[<DIV>Class representing a group of countries which make one unit, e.g. European Union.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CountryGroup</attribute>
+        <attribute name="RuntimeName">CountryGroup</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{39f9dd22-034a-44e3-965c-4d0f05c87078}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="countrysingle">
+        <doc><![CDATA[<DIV>Class representing a single country.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CountrySingle</attribute>
+        <attribute name="RuntimeName">CountrySingle</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{86320919-a451-480d-8ab2-4a75bcd6f49c}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">Children</attribute>
+        <attribute name="Tag">Eco.TableMapping</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">self.Name</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+      <object type="TaggedValue">
+        <attribute name="Value">"LocationDescription=String.Format('[{0}] {1}', Iso2, Name)"</attribute>
+        <attribute name="Tag">Eco.DerivationExpressions</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if a country with </SPAN><SPAN style="FONT-STYLE: italic">code </SPAN><SPAN>exists in a system and sets this country to a </SPAN><SPAN style="FONT-STYLE: italic">country </SPAN><SPAN>parameter. Otherwise returns </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>&nbsp;and sets </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to a </SPAN><SPAN style="FONT-STYLE: italic">country </SPAN><SPAN>parameter.</SPAN></DIV>]]></doc>
+        <modlrstring>GetCountry(serviceProvider:IEcoServiceProvider; code:String; out country:Country):Boolean</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetCountry</attribute>
+        <attribute name="RuntimeName">GetCountry</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{0ec570a7-5501-4675-b327-ff63eb13cdf9}_EMDUPEID_0</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">True</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Boolean</attribute>
+                <attribute name="RuntimeName">Boolean</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">serviceProvider</attribute>
+            <attribute name="RuntimeName">serviceProvider</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IEcoServiceProvider</attribute>
+                <attribute name="RuntimeName">IEcoServiceProvider</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">code</attribute>
+            <attribute name="RuntimeName">code</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">country</attribute>
+            <attribute name="RuntimeName">country</attribute>
+            <attribute name="Kind">Out</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Country</attribute>
+                <attribute name="RuntimeName">Country</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.PlainMethod</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Country's name.</DIV>]]></doc>
+        <modlrstring>Name: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Name</attribute>
+        <attribute name="RuntimeName">Name</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{5fa126f4-6b9f-4c4c-89d2-0d06ca93fcc9}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Country's iso2 code.</DIV>]]></doc>
+        <modlrstring>Iso2: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Iso2</attribute>
+        <attribute name="RuntimeName">Iso2</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{9c14dba7-f9a4-4961-baab-e9c3ebbb6c2c}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">2</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Country's iso3 <SPAN class=res_phr_translation>code.</SPAN></DIV>]]></doc>
+        <modlrstring>Iso3: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Iso3</attribute>
+        <attribute name="RuntimeName">Iso3</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{e2b5e7e1-29e7-44a6-a2dd-48fddd19f75d}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">3</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Country's code.</DIV>]]></doc>
+        <modlrstring>Code: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Code</attribute>
+        <attribute name="RuntimeName">Code</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{fa9c3777-df1a-4633-97d7-43be937b7070}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">5</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Method">
+        <doc><![CDATA[<DIV>Method. Gets a country with a <SPAN style="FONT-STYLE: italic">code</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>GetCountry(serviceProvider:IEcoServiceProvider; code:String):Country</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">GetCountry</attribute>
+        <attribute name="RuntimeName">GetCountry</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">6822b385-a1ab-4bd1-992a-c0e2460c428d</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">False</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">True</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName"></attribute>
+            <attribute name="Kind">Return</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Country</attribute>
+                <attribute name="RuntimeName">Country</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">serviceProvider</attribute>
+            <attribute name="RuntimeName">serviceProvider</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">IEcoServiceProvider</attribute>
+                <attribute name="RuntimeName">IEcoServiceProvider</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">code</attribute>
+            <attribute name="RuntimeName">code</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">String</attribute>
+                <attribute name="RuntimeName">String</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Points to a country from which this cargo comes.</DIV>]]></doc>
+        <modlrstring>CargoFrom (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CargoFrom</attribute>
+        <attribute name="RuntimeName">CargoFrom</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CargoFrom</attribute>
+        <attribute name="id">{031a281e-ec5f-48bd-a0ac-dd5b7e671742}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerSubOfferCountry</attribute>
+            <attribute name="RuntimeName">CustomerSubOfferCountry</attribute>
+            <attribute name="EffectiveName">CustomerSubOfferCountry</attribute>
+            <attribute name="id">{0198b966-b0ff-4e51-a784-476c05c4231b}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cargo">
+            <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>CustomerSubOfferCountry_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerSubOfferCountry_</attribute>
+            <attribute name="RuntimeName">CustomerSubOfferCountry_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomerSubOfferCountry_</attribute>
+            <attribute name="id">{57b00762-394a-4ddd-95f1-748eef950306}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="cargo">
+                <doc><![CDATA[<DIV>Describes cargo.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Cargo</attribute>
+                <attribute name="RuntimeName">Cargo</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4e894279-beb2-4957-9534-22b00c136e3b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Country in which this station is located</DIV>]]></doc>
+        <modlrstring>Country (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Country</attribute>
+        <attribute name="RuntimeName">Country</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Country</attribute>
+        <attribute name="id">{50785967-4d65-4660-b910-969055684b80}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StationCountry</attribute>
+            <attribute name="RuntimeName">StationCountry</attribute>
+            <attribute name="EffectiveName">StationCountry</attribute>
+            <attribute name="id">{4442144a-30cb-44b6-bab6-69538aa89a29}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="station">
+            <doc><![CDATA[<DIV>A list of all stations in this country.</DIV>]]></doc>
+            <modlrstring>Stations (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Stations</attribute>
+            <attribute name="RuntimeName">Stations</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Stations</attribute>
+            <attribute name="id">{cece4246-b053-4491-8ebb-8557ff215e9b}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="station">
+                <doc><![CDATA[<DIV>Class representing railway station</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Station</attribute>
+                <attribute name="RuntimeName">Station</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0c5000a9-bdf0-495a-ac18-742c9212d199}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Dispatching country</DIV>]]></doc>
+        <modlrstring>FromCountry (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FromCountry</attribute>
+        <attribute name="RuntimeName">FromCountry</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">FromCountry</attribute>
+        <attribute name="id">{318e8139-592f-4cf4-8b0a-c0fcb8fbd8ee}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SCShipCountry</attribute>
+            <attribute name="RuntimeName">SCShipCountry</attribute>
+            <attribute name="EffectiveName">SCShipCountry</attribute>
+            <attribute name="id">{522d6c2c-8134-4d4c-9c6d-b5e6745b150f}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="scship">
+            <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>SCShipCountry_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SCShipCountry_</attribute>
+            <attribute name="RuntimeName">SCShipCountry_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SCShipCountry_</attribute>
+            <attribute name="id">{63228160-7508-4be3-bf76-0ba1aacfcece}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="scship">
+                <doc><![CDATA[<DIV>
+<DIV>Class repreenting single cost info for ship</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SCShip</attribute>
+                <attribute name="RuntimeName">SCShip</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{9c9dd1b2-06c2-44ee-a639-7add189357e1}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Points to a country in which this railway is a national railway.</DIV>]]></doc>
+        <modlrstring>IsNationalIn (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">IsNationalIn</attribute>
+        <attribute name="RuntimeName">IsNationalIn</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">IsNationalIn</attribute>
+        <attribute name="id">{54025e55-cfcb-4444-9aa4-0e065f966666}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">RailwayCountry</attribute>
+            <attribute name="RuntimeName">RailwayCountry</attribute>
+            <attribute name="EffectiveName">RailwayCountry</attribute>
+            <attribute name="id">{580ede67-0a92-45b2-b833-32aaa8dca946}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="railway">
+            <doc><![CDATA[<DIV>Points to a national railway in this country.</DIV>]]></doc>
+            <modlrstring>NationalRailway (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">NationalRailway</attribute>
+            <attribute name="RuntimeName">NationalRailway</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">NationalRailway</attribute>
+            <attribute name="id">{53f8d2ea-b995-4793-8dff-ce87688b9dac}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="railway">
+                <doc><![CDATA[<DIV>Class representing railway.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Railway</attribute>
+                <attribute name="RuntimeName">Railway</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{f47db7f0-6f5e-4d75-874c-3cd34090f463}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Departure country.</DIV>]]></doc>
+        <modlrstring>FromCountry (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">FromCountry</attribute>
+        <attribute name="RuntimeName">FromCountry</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">FromCountry</attribute>
+        <attribute name="id">{69158fb9-2762-4a6b-96a6-a10039d1fa0c}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DSShipGroupCountry</attribute>
+            <attribute name="RuntimeName">DSShipGroupCountry</attribute>
+            <attribute name="EffectiveName">DSShipGroupCountry</attribute>
+            <attribute name="id">{581325e9-664a-4dad-a304-f192eff179f1}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="dsshipgroup">
+            <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>DSShipGroupCountry_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DSShipGroupCountry_</attribute>
+            <attribute name="RuntimeName">DSShipGroupCountry_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DSShipGroupCountry_</attribute>
+            <attribute name="id">{a5d598e6-f695-4c07-b18c-5cea7ce6ebb6}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="dsshipgroup">
+                <doc><![CDATA[<DIV>
+<DIV>Represents&nbsp;offered service&nbsp;details for services of type&nbsp;sea transport.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DSShipGroup</attribute>
+                <attribute name="RuntimeName">DSShipGroup</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{5a6c91f5-cc49-45d1-9b86-887d5892b58e}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Arrival country.</DIV>]]></doc>
+        <modlrstring>ToCountry (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ToCountry</attribute>
+        <attribute name="RuntimeName">ToCountry</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ToCountry</attribute>
+        <attribute name="id">{29418448-b8d8-46aa-80d1-3ac6145f595c}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DSShipGroupCountry1</attribute>
+            <attribute name="RuntimeName">DSShipGroupCountry1</attribute>
+            <attribute name="EffectiveName">DSShipGroupCountry1</attribute>
+            <attribute name="id">{5c009d47-4455-49bd-b562-d7a58bee9608}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="dsshipgroup">
+            <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>DSShipGroupCountry1_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DSShipGroupCountry1_</attribute>
+            <attribute name="RuntimeName">DSShipGroupCountry1_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">DSShipGroupCountry1_</attribute>
+            <attribute name="id">{16e25464-a0ff-4496-b172-fa2b63743838}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="dsshipgroup">
+                <doc><![CDATA[<DIV>
+<DIV>Represents&nbsp;offered service&nbsp;details for services of type&nbsp;sea transport.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">DSShipGroup</attribute>
+                <attribute name="RuntimeName">DSShipGroup</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{5a6c91f5-cc49-45d1-9b86-887d5892b58e}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Destination country</DIV>]]></doc>
+        <modlrstring>ToCountry (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">ToCountry</attribute>
+        <attribute name="RuntimeName">ToCountry</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">ToCountry</attribute>
+        <attribute name="id">{4882ce65-d14a-41ac-9086-85a1c930e924}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SCShipCountry1</attribute>
+            <attribute name="RuntimeName">SCShipCountry1</attribute>
+            <attribute name="EffectiveName">SCShipCountry1</attribute>
+            <attribute name="id">{5d176e46-308f-4cd5-9fbf-487b095aadc8}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="scship">
+            <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>SCShipCountry1_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SCShipCountry1_</attribute>
+            <attribute name="RuntimeName">SCShipCountry1_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SCShipCountry1_</attribute>
+            <attribute name="id">{d5e05d4f-fdff-469e-83f0-fd1d4bf07b4f}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="scship">
+                <doc><![CDATA[<DIV>
+<DIV>Class repreenting single cost info for ship</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SCShip</attribute>
+                <attribute name="RuntimeName">SCShip</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{9c9dd1b2-06c2-44ee-a639-7add189357e1}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>
+<DIV>Points to a country from which this cargo eventually goes.</DIV></DIV>]]></doc>
+        <modlrstring>CargoTo (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">CargoTo</attribute>
+        <attribute name="RuntimeName">CargoTo</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">CargoTo</attribute>
+        <attribute name="id">{5edc73e3-d5a0-47c5-92d5-ec9efaeb1120}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerSubOfferCountry1</attribute>
+            <attribute name="RuntimeName">CustomerSubOfferCountry1</attribute>
+            <attribute name="EffectiveName">CustomerSubOfferCountry1</attribute>
+            <attribute name="id">{774d1297-d897-47d6-9599-55939d74a4f2}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cargo">
+            <doc><![CDATA[<DIV>
+<DIV>One-way association.</DIV></DIV>]]></doc>
+            <modlrstring>CustomerSubOfferCountry1_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CustomerSubOfferCountry1_</attribute>
+            <attribute name="RuntimeName">CustomerSubOfferCountry1_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CustomerSubOfferCountry1_</attribute>
+            <attribute name="id">{22e8dec7-4b63-4fb7-84d4-f770a92dc2d0}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="cargo">
+                <doc><![CDATA[<DIV>Describes cargo.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Cargo</attribute>
+                <attribute name="RuntimeName">Cargo</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{4e894279-beb2-4957-9534-22b00c136e3b}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Points to a country in which this account exists.</DIV>]]></doc>
+        <modlrstring>Country (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Country</attribute>
+        <attribute name="RuntimeName">Country</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Country</attribute>
+        <attribute name="id">{ff1ce9c7-227b-41e1-8655-1c73183df420}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BankAccountCountry</attribute>
+            <attribute name="RuntimeName">BankAccountCountry</attribute>
+            <attribute name="EffectiveName">BankAccountCountry</attribute>
+            <attribute name="id">{bb1ff29b-5988-4b58-9fd3-f5280ae871dc}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="bankaccount">
+            <doc><![CDATA[<DIV>One-way association.</DIV>]]></doc>
+            <modlrstring>BankAccountCountry_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BankAccountCountry_</attribute>
+            <attribute name="RuntimeName">BankAccountCountry_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">BankAccountCountry_</attribute>
+            <attribute name="id">{4d92ac07-f32b-4577-bdc7-368592c30e38}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="bankaccount">
+                <doc><![CDATA[<DIV>Abstract class representing bank account.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">BankAccount</attribute>
+                <attribute name="RuntimeName">BankAccount</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{b02e621e-e780-4c84-9ae3-591a2cbcee55}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>A country to which this harbour belongs.</DIV>]]></doc>
+        <modlrstring>Country (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Country</attribute>
+        <attribute name="RuntimeName">Country</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Country</attribute>
+        <attribute name="id">{7243404e-2dd2-4415-b682-5ed1da589282}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CountryHarbor</attribute>
+            <attribute name="RuntimeName">CountryHarbor</attribute>
+            <attribute name="EffectiveName">CountryHarbor</attribute>
+            <attribute name="id">{ed52aa0d-bf70-4463-a601-2489634db63d}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="harbor">
+            <doc><![CDATA[<DIV>A list of all harbours in this country.</DIV>]]></doc>
+            <modlrstring>Harbors (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Harbors</attribute>
+            <attribute name="RuntimeName">Harbors</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Harbors</attribute>
+            <attribute name="id">{df9f5a8a-04f2-4de7-8d52-616a4f536c59}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="harbor">
+                <doc><![CDATA[<DIV>Class representing a harbour.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Harbor</attribute>
+                <attribute name="RuntimeName">Harbor</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{76ad260f-ef74-4c32-b5f0-7e6ceec5f0d6}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[<DIV>Previous country</DIV>]]></doc>
+        <modlrstring>PrevCountry (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">PrevCountry</attribute>
+        <attribute name="RuntimeName">PrevCountry</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment">Derived</attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">PrevCountry</attribute>
+        <attribute name="id">{487b1cc8-133f-41e1-8d8f-8ce822e27e32}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StationDistOverCountrySingle1</attribute>
+            <attribute name="RuntimeName">StationDistOverCountrySingle1</attribute>
+            <attribute name="EffectiveName">StationDistOverCountrySingle1</attribute>
+            <attribute name="id">{f6be7987-b4e1-4193-b4ff-780bb3f9dce4}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="stationdistover">
+            <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+            <modlrstring>StationDistOverCountrySingle1_ (0..1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StationDistOverCountrySingle1_</attribute>
+            <attribute name="RuntimeName">StationDistOverCountrySingle1_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment">Derived</attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">StationDistOverCountrySingle1_</attribute>
+            <attribute name="id">{71a26360-f085-4159-8499-5e303971ef94}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..1</attribute>
+            <link name="Participant">
+              <object type="Class" href="stationdistover">
+                <doc><![CDATA[<DIV>Transiant class used in searching distances between stations (see StationsDistSeraching class)</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">StationDistOver</attribute>
+                <attribute name="RuntimeName">StationDistOver</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{fee80598-078e-4c7d-ad9d-0fa73393aadb}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="country">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>Country (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name"></attribute>
+        <attribute name="RuntimeName">Country</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Country</attribute>
+        <attribute name="id">fd3e19c6-c5d3-4d00-aa7d-3919dd9a6c63</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">CountryCountrySystemBankSystemBanks</attribute>
+            <attribute name="EffectiveName">CountryCountrySystemBankSystemBanks</attribute>
+            <attribute name="id">a6a59c51-dfac-42de-9a71-09e5835dcb5d</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="country">
+            <doc><![CDATA[<DIV>Abstract class representing a country.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Country</attribute>
+            <attribute name="RuntimeName">Country</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="systembank">
+            <doc><![CDATA[]]></doc>
+            <modlrstring>SystemBanks (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name"></attribute>
+            <attribute name="RuntimeName">SystemBanks</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SystemBanks</attribute>
+            <attribute name="id">331de65a-5128-402f-8b04-57162a057bc6</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="systembank">
+                <doc><![CDATA[<DIV>Class representing bank information. Class is showing to which company units are connected which accounts.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SystemBank</attribute>
+                <attribute name="RuntimeName">SystemBank</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{b62b5246-963c-44f7-bbfa-199ed018e047}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">6a31b068-faf5-49cf-9be4-8c141bc87755</attribute>
+        <attribute name="x">-55</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">fb5d29c5-4793-4273-8d32-63c6719a85d0</attribute>
+        <attribute name="x">-57</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">09a017cb-3d66-4c78-9fed-7d76c54f9b1a</attribute>
+        <attribute name="x">-57</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">71044a7b-ba03-4cf5-a2b5-79f7946a7c9d</attribute>
+        <attribute name="x">-55</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">16</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">3</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="country">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">f52c6321-61f9-42f3-8747-0e0e37ca71f5</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Country</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">288</attribute>
+        <attribute name="y">760</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.00_system">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/f194685b-5e46-44b5-b970-0f246770e701.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">f194685b-5e46-44b5-b970-0f246770e701</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.00 System</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.00 System</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="country">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">5b3ff69e-b383-426d-8f7d-0ff8a66536cb</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Country</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">264</attribute>
+        <attribute name="y">176</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.00_common">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/efdd5d61-e1b3-40f7-b238-153cac683a57.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">efdd5d61-e1b3-40f7-b238-153cac683a57</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.00 Common</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.00 Common</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="country">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">a7dd726f-7319-4785-b785-a8023e82a4db</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Country</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">64</attribute>
+        <attribute name="y">312</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.03_cargo_(nhm_rid_adr)">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/9ccc940a-08d6-41d4-9249-bc6e93989012.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">9ccc940a-08d6-41d4-9249-bc6e93989012</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.03 Cargo (NHM,RID,ADR)</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.03 Cargo (NHM,RID,ADR)</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="country">
+        <attribute name="RenderedWidth">66</attribute>
+        <attribute name="id">24bed974-7fbb-4981-b169-8649c3310fe3</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Country</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">632</attribute>
+        <attribute name="y">464</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowOnlyPicked</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_station_distances_searching">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/30b57b5c-21f6-462b-bf02-a907d3c3b9f6.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">30b57b5c-21f6-462b-bf02-a907d3c3b9f6</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">Station distances searching</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">Station distances searching</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="country">
+        <attribute name="RenderedWidth">114</attribute>
+        <attribute name="id">14b8c606-bef6-4ec7-910a-f5fb50641005</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Country</attribute>
+        <attribute name="RenderedHeight">106</attribute>
+        <attribute name="x">264</attribute>
+        <attribute name="y">176</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{3803f439-1638-417d-b643-c9232744f270}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_02.06_locations">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/11f44bd4-3bc6-48d0-970c-bbca5c87225e.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">11f44bd4-3bc6-48d0-970c-bbca5c87225e</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">02.06 Locations</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">02.06 Locations</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

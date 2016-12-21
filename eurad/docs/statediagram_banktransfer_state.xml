@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="AttributeStateDiagram" href="statediagram_banktransfer_state">
+    <doc><![CDATA[]]></doc>
+    <modlrdiagram>diagramimages/b8f0297a-ded8-4b44-b449-e0856316d980.jpg</modlrdiagram>
+    <attribute name="ColorOnNew">0</attribute>
+    <attribute name="Id">b8f0297a-ded8-4b44-b449-e0856316d980</attribute>
+    <attribute name="ZoomScaleFactor">0</attribute>
+    <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+    <attribute name="SnapGridSize">8</attribute>
+    <attribute name="Designer"></attribute>
+    <attribute name="Comment"></attribute>
+    <attribute name="PresentationName">State:BankTransfer.State</attribute>
+    <link name="Attribute">
+      <object type="Attribute" href="statediagram_banktransfer_state">
+        <doc><![CDATA[]]></doc>
+        <modlrstring>State: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">State</attribute>
+        <attribute name="RuntimeName">State</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">3afa2426-4b66-430f-922a-6b5f4ce8cb31</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Owner">
+          <object type="Class" href="banktransfer">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">BankTransfer</attribute>
+            <attribute name="RuntimeName">BankTransfer</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">5ff3b931-1b51-4a5e-9f41-9e05d88b735b</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="PlacedState">
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">101</attribute>
+        <attribute name="id">a482489d-0375-4323-8661-ca8c2ad34202</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Unconfirmed</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">416</attribute>
+        <attribute name="y">112</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Unconfirmed</attribute>
+            <attribute name="RuntimeName">Unconfirmed</attribute>
+            <attribute name="id">37b678c5-184a-4166-84cd-675c9ad6805b</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">638eb041-7ff5-4a97-bc36-3a0e1156129e</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Confirmed</attribute>
+                    <attribute name="RuntimeName">Confirmed</attribute>
+                    <attribute name="id">7bc98b2e-8199-4b15-ae7e-ac48367a5ec5</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">7dedf849-90a0-4382-8ced-b7b5836e4b02</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Source">
+                  <object type="PseudoState">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Start2</attribute>
+                    <attribute name="RuntimeName">Start2</attribute>
+                    <attribute name="id">949aae58-cb61-4dda-8bf0-95b714d20ff4</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger" />
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">3af62430-6e60-4097-bfb1-06101eaa6d3d</attribute>
+                <attribute name="Guard">OCL: self.Detail.CanBeConfirmed</attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Confirmed</attribute>
+                    <attribute name="RuntimeName">Confirmed</attribute>
+                    <attribute name="id">7bc98b2e-8199-4b15-ae7e-ac48367a5ec5</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RootRegion</attribute>
+                <attribute name="RuntimeName">RootRegion</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">84</attribute>
+        <attribute name="id">ddd816d7-fbe7-4827-9ddb-b2c2c0480584</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Confirmed</attribute>
+        <attribute name="RenderedHeight">28</attribute>
+        <attribute name="x">408</attribute>
+        <attribute name="y">272</attribute>
+        <link name="Vertex">
+          <object type="State">
+            <doc><![CDATA[]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Confirmed</attribute>
+            <attribute name="RuntimeName">Confirmed</attribute>
+            <attribute name="id">7bc98b2e-8199-4b15-ae7e-ac48367a5ec5</attribute>
+            <link name="Entry" />
+            <link name="Exit" />
+            <link name="Incoming">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">3af62430-6e60-4097-bfb1-06101eaa6d3d</attribute>
+                <attribute name="Guard">OCL: self.Detail.CanBeConfirmed</attribute>
+                <link name="Source">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Unconfirmed</attribute>
+                    <attribute name="RuntimeName">Unconfirmed</attribute>
+                    <attribute name="id">37b678c5-184a-4166-84cd-675c9ad6805b</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Outgoing">
+              <object type="Transition">
+                <doc><![CDATA[]]></doc>
+                <attribute name="id">638eb041-7ff5-4a97-bc36-3a0e1156129e</attribute>
+                <attribute name="Guard">OCL: </attribute>
+                <link name="Target">
+                  <object type="State">
+                    <doc><![CDATA[]]></doc>
+                    <attribute name="Stereotype"></attribute>
+                    <attribute name="Name">Unconfirmed</attribute>
+                    <attribute name="RuntimeName">Unconfirmed</attribute>
+                    <attribute name="id">37b678c5-184a-4166-84cd-675c9ad6805b</attribute>
+                  </object>
+                </link>
+                <link name="Effect" />
+                <link name="Trigger">
+                  <object type="MethodTrigger" />
+                </link>
+              </object>
+            </link>
+            <link name="Container">
+              <object type="Region">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">RootRegion</attribute>
+                <attribute name="RuntimeName">RootRegion</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedState">
+        <attribute name="RenderedWidth">10</attribute>
+        <attribute name="id">e22bed19-fd6f-44b2-aa5b-41ce64180fd0</attribute>
+        <attribute name="Color">1693511920</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Start2</attribute>
+        <attribute name="RenderedHeight">10</attribute>
+        <attribute name="x">400</attribute>
+        <attribute name="y">32</attribute>
+        <link name="Vertex" />
+      </object>
+    </link>
+    <link name="PlacedNote" />
+    <link name="VACDefinition" />
+  </object>
+</contents>

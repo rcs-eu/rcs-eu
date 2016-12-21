@@ -1,0 +1,215 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">RailwayBill in package EuradSystem</h1>
+    <p><DIV>Class representing a railway bill.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">BillDocCIM: Byte[] = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>A file of CIM document prepared in Jerid system.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BillDocSMGS: Byte[] = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>
+<DIV>A file of&nbsp;SMGS document prepared in Jerid system.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContractNr: String</td>
+        <td class="style1"><DIV>Contract't number according to which this transport is executed.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DispatchDate: DateTime</td>
+        <td class="style1"><DIV>Dispatch date.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FIsEmpty: Boolean</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-WEIGHT: bold">True</SPAN> for empty transport if a registered bill reflects a group of waggons without a waggon list.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FOwner: WaggonOwner</td>
+        <td class="style1"><DIV>
+<DIV>An owner&nbsp;of all waggons if a registered bill reflects a group of waggons without a waggon list. Enum:</DIV>
+<DIV>- All = 0 (both private and railway),</DIV>
+<DIV>- Railway = 1,</DIV>
+<DIV>- Privat = 2.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FTotalAxles: Integer</td>
+        <td class="style1"><DIV>Total number of axles. Used when there is a rail transport without a waggon list.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FTotalRealWeight: Decimal</td>
+        <td class="style1"><DIV>Total real weight if a registered bill reflects a group of waggons without a waggon list.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Gauge: LoadingGauge</td>
+        <td class="style1"><DIV>Derived. Loading gauge. If this bill contains waggons and all waggons have the same <SPAN style="FONT-STYLE: italic">Gauge </SPAN><SPAN>then gauge of first waggon is returned. If this bill reflects a group of waggons without a waggon list then it is </SPAN><SPAN style="FONT-STYLE: italic">LoadingGauge.Any</SPAN><SPAN>.</SPAN></DIV>
+<DIV>Enum:</DIV>
+<DIV>- Any = 0,</DIV>
+<DIV>- Normal = 1,</DIV>
+<DIV>- WM0 = 2,</DIV>
+<DIV>- WM1 = 3.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasRealWeight: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasUti: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if waggons from this bill has containers.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasWaggons: Boolean</td>
+        <td class="style1"><DIV>Derived. <SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if this bill contains waggons.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsEmpty: Boolean</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Derived. If this bill contains waggons or containers then it is </SPAN><SPAN style="FONT-FAMILY: Verdana; FONT-WEIGHT: bold">true </SPAN><SPAN style="FONT-FAMILY: Verdana">if all waggons or containers are empty. It this bill reflects a group of waggons without a waggon list then&nbsp;it is </SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana">FIsEmpty</SPAN><SPAN style="FONT-FAMILY: Verdana">.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsSingleWaggon: Boolean</td>
+        <td class="style1"><DIV><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if bill contains only one waggon.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsWaggonGroup: Boolean</td>
+        <td class="style1"><DIV><SPAN>Derived. </SPAN><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if a registered bill has a list of waggons or it reflects a group of waggons without waggon list.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LoadLength: Decimal</td>
+        <td class="style1"><DIV>
+<DIV><SPAN style="FONT-FAMILY: Verdana">Derived. Loading length. If this bill contains waggons and all waggons have the same&nbsp;</SPAN><SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">LoadLength </SPAN><SPAN style="FONT-FAMILY: Verdana">then&nbsp;loading length&nbsp;of first waggon is returned. If this bill reflects a group of waggons without a waggon list then it is 0</SPAN><SPAN style="FONT-FAMILY: Verdana">.</SPAN></DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Owner: WaggonOwner</td>
+        <td class="style1"><DIV>Derived. If this bill contains waggons then it is an owner of all waggons. If all waggons are <SPAN style="FONT-STYLE: italic">private </SPAN><SPAN>then it is </SPAN><SPAN style="FONT-STYLE: italic">private</SPAN><SPAN>. If all waggons are </SPAN><SPAN style="FONT-STYLE: italic">railway </SPAN><SPAN>then it is </SPAN><SPAN style="FONT-STYLE: italic">railway. </SPAN><SPAN>If there are both </SPAN><SPAN style="FONT-STYLE: italic">private </SPAN><SPAN>and </SPAN><SPAN style="FONT-STYLE: italic">railway </SPAN><SPAN>then it is </SPAN><SPAN style="FONT-STYLE: italic">all</SPAN><SPAN>. If this bill reflects a group of waggons without a waggon list then it is </SPAN><SPAN style="FONT-STYLE: italic">FOwner</SPAN><SPAN>. Enum:</SPAN></DIV>
+<DIV><SPAN>
+<DIV>- All = 0 (both private and railway),</DIV>
+<DIV>- Railway = 1,</DIV>
+<DIV>- Privat = 2.</DIV></SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RailwayBillType: RailwayBillType</td>
+        <td class="style1"><DIV>Bill's type. Enum:</DIV>
+<DIV>- Unspecified,</DIV>
+<DIV>- CIM,</DIV>
+<DIV>- SMGS,</DIV>
+<DIV>- CETAR.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TotalAxles: Integer</td>
+        <td class="style1"><DIV>Derived. If there are waggons in this bill then it is a sum of their axles. If there are no waggons in this bill then it is equal to <SPAN style="FONT-STYLE: italic">FTotalAxles</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">TotalRealWeight: Decimal</td>
+        <td class="style1"><DIV>Derived. If this bill contains waggons or containers it is a total real weight of waggons or containers. Otherwise it is <SPAN style="FONT-STYLE: italic">FTotalRealWeight</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">WaybillNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Bill's number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Clone():RailwayBill</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CopyFrom(railwayBill:RailwayBill)</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine1():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine2():String</td>
+        <td class="style1"><DIV>Method.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine3():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine4():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine5():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetLine6():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetTypeStr():String</td>
+        <td class="style1"><DIV>
+<DIV>Method.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">BillNhm : <a href="nhm.htm">nhm</a> 0..1</td>
+        <td class="style1"><DIV>If this bill reflects a group of waggons without a waggon list then it points to a NHM of this bill.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecItemRailBillRailwayBill_ : <a href="execitemrailbill.htm">execitemrailbill</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One-way association.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Nhms : <a href="nhm.htm">nhm</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of all NHMs from all <SPAN style="FONT-STYLE: italic">Waggons</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Receiver : <a href="customer.htm">customer</a> 0..1</td>
+        <td class="style1"><DIV>A receiver of cargo.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Relation : <a href="dswaggongroup.htm">dswaggongroup</a> 1</td>
+        <td class="style1"><DIV>Points to a relation.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SpecItemRailBillRailwayBill_ : <a href="specitemrailbill.htm">specitemrailbill</a> 0..1</td>
+        <td class="style1"><DIV>One-way association.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Uti : <a href="uti.htm">uti</a> 0..*</td>
+        <td class="style1"><DIV>Derived. A list of all containers from all <SPAN style="FONT-STYLE: italic">Waggons.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Waggons : <a href="waggononbill.htm">waggononbill</a> 0..*</td>
+        <td class="style1"><DIV>A list of waggon on this bill.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.01_executed_railway_transport.htm">07.01 Executed Railway Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.05_executed_gos_servce.htm">07.05 Executed GOS Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.01_invoice_specitems.htm">12.01 Invoice SpecItems</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

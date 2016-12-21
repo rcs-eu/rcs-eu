@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="usedoption">
+    <doc><![CDATA[<DIV>Represents&nbsp;the value of a parameter of a generated report.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">UsedOption</attribute>
+    <attribute name="RuntimeName">UsedOption</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{2825b71e-7d40-4eaa-9909-fcd9ebef353d}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractroot">
+        <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractRoot</attribute>
+        <attribute name="RuntimeName">AbstractRoot</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Method">
+        <doc><![CDATA[<DIV>Instantiates new&nbsp;<SPAN style="FONT-STYLE: italic">UsedOption</SPAN> wich relfects the passed <SPAN style="FONT-STYLE: italic">option</SPAN>.</DIV>]]></doc>
+        <modlrstring>Constructor(option:ReportOption)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Constructor</attribute>
+        <attribute name="RuntimeName">UsedOption</attribute>
+        <attribute name="Visibility">Package</attribute>
+        <attribute name="id">{2be09381-b8fe-4f0f-9711-9782d4bd5e11}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="IsConstructor">True</attribute>
+        <attribute name="IsVirtual">False</attribute>
+        <attribute name="IsNew">False</attribute>
+        <attribute name="IsOverride">False</attribute>
+        <attribute name="IsStatic">False</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="Precondition"></attribute>
+        <attribute name="Postcondition"></attribute>
+        <attribute name="IsQuery">False</attribute>
+        <attribute name="Body"></attribute>
+        <link name="ReturnParameter" />
+        <link name="Parameter">
+          <object type="Parameter">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">option</attribute>
+            <attribute name="RuntimeName">option</attribute>
+            <attribute name="Kind">In</attribute>
+            <link name="Type">
+              <object type="Datatype">
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ReportOption</attribute>
+                <attribute name="RuntimeName">ReportOption</attribute>
+                <attribute name="IsAbstract">False</attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>The name of the parameter.</DIV>]]></doc>
+        <modlrstring>Caption: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Caption</attribute>
+        <attribute name="RuntimeName">Caption</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{dff01ec1-4da8-4329-a2b2-d322ecebb09c}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>
+<DIV>The string representation of the value of the parameter.</DIV></DIV>]]></doc>
+        <modlrstring>Value: String = &lt;NULL&gt;</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Value</attribute>
+        <attribute name="RuntimeName">Value</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{e691c87c-31f9-49a9-b6f4-68e73f8f0adc}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue">&lt;NULL&gt;</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="usedoption">
+        <doc><![CDATA[<DIV>A list of parameter values used during report generation.</DIV>]]></doc>
+        <modlrstring>UsedOptions (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">UsedOptions</attribute>
+        <attribute name="RuntimeName">UsedOptions</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Ordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">UsedOptions</attribute>
+        <attribute name="id">{b9271435-479e-42d9-b8fa-355c8785f3ed}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ReportExecutionUsedOption</attribute>
+            <attribute name="RuntimeName">ReportExecutionUsedOption</attribute>
+            <attribute name="EffectiveName">ReportExecutionUsedOption</attribute>
+            <attribute name="id">{acbb71e1-80c8-4fc0-9147-6f86e0528d10}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="usedoption">
+            <doc><![CDATA[<DIV>Represents&nbsp;the value of a parameter of a generated report.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">UsedOption</attribute>
+            <attribute name="RuntimeName">UsedOption</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{2825b71e-7d40-4eaa-9909-fcd9ebef353d}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="reportexecution">
+            <doc><![CDATA[<DIV>Points&nbsp;to single report&nbsp;execution.</DIV>]]></doc>
+            <modlrstring>ReportExecution (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">ReportExecution</attribute>
+            <attribute name="RuntimeName">ReportExecution</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">ReportExecution</attribute>
+            <attribute name="id">{eff0d4d8-12ed-42ad-b355-61884b9020db}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="reportexecution">
+                <doc><![CDATA[<DIV>Keeps information of single&nbsp;report generation.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">ReportExecution</attribute>
+                <attribute name="RuntimeName">ReportExecution</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{cd501db8-5ced-4c10-9166-280050d4d2b9}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.Ordered</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Cascade</attribute>
+            <attribute name="Tag">Eco.DeleteAction</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="usedoption">
+        <attribute name="RenderedWidth">116</attribute>
+        <attribute name="id">c447d6ab-49e8-4384-922c-ab6a6ed72f36</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">UsedOption</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">656</attribute>
+        <attribute name="y">592</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{2825b71e-7d40-4eaa-9909-fcd9ebef353d}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.11_reports_and_tariffs_framework">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/f7f65fd6-734d-4347-beb1-af8c9589b690.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">f7f65fd6-734d-4347-beb1-af8c9589b690</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.11 Reports and Tariffs Framework</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.11 Reports and Tariffs Framework</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

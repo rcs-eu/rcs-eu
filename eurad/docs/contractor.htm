@@ -1,0 +1,188 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">Contractor in package EuradSystem</h1>
+    <p><DIV>Abstract class representing a contractor.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ContractorNr: String</td>
+        <td class="style1"><DIV>Derived. Contractor's internal number.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CooperationState: CooperationState</td>
+        <td class="style1"><DIV>Derived. A cooperation state with a contractor. Enum:</DIV>
+<DIV>- OK = 0,</DIV>
+<DIV>- Warning = 1,</DIV>
+<DIV>- Bad = 2.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CooperationStateDesc: String</td>
+        <td class="style1"><DIV>Derived. Description of a cooperation state with a contractor.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FullName: String</td>
+        <td class="style1"><DIV>Derived. First line of a full name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FullNameSec: String</td>
+        <td class="style1"><DIV>Derived. Second line of a full name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FullNameThr: String</td>
+        <td class="style1"><DIV>Derived. Third line of a full name.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HaveCorrespondAddress: Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Identifier: String</td>
+        <td class="style1"><DIV>Derived. A contractor's identifier.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsInternal: Boolean</td>
+        <td class="style1"><DIV><SPAN>Derived. </SPAN><SPAN style="FONT-WEIGHT: bold">True </SPAN><SPAN>if a contractor is internal. Otherwise </SPAN><SPAN style="FONT-WEIGHT: bold">false</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">AddRole(roleType:Type):ContractorRole</td>
+        <td class="style1"><DIV>Method. Adds a role of <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>type to this contractor.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FindContractors(serviceProvider:IEcoServiceProvider; identifier:String; role:Type; maxAnswers:Integer; offset:Integer):IObjectList</td>
+        <td class="style1"><DIV>Method. Searches for contractors having filters: <SPAN style="FONT-STYLE: italic">identifier </SPAN><SPAN>and</SPAN><SPAN style="FONT-STYLE: italic">&nbsp;role</SPAN><SPAN>.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetHaveCorrespondAddress(ref res:Boolean)</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetRole(roleType:Type; out role:ContractorRole):Boolean</td>
+        <td class="style1"><DIV>Method. Gets a contractor's role. Returns <SPAN style="FONT-WEIGHT: bold">true </SPAN><SPAN>if a contractor has a role of </SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>and sets this <SPAN style="FONT-STYLE: italic; FONT-FAMILY: Verdana; COLOR: #000000; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION: none">ContractorRole</SPAN>&nbsp;to a&nbsp;</SPAN><SPAN style="FONT-STYLE: italic">role </SPAN><SPAN>parameter</SPAN><SPAN>. Returns </SPAN><SPAN style="FONT-WEIGHT: bold">false </SPAN><SPAN>if a contractor has</SPAN><SPAN>&nbsp;not a role of </SPAN><SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>and sets </SPAN><SPAN style="FONT-STYLE: italic">null </SPAN><SPAN>to a </SPAN><SPAN style="FONT-STYLE: italic">role </SPAN><SPAN>parameter.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetRole(roleType:Type):ContractorRole</td>
+        <td class="style1"><DIV>Method. Gets a contractor's role for a <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>type.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">HasRole(roleType:Type):Boolean</td>
+        <td class="style1"><DIV>Method. Checks if this contractor has role of <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>type.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IncludesContractor(childContractor:Contractor):Boolean</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RemoveRole(roleType:Type)</td>
+        <td class="style1"><DIV>Method. Removes a role of <SPAN style="FONT-STYLE: italic">roleType </SPAN><SPAN>type from this contractor.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SetHaveCorrespondAddress(value:Boolean)</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">Address : <a href="address.htm">address</a> 1</td>
+        <td class="style1"><DIV>Derived. Points to an address.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChildContractors : <a href="contractor.htm">contractor</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Contractor_parent : <a href="contractor.htm">contractor</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ContractorWithRoles : <a href="contractor.htm">contractor</a> 1..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CoresspondAddress : <a href="address.htm">address</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FindPayableDocumentsDocumentPayers : <a href="findpayabledocument.htm">findpayabledocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FindPayableDocumentsDocumentPeyees : <a href="findpayabledocument.htm">findpayabledocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoicesPayee : <a href="invoice.htm">invoice</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoicesPayer : <a href="invoice.htm">invoice</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaidDocuments2 : <a href="paiddocument.htm">paiddocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaidDocumentsDocumentPayee : <a href="paiddocument.htm">paiddocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaidDocumentsPaymentPayee : <a href="paiddocument.htm">paiddocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaidDocumentsPaymentPayer : <a href="paiddocument.htm">paiddocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ParentContractor : <a href="contractor.htm">contractor</a> 0..1</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayableDocumentsAsPayee : <a href="payabledocument.htm">payabledocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayableDocumentsAsPayer : <a href="payabledocument.htm">payabledocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PayableDocumentsDocumentOwner : <a href="payabledocument.htm">payabledocument</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Payments : <a href="payment.htm">payment</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_04.00_contractor.htm">04.00 Contractor</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_18.00_paymentregister.htm">18.00 PaymentRegister</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

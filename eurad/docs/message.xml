@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="message">
+    <doc><![CDATA[<DIV>Abstract class representing base of message in message system.</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">Message</attribute>
+    <attribute name="RuntimeName">Message</attribute>
+    <attribute name="IsAbstract">True</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{7b5373fe-86d5-49ec-acf2-885b8c13fe85}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses">
+      <object type="Class" href="messagebysystem">
+        <doc><![CDATA[<DIV>Predefined <SPAN style="FONT-STYLE: italic">Message </SPAN><SPAN>in message system. Mostly used when system needs to report some object action or state change. </SPAN></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MessageBySystem</attribute>
+        <attribute name="RuntimeName">MessageBySystem</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{38afc1ca-db4c-462a-bfaf-092e007ad7df}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+      <object type="Class" href="messagebyuser">
+        <doc><![CDATA[<DIV>Class representing a message sent by a user to another user.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MessageByUser</attribute>
+        <attribute name="RuntimeName">MessageByUser</attribute>
+        <attribute name="IsAbstract">False</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{46be3a81-8f11-43a9-bf89-9b0453eb5234}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="TaggedValue">
+      <object type="TaggedValue">
+        <attribute name="Value">self.MessageText</attribute>
+        <attribute name="Tag">Eco.DefaultStringRepresentation</attribute>
+      </object>
+    </link>
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Specifies date when message is intended to be sent by system.</DIV>]]></doc>
+        <modlrstring>MessageDateTime: DateTime</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MessageDateTime</attribute>
+        <attribute name="RuntimeName">MessageDateTime</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{1d3e8ea4-e2c0-4609-aebb-b4ee1858913a}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">DateTime</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">DateTime</attribute>
+            <attribute name="RuntimeName">DateTime</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived.&nbsp;Needs to be&nbsp;handled in child class.</DIV>]]></doc>
+        <modlrstring>MessageDescription: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MessageDescription</attribute>
+        <attribute name="RuntimeName">MessageDescription</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{42a4541e-178e-4152-a839-51ba78996a85}_EMDUPEID_0</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">1000000</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">''</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived. String describing how to display all of the attachments as link (eg.&nbsp;document number, file name ect.)</DIV>]]></doc>
+        <modlrstring>LinksStr: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">LinksStr</attribute>
+        <attribute name="RuntimeName">LinksStr</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{56e2225f-838a-44b0-8984-9e92978e2b31}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">250</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Derived.&nbsp;Needs to be&nbsp;handled in child class.</DIV>]]></doc>
+        <modlrstring>MessageText: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MessageText</attribute>
+        <attribute name="RuntimeName">MessageText</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{b77d033f-1fbe-48b0-a8e4-4939123f3d46}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">derived</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">True</attribute>
+            <attribute name="Tag">Eco.AllowNULL</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">500</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">Text</attribute>
+            <attribute name="Tag">Eco.FormerNames</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">''</attribute>
+            <attribute name="Tag">Eco.DerivationOCL</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="message">
+        <doc><![CDATA[<DIV>Derived. One-way association.</DIV>]]></doc>
+        <modlrstring>MessageAbstractRoot_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">MessageAbstractRoot_</attribute>
+        <attribute name="RuntimeName">MessageAbstractRoot_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">MessageAbstractRoot_</attribute>
+        <attribute name="id">{087bcef6-2e4f-438c-b530-e350a49b7d03}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageAbstractRoot</attribute>
+            <attribute name="RuntimeName">MessageAbstractRoot</attribute>
+            <attribute name="EffectiveName">MessageAbstractRoot</attribute>
+            <attribute name="id">{398e49c7-3031-48d1-b771-c69eeb03e48b}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="message">
+            <doc><![CDATA[<DIV>Abstract class representing base of message in message system.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Message</attribute>
+            <attribute name="RuntimeName">Message</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{7b5373fe-86d5-49ec-acf2-885b8c13fe85}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="abstractroot">
+            <doc><![CDATA[<DIV>List of&nbsp;objects (eg. CustomerOrder, OutInvoice, etc.) message is bound to.</DIV>]]></doc>
+            <modlrstring>Documents (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Documents</attribute>
+            <attribute name="RuntimeName">Documents</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Documents</attribute>
+            <attribute name="id">{736346b3-de14-4a53-9ecb-c87792e88a4a}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="abstractroot">
+                <doc><![CDATA[<DIV><SUMMARY>The root class for most of the model classes.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">AbstractRoot</attribute>
+                <attribute name="RuntimeName">AbstractRoot</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{0613bcd0-65d6-4738-a2c6-95f43191d4d9}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="AssociationEnd" href="message">
+        <doc><![CDATA[<DIV>A message which is delivered to a <SPAN style="FONT-STYLE: italic">Recipient</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+        <modlrstring>Message (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Message</attribute>
+        <attribute name="RuntimeName">Message</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">Message</attribute>
+        <attribute name="id">{cad88b18-dd24-4a98-8e3f-1410ee1c594a}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageDeliveryMessage</attribute>
+            <attribute name="RuntimeName">MessageDeliveryMessage</attribute>
+            <attribute name="EffectiveName">MessageDeliveryMessage</attribute>
+            <attribute name="id">{3f0d70ef-a39a-4cc7-a0c5-b70eee0f8b9c}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="message">
+            <doc><![CDATA[<DIV>Abstract class representing base of message in message system.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Message</attribute>
+            <attribute name="RuntimeName">Message</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{7b5373fe-86d5-49ec-acf2-885b8c13fe85}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="messagedelivery">
+            <doc><![CDATA[<DIV>As <SPAN style="FONT-STYLE: italic">Message </SPAN><SPAN>can be sent to more than one recipient </SPAN><SPAN>- this lists contains all required </SPAN><SPAN style="FONT-STYLE: italic">MessageDelivery </SPAN><SPAN>log.</SPAN></DIV>]]></doc>
+            <modlrstring>Deliveries (1..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Deliveries</attribute>
+            <attribute name="RuntimeName">Deliveries</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Deliveries</attribute>
+            <attribute name="id">{9b806584-230a-4d8d-9a07-e8f969cd4177}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="messagedelivery">
+                <doc><![CDATA[<DIV>Class representing a delivery of a <SPAN style="FONT-STYLE: italic">Message</SPAN><SPAN>.</SPAN></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">MessageDelivery</attribute>
+                <attribute name="RuntimeName">MessageDelivery</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{171a5991-c367-4976-ba57-b19e9a99aa19}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="message">
+        <doc><![CDATA[<DIV>Points to a message in which this attachment is attached.</DIV>]]></doc>
+        <modlrstring>AttachedToMessage (0..1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AttachedToMessage</attribute>
+        <attribute name="RuntimeName">AttachedToMessage</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">AttachedToMessage</attribute>
+        <attribute name="id">{c70c5a10-59b4-4a4a-8f9d-999ae931424a}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">0..1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">MessageAttachment</attribute>
+            <attribute name="RuntimeName">MessageAttachment</attribute>
+            <attribute name="EffectiveName">MessageAttachment</attribute>
+            <attribute name="id">{9fbc803a-5cc6-442c-a119-095264ebc024}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="message">
+            <doc><![CDATA[<DIV>Abstract class representing base of message in message system.</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Message</attribute>
+            <attribute name="RuntimeName">Message</attribute>
+            <attribute name="IsAbstract">True</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{7b5373fe-86d5-49ec-acf2-885b8c13fe85}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="attachment">
+            <doc><![CDATA[<DIV>Message attachments as list of <SPAN style="FONT-STYLE: italic">Attachment </SPAN><SPAN>objects.</SPAN></DIV>]]></doc>
+            <modlrstring>Attachments (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">Attachments</attribute>
+            <attribute name="RuntimeName">Attachments</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Ordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">Attachments</attribute>
+            <attribute name="id">{7b23fa51-71c0-4b82-8a71-42114504abea}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="attachment">
+                <doc><![CDATA[<DIV>Abstract class representing attachment attached to a message&nbsp;in a message system.</DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">Attachment</attribute>
+                <attribute name="RuntimeName">Attachment</attribute>
+                <attribute name="IsAbstract">True</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d030ee60-eae2-48de-9bae-c30227110326}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection">
+      <object type="SpecializationConnection">
+        <attribute name="id">ed5879db-d0bb-4992-9fb9-84f03f02cc34</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">e6c9d2cd-bd7d-4df9-a275-e8104638630b</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">bb1cfb17-7372-4ac5-b6b8-9d3066b393df</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+      <object type="SpecializationConnection">
+        <attribute name="id">97886e8e-c7c3-4b51-8f91-1ea6259cc591</attribute>
+        <attribute name="x">0</attribute>
+        <attribute name="NextLegDrawKind">0</attribute>
+        <attribute name="y">0</attribute>
+        <attribute name="LabelAngle">0</attribute>
+        <attribute name="LabelDistance">0</attribute>
+        <attribute name="ViaPointsStartsHere">False</attribute>
+        <attribute name="SideToUse">0</attribute>
+      </object>
+    </link>
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="message">
+        <attribute name="RenderedWidth">141</attribute>
+        <attribute name="id">aa220f43-9132-433a-9338-2639560cb1b7</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Message</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">176</attribute>
+        <attribute name="y">1296</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{7b5373fe-86d5-49ec-acf2-885b8c13fe85}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_01.00_system">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/f194685b-5e46-44b5-b970-0f246770e701.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">f194685b-5e46-44b5-b970-0f246770e701</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">01.00 System</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">01.00 System</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="message">
+        <attribute name="RenderedWidth">141</attribute>
+        <attribute name="id">f6675a9d-d227-4a23-9391-079f471d577e</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Message</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">616</attribute>
+        <attribute name="y">272</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{7b5373fe-86d5-49ec-acf2-885b8c13fe85}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_03.00_messaging">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/7b024bfb-90d0-4682-85ef-1ed67b0e31d4.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">7b024bfb-90d0-4682-85ef-1ed67b0e31d4</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">03.00 Messaging</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">03.00 Messaging</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="PlacedClass" href="message">
+        <attribute name="RenderedWidth">141</attribute>
+        <attribute name="id">1e6a5254-2a12-4c48-886d-8d2238f61f71</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">Message</attribute>
+        <attribute name="RenderedHeight">75</attribute>
+        <attribute name="x">616</attribute>
+        <attribute name="y">24</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{7b5373fe-86d5-49ec-acf2-885b8c13fe85}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_03.01_system_messages">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/aaca3789-20a7-4b7c-85b6-8df71e4ee48e.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">aaca3789-20a7-4b7c-85b6-8df71e4ee48e</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">03.01 System Messages</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">03.01 System Messages</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

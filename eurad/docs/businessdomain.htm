@@ -1,0 +1,59 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">BusinessDomain in package EuradSystem</h1>
+    <p><DIV>Class representing business domain of an executed item.</DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ObszarBiznesowy: Integer</td>
+        <td class="style1"><DIV>Business domain value pushed to Navision buffer.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Matches(sysUnit:SysCompanyUnit; serviceType:ServiceType; nhm:Nhm):Boolean</td>
+        <td class="style1"><DIV>Method. Checks if for given parameters this business domain is suitable.</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">ConfigForSystem : <a href="configforsystem.htm">configforsystem</a> 1</td>
+        <td class="style1"><DIV>Points to <SPAN style="FONT-STYLE: italic">ConfigForSystem </SPAN><SPAN>object (1 object for whole system) to make possible searching for suitable business domain in a </SPAN><SPAN style="FONT-STYLE: italic">ConfigForSystem.BusinessDomains </SPAN><SPAN>list.</SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExecutedItems : <a href="executeditem.htm">executeditem</a> 0..*</td>
+        <td class="style1"><DIV>A list of executed items for which this business domain is set.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NhmGroup : <a href="nhmgroup.htm">nhmgroup</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to a&nbsp;group of NHMs&nbsp;for which this business domain is suitable.</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ServiceType : <a href="servicetype.htm">servicetype</a> 0..1</td>
+        <td class="style1"><DIV>Points to a service type for which this business domain is suitable.</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SysCompanyUnit : <a href="syscompanyunit.htm">syscompanyunit</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>Points to a&nbsp;internal company unit&nbsp;for which this business domain is suitable.</DIV></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.01_navision.htm">99.01 Navision</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.03_service_tags.htm">99.03 Service Tags</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

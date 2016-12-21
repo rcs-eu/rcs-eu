@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents>
+  <object type="Class" href="storageunit">
+    <doc><![CDATA[<DIV>Class representing storage unit (in werhouse)</DIV>]]></doc>
+    <attribute name="Stereotype"></attribute>
+    <attribute name="Name">StorageUnit</attribute>
+    <attribute name="RuntimeName">StorageUnit</attribute>
+    <attribute name="IsAbstract">False</attribute>
+    <attribute name="ConstructorVisibility">Public</attribute>
+    <attribute name="AdditionalNamespaces"></attribute>
+    <attribute name="Interfaces"></attribute>
+    <attribute name="id">{410f1129-49b4-4c64-ad7b-7427db5d8ecc}</attribute>
+    <attribute name="IsSealed">False</attribute>
+    <attribute name="CodeComment"></attribute>
+    <link name="Superclass">
+      <object type="Class" href="abstractsystem">
+        <doc><![CDATA[<DIV><SUMMARY>AbstractSystem All classes representing system (user, session etc.) inherits from this class </SUMMARY></DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">AbstractSystem</attribute>
+        <attribute name="RuntimeName">AbstractSystem</attribute>
+        <attribute name="IsAbstract">True</attribute>
+        <attribute name="ConstructorVisibility">Public</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="Interfaces"></attribute>
+        <attribute name="id">{fe39b885-d95e-4634-a188-1449c3625984}</attribute>
+        <attribute name="IsSealed">False</attribute>
+        <attribute name="CodeComment"></attribute>
+      </object>
+    </link>
+    <link name="Subclasses" />
+    <link name="TaggedValue" />
+    <link name="Feature">
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Name of unit</DIV>]]></doc>
+        <modlrstring>Name: String</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">Name</attribute>
+        <attribute name="RuntimeName">Name</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{584fa792-91dd-4853-9c4c-f3c4e5aeec9f}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">String</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">String</attribute>
+            <attribute name="RuntimeName">String</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">100</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+      <object type="Attribute">
+        <doc><![CDATA[<DIV>Type of unit: 0 - other; Plac, Magazyn, Zbiornik, Silos</DIV>]]></doc>
+        <modlrstring>StorageUnitType: StorageUnitType</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StorageUnitType</attribute>
+        <attribute name="RuntimeName">StorageUnitType</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="id">{eec32857-d106-4211-8d29-c67e9ef8ebe6}</attribute>
+        <attribute name="Multiplicity"></attribute>
+        <attribute name="AttributeType">StorageUnitType</attribute>
+        <attribute name="HasUserCode">False</attribute>
+        <attribute name="InitialValue"></attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="CodeComment"></attribute>
+        <link name="Type">
+          <object type="Datatype">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StorageUnitType</attribute>
+            <attribute name="RuntimeName">StorageUnitType</attribute>
+            <attribute name="IsAbstract">False</attribute>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">0</attribute>
+            <attribute name="Tag">Eco.DefaultDBValue</attribute>
+          </object>
+          <object type="TaggedValue">
+            <attribute name="Value">50</attribute>
+            <attribute name="Tag">Eco.Length</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="AssociationEnd">
+      <object type="AssociationEnd" href="storageunit">
+        <doc><![CDATA[<DIV>Points to a storage unit in which a cargo is stored.</DIV>]]></doc>
+        <modlrstring>StorageUnit (1)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StorageUnit</attribute>
+        <attribute name="RuntimeName">StorageUnit</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">StorageUnit</attribute>
+        <attribute name="id">{34d351b2-826b-451e-8d84-8d9c17500383}</attribute>
+        <attribute name="IsNavigable">True</attribute>
+        <attribute name="Multiplicity">1</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CargoHolderStorageUnitStorageUnit</attribute>
+            <attribute name="RuntimeName">CargoHolderStorageUnitStorageUnit</attribute>
+            <attribute name="EffectiveName">CargoHolderStorageUnitStorageUnit</attribute>
+            <attribute name="id">{480acb1d-a437-4702-bc90-b1af6de25f5b}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="storageunit">
+            <doc><![CDATA[<DIV>Class representing storage unit (in werhouse)</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StorageUnit</attribute>
+            <attribute name="RuntimeName">StorageUnit</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{410f1129-49b4-4c64-ad7b-7427db5d8ecc}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="cargoholderstorageunit">
+            <doc><![CDATA[<DIV>One way association</DIV>]]></doc>
+            <modlrstring>CargoHolderStorageUnitStorageUnit_ (0..*)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">CargoHolderStorageUnitStorageUnit_</attribute>
+            <attribute name="RuntimeName">CargoHolderStorageUnitStorageUnit_</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">CargoHolderStorageUnitStorageUnit_</attribute>
+            <attribute name="id">{12872631-08bb-4c5c-9cdb-a176ee2f0aa8}</attribute>
+            <attribute name="IsNavigable">False</attribute>
+            <attribute name="Multiplicity">0..*</attribute>
+            <link name="Participant">
+              <object type="Class" href="cargoholderstorageunit">
+                <doc><![CDATA[<DIV>
+<DIV>Class representing a holder for cargo storage.</DIV></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">CargoHolderStorageUnit</attribute>
+                <attribute name="RuntimeName">CargoHolderStorageUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{d7a62a7c-3ee1-40dd-a847-754bd9dc9194}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue" />
+      </object>
+      <object type="AssociationEnd" href="storageunit">
+        <doc><![CDATA[<DIV>
+<DIV>One way association</DIV></DIV>]]></doc>
+        <modlrstring>StorageUnitSysCompanyUnit_ (0..*)</modlrstring>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">StorageUnitSysCompanyUnit_</attribute>
+        <attribute name="RuntimeName">StorageUnitSysCompanyUnit_</attribute>
+        <attribute name="Visibility">Public</attribute>
+        <attribute name="CodeComment"></attribute>
+        <attribute name="Ordering">Unordered</attribute>
+        <attribute name="Aggregation">None</attribute>
+        <attribute name="SetterVisibility">Default</attribute>
+        <attribute name="EffectiveName">StorageUnitSysCompanyUnit_</attribute>
+        <attribute name="id">{00f0f5d8-726c-4254-a948-f20afff8c832}</attribute>
+        <attribute name="IsNavigable">False</attribute>
+        <attribute name="Multiplicity">0..*</attribute>
+        <link name="Association">
+          <object type="Association">
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StorageUnitSysCompanyUnit</attribute>
+            <attribute name="RuntimeName">StorageUnitSysCompanyUnit</attribute>
+            <attribute name="EffectiveName">StorageUnitSysCompanyUnit</attribute>
+            <attribute name="id">{923b4135-6fea-4a50-b459-e6a2c04c9e68}</attribute>
+            <link name="Class" />
+          </object>
+        </link>
+        <link name="Participant">
+          <object type="Class" href="storageunit">
+            <doc><![CDATA[<DIV>Class representing storage unit (in werhouse)</DIV>]]></doc>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">StorageUnit</attribute>
+            <attribute name="RuntimeName">StorageUnit</attribute>
+            <attribute name="IsAbstract">False</attribute>
+            <attribute name="ConstructorVisibility">Public</attribute>
+            <attribute name="AdditionalNamespaces"></attribute>
+            <attribute name="Interfaces"></attribute>
+            <attribute name="id">{410f1129-49b4-4c64-ad7b-7427db5d8ecc}</attribute>
+            <attribute name="IsSealed">False</attribute>
+            <attribute name="CodeComment"></attribute>
+          </object>
+        </link>
+        <link name="OtherEnd">
+          <object type="AssociationEnd" href="syscompanyunit">
+            <doc><![CDATA[<DIV>Company unit in which this storage type is available</DIV>]]></doc>
+            <modlrstring>SysCompanyUnit (1)</modlrstring>
+            <attribute name="Stereotype"></attribute>
+            <attribute name="Name">SysCompanyUnit</attribute>
+            <attribute name="RuntimeName">SysCompanyUnit</attribute>
+            <attribute name="Visibility">Public</attribute>
+            <attribute name="CodeComment"></attribute>
+            <attribute name="Ordering">Unordered</attribute>
+            <attribute name="Aggregation">None</attribute>
+            <attribute name="SetterVisibility">Default</attribute>
+            <attribute name="EffectiveName">SysCompanyUnit</attribute>
+            <attribute name="id">{0ad5c7c5-7ec0-48cd-9c37-c6523fe21e44}</attribute>
+            <attribute name="IsNavigable">True</attribute>
+            <attribute name="Multiplicity">1</attribute>
+            <link name="Participant">
+              <object type="Class" href="syscompanyunit">
+                <doc><![CDATA[<DIV><SUMMARY>Class defining companies using the system </SUMMARY></DIV>]]></doc>
+                <attribute name="Stereotype"></attribute>
+                <attribute name="Name">SysCompanyUnit</attribute>
+                <attribute name="RuntimeName">SysCompanyUnit</attribute>
+                <attribute name="IsAbstract">False</attribute>
+                <attribute name="ConstructorVisibility">Public</attribute>
+                <attribute name="AdditionalNamespaces"></attribute>
+                <attribute name="Interfaces"></attribute>
+                <attribute name="id">{ad158864-18dc-4bf0-8046-3527ce03f54a}</attribute>
+                <attribute name="IsSealed">False</attribute>
+                <attribute name="CodeComment"></attribute>
+              </object>
+            </link>
+          </object>
+        </link>
+        <link name="TaggedValue">
+          <object type="TaggedValue">
+            <attribute name="Value">False</attribute>
+            <attribute name="Tag">Eco.Embed</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+    <link name="StateMachine" />
+    <link name="SpecializationConnection" />
+    <link name="Package_">
+      <object type="Package" href="package_euradsystempackage">
+        <doc><![CDATA[<DIV>Eurad business classes.</DIV>]]></doc>
+        <attribute name="Stereotype"></attribute>
+        <attribute name="Name">EuradSystem</attribute>
+        <attribute name="RuntimeName">EuradSystemPackage</attribute>
+        <attribute name="DefaultLength">50</attribute>
+        <attribute name="EffectiveNameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="CodeGenCharacterMode">AllowUnicode</attribute>
+        <attribute name="id">a8b79a4f-5652-4d94-84a7-44ed101961bf</attribute>
+        <attribute name="AdditionalNamespaces"></attribute>
+        <attribute name="ORMappingConfigMode">Medium</attribute>
+        <attribute name="GenerateNullableTypes">True</attribute>
+        <attribute name="NameSpace">Rcs.Eurad.Model</attribute>
+        <attribute name="PluralSuffix">s</attribute>
+      </object>
+    </link>
+    <link name="PlacedClass">
+      <object type="PlacedClass" href="storageunit">
+        <attribute name="RenderedWidth">161</attribute>
+        <attribute name="id">35161792-5d9d-4fad-a844-78eb36b10c70</attribute>
+        <attribute name="Color">1692800256</attribute>
+        <attribute name="Size">1</attribute>
+        <attribute name="LastKnownName">StorageUnit</attribute>
+        <attribute name="RenderedHeight">54</attribute>
+        <attribute name="x">656</attribute>
+        <attribute name="y">120</attribute>
+        <attribute name="ShowMethods">False</attribute>
+        <attribute name="PickedFeatureVisibility">ShowAll</attribute>
+        <attribute name="ShowAttributes">False</attribute>
+        <attribute name="ClassId">{410f1129-49b4-4c64-ad7b-7427db5d8ecc}</attribute>
+        <link name="Diagram">
+          <object type="Diagram" href="classdiagram_07.10_cargo_holders">
+            <doc><![CDATA[]]></doc>
+            <modlrdiagram>diagramimages/991a97f5-b326-4c27-ad0f-7d83cc7feee4.jpg</modlrdiagram>
+            <attribute name="ColorOnNew">0</attribute>
+            <attribute name="Id">991a97f5-b326-4c27-ad0f-7d83cc7feee4</attribute>
+            <attribute name="ZoomScaleFactor">0</attribute>
+            <attribute name="ChangeDate">0001-01-01 00:00:00</attribute>
+            <attribute name="SnapGridSize">8</attribute>
+            <attribute name="Designer"></attribute>
+            <attribute name="Comment"></attribute>
+            <attribute name="PresentationName">07.10 Cargo Holders</attribute>
+            <attribute name="ShowMethodSignatures">False</attribute>
+            <attribute name="ShowAssociationNames">DimDefaults</attribute>
+            <attribute name="ShowVisibility">False</attribute>
+            <attribute name="SquareNewAssociations">False</attribute>
+            <attribute name="SquareNewGeneralizations">False</attribute>
+            <attribute name="ShowMethodReturnTypes">False</attribute>
+            <attribute name="Name">07.10 Cargo Holders</attribute>
+          </object>
+        </link>
+      </object>
+    </link>
+  </object>
+</contents>

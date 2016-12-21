@@ -1,0 +1,66 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">SysUserSession in package EuradSystem</h1>
+    <p><DIV><SUMMARY>Class for logging entrence in system </SUMMARY></DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AppName: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Name of appliaction</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ComputerName: String</td>
+        <td class="style1"><DIV><SUMMARY>Name of the computer from which loged to the system </SUMMARY></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LogOfTime: DateTime = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>Time&nbsp;when user log off</DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LogOnTime: DateTime</td>
+        <td class="style1"><DIV>
+<DIV>Time&nbsp;when user log on</DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OSUser: String</td>
+        <td class="style1"><DIV><SUMMARY>Name of the OSUser which loged to the system </SUMMARY></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetCurrentSession(serviceProvide:IEcoServiceProvider):SysUserSession</td>
+        <td class="style1"><DIV><SUMMARY>Methode.&nbsp;&nbsp;Returning current session </SUMMARY><RETURNS>SysUserSession </RETURNS><PARAM name="serviceProvide">(IEcoServiceProvider) </PARAM></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RegisterLogin(serviceProvider:IEcoServiceProvider; user:SysUser):SysUserSession</td>
+        <td class="style1"><DIV><SUMMARY>Methode.&nbsp;Registring user login into system </SUMMARY><RETURNS>SysUserSession </RETURNS><PARAM name="serviceProvider">(IEcoServiceProvider) </PARAM><PARAM name="user">(SysUser) </PARAM></DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">SysAppSysUserSession_ : <a href="sysapp.htm">sysapp</a> 0..1</td>
+        <td class="style1"><DIV><I>One way association</I></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SysUser : <a href="sysuser.htm">sysuser</a> 1</td>
+        <td class="style1"><DIV>User of the session</DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.00_root.htm">00.00 Root</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>

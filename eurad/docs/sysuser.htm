@@ -1,0 +1,366 @@
+﻿<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modlr class</title>
+    <LINK REL="StyleSheet" HREF="style.css" TYPE="text/css">
+  </head>
+  <body>
+    <h1 class="HeaderMain">SysUser in package EuradSystem</h1>
+    <p><DIV><SUMMARY />Represents&nbsp;a user of the system.&nbsp; </DIV></p>
+    <h1 class="subheader">Features</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">DefLocale: String</td>
+        <td class="style1"><DIV><SUMMARY /><SPAN style="TEXT-DECORATION: line-through">Not in use. </SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">EMail: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>User's e-mail address. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Fax: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>User's Fax number. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">FullName: String</td>
+        <td class="style1"><DIV><SUMMARY />User's full </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsActive: Boolean</td>
+        <td class="style1"><DIV><SUMMARY />Determines whether the user is active and may log into the system. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsAdmin: Boolean</td>
+        <td class="style1"><DIV>Determines whether the user is an&nbsp;administrator of the system. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Login: String</td>
+        <td class="style1"><DIV><SUMMARY />User's login name. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Mobile: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>User's mobile phone number. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Password: String</td>
+        <td class="style1"><DIV><SUMMARY />User's password in encrypted form. </SUMMARY /></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PersonalNr: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>User's personal identification&nbsp;number. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Phone: String = &lt;NULL&gt;</td>
+        <td class="style1"><DIV>User's phone number. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetRepresentationString(reevaluateSubscriber:ISubscriber; resubscribeSubscriber:ISubscriber):String</td>
+        <td class="style1"><DIV>Method. Returns a nice&nbsp;string representation of the user (currently <SPAN style="FONT-STYLE: italic">FullName </SPAN>). </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">GetSysUsers(sysCompanyUnit:SysCompanyUnit):IObjectList</td>
+        <td class="style1"><DIV>Static method. Retrievs a list of users belonging to <SPAN style="FONT-STYLE: italic">sysC </SPAN><SPAN style="FONT-STYLE: italic">ompanyUnit </SPAN>. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">IsValidPasswod(password:String):Boolean</td>
+        <td class="style1"><DIV>Method.&nbsp;Checks if passed <SPAN style="FONT-STYLE: italic">password </SPAN>matches user's <SPAN style="FONT-STYLE: italic">P </SPAN><SPAN style="FONT-STYLE: italic">assword </SPAN>. </DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Associations</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1">AbstractRootSysUser_ : <a href="abstractroot.htm">abstractroot</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ApprovedOffers : <a href="customeroffer.htm">customeroffer</a> 0..*</td>
+        <td class="style1"><DIV>A list of customer offers prepared by this user. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">BelongsToGroups : <a href="sysusergroup.htm">sysusergroup</a> 0..*</td>
+        <td class="style1"><DIV>A list of user groups this user belongs to. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ChangeLogSysUser_ : <a href="changelog.htm">changelog</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Company : <a href="company.htm">company</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Configuration : <a href="userconfiguration.htm">userconfiguration</a> 1</td>
+        <td class="style1"><DIV>User's configuration. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CurrentDeliveries : <a href="messagedelivery.htm">messagedelivery</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CurrentSentMessages : <a href="messagebyuser.htm">messagebyuser</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerContract : <a href="customercontract.htm">customercontract</a> 0..*</td>
+        <td class="style1"><DIV>A list of customer contracts prepared by this user. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerContractSysUser_ : <a href="customercontract.htm">customercontract</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerOrdersResponsibleFor : <a href="customerorder.htm">customerorder</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>A list of&nbsp;customer orders this user is responsible for. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomerRequestSysUser_ : <a href="customerrequest.htm">customerrequest</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsDocumentSysUser_ : <a href="customsdocument.htm">customsdocument</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">CustomsDocumentSysUser1_ : <a href="customsdocument.htm">customsdocument</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DefCompanyUnit : <a href="syscompanyunit.htm">syscompanyunit</a> 1</td>
+        <td class="style1"><DIV>User's default company unit. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DefLanguage : <a href="language.htm">language</a> 1</td>
+        <td class="style1"><DIV>Derived. User's&nbsp;default language. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">DelivererOrdersResponsibleFor : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of deliverer orders this user is responsible for. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">Deliveries : <a href="messagedelivery.htm">messagedelivery</a> 0..*</td>
+        <td class="style1"><DIV>A list of message deliveries delivered to this user. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ExcelImpConfig : <a href="excelimpconfig.htm">excelimpconfig</a> 0..*</td>
+        <td class="style1"><DIV><SPAN style="TEXT-DECORATION: line-through">Not in use. </SPAN></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InInvoiceReclamSysUser_ : <a href="ininvoicereclam.htm">ininvoicereclam</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">InvoiceAmountSysUser_ : <a href="ininvoiceamount.htm">ininvoiceamount</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">LastUserReportExecutions : <a href="lastuserreportexecution.htm">lastuserreportexecution</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageByUserSysUser1_ : <a href="messagebyuser.htm">messagebyuser</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">MessageDeliverySysUser_ : <a href="messagedelivery.htm">messagedelivery</a> 0..*</td>
+        <td class="style1"><DIV>One way association. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NewDeliveries : <a href="messagedelivery.htm">messagedelivery</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">NoteCatalogSysUser_ : <a href="notecatalog.htm">notecatalog</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">OutInvoiceSysUser_ : <a href="outinvoice.htm">outinvoice</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PaymentRemainders : <a href="paymentremainder.htm">paymentremainder</a> 0..*</td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">PriceRequestSysUser_ : <a href="pricerequest.htm">pricerequest</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">QueuedIntegrationTasks : <a href="integrationtask.htm">integrationtask</a> 0..*</td>
+        <td class="style1"><DIV>A list of integration tasks queued by this user. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RailTariffInstanceSysUser_ : <a href="railtariffinstance.htm">railtariffinstance</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">RejectedDelivererOrders : <a href="delivererorder.htm">delivererorder</a> 0..*</td>
+        <td class="style1"><DIV>A list of deliverer orders rejected by this user. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ReportExecutionSysUser_ : <a href="reportexecution.htm">reportexecution</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ReportInstanceSysUser_ : <a href="reportinstance.htm">reportinstance</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">ResponsibleForOffers : <a href="customeroffer.htm">customeroffer</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>A list of&nbsp;customer&nbsp;offers this user is responsible for. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SentMessages : <a href="messagebyuser.htm">messagebyuser</a> 0..*</td>
+        <td class="style1"><DIV>A list of messages sent by this user. </DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SysAppSysUser_ : <a href="sysapp.htm">sysapp</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SysUserGroupConfigSysUser_ : <a href="sysusergroupconfig.htm">sysusergroupconfig</a> 0..1</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">SysUserSessionSysUser_ : <a href="sysusersession.htm">sysusersession</a> 0..*</td>
+        <td class="style1"><DIV>
+<DIV>One way association. </DIV></DIV></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1">UserPrivRole : <a href="userprivrole.htm">userprivrole</a> 0..*</td>
+        <td class="style1"><DIV>A list of privilege roles granted to this user. </DIV></td>
+      </tr>
+    </table>
+    <h1 class="subheader">Placed in diagrams</h1>
+    <table style="width:100%;" class="newStyle1">
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.00_root.htm">00.00 Root</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_00.10_security.htm">00.10 Security</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.00_system.htm">01.00 System</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.03_cbrimportconfig.htm">01.03 CbrImportConfig</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.04_configuration.htm">01.04 Configuration</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.11_reports_and_tariffs_framework.htm">01.11 Reports and Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.11_reports_and_tariffs_framework.htm">01.11 Reports and Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.12_tariffs_framework.htm">01.12 Tariffs Framework</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_01.13_imports.htm">01.13 Imports</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_02.01_commom_2.htm">02.01 Commom 2</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_03.00_messaging.htm">03.00 Messaging</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_05.00_crm.htm">05.00 CRM</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.00_offers.htm">06.00 Offers</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_06.02_similar_offers_and_requests.htm">06.02 Similar Offers and Requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.00_customer_order.htm">07.00 Customer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.02_executed_truck_transport.htm">07.02 Executed Truck Transport</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_07.04_executed_ac_servce.htm">07.04 Executed AC Servce</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_08.00_customer_requests.htm">08.00 Customer requests</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_10.00_pricerequest.htm">10.00 PriceRequest</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_11.00_deliverer_order.htm">11.00 Deliverer Order</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_12.03_outinvoices.htm">12.03 OutInvoices</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_13.00_ininvoice_reclamation.htm">13.00 InInvoice Reclamation</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_14.00_customercontracts.htm">14.00 CustomerContracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_15.00_internal_deliverer_contracts.htm">15.00 Internal Deliverer Contracts</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_17.00_paymentremainder.htm">17.00 PaymentRemainder</a> </td>
+        <td class="style1"></td>
+      </tr>
+      <tr class="cellstyle">
+        <td class="style1"><a href="classdiagram_99.00_integration.htm">99.00 Integration</a> </td>
+        <td class="style1"></td>
+      </tr>
+    </table>
+    <p></p><a class="backtoindex" href="index.htm">Back to index</a></body>
+</html>
